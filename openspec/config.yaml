@@ -1,0 +1,7 @@
+schema: spec-driven
+context: |
+  Proofwall: сбор текстовых и видеоотзывов, Wall of Love, встраиваемый виджет.
+  Самостоятельный npm-workspaces репозиторий, /home/proofwall.
+  Контекст: AGENTS.md, CLAUDE.md, docs/Specification.md, docs/Architecture.md,
+  docs/Pseudocode.md и docs/ADR.md. Процесс: docs/development/workflow.md.
+  Новые документы на русском; feature-adr хранит исполнение, OpenSpec — дельту поведения.

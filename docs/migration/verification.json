@@ -1,0 +1,228 @@
+{
+  "date": "2026-11-11",
+  "scope": "Repository import and development-process bootstrap only",
+  "sourceFileCount": 558,
+  "missingFiles": [],
+  "importCommitHashMismatches": [],
+  "applicationCodeChanges": [],
+  "installedSkillCount": 9,
+  "checks": [
+    {
+      "command": [
+        "npm",
+        "exec",
+        "--",
+        "node",
+        "--version"
+      ],
+      "exitCode": 0,
+      "stdout": "v22.23.4\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "dz",
+        "--",
+        "--version"
+      ],
+      "exitCode": 0,
+      "stdout": "\n> proofwall@0.1.0 dz\n> dz --version\n\n0.8.58\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "openspec",
+        "--",
+        "--version"
+      ],
+      "exitCode": 0,
+      "stdout": "\n> proofwall@0.1.0 openspec\n> openspec --version\n\n1.15.0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "process:install"
+      ],
+      "exitCode": 0,
+      "stdout": "\n> proofwall@0.1.0 process:install\n> sh scripts/install-process.sh\n\ndz init --target codex: 9 skill(s), 135 file(s) written, 0 skipped\nMCP: NOT-REQUESTED (explicitly not requested)\nHooks: NOT-REQUESTED (explicitly not requested)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "openspec",
+        "--",
+        "validate",
+        "extract-proofwall",
+        "--type",
+        "change",
+        "--strict",
+        "--no-interactive"
+      ],
+      "exitCode": 0,
+      "stdout": "\n> proofwall@0.1.0 openspec\n> openspec validate extract-proofwall --type change --strict --no-interactive\n\nChange 'extract-proofwall' is valid\n",
+      "stderr": "Note: OpenSpec collects anonymous usage stats. Opt out: OPENSPEC_TELEMETRY=0 or openspec config set telemetry.enabled false\n"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "openspec",
+        "--",
+        "list",
+        "--changes",
+        "--json"
+      ],
+      "exitCode": 0,
+      "stdout": "\n> proofwall@0.1.0 openspec\n> openspec list --changes --json\n\n{\n  \"changes\": [\n    {\n      \"name\": \"extract-proofwall\",\n      \"completedTasks\": 2,\n      \"totalTasks\": 3,\n      \"lastModified\": \"2026-11-11T16:06:20.560Z\",\n      \"status\": \"in-progress\"\n    }\n  ],\n  \"root\": {\n    \"path\": \"/home/proofwall\",\n    \"source\": \"nearest\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "dz",
+        "--",
+        "recall",
+        "Proofwall перенос самостоятельный репозиторий",
+        "--project",
+        "/home/proofwall",
+        "--limit",
+        "3"
+      ],
+      "exitCode": 0,
+      "stdout": "\n> proofwall@0.1.0 dz\n> dz recall Proofwall перенос самостоятельный репозиторий --project /home/proofwall --limit 3\n\ndz recall \"Proofwall перенос самостоятельный репозиторий\"\n  No matching patterns (teach some with `dz teach`, or consolidate sessions).\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "dz",
+        "--",
+        "name-check",
+        "--module",
+        "proofwall-bootstrap-unused-probe",
+        "--project",
+        "/home/proofwall",
+        "--json"
+      ],
+      "exitCode": 0,
+      "stderr": "",
+      "result": {
+        "exit": 0,
+        "outcome": "free",
+        "scan": {
+          "status": "complete",
+          "roots": [
+            {
+              "requested": "/home/proofwall/apps",
+              "canonical": "/home/proofwall/apps",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 171,
+              "bytes": 1173402,
+              "observedLanguages": [
+                "JavaScript",
+                "TypeScript"
+              ]
+            },
+            {
+              "requested": "/home/proofwall/packages",
+              "canonical": "/home/proofwall/packages",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 31,
+              "bytes": 148764,
+              "observedLanguages": [
+                "TypeScript",
+                "JavaScript"
+              ]
+            },
+            {
+              "requested": "/home/proofwall/scripts",
+              "canonical": "/home/proofwall/scripts",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 3,
+              "bytes": 3632,
+              "observedLanguages": [
+                "JavaScript",
+                "TypeScript"
+              ]
+            },
+            {
+              "requested": "/home/proofwall/tests",
+              "canonical": "/home/proofwall/tests",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 14,
+              "bytes": 62949,
+              "observedLanguages": [
+                "JavaScript"
+              ]
+            }
+          ],
+          "supportedLanguages": [
+            "JavaScript",
+            "TypeScript",
+            "Python (explicit root only)"
+          ],
+          "observedLanguages": [
+            "JavaScript",
+            "TypeScript"
+          ],
+          "files": 219,
+          "bytes": 1389832,
+          "entries": 377,
+          "counts": {
+            "JavaScript": {
+              "files": 26,
+              "bytes": 115615
+            },
+            "TypeScript": {
+              "files": 193,
+              "bytes": 1273132
+            }
+          },
+          "commandManifestBytes": 1085,
+          "failureCode": null,
+          "excludedPathCount": 79
+        }
+      }
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/check-compose-buildable.sh"
+      ],
+      "exitCode": 0,
+      "stdout": "== 1. У сервиса со сборкой есть исходники, а не только Dockerfile ==\n  ✅ apps/web — исходники на месте\n  ✅ services/worker — исходники на месте\n  ✅ services/transcribe — исходники на месте\n== 2. Dockerfile не запускает dist/, которого сам не собирает ==\n  ✅ web: CMD и шаг сборки согласованы\n  ✅ worker: CMD и шаг сборки согласованы\n  ✅ transcribe: CMD и шаг сборки согласованы\n== 3. Образы закреплены тегом (плавающий :latest = невоспроизводимый деплой) ==\n  ✅ postgres:16-alpine — тег закреплён\n  ✅ minio/minio:RELEASE.2025-04-22T22-12-26Z — тег закреплён\n  ✅ caddy:2-alpine — тег закреплён\n== 4. Есть .dockerignore (иначе COPY . . тащит node_modules, tests и .env в образ) ==\n  ✅ .dockerignore есть и исключает .env\n== 5. depends_on ждёт здоровья там, где healthcheck объявлен ==\n  ⚠️  есть condition: service_started — проверить, нет ли у этого сервиса healthcheck\n\nБлокирующих проблем нет.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "runtimeDeployed": false,
+  "independentReviewPerformed": false,
+  "existingLockedPackageVersionChanges": []
+}

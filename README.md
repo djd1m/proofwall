@@ -1,5 +1,10 @@
 # 01. Сбор отзывов и «Стена любви» — Proofwall
 
+> Обновление 11.11.2026: проект выделен в `djd1m/proofwall`, каталог `/home/proofwall`.
+> Актуальный процесс — [workflow](docs/development/workflow.md), обязательные инструкции — [AGENTS.md](AGENTS.md).
+> Старые отчёты и адреса стендов ниже описывают исходный проект; на этом VPS сервисы не запускались.
+
+
 > **Неделя 01** · `отзывы` · референс: **[Senja.io](https://senja.io/) — 7000+ создателей и SaaS, $1M ARR, импорт с 30+ платформ**
 > · стенд: **https://proofwall.aicoding.space/**
 
@@ -82,7 +87,7 @@ FR-015 `planned`, четыре решения владельца DEC-001…004 `
 Полное описание — [`DEVELOPMENT_GUIDE.md`](DEVELOPMENT_GUIDE.md) §1. Перед любым запуском:
 
 ```bash
-node ../../.claude/hooks/check-ports.cjs .      # хранилища наружу не смотрят
+node .claude/hooks/check-ports.cjs .      # хранилища наружу не смотрят
 bash scripts/check-port-conflicts.sh .          # порты этой машины свободны
 ```
 

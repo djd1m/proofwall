@@ -1,5 +1,10 @@
 # Как повторить Proofwall (N1) с нуля
 
+> Обновление 11.11.2026: проект выделен в `djd1m/proofwall`, каталог `/home/proofwall`.
+> Актуальный процесс — [workflow](development/workflow.md), обязательные инструкции — [AGENTS.md](../AGENTS.md).
+> Старые отчёты и адреса стендов ниже описывают исходный проект; на этом VPS сервисы не запускались.
+
+
 Дата: 2026-09-29 · Основа: ветка после правки FR-015 «время ответа» (28.09) · Образец — `projects/06-rag-sales-chatbase/docs/REPRODUCE.md`.
 
 Документ для человека или агента, который поднимает N1 на новой машине или повторяет разработку.
@@ -9,7 +14,7 @@
 [`Pseudocode.md`](Pseudocode.md#post-mvp), компоненты и переменные — [`Architecture.md`](Architecture.md#post-mvp),
 выпуск и статус на стенде — [`Completion.md`](Completion.md#post-mvp). Решения — [`../decisions/`](../decisions/README.md) (D-001…D-010).
 
-Все команды — из каталога проекта `projects/01-testimonials-senja`, если не сказано иначе.
+Все команды — из каталога проекта `/home/proofwall`, если не сказано иначе.
 
 ## 0. Что получится в конце
 
@@ -48,7 +53,7 @@
 ## 2. Код и зависимости
 
 ```bash
-git clone git@github.com:djd1m/2026-AUG-PU-Projects.git && cd 2026-AUG-PU-Projects/projects/01-testimonials-senja
+git clone https://github.com/djd1m/proofwall.git /home/proofwall && cd /home/proofwall
 npm ci                       # монорепо npm workspaces: apps/*, services/*, packages/*
 npm run build:widget         # бандл виджета с content-hash → apps/web/public + widget-manifest.json
 ```
@@ -87,7 +92,7 @@ npm run typecheck                                                 # 0 ошибо
 
 ## 4. Конвейер разработки фичи (как делались FR-009…FR-016)
 
-1. **Тир:** `bash ../../scripts/complexity-router.sh <файлы>` — `0` T/S/M, `1` L/XL, `2` не выполнено.
+1. **Тир:** `bash scripts/complexity-router.sh <файлы>` — `0` T/S/M, `1` L/XL, `2` не выполнено.
    Деньги, вход, необратимое — L/XL.
 2. **План** `docs/features/<slug>/01…05_*.md` (spec, pseudocode, architecture, refinement, completion),
    затем `validation-report.md`; красный вердикт — новая ревизия плана, не код.
@@ -99,7 +104,7 @@ npm run typecheck                                                 # 0 ошибо
 ## 5. Проверки портов — ДО любого `up`
 
 ```bash
-node ../../.claude/hooks/check-ports.cjs .        # 0 — хранилища наружу не смотрят; 2 — проверка НЕ выполнена
+node .claude/hooks/check-ports.cjs .        # 0 — хранилища наружу не смотрят; 2 — проверка НЕ выполнена
 bash scripts/check-port-conflicts.sh .            # 0 — порты свободны; 1 — конфликт
 bash scripts/check-compose-buildable.sh           # СТАТИЧЕСКАЯ проверка, ничего не собирает (см. ниже)
 bash scripts/check-env-wiring.sh                  # каждая process.env.X сервиса есть в его environment:
@@ -256,7 +261,7 @@ git -C "$R" worktree add /tmp/pw-186f8b3 186f8b37 && git -C "$R" worktree add /t
 # а не services/agent-api, как в compose.agent-payments.yml сегодня
 ( cd /tmp/pw-3828a74/projects/01-testimonials-senja &&
   docker build -f services/agent-api/Dockerfile -t proofwall-agent-api:test-3828a74 . )
-node ../../.claude/hooks/check-ports.cjs . && bash scripts/check-port-conflicts.sh .
+node .claude/hooks/check-ports.cjs . && bash scripts/check-port-conflicts.sh .
 docker compose -f compose.agent-pilot.yml up -d postgres minio
 # обычные миграции 001…020 — тем же циклом psql, что в §6, с `-f compose.agent-pilot.yml`;
 # бакеты — той же командой mc, что в §6, с `-f compose.agent-pilot.yml`

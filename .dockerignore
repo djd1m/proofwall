@@ -27,3 +27,10 @@ harness-forge
 .github
 .claude
 *.log
+
+# Локальные инструменты и память процесса не входят в runtime-образ
+.agents
+.dz
+features
+openspec
+patches

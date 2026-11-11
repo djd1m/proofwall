@@ -1,17 +1,20 @@
 # Development Guide — Proofwall
 
+> Обновление 11.11.2026: проект выделен в `djd1m/proofwall`, каталог `/home/proofwall`.
+> Актуальный процесс — [workflow](docs/development/workflow.md), обязательные инструкции — [AGENTS.md](AGENTS.md).
+> Старые отчёты и адреса стендов ниже описывают исходный проект; на этом VPS сервисы не запускались.
+
+
 Пошаговый цикл разработки MVP-недели. Контекст продукта, стек и non-negotiable ограничения —
 в `CLAUDE.md`. Алгоритмы — `docs/Pseudocode.md`, схема данных и compose — `docs/Architecture.md`.
 
 ## 0. Открыть проект правильно (решение D-006)
 
-Репозиторий содержит 8 проектов; корневой `.claude/` — общий пайплайн. Работать над Proofwall
-нужно **из этой директории**, не из корня репозитория:
-
-```bash
-cd projects/01-testimonials-senja
-claude
-```
+Proofwall — самостоятельный npm-workspaces репозиторий. Работать из `/home/proofwall`.
+Общий инструментарий теперь устанавливается локально: Node.js 22, `npm ci`,
+`npm run process:install`. Приоритет новых процессных правил — `AGENTS.md` и
+`docs/development/workflow.md`; разделы про старые `/next`, `/plan`, `/feature`
+ниже оставлены как история исходного проекта и не являются установленными командами.
 
 ## 1. Поднять окружение
 
@@ -111,7 +114,7 @@ npm run build:widget && gzip -9 -c apps/widget/dist/widget.js | wc -c   # ≤30 
 `.claude/agents/code-reviewer.md` (4 неявных `@security`-соответствия):
 
 ```bash
-bash ../../scripts/check-pipeline-gaps.sh .
+bash scripts/check-pipeline-gaps.sh .
 ```
 
 ## 4. Definition of Done недели (Completion.md)
@@ -132,7 +135,7 @@ Growth-события, обязательные с первого релиза (
 
 ```bash
 # Фактический способ (стенд за уже работающим на машине прокси, как в docs/yookassa-setup.md):
-bash ../../scripts/check-port-conflicts.sh .      # до любого up
+bash scripts/check-port-conflicts.sh .      # до любого up
 docker compose -f docker-compose.yml -f compose.demo.yml up -d --build
 # точечный перезапуск одного сервиса:
 docker compose -f docker-compose.yml -f compose.demo.yml up -d web
