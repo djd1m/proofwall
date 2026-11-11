@@ -57,7 +57,7 @@ async function main() {
     assert.match(await page.$eval('body', e => e.innerText), /email аккаунта, в который вы сейчас вошли/);
     await page.click('button'); await page.waitForSelector('[role=status]');
     assert.match(await page.$eval('[role=status]', e => e.textContent), /текущего аккаунта уже подтверждён/);
-    assert.deepEqual(writes[0].body, {});
+    assert.deepEqual(writes[0].body, { expected_email: null });
     writes.length = 0; responseMode = 'unauthorized';
     await page.goto(`${origin}/verify-email`, { waitUntil: 'networkidle0' });
     await page.waitForSelector('[role=alert]'); assert.equal(writes.length, 0);

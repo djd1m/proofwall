@@ -89,11 +89,24 @@ describe('FR-102: bounded confirm/resend HTTP contracts', () => {
     const tasks: (() => Promise<void>)[] = []; const send = vi.fn().mockResolvedValue(undefined);
     expect((await handleResendVerification(request('/api/auth/resend-verification', {}), send, () => {})).status).toBe(401);
     expect((await handleResendVerification(request('/api/auth/resend-verification', { email: 'foreign@example.test' }, o.token), send, () => {})).status).toBe(400);
-    const r = await handleResendVerification(request('/api/auth/resend-verification', {}, o.token), send, t => tasks.push(t));
+    const r = await handleResendVerification(request('/api/auth/resend-verification', { expected_email: o.email }, o.token), send, t => tasks.push(t));
     expect(r.status).toBe(202); expect(await r.json()).toEqual({ email_delivery: 'scheduled' });
     expect(send).not.toHaveBeenCalled(); await tasks[0]!(); expect(send.mock.calls[0]![0].to).toBe(i.email);
     expect(send.mock.calls[0]![0].html).not.toContain('Стена');
-    expect((await handleResendVerification(request('/api/auth/resend-verification', {}, o.token), send, () => {})).status).toBe(429);
+    expect((await handleResendVerification(request('/api/auth/resend-verification', { expected_email: o.email }, o.token), send, () => {})).status).toBe(429);
+  });
+  it('resend отказывает при смене аккаунта между SSR и POST', async () => {
+    const a = await withService(c => registerAccountAndProject(c, input()));
+    const b = await withService(c => registerAccountAndProject(c, input()));
+    if (!a.ok || !b.ok) throw new Error('signup failed');
+    const original = await withService(c => issueEmailVerification(c, a.accountId, a.email));
+    const send = vi.fn(); const defer = vi.fn();
+    // Страница показывала B; общая cookie уже принадлежит A. B не выбирает адресат.
+    const r = await handleResendVerification(request('/api/auth/resend-verification', { expected_email: b.email }, a.token), send, defer);
+    expect(r.status).toBe(409); expect(send).not.toHaveBeenCalled(); expect(defer).not.toHaveBeenCalled();
+    const tokens = await withService(c => c.query('select used_at from email_verification_tokens where account_id=$1', [a.accountId]));
+    expect(tokens.rowCount).toBe(1); expect(tokens.rows[0].used_at).toBeNull();
+    expect(original.kind).toBe('issued');
   });
   it('resend отклоняет cross origin и не настроенную почту', async () => {
     const foreign = new Request(origin + '/api/auth/resend-verification', { method: 'POST',

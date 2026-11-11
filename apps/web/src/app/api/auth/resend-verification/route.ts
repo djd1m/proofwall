@@ -24,9 +24,13 @@ export async function handleResendVerification(
   }
   const raw = await readBodyAtMost(request, MAX_JSON_BODY);
   if (raw === null) return json({ error: 'тело запроса слишком большое' }, 413);
+  let expectedEmail: unknown;
   try {
     const body: unknown = JSON.parse(raw);
-    if (!body || typeof body !== 'object' || Array.isArray(body) || Object.keys(body).length) return json({ error: 'ожидается пустой объект' }, 400);
+    if (!body || typeof body !== 'object' || Array.isArray(body) || Object.keys(body).some(key => key !== 'expected_email')) {
+      return json({ error: 'некорректное тело запроса' }, 400);
+    }
+    expectedEmail = (body as { expected_email?: unknown }).expected_email;
   } catch { return json({ error: 'ожидается JSON' }, 400); }
   const cookie = request.headers.get('cookie')?.split(';').map(c => c.trim())
     .find(c => c.startsWith(`${SESSION_COOKIE}=`))?.slice(SESSION_COOKIE.length + 1);
@@ -37,9 +41,13 @@ export async function handleResendVerification(
       join sessions s on s.account_id=a.id where s.token_hash=$1 and s.revoked_at is null
       and s.expires_at>clock_timestamp()`, [sessionHash])).rows[0];
     if (!account) return { kind: 'unauthorized' as const };
+    // Precondition отображённого получателя, а не выбор адресата: cookie-authority
+    // единственная определяет account/email. Другая вкладка могла сменить cookie.
+    if (typeof expectedEmail !== 'string' || expectedEmail !== account.email) return { kind: 'identity_changed' as const };
     return issueEmailVerification(client, account.id, account.email, { sessionHash, ip: extractClientIP(request) });
   });
   if (result.kind === 'unauthorized') return json({ error: 'войдите в аккаунт' }, 401);
+  if (result.kind === 'identity_changed') return json({ error: 'аккаунт изменился: обновите страницу или войдите в нужный аккаунт' }, 409);
   if (result.kind === 'rate_limited') return json({ error: 'повторите позже: не чаще раза в минуту' }, 429);
   if (result.kind === 'verified') return json({ verified: true }, 200);
   const message = emailVerificationMessage(result.email, emailVerificationUrl(origin, result.token));

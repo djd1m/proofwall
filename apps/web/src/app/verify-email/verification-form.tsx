@@ -35,7 +35,7 @@ export function EmailVerificationForm({ accountEmail }: { accountEmail: string |
     try {
       const response = await fetch(resend ? '/api/auth/resend-verification' : '/api/auth/verify-email', {
         method: 'POST', headers: { 'content-type': 'application/json' },
-        body: JSON.stringify(resend ? {} : { token }),
+        body: JSON.stringify(resend ? { expected_email: accountEmail } : { token }),
       });
       const body = await response.json().catch(() => null) as { error?: string; verified?: boolean } | null;
       if (!response.ok) {

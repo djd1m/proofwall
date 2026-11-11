@@ -72,7 +72,7 @@ POST `/api/auth/verify-email`: bounded JSON `{token}`, success200 `{verified:tru
 unknown/expired/used/stale email одинаковый400. Не зависит от mailConfigured:
 выданный token работает даже при отключённом провайдере. GET никогда не мутирует.
 POST `/api/auth/resend-verification`: current session authority, recipient из БД,
-body не выбирает account/email; JSON Content-Type и Origin/Fetch-Site guards.
+body не выбирает account/email; expected_email лишь precondition показанного SSR адреса, mismatch409 до issue; JSON Content-Type и Origin/Fetch-Site guards.
 401 без сессии, 429 rate limit, 503 mail unavailable/config/scheduling failure,
 200 verified/no-op или202 scheduled. Повтор отзывает старый token; сеть после COMMIT.
 Confirm possession-based, не cookie authority: его доступ не связывать с настройкой

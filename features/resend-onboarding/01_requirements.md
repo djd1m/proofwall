@@ -1,7 +1,7 @@
 # Требования
 
 Нормативная дельта: openspec/changes/resend-onboarding/specs/transactional-email/spec.md
-SHA-256: 67808d74c1afc7fcb4765ea7b7bad04ed8987d6eb4a61809d1f56889305c1cec
+SHA-256: 3d5b4483ce81d238e895fc351265cba9c389b0e21b81990a96352570684ded82
 
 | ID | Требование / scenario |
 |---|---|
