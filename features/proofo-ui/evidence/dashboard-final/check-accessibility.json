@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "exitCode": 0,
+  "command": "node_modules/.bin/node features/proofo-ui/evidence/dashboard-final/a11y-probe.mjs",
+  "artifacts": [
+    "features/proofo-ui/evidence/dashboard-final/accessibility-results.json",
+    "features/proofo-ui/evidence/dashboard-final/accessibility-manual.json",
+    "features/proofo-ui/evidence/dashboard-final/browser-measurements.json"
+  ],
+  "detail": {
+    "automatedLiveCases": 6,
+    "violations": 0,
+    "manualIncompleteTargets": "brand gradient, mark, decorative card arrow",
+    "limits": "Named axe/keyboard/contrast checks; no full screen-reader certification"
+  }
+}

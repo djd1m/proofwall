@@ -1,0 +1,140 @@
+[
+  {
+    "case": "style contract",
+    "width": 1440,
+    "contract": {
+      "body": {
+        "fontFamily": "body, Arial, sans-serif",
+        "backgroundColor": "rgb(242, 237, 227)",
+        "backgroundImage": "radial-gradient(circle at 1px 1px, rgba(23, 20, 15, 0.043) 1px, rgba(0, 0, 0, 0) 0px), radial-gradient(circle at 1px 1px, rgba(23, 20, 15, 0.03) 1px, rgba(0, 0, 0, 0) 0px)",
+        "backgroundSize": "22px 22px, 22px 22px",
+        "backgroundPosition": "0px 0px, 11px 11px"
+      },
+      "shell": {
+        "x": 128,
+        "y": 56,
+        "width": 1184,
+        "padding": "0px 32px"
+      }
+    }
+  },
+  {
+    "case": "style contract",
+    "width": 390,
+    "contract": {
+      "body": {
+        "fontFamily": "body, Arial, sans-serif",
+        "backgroundColor": "rgb(242, 237, 227)",
+        "backgroundImage": "radial-gradient(circle at 1px 1px, rgba(23, 20, 15, 0.043) 1px, rgba(0, 0, 0, 0) 0px), radial-gradient(circle at 1px 1px, rgba(23, 20, 15, 0.03) 1px, rgba(0, 0, 0, 0) 0px)",
+        "backgroundSize": "22px 22px, 22px 22px",
+        "backgroundPosition": "0px 0px, 11px 11px"
+      },
+      "shell": {
+        "x": 0,
+        "y": 28,
+        "width": 390,
+        "padding": "0px 16px"
+      }
+    }
+  },
+  {
+    "case": "style contract",
+    "width": 360,
+    "contract": {
+      "body": {
+        "fontFamily": "body, Arial, sans-serif",
+        "backgroundColor": "rgb(242, 237, 227)",
+        "backgroundImage": "radial-gradient(circle at 1px 1px, rgba(23, 20, 15, 0.043) 1px, rgba(0, 0, 0, 0) 0px), radial-gradient(circle at 1px 1px, rgba(23, 20, 15, 0.03) 1px, rgba(0, 0, 0, 0) 0px)",
+        "backgroundSize": "22px 22px, 22px 22px",
+        "backgroundPosition": "0px 0px, 11px 11px"
+      },
+      "shell": {
+        "x": 0,
+        "y": 28,
+        "width": 360,
+        "padding": "0px 16px"
+      }
+    }
+  },
+  {
+    "case": "exact visual and three mutations",
+    "width": 1440,
+    "changedPixels": 0,
+    "mutationsRejected": 3
+  },
+  {
+    "case": "exact visual and three mutations",
+    "width": 390,
+    "changedPixels": 0,
+    "mutationsRejected": 3
+  },
+  {
+    "case": "exact visual and three mutations",
+    "width": 360,
+    "changedPixels": 0,
+    "mutationsRejected": 3
+  },
+  {
+    "case": "long title keyboard overflow",
+    "width": 360,
+    "titleKind": 0,
+    "overflow": false,
+    "keyboardNavigated": true
+  },
+  {
+    "case": "long title keyboard overflow",
+    "width": 360,
+    "titleKind": 1,
+    "overflow": false,
+    "keyboardNavigated": true
+  },
+  {
+    "case": "long title keyboard overflow",
+    "width": 360,
+    "titleKind": 2,
+    "overflow": false,
+    "keyboardNavigated": true
+  },
+  {
+    "case": "long title keyboard overflow",
+    "width": 390,
+    "titleKind": 0,
+    "overflow": false,
+    "keyboardNavigated": true
+  },
+  {
+    "case": "long title keyboard overflow",
+    "width": 390,
+    "titleKind": 1,
+    "overflow": false,
+    "keyboardNavigated": true
+  },
+  {
+    "case": "long title keyboard overflow",
+    "width": 390,
+    "titleKind": 2,
+    "overflow": false,
+    "keyboardNavigated": true
+  },
+  {
+    "case": "long title keyboard overflow",
+    "width": 1440,
+    "titleKind": 0,
+    "overflow": false,
+    "keyboardNavigated": true
+  },
+  {
+    "case": "long title keyboard overflow",
+    "width": 1440,
+    "titleKind": 1,
+    "overflow": false,
+    "keyboardNavigated": true
+  },
+  {
+    "case": "long title keyboard overflow",
+    "width": 1440,
+    "titleKind": 2,
+    "overflow": false,
+    "keyboardNavigated": true
+  }
+]

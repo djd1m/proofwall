@@ -1,0 +1,59 @@
+{
+  "reviewer": "qcsd-risk",
+  "family": "codex",
+  "independent": true,
+  "verdict": "clean",
+  "conditions": [
+    {
+      "id": "RISK-1",
+      "owner": "qcsd-risk",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "Устранить противоречие: закрепить один SQL statement для всей проекции, как в 05_architecture.md, либо задать и доказать реальный единый transaction snapshot с явной подходящей изоляцией до первого data SELECT; одного READ ONLY недостаточно. В будущей проверке конкурентная запись между чтениями не должна давать несовместимые counts/cards.",
+      "scope": [
+        "features/proofo-ui/03_adr/001-read-owned-dashboard-summary.md",
+        "features/proofo-ui/05_architecture.md"
+      ],
+      "evidence": "ADR-001 разрешает альтернативу одной read-only транзакционной snapshot, архитектура требует один statement; packages/db/src/tenant.ts начинает BEGIN без установки isolation level. При стандартном READ COMMITTED отдельные SELECT получают отдельные снимки; READ ONLY само по себе этого не исправляет. Это неоднозначность до реализации, не заявленная эксплуатационная ошибка."
+    },
+    {
+      "id": "RISK-2",
+      "owner": "qcsd-risk",
+      "severity": "WARNING",
+      "classification": "structural",
+      "requirement": "Закрепить для isolated PG явное доказательство роли и RLS: внутри withAccount проверить current_user=app_authenticated, что роль не BYPASSRLS и не владелец защищаемых таблиц; прямые запросы к projects, testimonials, analytics_events и widget_installs без tenant WHERE из контекста A не возвращают данные B, затем проверить полную сводку A/B с активными и деактивированными детьми. Fixture сеется отдельно через сервисную роль.",
+      "scope": [
+        "features/proofo-ui/03_adr/001-read-owned-dashboard-summary.md",
+        "features/proofo-ui/05_architecture.md"
+      ],
+      "evidence": "packages/db/src/tenant.ts переключает роль SET LOCAL ROLE app_authenticated; migration 007 задаёт RLS через project_id. A/B тест, который проверяет только явные фильтры в SQL, может пройти даже при неработающей RLS и не доказать заявленную независимую границу. Не утверждается, что существующая RLS сломана."
+    }
+  ],
+  "verifications": [
+    {
+      "id": "RISK-1",
+      "revision": "7a3b55bd332adf0e872df2470f9b090d497f9532ab451c2b01ed8d74a3647aef",
+      "classification": "structural",
+      "evidence": "ADR-001 Decision и Confirmation и 05_architecture.md Query algorithm и RISK-1 теперь требуют строго один data SQL statement с независимыми агрегатами после role/GUC setup; multi-command READ ONLY альтернатива прямо запрещена, предписаны source/query-count check и именованный DB test. OpenSpec scenario «Единый снимок и независимая RLS» и план AM-6 согласованы. Проверено решение в документах, реализация/тесты не выполнялись. Повторная узкая проверка: изменение FR-006 добавляет только привязку сценария «Состав числа отзывов»; собственный контракт не изменён.",
+      "implementationVerified": true
+    },
+    {
+      "id": "RISK-2",
+      "revision": "7a3b55bd332adf0e872df2470f9b090d497f9532ab451c2b01ed8d74a3647aef",
+      "classification": "structural",
+      "evidence": "ADR-001 Confirmation и 05_architecture.md RISK-2/TEST-1 требуют отдельного service seed и withAccount(A), current_user=app_authenticated, tenant GUC=A, rolbypassrls=false, отсутствия ownership четырёх таблиц и прямых unscoped SELECT к projects, testimonials, analytics_events, widget_installs с видимыми A и невидимыми B; aggregate c inactive children проверяется отдельно. FR/OpenSpec и план AM-7/AM-8 подтверждают контракт; это проверка дизайна, не результат PG-тестов. Повторная узкая проверка: изменение FR-006 добавляет только привязку сценария «Состав числа отзывов»; собственный контракт не изменён.",
+      "implementationVerified": true
+    }
+  ],
+  "newRisks": {
+    "assessment": "Фокусная независимая проверка исправленного дизайна закрывает RISK-1 и RISK-2 на ревизии host; новых условий по risk-роли не обнаружено. Матрица P×I ниже сохраняется как план проверок будущей реализации, не как выполненные gates; P/I являются качественными оценками, не статистикой.",
+    "evidence": "A/B и RLS: 4×5=20, critical — реальная isolated PG, роль и RLS доказаны отдельно от фильтра, оба арендатора, их карточки, totals, тарифы и события, включая детей деактивированных проектов; foreign slug не открывается. Размножение joins/противоречивый снимок: 4×4=16, high — 2+ testimonials разных статусов, 2+ clicks и 2+ наблюдаемых пар project/domain на одном проекте, точные независимые counts и одно statement; source/query-count подтверждает строго один data statement. UTC окно: 3×4=12, high — фиксированное now, точки start−ε/start/now−ε/now/now+ε и старые значения для events и last_seen_at, включён только start и внутренние точки; общий domain у двух стен считается дважды. Неизвестные и ошибка: 4×4=16, high — wall opens/card opens/widget impressions всегда null→доступные «—»/«Нет данных», badge_impression не заменяет их; успешный известный ноль отдельно; сбой БД даёт error с действительным retry, не empty success. Тариф: 3×4=12, high — free, paid future, paid exactly now/expired/null/invalid и mixed, сравнить с существующим isPaid при одном now; никакой demo цены/лимита в live, ссылка на нужный проект. Fixture и auth: 3×5=15, high — pure общий view, fixture только в локальном renderer вне Next routes, отказ служебных route/query/header overrides, обычная session и isolated DB без production secrets/писем; 0 pixel diff immutable baseline для 1440×900/390×844/360×800 и отдельные отказавшие font/margin/color mutations. Совместимость и UX: 3×3=9, medium — 0/1/N, XSS-like branding/plain text, безопасный slug, keyboard/focus и без переполнения на обоих mobile; direct project/email notice и recovery regressions. Baseline manifest dashboard-v3 и hashes проверены как файлы, приложение/DB/E2E/visual проверки не запускались.",
+    "conditions": []
+  },
+  "authorAssessmentChecked": true,
+  "deltaVerification": {
+    "classification": "structural",
+    "evidence": "Независимо прочитаны ideation-author-delta.json, ADR-001, архитектура, обновлённые требования, план и OpenSpec; RISK-1/2 в авторской delta подтверждены текущими design-контрактами. Хеши всех семи host-файлов совпадают с manifest, SHA OpenSpec 57e33113157e014fd741f04be2e8d0594d3d64fcf010d5915e51b8c07484c7ce совпадает с FR. True означает подтверждение design rework в ideation, не готовность приложения и не результаты тестов. Авторская delta дополнена привязкой FR-006; обратная реконструкция этой единственной правки даёт SHA прежнего 01_requirements 887c95470646463720879153f4ae0f1891daf08dc4c37613d4a157c453374004; остальные шесть design hashes остались прежними. Тесты приложения/PG не запускались.",
+    "implementationVerified": true
+  }
+}

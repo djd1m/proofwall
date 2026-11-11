@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "data": {
+    "stored": true,
+    "key": "patterns/feature-adr/fleet/proofo-dashboard-authority-20261111",
+    "namespace": "learning",
+    "timestamp": "2026-11-11T20:57:10.276Z",
+    "persisted": true,
+    "vectorIndex": {
+      "status": "failed",
+      "error": {
+        "code": "VECTOR_INDEX_UNAVAILABLE",
+        "message": "Semantic vector indexing is unavailable for this entry. Configure AQE_EMBEDDER_ENDPOINT for the recommended remote backend. The compatible local @huggingface/transformers@4.2.0 dependency chain currently has unresolved HIGH advisories GHSA-xcpc-8h2w-3j85 and GHSA-f88m-g3jw-g9cj."
+      }
+    }
+  }
+}

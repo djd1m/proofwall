@@ -1,0 +1,34 @@
+{
+  "method": "Manual coordinator evaluation of the two axe incomplete targets using actual scoped CSS and WCAG sRGB relative luminance; conservative overlapping gradient alpha bound (both dots) darkens the light background most. Not a full screen-reader/WCAG certification.",
+  "source": "apps/web/src/app/dashboard/dashboard.css",
+  "sourceSha256": "54ffaef4d747c22f397a0ec67dbc62092e3a6357241e550a85e2925fc77346e5",
+  "brand": {
+    "foregroundRGB": [
+      23,
+      20,
+      15
+    ],
+    "worstBackgroundRGB": [
+      225.87064999999998,
+      221.01794999999998,
+      211.3862
+    ],
+    "contrastRatio": 13.572384190621824,
+    "requiredRatioConservative": 4.5,
+    "result": "passed"
+  },
+  "mark": {
+    "meaning": "Brand mark accompanying visible brand text",
+    "contrastRatioWhiteOnAccent": 4.719168294739833,
+    "requiredNonTextRatio": 3,
+    "result": "passed"
+  },
+  "baselineFixtureException": "The synthetic reference locked-card link has 4.29:1 at 14px and fails axe contrast. It is absent from the live product data model. Reference not edited; full WCAG compliance of the static prototype is not claimed.",
+  "cardArrow": {
+    "target": "span[aria-hidden=\"true\"] inside populated project h3",
+    "meaning": "Decorative navigation arrow; excluded from accessible name with aria-hidden=true. Meaning also conveyed by named link and keyboard behavior.",
+    "foreground": "#17140f",
+    "background": "#fffdf8",
+    "result": "reviewed; decorative, no additional readable text requirement"
+  }
+}

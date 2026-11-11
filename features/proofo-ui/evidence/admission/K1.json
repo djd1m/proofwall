@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "exitCode": 0,
+  "command": "node --input-type=module (inline: exact old/current plan equality after deleting only reasoned TWIN_NOT_A_TARGET section)",
+  "designDigest": "942b0056da05fb680ad67ebd581fe23de482c9a206e1da367e0215e9c772ac49",
+  "originalPrecreationEvidence": "features/proofo-ui/evidence/admission/K1-original.json",
+  "originalEvidenceSha256": "948feee2ed798cb9ed6069e6c80831e678f2cdf658f36ba5bf3b29357b753cc0",
+  "oldPlanSha256": "b7401a66bc10f02a67e10ff66f64bd5e6e9762173e8b8bb29877762d81731d72",
+  "currentPlanSha256": "69cfe784dd155731a035767d89a641435e6ebb80634bebc84044555d4f63bee3",
+  "newModuleCommandOrExportNames": false,
+  "explanation": "Original real pre-creation K1 retained; repair introduces no new modules, commands or exports, and preserves all 18 literal targets. This is a measured no-new-names rebinding, not a repeated FREE claim for existing code."
+}

@@ -1,0 +1,327 @@
+{
+  "reviewer": "qe-regression",
+  "family": "codex",
+  "reviewerModel": "gpt-6-astra",
+  "reasoning": "xhigh",
+  "authorModel": "gpt-6.1-sol",
+  "independentSession": true,
+  "createdAt": "2026-11-11T20:35:54.264Z",
+  "revision": "4fb5f45771da845cfb31b82638322ed64f90d265402c5ac42f99e9125c77a72c",
+  "nonce": "c31c4bbe-bef2-49ee-9d89-863decf9f99b",
+  "baseCommit": "cd7ecb481f1ec6370f8e1d617d2c7e18528a964e",
+  "manifest": [
+    {
+      "path": "apps/web/public/proofo/body.woff2",
+      "digest": "d46c189e06e905afb249cac3de1e6f532ddc7b7bcf046193027f6bfd22a0d985",
+      "actualDigest": "d46c189e06e905afb249cac3de1e6f532ddc7b7bcf046193027f6bfd22a0d985"
+    },
+    {
+      "path": "apps/web/public/proofo/display.woff2",
+      "digest": "21f1068a46ae7111c5887098ec1aa173204d0a72585d1f8cff99d38ac3833158",
+      "actualDigest": "21f1068a46ae7111c5887098ec1aa173204d0a72585d1f8cff99d38ac3833158"
+    },
+    {
+      "path": "apps/web/src/app/dashboard/dashboard-overview.tsx",
+      "digest": "4f1cab6df35ccd0bddb743635cea96c9ec71222be94e945eaa012c7b3bcd9e8e",
+      "actualDigest": "4f1cab6df35ccd0bddb743635cea96c9ec71222be94e945eaa012c7b3bcd9e8e"
+    },
+    {
+      "path": "apps/web/src/app/dashboard/dashboard.css",
+      "digest": "54ffaef4d747c22f397a0ec67dbc62092e3a6357241e550a85e2925fc77346e5",
+      "actualDigest": "54ffaef4d747c22f397a0ec67dbc62092e3a6357241e550a85e2925fc77346e5"
+    },
+    {
+      "path": "apps/web/src/app/dashboard/error.tsx",
+      "digest": "d1fb986b327bf14b509cf073d210206269e919520cd11eea9513d4dde385778b",
+      "actualDigest": "d1fb986b327bf14b509cf073d210206269e919520cd11eea9513d4dde385778b"
+    },
+    {
+      "path": "apps/web/src/app/dashboard/page.tsx",
+      "digest": "3ad9f0a373bdb62f1655645986721898e55930f1b22e847eb85aea9d1801640d",
+      "actualDigest": "3ad9f0a373bdb62f1655645986721898e55930f1b22e847eb85aea9d1801640d"
+    },
+    {
+      "path": "apps/web/src/lib/dashboard-summary.ts",
+      "digest": "55dfb5bad26f217997894917b3328043977577ddde577c761f371cd5152621e1",
+      "actualDigest": "55dfb5bad26f217997894917b3328043977577ddde577c761f371cd5152621e1"
+    },
+    {
+      "path": "apps/web/tests/dashboard-overview-db.test.ts",
+      "digest": "e8d0b76cf4c1b7b93631f821c1802d662f17ad5c53b1ce6463c1cb933c98a849",
+      "actualDigest": "e8d0b76cf4c1b7b93631f821c1802d662f17ad5c53b1ce6463c1cb933c98a849"
+    },
+    {
+      "path": "apps/web/tests/dashboard-overview.test.ts",
+      "digest": "d3baf494d1b180ae9754f95891ca092e4c060d532182a73ebcb5095052ddcbca",
+      "actualDigest": "d3baf494d1b180ae9754f95891ca092e4c060d532182a73ebcb5095052ddcbca"
+    },
+    {
+      "path": "apps/web/tests/dashboard-visual-fixture.test.ts",
+      "digest": "4123bfbf888c331e78bd92594a9a6999f5bed378b736af67a74555382a287669",
+      "actualDigest": "4123bfbf888c331e78bd92594a9a6999f5bed378b736af67a74555382a287669"
+    },
+    {
+      "path": "features/proofo-ui/00_complexity_assessment.md",
+      "digest": "16998f3b9f347f3c9d41a89052863ae17e05b45c6dd3f1fa997db08d319442c9",
+      "actualDigest": "16998f3b9f347f3c9d41a89052863ae17e05b45c6dd3f1fa997db08d319442c9"
+    },
+    {
+      "path": "features/proofo-ui/01_requirements.md",
+      "digest": "2fa80dc740ef67c1ad22c437f3043f89d3c94de2404d9ba9895b8855969a37f3",
+      "actualDigest": "2fa80dc740ef67c1ad22c437f3043f89d3c94de2404d9ba9895b8855969a37f3"
+    },
+    {
+      "path": "features/proofo-ui/02_research.md",
+      "digest": "3499658b9848848a41974b10929bdebbc7f9767b834038ac44a87d8f298dbc55",
+      "actualDigest": "3499658b9848848a41974b10929bdebbc7f9767b834038ac44a87d8f298dbc55"
+    },
+    {
+      "path": "features/proofo-ui/03.5_ideation_report.md",
+      "digest": "0cf81171910a46cac6a226fc917770e9a44ed9d4d196ef775105537e2fbcf65e",
+      "actualDigest": "0cf81171910a46cac6a226fc917770e9a44ed9d4d196ef775105537e2fbcf65e"
+    },
+    {
+      "path": "features/proofo-ui/03_adr/001-read-owned-dashboard-summary.md",
+      "digest": "a2f9a55ded15c4da96f2cdfa9b317a7d361bed6179baa82f89ff2304bb513d32",
+      "actualDigest": "a2f9a55ded15c4da96f2cdfa9b317a7d361bed6179baa82f89ff2304bb513d32"
+    },
+    {
+      "path": "features/proofo-ui/03_adr/002-share-pure-view-with-isolated-fixture.md",
+      "digest": "675859e11a7218be42c81c45fa850ec1d6b5908a70779d902b0629ec5fb4dc8c",
+      "actualDigest": "675859e11a7218be42c81c45fa850ec1d6b5908a70779d902b0629ec5fb4dc8c"
+    },
+    {
+      "path": "features/proofo-ui/04_domain_model.md",
+      "digest": "92325264a0a34f5667e0e01993bbad4704b63d2e1a01b2135853586cc01d22cd",
+      "actualDigest": "92325264a0a34f5667e0e01993bbad4704b63d2e1a01b2135853586cc01d22cd"
+    },
+    {
+      "path": "features/proofo-ui/05_architecture.md",
+      "digest": "bb637115cf3580d0fb0b6f994f76717c7a4940348c3d6d85307d8d808f82b130",
+      "actualDigest": "bb637115cf3580d0fb0b6f994f76717c7a4940348c3d6d85307d8d808f82b130"
+    },
+    {
+      "path": "features/proofo-ui/06_implementation_plan.md",
+      "digest": "b7401a66bc10f02a67e10ff66f64bd5e6e9762173e8b8bb29877762d81731d72",
+      "actualDigest": "b7401a66bc10f02a67e10ff66f64bd5e6e9762173e8b8bb29877762d81731d72"
+    },
+    {
+      "path": "openspec/changes/proofo-dashboard/proposal.md",
+      "digest": "3f3857e50b4599080925def45667d1dea9858388506d418c06d3d6c36ae1d695",
+      "actualDigest": "3f3857e50b4599080925def45667d1dea9858388506d418c06d3d6c36ae1d695"
+    },
+    {
+      "path": "openspec/changes/proofo-dashboard/specs/dashboard-overview/spec.md",
+      "digest": "57e33113157e014fd741f04be2e8d0594d3d64fcf010d5915e51b8c07484c7ce",
+      "actualDigest": "57e33113157e014fd741f04be2e8d0594d3d64fcf010d5915e51b8c07484c7ce"
+    },
+    {
+      "path": "openspec/changes/proofo-dashboard/tasks.md",
+      "digest": "e6d83bc3b7da068efde1e2cc07aa8ff7cb91d752692c557467561fcc22386c2d",
+      "actualDigest": "e6d83bc3b7da068efde1e2cc07aa8ff7cb91d752692c557467561fcc22386c2d"
+    },
+    {
+      "path": "scripts/capture-proofo-reference.mjs",
+      "digest": "db2516c8636d39339c04a39ef3a3dde0a64f1faf6fd7770f069b4fa3cc236623",
+      "actualDigest": "db2516c8636d39339c04a39ef3a3dde0a64f1faf6fd7770f069b4fa3cc236623"
+    },
+    {
+      "path": "scripts/check-proofo-visual.mjs",
+      "digest": "9e74df16a924788c140c7cc610c85b908a2af23547c157ea6e00fca7a998fc83",
+      "actualDigest": "9e74df16a924788c140c7cc610c85b908a2af23547c157ea6e00fca7a998fc83"
+    },
+    {
+      "path": "scripts/proofo-visual-paths.test.mjs",
+      "digest": "abab51760789a30ca7bb91093d9f17885d43a0413912eea52ed5a412cecc8989",
+      "actualDigest": "abab51760789a30ca7bb91093d9f17885d43a0413912eea52ed5a412cecc8989"
+    },
+    {
+      "path": "scripts/render-dashboard-fixture.mjs",
+      "digest": "ff07638afb75de5a75fc20c50b324e7d757e80a8a4a9361179b5cdc43e7787be",
+      "actualDigest": "ff07638afb75de5a75fc20c50b324e7d757e80a8a4a9361179b5cdc43e7787be"
+    },
+    {
+      "path": "scripts/run-dashboard-preview.mjs",
+      "digest": "f37ef6e9caa1be1745fba10cc029ccf7d842f2c36d99153efa46814c1253a0e9",
+      "actualDigest": "f37ef6e9caa1be1745fba10cc029ccf7d842f2c36d99153efa46814c1253a0e9"
+    },
+    {
+      "path": "tools/visual/dashboard.e2e.test.mjs",
+      "digest": "33b8399d4d1e9ec2897d5322ee2f05933489f2b57b3c39bfc314871bb05a25e6",
+      "actualDigest": "33b8399d4d1e9ec2897d5322ee2f05933489f2b57b3c39bfc314871bb05a25e6"
+    },
+    {
+      "path": "tools/visual/package-lock.json",
+      "digest": "9e784b9d208dd109e5283fbba1ca3df232c93fef51b833b1238f2d3b56b8dcf8",
+      "actualDigest": "9e784b9d208dd109e5283fbba1ca3df232c93fef51b833b1238f2d3b56b8dcf8"
+    },
+    {
+      "path": "tools/visual/package.json",
+      "digest": "150fe3c78b7a5a30f7a3dcee54ca697d1262617186e409694ed77f2a225f8411",
+      "actualDigest": "150fe3c78b7a5a30f7a3dcee54ca697d1262617186e409694ed77f2a225f8411"
+    }
+  ],
+  "unchanged": [
+    {
+      "path": "apps/web/src/app/dashboard/[slug]/page.tsx",
+      "equalsHead": true
+    },
+    {
+      "path": "apps/web/src/app/globals.css",
+      "equalsHead": true
+    },
+    {
+      "path": "apps/web/src/app/layout.tsx",
+      "equalsHead": true
+    },
+    {
+      "path": "apps/web/src/lib/tariff.ts",
+      "equalsHead": true
+    },
+    {
+      "path": "apps/web/src/lib/current-session.ts",
+      "equalsHead": true
+    },
+    {
+      "path": "apps/web/src/lib/register.ts",
+      "equalsHead": true
+    },
+    {
+      "path": "apps/web/src/lib/login.ts",
+      "equalsHead": true
+    },
+    {
+      "path": "apps/web/src/lib/storage.ts",
+      "equalsHead": true
+    },
+    {
+      "path": "packages/db/src/index.ts",
+      "equalsHead": true
+    },
+    {
+      "path": "package-lock.json",
+      "equalsHead": true
+    }
+  ],
+  "pgIdentity": [
+    {
+      "workspace": "apps/web/package.json",
+      "resolved": "/tmp/proofwall-dashboard-baseline-external/node_modules/pg/lib/index.js"
+    },
+    {
+      "workspace": "packages/db/package.json",
+      "resolved": "/tmp/proofwall-dashboard-baseline-external/node_modules/pg/lib/index.js"
+    },
+    {
+      "workspace": "packages/agent-payments/package.json",
+      "resolved": "/tmp/proofwall-dashboard-baseline-external/node_modules/pg/lib/index.js"
+    }
+  ],
+  "coverage": {
+    "statements": null,
+    "branches": null,
+    "functions": null,
+    "lines": null,
+    "differential": null,
+    "reason": "Нет source coverage artifacts, baseline/head instrumentation и installed coverage-v8/istanbul/c8; case counts не являются code coverage."
+  },
+  "runs": [
+    {
+      "kind": "full-web",
+      "exitCode": 1,
+      "passed": 921,
+      "failed": 1,
+      "skipped": 3,
+      "note": "One-statement spy observed 0 calls during external dependency identity transition; сохранён исходный провал."
+    },
+    {
+      "kind": "affected-db-rerun",
+      "exitCode": 0,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "kind": "browser-selected",
+      "exitCode": 0,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "explicitlyNotSelected": 2
+    },
+    {
+      "kind": "own-browser-probe",
+      "exitCode": 0,
+      "passed": 11,
+      "note": "Первый geometry probe считал 0.000031px float difference дефектом; первоначальный log сохранён, geometric measurement округлено до 0.001px, exact computed styles не ослаблены."
+    },
+    {
+      "kind": "typecheck",
+      "exitCode": 0
+    },
+    {
+      "kind": "visual-paths",
+      "exitCode": 0,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0
+    }
+  ],
+  "files": [
+    {
+      "path": "features/proofo-ui/evidence/qe-regression-artifacts/browser-measurements.json",
+      "bytes": 3535,
+      "sha256": "fba786771cec3ffd90b78e141933fe0fa106800043578a6c743ac806d46b0374"
+    },
+    {
+      "path": "features/proofo-ui/evidence/qe-regression-artifacts/browser.log",
+      "bytes": 1231,
+      "sha256": "428581b571ee6d542444f31a0bee0dd40c5d618df7ca2cfc22ed5005365d3759"
+    },
+    {
+      "path": "features/proofo-ui/evidence/qe-regression-artifacts/db-rerun.log",
+      "bytes": 446,
+      "sha256": "b479f8726cf34dec5d1777069bbc52b5b2ae5a36fcf9619a0e5608a7b074547e"
+    },
+    {
+      "path": "features/proofo-ui/evidence/qe-regression-artifacts/probe-initial.json",
+      "bytes": 108,
+      "sha256": "35ccbdf0c5dea6e1b9d380fb920464b20cdbd0ddd7967e50136625ac0dc1688d"
+    },
+    {
+      "path": "features/proofo-ui/evidence/qe-regression-artifacts/probe-initial.log",
+      "bytes": 26315,
+      "sha256": "0766b45f4cb9822cf44fd54981be83b5a7cc55872de0b2a38ba7ca34e1e6404f"
+    },
+    {
+      "path": "features/proofo-ui/evidence/qe-regression-artifacts/probe.json",
+      "bytes": 1371,
+      "sha256": "4b920c1c6a038c862e8fba455990498968bc48f3a045518112efb19a0d9b44d4"
+    },
+    {
+      "path": "features/proofo-ui/evidence/qe-regression-artifacts/probe.log",
+      "bytes": 79,
+      "sha256": "4779fb2e03067e9728d53ced2f9e5b8d0cff4603f0c14f2fb725fdd1143982d3"
+    },
+    {
+      "path": "features/proofo-ui/evidence/qe-regression-artifacts/probe.mjs",
+      "bytes": 6562,
+      "sha256": "e64bb3f347942ac78a6585dfc593ce23f8120f933751938ce7572a588f49e7ae"
+    },
+    {
+      "path": "features/proofo-ui/evidence/qe-regression-artifacts/typecheck.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "features/proofo-ui/evidence/qe-regression-artifacts/visual-paths.log",
+      "bytes": 1696,
+      "sha256": "681d6f642e7ea6327ba2ee5727b77dcfa004ecf47d818d7b4e0e17b5b5d2c886"
+    },
+    {
+      "path": "features/proofo-ui/evidence/qe-regression-artifacts/vitest.log",
+      "bytes": 22170,
+      "sha256": "09fe34abf93ee395c52bcf0c3601dc940d62a7dfeed857e69734694ad6545a5c"
+    }
+  ]
+}

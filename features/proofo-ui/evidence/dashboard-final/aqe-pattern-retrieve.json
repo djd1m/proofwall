@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "data": {
+    "found": true,
+    "key": "patterns/feature-adr/fleet/proofo-dashboard-authority-20261111",
+    "value": {
+      "pattern": "RLS-тест должен проверять роль и tenant GUC фактического summary statement на том же client/transaction; отдельный тест helper-транзакции пропускает withService-регрессию при сохранённом account WHERE.",
+      "confidence": 0.9,
+      "type": "fleet-qe-finding",
+      "metadata": {
+        "tier": "L",
+        "verdict": "COMPLETE",
+        "agents_used": 4,
+        "remediation_count": 1
+      }
+    },
+    "timestamp": "2026-11-11T20:57:11.158Z"
+  }
+}

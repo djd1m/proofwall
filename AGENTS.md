@@ -13,10 +13,17 @@
    изменений применять независимое ревью по `docs/review-policy.md`.
 3. Выполнить `npm run dz -- recall "<тема>" --project /home/proofwall --limit 3`;
    прочитать результат. Пустой ответ или ошибка не означают применение знания.
-4. Новые фичи вести по локальному `.agents/skills/feature-adr/SKILL.md`:
+4. Новые фичи вести через `/feature-adr --full-qe` по локальному `.agents/skills/feature-adr/SKILL.md`:
    сложность → требования → reuse → применимые ADR/QCSD/архитектура → план →
    настоящие K1/K2/checkpoints → код → тесты/QE → независимое ревью → anti-drift.
    Не выдумывать успешные gates, receipts, разрешения владельца или результаты проверок.
+5. Direct QE: сначала `.agents/agentic-qe/PROOFWALL-INTEGRATION.md`. Полные навыки
+   закреплены GitHub commit `98f241fc8b9d48d017cbdb63ab890104e30397d0`, runtime
+   `agentic-qe@3.15.19` локальный. Runtime/обязательный gate недоступен → BLOCKED,
+   не тихий переход в reference. Query памяти → retrieve значений перед применением.
+   Native hooks действуют только в активированном проектном запуске; подготовленный
+   launcher — `bash scripts/codex-project.sh`. Текущий root-сеанс не считать автоматически
+   переключённым в `/home/proofwall` после создания файлов конфигурации.
 
 ## Источники и процесс
 
@@ -42,7 +49,16 @@
 - Перед реализацией UI показать конкретный макет владельцу и согласовать его.
 - Цикл: согласованный макет/план → тестовая копия → E2E UI/UX → ссылка и инструкция
   владельцу → ручная приёмка → отдельно разрешённая production-поставка того же артефакта.
-  Домен/стенд Proofwall на этом VPS ещё не выбран. Не подставлять адрес Clipmkr.
+  Текущий тестовый HTTPS-стенд — `proofwall.78.17.53.233.sslip.io`; не подставлять Clipmkr.
+  Макеты `/__design/proofo/` — отдельный static preview, не доказательство готовности UI.
+- Актуальный полный план UI/UX и email: `features/proofo-ui/06_team_execution_plan.md`.
+  Первый UI-инкремент: dashboard/branding/collect; зафиксированные baseline, pixel diff,
+  независимое QE. Не обновлять snapshots автоматически ради прохождения тестов.
+- `npm run process:check` и `npm run process:test` проверяют процесс; `process:delivery`
+  требует актуальные product evidence. Эти команды не заменяют настоящий visual/E2E.
+- Решение владельца: пока работаем без GitHub CI. Проверки и gates выполняются
+  локально на VPS; GitHub Actions, required checks и расширение права workflow
+  не являются условиями продолжения. Их подключение отложено до отдельного поручения.
 - Перед Compose проверить порты и окружение. Не перезаписывать существующие данные,
   не переключать DNS и не применять миграции к чужим/production-БД без явного поручения.
 - Для кода выполнить применимые тесты, lint/typecheck/build и интеграцию/E2E по риску.

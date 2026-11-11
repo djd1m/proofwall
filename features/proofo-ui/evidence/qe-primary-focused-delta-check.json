@@ -1,0 +1,46 @@
+{
+  "planOriginalHash": "b7401a66bc10f02a67e10ff66f64bd5e6e9762173e8b8bb29877762d81731d72",
+  "planCurrentHash": "69cfe784dd155731a035767d89a641435e6ebb80634bebc84044555d4f63bee3",
+  "nonWaiverBytesEqual": true,
+  "targetsEqual": true,
+  "fonts": [
+    {
+      "name": "body.woff2",
+      "hashes": [
+        "d46c189e06e905afb249cac3de1e6f532ddc7b7bcf046193027f6bfd22a0d985",
+        "d46c189e06e905afb249cac3de1e6f532ddc7b7bcf046193027f6bfd22a0d985",
+        "d46c189e06e905afb249cac3de1e6f532ddc7b7bcf046193027f6bfd22a0d985"
+      ]
+    },
+    {
+      "name": "display.woff2",
+      "hashes": [
+        "21f1068a46ae7111c5887098ec1aa173204d0a72585d1f8cff99d38ac3833158",
+        "21f1068a46ae7111c5887098ec1aa173204d0a72585d1f8cff99d38ac3833158",
+        "21f1068a46ae7111c5887098ec1aa173204d0a72585d1f8cff99d38ac3833158"
+      ]
+    }
+  ],
+  "identity": [
+    {
+      "file": "package.json",
+      "head": "002d897fbe44f5938d0490e733a4236da7425a2f07498f9aa590e38e663c373b",
+      "current": "002d897fbe44f5938d0490e733a4236da7425a2f07498f9aa590e38e663c373b"
+    },
+    {
+      "file": "package-lock.json",
+      "head": "98156ca6856ff36a043ca5d0180b33428d38130beef08fbd1281c3c537269580",
+      "current": "98156ca6856ff36a043ca5d0180b33428d38130beef08fbd1281c3c537269580"
+    },
+    {
+      "file": "apps/web/package.json",
+      "head": "5347fffe36a2e7e94f10c7e3a4e011cf2038a3ab233596408c8ba979acae9a21",
+      "current": "5347fffe36a2e7e94f10c7e3a4e011cf2038a3ab233596408c8ba979acae9a21"
+    }
+  ],
+  "externalLinks": {
+    "count": 35,
+    "unsafe": [],
+    "dangling": []
+  }
+}

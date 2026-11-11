@@ -1,0 +1,392 @@
+
+> proofwall@0.1.0 process:test
+> node --test scripts/test-process-guard.mjs
+
+TAP version 13
+# Subtest: legitimate fixture receipt succeeds (not product evidence)
+ok 1 - legitimate fixture receipt succeeds (not product evidence)
+  ---
+  duration_ms: 228.198405
+  type: 'test'
+  ...
+# Subtest: configuration and SessionStart payload succeed
+ok 2 - configuration and SessionStart payload succeed
+  ---
+  duration_ms: 263.817973
+  type: 'test'
+  ...
+# Subtest: missing receipt is an executable failure
+ok 3 - missing receipt is an executable failure
+  ---
+  duration_ms: 178.701712
+  type: 'test'
+  ...
+# Subtest: planned product delivery is blocked
+ok 4 - planned product delivery is blocked
+  ---
+  duration_ms: 187.24724
+  type: 'test'
+  ...
+# Subtest: tracked or untracked source mutation invalidates digest
+ok 5 - tracked or untracked source mutation invalidates digest
+  ---
+  duration_ms: 220.236806
+  type: 'test'
+  ...
+# Subtest: plan mutation invalidates receipt/admission
+ok 6 - plan mutation invalidates receipt/admission
+  ---
+  duration_ms: 209.525125
+  type: 'test'
+  ...
+# Subtest: visual failure cannot be labeled as passed by outer receipt
+ok 7 - visual failure cannot be labeled as passed by outer receipt
+  ---
+  duration_ms: 304.959887
+  type: 'test'
+  ...
+# Subtest: empty evidence fails closed
+ok 8 - empty evidence fails closed
+  ---
+  duration_ms: 193.746217
+  type: 'test'
+  ...
+# Subtest: symlink evidence fails closed
+ok 9 - symlink evidence fails closed
+  ---
+  duration_ms: 209.847905
+  type: 'test'
+  ...
+# Subtest: vendor mutation fails verification
+ok 10 - vendor mutation fails verification
+  ---
+  duration_ms: 164.209456
+  type: 'test'
+  ...
+# Subtest: wrong local runtime version fails verification
+ok 11 - wrong local runtime version fails verification
+  ---
+  duration_ms: 174.132787
+  type: 'test'
+  ...
+# Subtest: missing obligatory check fails closed
+ok 12 - missing obligatory check fails closed
+  ---
+  duration_ms: 186.90181
+  type: 'test'
+  ...
+# Subtest: baseline replacement patch is explicitly denied
+ok 13 - baseline replacement patch is explicitly denied
+  ---
+  duration_ms: 180.796434
+  type: 'test'
+  ...
+# Subtest: snapshot update command is explicitly denied
+ok 14 - snapshot update command is explicitly denied
+  ---
+  duration_ms: 171.797484
+  type: 'test'
+  ...
+# Subtest: delivery and npm script indirection need receipt
+ok 15 - delivery and npm script indirection need receipt
+  ---
+  duration_ms: 173.421266
+  type: 'test'
+  ...
+# Subtest: process docs editing with quoted baseline/deploy examples allowed while planned
+ok 16 - process docs editing with quoted baseline/deploy examples allowed while planned
+  ---
+  duration_ms: 190.190754
+  type: 'test'
+  ...
+# Subtest: ordinary planned Stop is allowed
+ok 17 - ordinary planned Stop is allowed
+  ---
+  duration_ms: 172.987125
+  type: 'test'
+  ...
+# Subtest: active Stop requests one continuation then terminates with blocker
+ok 18 - active Stop requests one continuation then terminates with blocker
+  ---
+  duration_ms: 252.994781
+  type: 'test'
+  ...
+# Subtest: empty payload produces actual nonzero exit
+ok 19 - empty payload produces actual nonzero exit
+  ---
+  duration_ms: 152.445703
+  type: 'test'
+  ...
+# Subtest: audit contains only allowlisted metadata, never synthetic tool input
+ok 20 - audit contains only allowlisted metadata, never synthetic tool input
+  ---
+  duration_ms: 269.642769
+  type: 'test'
+  ...
+# Subtest: ignored artifacts cannot escape digest binding
+ok 21 - ignored artifacts cannot escape digest binding
+  ---
+  duration_ms: 257.693756
+  type: 'test'
+  ...
+# Subtest: traversal evidence fails closed
+ok 22 - traversal evidence fails closed
+  ---
+  duration_ms: 197.726982
+  type: 'test'
+  ...
+# Subtest: empty ordinary source file is valid digest input
+ok 23 - empty ordinary source file is valid digest input
+  ---
+  duration_ms: 277.160247
+  type: 'test'
+  ...
+# Subtest: process-only source push is allowed while planned/inactive
+ok 24 - process-only source push is allowed while planned/inactive
+  ---
+  duration_ms: 183.822557
+  type: 'test'
+  ...
+# Subtest: untracked product diff blocks source publication even while inactive
+ok 25 - untracked product diff blocks source publication even while inactive
+  ---
+  duration_ms: 191.106825
+  type: 'test'
+  ...
+# Subtest: malformed JSON errors never echo synthetic input
+ok 26 - malformed JSON errors never echo synthetic input
+  ---
+  duration_ms: 151.776512
+  type: 'test'
+  ...
+# Subtest: credential-named paths excluded from digest without reading their content
+ok 27 - credential-named paths excluded from digest without reading their content
+  ---
+  duration_ms: 252.714461
+  type: 'test'
+  ...
+# Subtest: existing VPS stand launcher cannot publish without current receipt
+ok 28 - existing VPS stand launcher cannot publish without current receipt
+  ---
+  duration_ms: 173.138436
+  type: 'test'
+  ...
+# Subtest: read-only stand status remains allowed while planned
+ok 29 - read-only stand status remains allowed while planned
+  ---
+  duration_ms: 164.203776
+  type: 'test'
+  ...
+# Subtest: narrow read-only form allowed: sed -n '1,20p' apps/web/package.json
+ok 30 - narrow read-only form allowed: sed -n '1,20p' apps/web/package.json
+  ---
+  duration_ms: 168.41006
+  type: 'test'
+  ...
+# Subtest: narrow read-only form allowed: python3 -c 'print(open("apps/web/package.json").read())'
+ok 31 - narrow read-only form allowed: python3 -c 'print(open("apps/web/package.json").read())'
+  ---
+  duration_ms: 159.538501
+  type: 'test'
+  ...
+# Subtest: planned product patch fails before execution
+ok 32 - planned product patch fails before execution
+  ---
+  duration_ms: 157.495019
+  type: 'test'
+  ...
+# Subtest: implementing without K1/K2 evidence fails before execution
+ok 33 - implementing without K1/K2 evidence fails before execution
+  ---
+  duration_ms: 173.792636
+  type: 'test'
+  ...
+# Subtest: implementing with current design-bound K1/K2 admits product patch fixture
+ok 34 - implementing with current design-bound K1/K2 admits product patch fixture
+  ---
+  duration_ms: 194.235678
+  type: 'test'
+  ...
+# Subtest: plan change invalidates implementation admission
+ok 35 - plan change invalidates implementation admission
+  ---
+  duration_ms: 191.477235
+  type: 'test'
+  ...
+# Subtest: failed K2 cannot admit product patch
+ok 36 - failed K2 cannot admit product patch
+  ---
+  duration_ms: 209.650255
+  type: 'test'
+  ...
+# Subtest: CI diff gate rejects missing or malformed revision inputs
+ok 37 - CI diff gate rejects missing or malformed revision inputs
+  ---
+  duration_ms: 185.326459
+  type: 'test'
+  ...
+# Subtest: planned product patch in tool_input.input is denied
+ok 38 - planned product patch in tool_input.input is denied
+  ---
+  duration_ms: 169.979732
+  type: 'test'
+  ...
+# Subtest: planned product patch in tool_input.patch is denied
+ok 39 - planned product patch in tool_input.patch is denied
+  ---
+  duration_ms: 177.76857
+  type: 'test'
+  ...
+# Subtest: decoy command cannot hide a product patch in input
+ok 40 - decoy command cannot hide a product patch in input
+  ---
+  duration_ms: 194.271218
+  type: 'test'
+  ...
+# Subtest: unparseable patch destinations fail closed
+ok 41 - unparseable patch destinations fail closed
+  ---
+  duration_ms: 171.334633
+  type: 'test'
+  ...
+# Subtest: snapshot destination snapshots/home.png is denied
+ok 42 - snapshot destination snapshots/home.png is denied
+  ---
+  duration_ms: 165.718078
+  type: 'test'
+  ...
+# Subtest: snapshot destination features/proofo-ui/home.spec.ts-snapshots/home.png is denied
+ok 43 - snapshot destination features/proofo-ui/home.spec.ts-snapshots/home.png is denied
+  ---
+  duration_ms: 173.227706
+  type: 'test'
+  ...
+# Subtest: read-only research allowed: cat docs/development/deploy.md
+ok 44 - read-only research allowed: cat docs/development/deploy.md
+  ---
+  duration_ms: 210.584565
+  type: 'test'
+  ...
+# Subtest: read-only research allowed: rg -- --update-snapshots docs
+ok 45 - read-only research allowed: rg -- --update-snapshots docs
+  ---
+  duration_ms: 218.577685
+  type: 'test'
+  ...
+# Subtest: read-only research allowed: bash -c 'cat apps/web/package.json'
+ok 46 - read-only research allowed: bash -c 'cat apps/web/package.json'
+  ---
+  duration_ms: 180.079323
+  type: 'test'
+  ...
+# Subtest: read-only research allowed: node -p 'require("fs").readFileSync("apps/web/package.json","utf8")'
+ok 47 - read-only research allowed: node -p 'require("fs").readFileSync("apps/web/package.json","utf8")'
+  ---
+  duration_ms: 172.917245
+  type: 'test'
+  ...
+# Subtest: read-only exception rejects mutation/substitution: cat apps/web/product.js && touch apps/web/new.js
+ok 48 - read-only exception rejects mutation/substitution: cat apps/web/product.js && touch apps/web/new.js
+  ---
+  duration_ms: 229.994486
+  type: 'test'
+  ...
+# Subtest: read-only exception rejects mutation/substitution: cat $(node apps/web/write.js)
+ok 49 - read-only exception rejects mutation/substitution: cat $(node apps/web/write.js)
+  ---
+  duration_ms: 179.211402
+  type: 'test'
+  ...
+# Subtest: read-only exception rejects mutation/substitution: bash -c 'cat apps/web/product.js; touch apps/web/new.js'
+ok 50 - read-only exception rejects mutation/substitution: bash -c 'cat apps/web/product.js; touch apps/web/new.js'
+  ---
+  duration_ms: 185.545319
+  type: 'test'
+  ...
+# Subtest: fake echo handler cannot pass trust-bypass validation
+ok 51 - fake echo handler cannot pass trust-bypass validation
+  ---
+  duration_ms: 164.034926
+  type: 'test'
+  ...
+# Subtest: restrictive matcher cannot pass trust-bypass validation
+ok 52 - restrictive matcher cannot pass trust-bypass validation
+  ---
+  duration_ms: 178.321441
+  type: 'test'
+  ...
+# Subtest: additional hook event cannot pass trust-bypass validation
+ok 53 - additional hook event cannot pass trust-bypass validation
+  ---
+  duration_ms: 181.220844
+  type: 'test'
+  ...
+# Subtest: asynchronous handler cannot pass trust-bypass validation
+ok 54 - asynchronous handler cannot pass trust-bypass validation
+  ---
+  duration_ms: 163.224425
+  type: 'test'
+  ...
+# Subtest: missing generated feature-adr fails configuration check
+ok 55 - missing generated feature-adr fails configuration check
+  ---
+  duration_ms: 150.073631
+  type: 'test'
+  ...
+# Subtest: tampered generated Direct Mode routing fails SessionStart
+ok 56 - tampered generated Direct Mode routing fails SessionStart
+  ---
+  duration_ms: 158.21912
+  type: 'test'
+  ...
+# Subtest: tampered installed QE skill fails delivery
+ok 57 - tampered installed QE skill fails delivery
+  ---
+  duration_ms: 157.724719
+  type: 'test'
+  ...
+# Subtest: missing typecheck is rejected
+ok 58 - missing typecheck is rejected
+  ---
+  duration_ms: 171.889944
+  type: 'test'
+  ...
+# Subtest: missing build is rejected
+ok 59 - missing build is rejected
+  ---
+  duration_ms: 183.548016
+  type: 'test'
+  ...
+# Subtest: unclassified implementation is rejected
+ok 60 - unclassified implementation is rejected
+  ---
+  duration_ms: 170.845883
+  type: 'test'
+  ...
+# Subtest: XL cannot omit security/performance
+ok 61 - XL cannot omit security/performance
+  ---
+  duration_ms: 165.016216
+  type: 'test'
+  ...
+# Subtest: XL security/performance require actual passed reports
+ok 62 - XL security/performance require actual passed reports
+  ---
+  duration_ms: 183.893047
+  type: 'test'
+  ...
+# Subtest: XL fixture with security/performance evidence succeeds
+ok 63 - XL fixture with security/performance evidence succeeds
+  ---
+  duration_ms: 285.804117
+  type: 'test'
+  ...
+1..63
+# tests 63
+# suites 0
+# pass 63
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 12305.028451

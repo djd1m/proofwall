@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "uid": 20001,
+  "runtimeUids": [
+    20001,
+    20001,
+    20001,
+    20001
+  ],
+  "user": "proofwall-preview",
+  "unitSha256": "7325fe7d50971bd43647b14fc730a7e5841fa07e34f5c8207784f350d8533287",
+  "stableArtifact": "/opt/proofwall-ui-preview/artifacts/u0skKIAfRIAw4AJWplbBw",
+  "serviceEnabled": "enabled",
+  "checks": [
+    {
+      "case": "production env unreadable",
+      "observed": false,
+      "expected": false,
+      "passed": true,
+      "commandExit": 1
+    },
+    {
+      "case": "Proofo creds unreadable",
+      "observed": false,
+      "expected": false,
+      "passed": true,
+      "commandExit": 1
+    },
+    {
+      "case": "root credentials unreadable",
+      "observed": false,
+      "expected": false,
+      "passed": true,
+      "commandExit": 1
+    },
+    {
+      "case": "own EnvironmentFile hidden from child",
+      "observed": false,
+      "expected": false,
+      "passed": true,
+      "commandExit": 1
+    },
+    {
+      "case": "compiled build readable",
+      "observed": true,
+      "expected": true,
+      "passed": true,
+      "commandExit": 0
+    },
+    {
+      "case": "compiled build not writable",
+      "observed": false,
+      "expected": false,
+      "passed": true,
+      "commandExit": 1
+    },
+    {
+      "case": "own cache writable",
+      "observed": true,
+      "expected": true,
+      "passed": true,
+      "commandExit": 0
+    }
+  ],
+  "scope": "Actual process UID and filesystem access predicates in service mount namespace; no secret contents read by these access predicates."
+}

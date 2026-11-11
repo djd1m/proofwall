@@ -1,0 +1,83 @@
+
+> @course/agent-payments@0.1.0 build
+> tsc
+
+
+> proofwall@0.1.0 build:widget
+> npm run build --workspace apps/widget && node scripts/copy-widget-to-public.mjs
+
+
+> @proofwall/widget@0.1.0 build
+> node scripts/build.mjs
+
+[build] widget.b697d478.js: raw=7.48 KB, gzip=2.83 KB
+[build] OK — в пределах бюджета 30 KB gzip.
+виджет разложен: public/widget.b697d478.js (2900 B gzip)
+   ▲ Next.js 15.5.24
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 4.8s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/6) ...
+   Generating static pages (1/6) 
+   Generating static pages (2/6) 
+   Generating static pages (4/6) 
+ ✓ Generating static pages (6/6)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ○ /                                    2.54 kB         105 kB
+├ ○ /_not-found                            991 B         104 kB
+├ ○ /agent-payments                      2.69 kB         105 kB
+├ ƒ /api/agent-payments/commands           211 B         103 kB
+├ ƒ /api/agent-payments/human              211 B         103 kB
+├ ƒ /api/agent-payments/reconcile          211 B         103 kB
+├ ƒ /api/agent-payments/webhook            211 B         103 kB
+├ ƒ /api/auth/forgot                       211 B         103 kB
+├ ƒ /api/auth/login                        211 B         103 kB
+├ ƒ /api/auth/password                     211 B         103 kB
+├ ƒ /api/auth/register                     211 B         103 kB
+├ ƒ /api/auth/resend-verification          211 B         103 kB
+├ ƒ /api/auth/reset                        211 B         103 kB
+├ ƒ /api/auth/verify-email                 211 B         103 kB
+├ ƒ /api/auth/yandex/callback              211 B         103 kB
+├ ƒ /api/auth/yandex/start                 211 B         103 kB
+├ ƒ /api/checkout                          211 B         103 kB
+├ ƒ /api/import                            211 B         103 kB
+├ ƒ /api/n3/program                        211 B         103 kB
+├ ƒ /api/n3/proof                          211 B         103 kB
+├ ƒ /api/n3/status                         211 B         103 kB
+├ ƒ /api/partner/session                   211 B         103 kB
+├ ƒ /api/photo/[...key]                    211 B         103 kB
+├ ƒ /api/projects/slug-available           211 B         103 kB
+├ ƒ /api/share                             211 B         103 kB
+├ ƒ /api/testimonials                      211 B         103 kB
+├ ƒ /api/testimonials/[id]/moderate        211 B         103 kB
+├ ƒ /api/testimonials/platform             211 B         103 kB
+├ ƒ /api/testimonials/video                211 B         103 kB
+├ ƒ /api/webhooks/payment                  211 B         103 kB
+├ ƒ /api/widget/badge-click                211 B         103 kB
+├ ƒ /api/widget/config                     211 B         103 kB
+├ ƒ /dashboard                             171 B         103 kB
+├ ƒ /dashboard/[slug]                    6.56 kB         109 kB
+├ ƒ /f/[slug]                            3.46 kB         106 kB
+├ ƒ /forgot                              1.02 kB         104 kB
+├ ƒ /login                               1.64 kB         104 kB
+├ ƒ /n3/start                              211 B         103 kB
+├ ○ /n3/verify                             942 B         103 kB
+├ ƒ /partner                               875 B         103 kB
+├ ƒ /partner/dashboard                     211 B         103 kB
+├ ƒ /reset                               1.06 kB         104 kB
+├ ƒ /verify-email                        1.77 kB         104 kB
+└ ƒ /w/[slug]                              211 B         103 kB
++ First Load JS shared by all             103 kB
+  ├ chunks/18-51732c0e3a66e117.js        46.4 kB
+  ├ chunks/87c73c54-24122e7b92478d00.js  54.2 kB
+  └ other shared chunks (total)          1.91 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

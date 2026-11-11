@@ -1,0 +1,12 @@
+
+ RUN  v2.1.9 /tmp/proofwall-ui-dashboard/apps/web
+
+ ✓ tests/dashboard-visual-fixture.test.ts (1 test) 37ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  20:49:15
+   Duration  611ms (transform 130ms, setup 0ms, collect 132ms, tests 37ms, environment 0ms, prepare 151ms)
+
+/tmp/proofwall-dashboard-fixture-2WEoQh
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m

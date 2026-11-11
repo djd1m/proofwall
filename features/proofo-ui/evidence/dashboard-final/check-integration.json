@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "exitCode": 0,
+  "command": "node_modules/.bin/node scripts/run-dashboard-preview.mjs test",
+  "artifacts": [
+    "features/proofo-ui/evidence/dashboard-final/web-after-repair.log",
+    "features/proofo-ui/evidence/qe-risk-entry.json",
+    "features/proofo-ui/evidence/qe-integration-entry.json"
+  ],
+  "detail": {
+    "isolatedDashboardPGTests": 7,
+    "additionalIndependentVerification": true,
+    "authorityMutant": "actual assertion kill; original condition retained and verified"
+  }
+}

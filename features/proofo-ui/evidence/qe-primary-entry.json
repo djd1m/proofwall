@@ -1,0 +1,42 @@
+{
+  "reviewer": "qe-primary",
+  "family": "codex",
+  "independent": true,
+  "verdict": "clean",
+  "conditions": [
+    {
+      "id": "QE-PRIMARY-1",
+      "owner": "qe-primary",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "До закрытия обязательного Step-8 discrimination gate получить распознаваемое исполнение load-bearing dashboard tests на genuine pre-feature baseline и текущем snapshot через установленный CLI, с явной оценкой недискриминирующих compatibility tests. Исправить доступность/изоляцию baseline dependencies, не подменяя их tip workspace/dist, не меняя classifier и не трактуя exit 0 как доказательство измерения. Тесты новых модулей могут быть классифицированы DISCRIMINATES_VIA_ERROR только при доказанном green tip control; оставшиеся CANNOT_ISOLATE должны остаться незакрытыми.",
+      "scope": [
+        "features/proofo-ui/06_implementation_plan.md",
+        "apps/web/tests/dashboard-overview.test.ts",
+        "apps/web/tests/dashboard-overview-db.test.ts",
+        "apps/web/tests/dashboard-visual-fixture.test.ts"
+      ],
+      "evidence": "Самостоятельный запуск installed dz discrimination-check --test apps/web/tests/dashboard-overview.test.ts,apps/web/tests/dashboard-overview-db.test.ts,apps/web/tests/dashboard-visual-fixture.test.ts,apps/web/tests/dashboard-onboarding.test.ts --base HEAD --timeout 30000 --json: process exit 0, aggregate CANNOT_ISOLATE, measurementValid=false; каждый из 4 результатов baseline-dependency-unavailable (specifier vitest/config). Полный raw report features/proofo-ui/evidence/qe-primary-discrimination.json. Helper отказал root vitest из-за live workspace edges в adjacent node_modules; package-local vitest отсутствует. Требование инструмента: .agents/skills/feature-adr/modules/08-qe.md:365. Это недоказанный обязательный gate, а не найденный дефект runtime dashboard."
+    }
+  ],
+  "verifications": [
+    {
+      "id": "QE-PRIMARY-1",
+      "revision": "06f4dce82d3e419861bced5377c6c71ae2fc9a42d87f12c219fee9d2dc1c1840",
+      "classification": "structural",
+      "evidence": "Независимо повторён installed dz discrimination-check на genuine HEAD baseline и трёх текущих planned test files: process exit0, measurementValid=true, all3 DISCRIMINATES_VIA_ERROR, exact feature-module-absent attribution (.ts/.tsx), green TIP 7+7+1. Полные raw evidence qe-primary-discrimination-focused.json и binding qe-primary-discrimination-focused-inputs.json: 30/30 manifest hashes совпали до/после; nonce 690f6976-08de-4023-9747-5782b9c1c20f. External artifact links проверены самостоятельно (35, no unsafe/dangling); HEAD/current package manifests и lock равны. Existing onboarding NON_DISCRIMINATING честно сохранён как preservation coverage и не выдан за new-feature property. Это limited load-error inference, не baseline assertion proof. Initial условие и evidence сохранены неизменными.",
+      "implementationVerified": true
+    }
+  ],
+  "newRisks": {
+    "assessment": "Новых подтверждённых рисков после focused review полного actual delta и affected dependencies не выявлено. Собственное QE-PRIMARY-1 проверено и закрыто на текущей ревизии. Это verdict только роли qe-primary; исходные условия других ролей и общую native closure подтверждает координатор отдельно.",
+    "evidence": "Собственный installed gate measurementValid=true/all3 limited DISCRIMINATES_VIA_ERROR+greenTIP15; hash-stable manifest; проверенные external-only dependencies; K2 pass и точная font-only waiver delta. Coverage оставляет две явно измеренные ветви вне исполнения; пороги не снижены, runtime не менялся. Полная история finding и границы inference сохранены в qe-primary.md и qe-primary-entry-initial.json.",
+    "conditions": []
+  },
+  "authorAssessmentChecked": true,
+  "deltaVerification": {
+    "classification": "structural",
+    "evidence": "Прочитан qe-author-delta.json и независимо проверены все четыре host changedPaths: точные literal dynamic imports в трёх тестах, новая authority-проверка summary на том же реальном pg Client/backend/transaction до и после SQL для A/B, без подмены SQL/args/result. Этот DB suite самостоятельно исполнен installed gate TIP: 7/7. Все прежние assertions и fixture values сохранены. Plan отличается только reasoned C9 font exclusions: удаление секции даёт точные исходные bytes b7401a..., все18targets прежние, runtime/prototype/baseline fonts совпадают по SHA. Собственный canonical K2 exit0, 0failures/0warnings/0skips. K1-original и precreation raw сохранены; no-new-names rebinding не заявляет повторный FREE. Production source неизменён. Raw coverage и source/test SHA проверены: 91/91lines,40/42branches, summary24/26branches; gaps invalid-count throw/paid-only label раскрыты. Evidence: qe-primary-focused-delta-check.json, qe-primary-focused-k2.log, dashboard-final/coverage и дополнение qe-primary.md. Новых серьёзных рисков в actual delta не выявлено.",
+    "implementationVerified": true
+  }
+}

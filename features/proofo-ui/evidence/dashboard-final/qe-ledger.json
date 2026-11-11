@@ -1,0 +1,1 @@
+{"ok":true,"kind":"ledger","stage":"qe","verdict":"written","exit":0,"reason":"appended and verified by re-reading the tail","blocking":false,"target":"/tmp/proofwall-ui-dashboard/.dz/feature-adr/run-cost-ledger.jsonl"}

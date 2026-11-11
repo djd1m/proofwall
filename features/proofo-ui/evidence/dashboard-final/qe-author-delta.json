@@ -1,0 +1,22 @@
+{
+  "addressed": [
+    "QE-PRIMARY-1",
+    "QE-RISK-1"
+  ],
+  "changedScope": [
+    "apps/web/tests/dashboard-overview-db.test.ts",
+    "apps/web/tests/dashboard-overview.test.ts",
+    "apps/web/tests/dashboard-visual-fixture.test.ts",
+    "features/proofo-ui/06_implementation_plan.md",
+    "apps/web/src/lib/dashboard-summary.ts",
+    "apps/web/src/app/dashboard/dashboard-overview.tsx"
+  ],
+  "classification": "structural",
+  "delta": "Три planned test files: exact literal dynamic imports with explicit .ts/.tsx suffix, no suppressions/classifier changes; actual summary client/transaction authority probe for both accounts before/after statement (role, tenant GUC, BYPASSRLS, ownership four tables, backend PID and transaction ID). Production code unchanged. Plan adds reasoned C9 exclusions only for byte-identical immutable prototype/baseline fonts; exact plan bytes otherwise equal original, same 18 targets. Original K1 precreation evidence retained; measured no-new-names rebinding + real canonical K2 exit0. Genuine external-only dependency artifact matches prefeature manifests/lock and has no checkout/workspace symlink edges; package lookups unified after a documented partial-setup failed attempt.",
+  "evidence": "Root actual installed discrimination-repair.json: measurementValid=true, all3 DISCRIMINATES_VIA_ERROR and greenTIP. This is limited load-error inference, not baseline assertion proof. Existing onboarding remains explicitly NON_DISCRIMINATING preservation coverage. Author focused158pass/typecheck0 and authority mutant real assertion app_service!=app_authenticated in isolated copy; reviewers must rerun independently. Root fullweb postrepair923passed3oldS3skipped. Real coverage4productionfiles100%lines,95.23%branches,criticalsummary92.30%; raw source/test before/after hashes stable. Artifacts under features/proofo-ui/evidence/dashboard-final/ and /tmp/proofwall-qe-test-repair-handoff.json.",
+  "newRisks": {
+    "assessment": "No new production runtime path or permissions introduced. QA observers add diagnostic SQL only inside isolated tests. Explicit module imports alter test loading; old incomplete baseline resolution reports retained. Font exclusions intentionally preserve reference bytes and do not waive app behavior or edit goldens. Coverage gaps invalid-counter throw/paid-only-label remain measured, within explicit thresholds. No further serious product risk identified by author; independent verification still required.",
+    "evidence": "Measured host delta is exactly three test files and plan. App production hashes match previous reviewed snapshot and packaged production build. OPS-1/OPS-2 were separately corrected and independently closed in operations-focused-review.md; public gateway still unchanged.",
+    "conditions": []
+  }
+}

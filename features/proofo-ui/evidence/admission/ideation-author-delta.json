@@ -1,0 +1,29 @@
+{
+  "addressed": [
+    "QUALITY-1",
+    "QUALITY-2",
+    "RISK-1",
+    "RISK-2",
+    "TEST-1",
+    "TEST-2",
+    "TEST-3",
+    "TEST-4"
+  ],
+  "changedScope": [
+    "features/proofo-ui/00_complexity_assessment.md",
+    "features/proofo-ui/01_requirements.md",
+    "features/proofo-ui/02_research.md",
+    "features/proofo-ui/03_adr/001-read-owned-dashboard-summary.md",
+    "features/proofo-ui/03_adr/002-share-pure-view-with-isolated-fixture.md",
+    "features/proofo-ui/04_domain_model.md",
+    "features/proofo-ui/05_architecture.md"
+  ],
+  "classification": "structural",
+  "delta": "Уточнены all-time counts всех статусов и pending, наблюдённые domain pairs/config requests с честной подписью; закреплён один data SQL statement; добавлены независимые role/GUC/non-BYPASS/non-owner и unscoped RLS проверки четырёх таблиц; summary permission failure после auth с restore/retry отделён от session-store failure; fixture/live global CSS, dashboard CSS, wrapper/body contract проверяются HTTP E2E; длинные Unicode/multiline имена проверяются клавиатурой на трёх viewport. Изменены также OpenSpec и план AM-4…AM-11. Дополнительно FR-006 явно связан с отдельным OpenSpec-сценарием «Состав числа отзывов» по focused замечанию QUALITY-1.",
+  "evidence": "Прочитаны исходные qcsd-quality.json, qcsd-risk.json, qcsd-testability.json: 8 условий, все сопоставлены в 01_requirements/05_architecture и AM-4…AM-11 с named test paths. SHA OpenSpec 57e33113157e014fd741f04be2e8d0594d3d64fcf010d5915e51b8c07484c7ce. Это design rework, будущие app tests не исполнялись; исходные reviewer/host JSON сохранены.",
+  "newRisks": {
+    "assessment": "Новых самостоятельных условий автор не заявляет. Добавлены ограничения и проверки уже найденных рисков; qualified body styling и isolated GRANT/REVOKE требуют реализации и независимой проверки, не считаются доказанными этим delta.",
+    "evidence": "TEST-2 ограничивает permission injection только isolated PG с восстановлением в finally, TEST-3 проверяет реальные CSS/body и неизменность baseline; TASK-6 и AM-9/AM-10 закрепляют named browser checks. Ни production permissions, ни runtime guards, ни секреты не изменялись.",
+    "conditions": []
+  }
+}

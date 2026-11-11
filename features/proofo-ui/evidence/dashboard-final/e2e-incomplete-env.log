@@ -1,0 +1,137 @@
+TAP version 13
+# Subtest: dashboard requires an ordinary session and opens the owned project
+not ok 1 - dashboard requires an ordinary session and opens the owned project
+  ---
+  duration_ms: 31675.69443
+  type: 'test'
+  location: '/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:112:1'
+  failureType: 'hookFailed'
+  error: |-
+    page.waitForURL: Timeout 30000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation to "http://127.0.0.1:33181/dashboard" until "load"
+    ============================================================
+  code: 'ERR_TEST_FAILURE'
+  name: 'TimeoutError'
+  stack: |-
+    login (/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:40:16)
+    async TestContext.<anonymous> (/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:95:3)
+  ...
+# Subtest: zero and single project accounts stay in overview
+not ok 2 - zero and single project accounts stay in overview
+  ---
+  duration_ms: 0.80108
+  type: 'test'
+  location: '/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:136:1'
+  failureType: 'hookFailed'
+  error: |-
+    page.waitForURL: Timeout 30000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation to "http://127.0.0.1:33181/dashboard" until "load"
+    ============================================================
+  code: 'ERR_TEST_FAILURE'
+  name: 'TimeoutError'
+  stack: |-
+    login (/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:40:16)
+    async TestContext.<anonymous> (/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:95:3)
+  ...
+# Subtest: summary permission failure recovers through retry after valid login
+not ok 3 - summary permission failure recovers through retry after valid login
+  ---
+  duration_ms: 0.307791
+  type: 'test'
+  location: '/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:151:1'
+  failureType: 'hookFailed'
+  error: |-
+    page.waitForURL: Timeout 30000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation to "http://127.0.0.1:33181/dashboard" until "load"
+    ============================================================
+  code: 'ERR_TEST_FAILURE'
+  name: 'TimeoutError'
+  stack: |-
+    login (/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:40:16)
+    async TestContext.<anonymous> (/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:95:3)
+  ...
+# Subtest: session store failure does not render owned data
+not ok 4 - session store failure does not render owned data
+  ---
+  duration_ms: 0.10323
+  type: 'test'
+  location: '/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:176:1'
+  failureType: 'hookFailed'
+  error: |-
+    page.waitForURL: Timeout 30000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation to "http://127.0.0.1:33181/dashboard" until "load"
+    ============================================================
+  code: 'ERR_TEST_FAILURE'
+  name: 'TimeoutError'
+  stack: |-
+    login (/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:40:16)
+    async TestContext.<anonymous> (/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:95:3)
+  ...
+# Subtest: live dashboard and fixture share body styles and shell geometry
+not ok 5 - live dashboard and fixture share body styles and shell geometry
+  ---
+  duration_ms: 0.107
+  type: 'test'
+  location: '/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:185:1'
+  failureType: 'hookFailed'
+  error: |-
+    page.waitForURL: Timeout 30000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation to "http://127.0.0.1:33181/dashboard" until "load"
+    ============================================================
+  code: 'ERR_TEST_FAILURE'
+  name: 'TimeoutError'
+  stack: |-
+    login (/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:40:16)
+    async TestContext.<anonymous> (/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:95:3)
+  ...
+# Subtest: frozen fixture has zero changed pixels and detects font margin color mutations
+not ok 6 - frozen fixture has zero changed pixels and detects font margin color mutations
+  ---
+  duration_ms: 0.07352
+  type: 'test'
+  location: '/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:200:1'
+  failureType: 'hookFailed'
+  error: |-
+    page.waitForURL: Timeout 30000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation to "http://127.0.0.1:33181/dashboard" until "load"
+    ============================================================
+  code: 'ERR_TEST_FAILURE'
+  name: 'TimeoutError'
+  stack: |-
+    login (/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:40:16)
+    async TestContext.<anonymous> (/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:95:3)
+  ...
+# Subtest: long Unicode titles remain visible and keyboard reachable on every viewport
+not ok 7 - long Unicode titles remain visible and keyboard reachable on every viewport
+  ---
+  duration_ms: 0.179931
+  type: 'test'
+  location: '/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:218:1'
+  failureType: 'hookFailed'
+  error: |-
+    page.waitForURL: Timeout 30000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation to "http://127.0.0.1:33181/dashboard" until "load"
+    ============================================================
+  code: 'ERR_TEST_FAILURE'
+  name: 'TimeoutError'
+  stack: |-
+    login (/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:40:16)
+    async TestContext.<anonymous> (/tmp/proofwall-ui-dashboard/tools/visual/dashboard.e2e.test.mjs:95:3)
+  ...
+# Browser measurements: /tmp/proofwall-dashboard-e2e-43xIWM/measurements.json
+1..7
+# tests 7
+# suites 0
+# pass 0
+# fail 7
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 33046.299358

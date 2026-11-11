@@ -1,0 +1,62 @@
+{
+  "reviewer": "qcsd-quality",
+  "family": "codex",
+  "independent": true,
+  "verdict": "clean",
+  "conditions": [
+    {
+      "id": "QUALITY-1",
+      "owner": "qcsd-quality",
+      "severity": "WARNING",
+      "classification": "structural",
+      "requirement": "Однозначно определить состав и период отображаемого на карточке общего числа отзывов, подпись и проверяемые примеры для всех существующих статусов; отдельно сохранить точный pending count. Согласовать FR/OpenSpec и дизайн, не считать результат автоматически закрытым без повторной независимой проверки.",
+      "scope": [
+        "features/proofo-ui/01_requirements.md",
+        "features/proofo-ui/04_domain_model.md",
+        "features/proofo-ui/05_architecture.md"
+      ],
+      "evidence": "FR-006 требует реальные counts, но не определяет включение pending/approved/rejected/hidden и период; 04_domain_model.md перечисляет эти статусы, но определяет лишь pending; 05_architecture.md говорит об aggregate testimonials counts и pending count без фильтра. В packages/db/migrations/003_core.sql реально допустимы все четыре статуса; текущая apps/web/src/app/dashboard/[slug]/page.tsx читает все отзывы и отдельно вычисляет pending. При одинаковых данных возможно несколько разных корректно выглядящих результатов; FR-003/общий заголовок за 30 дней добавляет неоднозначность периода."
+    },
+    {
+      "id": "QUALITY-2",
+      "owner": "qcsd-quality",
+      "severity": "WARNING",
+      "classification": "structural",
+      "requirement": "Для числа сайтов/установок определить видимую пользователю подпись и пояснение как числа наблюдённых пар проект/домен по запросам конфигурации в окне, без утверждения подтверждённой текущей установки; проверить повторный запрос, одинаковый домен у двух проектов и отсутствие зарегистрированного домена. Согласовать FR/OpenSpec и дизайн.",
+      "scope": [
+        "features/proofo-ui/01_requirements.md",
+        "features/proofo-ui/03_adr/001-read-owned-dashboard-summary.md",
+        "features/proofo-ui/04_domain_model.md",
+        "features/proofo-ui/05_architecture.md"
+      ],
+      "evidence": "FR-003 называет метрику widget sites; 04_domain_model.md называет её «Активная установка», а ADR-001 и архитектура обязывают подсчёт last_seen_at. apps/web/src/app/api/widget/config/route.ts записывает факт запроса конфигурации и получает домен из Origin, Referer либо query; apps/web/src/lib/widget-install.ts обновляет last_seen_at на повторном вызове и исключает локальные/собственные домены, но не проверяет, установлен ли виджет сейчас. Соответственно это наблюдение запросов, а не достоверное число текущих установок, что существенно для понятной метрики."
+    }
+  ],
+  "verifications": [
+    {
+      "id": "QUALITY-1",
+      "revision": "7a3b55bd332adf0e872df2470f9b090d497f9532ab451c2b01ed8d74a3647aef",
+      "classification": "structural",
+      "evidence": "Дизайн исправлен: FR-006 и OpenSpec-сценарий «Состав числа отзывов» явно задают все четыре статуса за всё время, отдельный all-time pending, подписи и пример 4/1 включая старые строки; чужие/deactivated исключены. 04_domain_model.md и 05_architecture.md согласованы; FR-006 явно указывает оба сценария. implementationVerified=true означает проверку исправления дизайна текущей ideation-фазы, не исполнение app tests.",
+      "implementationVerified": true
+    },
+    {
+      "id": "QUALITY-2",
+      "revision": "7a3b55bd332adf0e872df2470f9b090d497f9532ab451c2b01ed8d74a3647aef",
+      "classification": "structural",
+      "evidence": "Дизайн исправлен: FR-003, OpenSpec «Доступные события», ADR-001, domain model и architecture определяют наблюдённые пары project/domain по config/last_seen_at, точную подпись и пояснение, и не утверждают подтверждённую установку; acceptance cases задают повтор одной пары, два проекта одного домена и отсутствие зарегистрированной пары. implementationVerified=true означает проверку исправления дизайна текущей ideation-фазы, не исполнение app tests.",
+      "implementationVerified": true
+    }
+  ],
+  "newRisks": {
+    "assessment": "После проверки исправленного дизайна новых самостоятельных условий по данной роли не выявлено; риски исполнения и неизвестные результаты будущих проверок сохраняются.",
+    "evidence": "Исправлены определения отзывов и наблюдённых domain pairs, контракты имеют конкретные примеры. Изменения про один SQL statement, RLS, отказ/повтор и CSS окружение направлены на существующие риски и требуют фактической реализации и отдельного QE. Код продукта и app tests этой focused проверкой не проверены.",
+    "conditions": []
+  },
+  "authorAssessmentChecked": true,
+  "deltaVerification": {
+    "classification": "structural",
+    "evidence": "Прочитан ideation-author-delta.json и независимо сверены новые требования, ADR, модель, архитектура и OpenSpec SHA 57e33113157e014fd741f04be2e8d0594d3d64fcf010d5915e51b8c07484c7ce. Обе правки QUALITY подтверждены по дизайну; implementationVerified=true относится к design rework ideation, не к реализации приложения или результатам тестов.",
+    "implementationVerified": true
+  }
+}

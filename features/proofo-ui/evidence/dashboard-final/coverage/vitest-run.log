@@ -1,0 +1,25 @@
+
+ RUN  v2.1.9 /tmp/proofwall-ui-dashboard/apps/web
+      Coverage enabled with v8
+
+ ✓ tests/dashboard-overview-db.test.ts (7 tests) 259ms
+ ✓ tests/dashboard-overview.test.ts (7 tests) 39ms
+ ✓ tests/dashboard-visual-fixture.test.ts (1 test) 29ms
+
+ Test Files  3 passed (3)
+      Tests  15 passed (15)
+   Start at  20:44:50
+   Duration  3.57s (transform 376ms, setup 0ms, collect 686ms, tests 328ms, environment 3ms, prepare 479ms)
+
+ % Coverage report from v8
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |     100 |    95.23 |     100 |     100 |                   
+ app/dashboard     |     100 |      100 |     100 |     100 |                   
+  ...-overview.tsx |     100 |      100 |     100 |     100 |                   
+  error.tsx        |     100 |      100 |     100 |     100 |                   
+  page.tsx         |     100 |      100 |     100 |     100 |                   
+ lib               |     100 |     92.3 |     100 |     100 |                   
+  ...rd-summary.ts |     100 |     92.3 |     100 |     100 | 12,53             
+-------------------|---------|----------|---------|---------|-------------------

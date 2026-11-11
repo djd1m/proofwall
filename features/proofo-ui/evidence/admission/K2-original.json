@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "exitCode": 0,
+  "command": "node .agents/skills/feature-adr/scripts/check-plan-completeness.mjs features/proofo-ui --tier=L --require-requirements --acid=A1,A2,A3,A4,A5,A6,A7",
+  "designDigest": "6e3e3a4515f27f221d6c5078b8a477850375030e833435398ef205c2f8a30207",
+  "rawEvidence": "features/proofo-ui/evidence/admission/K2.stdout.txt"
+}

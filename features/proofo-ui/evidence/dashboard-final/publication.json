@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "exitCode": 0,
+  "command": "node_modules/.bin/node features/proofo-ui/evidence/dashboard-final/published-preview-probe.mjs",
+  "url": "https://ui-proofwall.78.17.53.233.sslip.io/dashboard",
+  "syntheticDataOnly": true,
+  "observations": [
+    {
+      "case": "ordinary HTTPS login",
+      "passed": true,
+      "walls": 2,
+      "secureCookie": true,
+      "httpOnlyCookie": true,
+      "sameSite": "Lax",
+      "tls": {
+        "issuer": "YE1",
+        "protocol": "TLS 1.3",
+        "subjectName": "ui-proofwall.78.17.53.233.sslip.io",
+        "validFrom": 1794427325,
+        "validTo": 1802203324
+      }
+    },
+    {
+      "case": "published responsive view",
+      "width": 1440,
+      "overflow": false,
+      "screenshot": "published-dashboard-1440.png"
+    },
+    {
+      "case": "published responsive view",
+      "width": 390,
+      "overflow": false,
+      "screenshot": "published-dashboard-390.png"
+    },
+    {
+      "case": "published responsive view",
+      "width": 360,
+      "overflow": false,
+      "screenshot": "published-dashboard-360.png"
+    },
+    {
+      "case": "owned project navigation and actual preview widget URL",
+      "passed": true
+    },
+    {
+      "case": "fixture not exposed",
+      "path": "/dashboard.html",
+      "status": 404
+    },
+    {
+      "case": "fixture not exposed",
+      "path": "/__test/dashboard",
+      "status": 404
+    },
+    {
+      "case": "existing host preserved",
+      "url": "https://proofwall.78.17.53.233.sslip.io/",
+      "status": 200
+    },
+    {
+      "case": "existing host preserved",
+      "url": "https://proofwall.78.17.53.233.sslip.io/__design/proofo/?screen=dashboard",
+      "status": 200
+    }
+  ],
+  "limits": [
+    "Dashboard increment; branding/collect still draft",
+    "No real mail/storage/payment credentials in isolated preview",
+    "No production DNS/database changes"
+  ]
+}

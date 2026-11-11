@@ -1,0 +1,8 @@
+{
+  "existingCaddyfileSha256": "c33acf48cda108f987ad9b9d339c027333f84f8b0b044fdc70f863d19cfde474",
+  "proposedCaddyfileSha256": "98316f0aa5f8c6c348f0de316f84bd44c41302704440ae98e0ef43d2078222b8",
+  "serviceSha256": "d42518267e53f04f549183a6379bb641b304a3eeed73d50cbede632218221cf6",
+  "nextBind": "172.21.0.1:33183",
+  "postgresBind": "127.0.0.1:33184",
+  "published": false
+}

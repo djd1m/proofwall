@@ -1,0 +1,12 @@
+{
+  "name": "proofwall-visual-tooling",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Изолированные инструменты неизменяемого эталона и pixel diff",
+  "type": "module",
+  "dependencies": {
+    "pixelmatch": "8.0.0",
+    "playwright": "1.65.0",
+    "pngjs": "7.0.0"
+  }
+}

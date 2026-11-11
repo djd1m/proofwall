@@ -1,0 +1,586 @@
+{
+  "kind": "application-visual-comparison",
+  "baseline": "/tmp/proofwall-ui-dashboard/features/proofo-ui/reference/dashboard-v3",
+  "environment": {
+    "node": "v22.23.4",
+    "platform": "linux",
+    "arch": "x64",
+    "kernel": "6.8.0-138-generic",
+    "osRelease": "PRETTY_NAME=\"Ubuntu 24.04 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+    "chromiumExecutable": "/root/.cache/puppeteer/chrome/linux-148.0.7778.97/chrome-linux64/chrome",
+    "chromiumSha256": "7f5c687c69c06c2b49f80755087b0575fa67633f359b0cdbe2ee40c33235fc98",
+    "tooling": {
+      "playwright": "1.65.0",
+      "pixelmatch": "8.0.0",
+      "pngjs": "7.0.0"
+    }
+  },
+  "url": "http://127.0.0.1:34497/dashboard.html",
+  "cases": [
+    {
+      "id": "dashboard/1440x900",
+      "mutation": "none",
+      "expected": "identical",
+      "passed": true,
+      "checks": {
+        "raster": true,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": true,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 128,
+          "y": 56,
+          "width": 1184,
+          "height": 996.234375
+        },
+        "actual": {
+          "x": 128,
+          "y": 56,
+          "width": 1184,
+          "height": 996.234375
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 1184,
+          "height": 997
+        },
+        "actual": {
+          "width": 1184,
+          "height": 997
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 0,
+        "pixelmatchPixels": 0,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-ui-dashboard/features/proofo-ui/evidence/dashboard-final/visual/dashboard-1440x900-none"
+    },
+    {
+      "id": "dashboard/1440x900",
+      "mutation": "font",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 128,
+          "y": 56,
+          "width": 1184,
+          "height": 996.234375
+        },
+        "actual": {
+          "x": 128,
+          "y": 56,
+          "width": 1184,
+          "height": 996.234375
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 1184,
+          "height": 997
+        },
+        "actual": {
+          "width": 1184,
+          "height": 997
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 4915,
+        "pixelmatchPixels": 4915,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-ui-dashboard/features/proofo-ui/evidence/dashboard-final/visual/dashboard-1440x900-font"
+    },
+    {
+      "id": "dashboard/1440x900",
+      "mutation": "margin",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 128,
+          "y": 56,
+          "width": 1184,
+          "height": 996.234375
+        },
+        "actual": {
+          "x": 128,
+          "y": 56,
+          "width": 1184,
+          "height": 996.234375
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 1184,
+          "height": 997
+        },
+        "actual": {
+          "width": 1184,
+          "height": 997
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 3117,
+        "pixelmatchPixels": 3117,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-ui-dashboard/features/proofo-ui/evidence/dashboard-final/visual/dashboard-1440x900-margin"
+    },
+    {
+      "id": "dashboard/1440x900",
+      "mutation": "color",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 128,
+          "y": 56,
+          "width": 1184,
+          "height": 996.234375
+        },
+        "actual": {
+          "x": 128,
+          "y": 56,
+          "width": 1184,
+          "height": 996.234375
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 1184,
+          "height": 997
+        },
+        "actual": {
+          "width": 1184,
+          "height": 997
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 5134,
+        "pixelmatchPixels": 5134,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-ui-dashboard/features/proofo-ui/evidence/dashboard-final/visual/dashboard-1440x900-color"
+    },
+    {
+      "id": "dashboard/390x844",
+      "mutation": "none",
+      "expected": "identical",
+      "passed": true,
+      "checks": {
+        "raster": true,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": true,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1369.078125
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1369.078125
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 390,
+          "height": 1370
+        },
+        "actual": {
+          "width": 390,
+          "height": 1370
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 0,
+        "pixelmatchPixels": 0,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-ui-dashboard/features/proofo-ui/evidence/dashboard-final/visual/dashboard-390x844-none"
+    },
+    {
+      "id": "dashboard/390x844",
+      "mutation": "font",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1369.078125
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1369.078125
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 390,
+          "height": 1370
+        },
+        "actual": {
+          "width": 390,
+          "height": 1370
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 2584,
+        "pixelmatchPixels": 2584,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-ui-dashboard/features/proofo-ui/evidence/dashboard-final/visual/dashboard-390x844-font"
+    },
+    {
+      "id": "dashboard/390x844",
+      "mutation": "margin",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1369.078125
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1369.078125
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 390,
+          "height": 1370
+        },
+        "actual": {
+          "width": 390,
+          "height": 1370
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 2039,
+        "pixelmatchPixels": 2039,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-ui-dashboard/features/proofo-ui/evidence/dashboard-final/visual/dashboard-390x844-margin"
+    },
+    {
+      "id": "dashboard/390x844",
+      "mutation": "color",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1369.078125
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1369.078125
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 390,
+          "height": 1370
+        },
+        "actual": {
+          "width": 390,
+          "height": 1370
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 2586,
+        "pixelmatchPixels": 2586,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-ui-dashboard/features/proofo-ui/evidence/dashboard-final/visual/dashboard-390x844-color"
+    },
+    {
+      "id": "dashboard/360x800",
+      "mutation": "none",
+      "expected": "identical",
+      "passed": true,
+      "checks": {
+        "raster": true,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": true,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1435.46875
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1435.46875
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 360,
+          "height": 1436
+        },
+        "actual": {
+          "width": 360,
+          "height": 1436
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 0,
+        "pixelmatchPixels": 0,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-ui-dashboard/features/proofo-ui/evidence/dashboard-final/visual/dashboard-360x800-none"
+    },
+    {
+      "id": "dashboard/360x800",
+      "mutation": "font",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1435.46875
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1435.46875
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 360,
+          "height": 1436
+        },
+        "actual": {
+          "width": 360,
+          "height": 1436
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 2584,
+        "pixelmatchPixels": 2584,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-ui-dashboard/features/proofo-ui/evidence/dashboard-final/visual/dashboard-360x800-font"
+    },
+    {
+      "id": "dashboard/360x800",
+      "mutation": "margin",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1435.46875
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1435.46875
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 360,
+          "height": 1436
+        },
+        "actual": {
+          "width": 360,
+          "height": 1436
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 2039,
+        "pixelmatchPixels": 2039,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-ui-dashboard/features/proofo-ui/evidence/dashboard-final/visual/dashboard-360x800-margin"
+    },
+    {
+      "id": "dashboard/360x800",
+      "mutation": "color",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1435.46875
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1435.46875
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 360,
+          "height": 1436
+        },
+        "actual": {
+          "width": 360,
+          "height": 1436
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 2586,
+        "pixelmatchPixels": 2586,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-ui-dashboard/features/proofo-ui/evidence/dashboard-final/visual/dashboard-360x800-color"
+    }
+  ],
+  "passed": true
+}

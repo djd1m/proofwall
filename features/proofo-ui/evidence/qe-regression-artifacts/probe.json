@@ -1,0 +1,54 @@
+{
+  "results": [
+    {
+      "case": "single project remains in overview",
+      "passed": true
+    },
+    {
+      "case": "project page styles unaffected by loaded dashboard CSS; recovery collect wall widget moderation present",
+      "width": 360,
+      "passed": true
+    },
+    {
+      "case": "login styles unaffected by loaded dashboard CSS",
+      "width": 360,
+      "passed": true
+    },
+    {
+      "case": "project page styles unaffected by loaded dashboard CSS; recovery collect wall widget moderation present",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "case": "login styles unaffected by loaded dashboard CSS",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "case": "project page styles unaffected by loaded dashboard CSS; recovery collect wall widget moderation present",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "case": "login styles unaffected by loaded dashboard CSS",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "case": "expired session redirect",
+      "passed": true
+    },
+    {
+      "case": "revoked session redirect",
+      "passed": true
+    },
+    {
+      "case": "anonymous query and public fixture probes do not reveal fixture or owned data",
+      "passed": true
+    },
+    {
+      "case": "HTTP fonts equal manifest assets byte for byte",
+      "passed": true
+    }
+  ]
+}

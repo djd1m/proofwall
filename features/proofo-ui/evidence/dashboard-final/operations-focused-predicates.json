@@ -1,0 +1,108 @@
+{
+  "reviewer": "qe-integration",
+  "pid": 3497848,
+  "uid": 20001,
+  "gid": 988,
+  "contentsRead": false,
+  "checks": [
+    {
+      "case": "production env unreadable",
+      "predicate": "-r",
+      "path": "/home/proofwall/.env",
+      "observed": false,
+      "expected": false,
+      "passed": true,
+      "exit": 1
+    },
+    {
+      "case": "Proofo creds unreadable",
+      "predicate": "-r",
+      "path": "/home/proofwall/.secrets/proofo-access.env",
+      "observed": false,
+      "expected": false,
+      "passed": true,
+      "exit": 1
+    },
+    {
+      "case": "root auth unreadable",
+      "predicate": "-r",
+      "path": "/root/.codex/auth.json",
+      "observed": false,
+      "expected": false,
+      "passed": true,
+      "exit": 1
+    },
+    {
+      "case": "own env unreadable",
+      "predicate": "-r",
+      "path": "/home/proofwall/.secrets/ui-preview/app.env",
+      "observed": false,
+      "expected": false,
+      "passed": true,
+      "exit": 1
+    },
+    {
+      "case": "home subtree untraversable",
+      "predicate": "-x",
+      "path": "/home/proofwall",
+      "observed": false,
+      "expected": false,
+      "passed": true,
+      "exit": 1
+    },
+    {
+      "case": "root subtree untraversable",
+      "predicate": "-x",
+      "path": "/root",
+      "observed": false,
+      "expected": false,
+      "passed": true,
+      "exit": 1
+    },
+    {
+      "case": "compiled readable",
+      "predicate": "-r",
+      "path": "/opt/proofwall-ui-preview/artifacts/u0skKIAfRIAw4AJWplbBw/apps/web/.next/server/app/dashboard/page.js",
+      "observed": true,
+      "expected": true,
+      "passed": true,
+      "exit": 0
+    },
+    {
+      "case": "compiled not writable",
+      "predicate": "-w",
+      "path": "/opt/proofwall-ui-preview/artifacts/u0skKIAfRIAw4AJWplbBw/apps/web/.next/server/app/dashboard/page.js",
+      "observed": false,
+      "expected": false,
+      "passed": true,
+      "exit": 1
+    },
+    {
+      "case": "cache writable",
+      "predicate": "-w",
+      "path": "/opt/proofwall-ui-preview/artifacts/u0skKIAfRIAw4AJWplbBw/apps/web/.next/cache",
+      "observed": true,
+      "expected": true,
+      "passed": true,
+      "exit": 0
+    },
+    {
+      "case": "runtime writable",
+      "predicate": "-w",
+      "path": "/run/proofwall-ui-preview",
+      "observed": true,
+      "expected": true,
+      "passed": true,
+      "exit": 0
+    },
+    {
+      "case": "docker socket inaccessible",
+      "predicate": "-w",
+      "path": "/run/docker.sock",
+      "observed": false,
+      "expected": false,
+      "passed": true,
+      "exit": 1
+    }
+  ]
+}

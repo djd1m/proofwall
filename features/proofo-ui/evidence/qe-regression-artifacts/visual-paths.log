@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: same-byte baseline font symlink is refused by the real CLI with exit 2
+ok 1 - same-byte baseline font symlink is refused by the real CLI with exit 2
+  ---
+  duration_ms: 190.558314
+  type: 'test'
+  ...
+# Subtest: existing report.json symlink is refused with exit 2 and sentinel unchanged
+ok 2 - existing report.json symlink is refused with exit 2 and sentinel unchanged
+  ---
+  duration_ms: 664.781022
+  type: 'test'
+  ...
+# Subtest: legacy PNG symlink in an existing output directory is refused without touching target
+ok 3 - legacy PNG symlink in an existing output directory is refused without touching target
+  ---
+  duration_ms: 690.153909
+  type: 'test'
+  ...
+# Subtest: exclusive writer refuses existing report/PNG symlinks and regular files
+ok 4 - exclusive writer refuses existing report/PNG symlinks and regular files
+  ---
+  duration_ms: 9.37711
+  type: 'test'
+  ...
+# Subtest: source and output ancestor symlinks are refused, even with identical readable bytes
+ok 5 - source and output ancestor symlinks are refused, even with identical readable bytes
+  ---
+  duration_ms: 677.149795
+  type: 'test'
+  ...
+# Subtest: baseline directory alias is refused and the original baseline remains intact
+ok 6 - baseline directory alias is refused and the original baseline remains intact
+  ---
+  duration_ms: 67.564212
+  type: 'test'
+  ...
+# Subtest: capture accepts both excluded demo elements absent without waiting for them
+ok 7 - capture accepts both excluded demo elements absent without waiting for them
+  ---
+  duration_ms: 1965.806835
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4416.831161

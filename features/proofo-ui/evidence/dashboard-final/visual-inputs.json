@@ -1,0 +1,8 @@
+{
+  "command": "/tmp/proofwall-ui-dashboard/node_modules/node/bin/node scripts/check-proofo-visual.mjs --url http://127.0.0.1:34497/dashboard.html --screen dashboard --output features/proofo-ui/evidence/dashboard-final/visual --mutations",
+  "exitCode": 0,
+  "freshRenderedHTMLSha256": "090c9c8a823769bda198bbcefe73b579730bcdc13deabb0e8336f76f32f5a93b",
+  "viewSourceSha256": "4f1cab6df35ccd0bddb743635cea96c9ec71222be94e945eaa012c7b3bcd9e8e",
+  "fixtureTestSha256": "1a4af84a9c68955c3bae8c3bcfebc79943226e48fefdfccf9063aa7997d54426",
+  "note": "Fresh production-view render; prototype goldens unchanged; fixture CSS/fonts reuse exact source bytes and are not copied as new Git targets."
+}
