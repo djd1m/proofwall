@@ -1,0 +1,2149 @@
+[
+  {
+    "name": "home",
+    "url": "https://proofo.ru/",
+    "status": 200,
+    "width": 1440,
+    "height": 1000,
+    "title": "Proofo — соберите отзывы со всех площадок в одну стену",
+    "body": {
+      "tag": "BODY",
+      "text": "◆\nproofo\nКак это работает\nТарифы\nВойти\nСобрать стену\n\nОТЗЫВЫ УЖЕ ЕСТЬ — ИХ ПРОСТО НЕ ВИДНО\n\nСоберите отзывы со всех площадок в одну стену\n\nВаши отзывы лежат на ",
+      "font": "body, \"body Fallback\", system-ui, sans-serif",
+      "size": "16px",
+      "weight": "400",
+      "color": "rgb(23, 20, 15)",
+      "background": "rgb(242, 237, 227)",
+      "border": "0px none rgb(23, 20, 15)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "display": "block",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 3719.328125
+      }
+    },
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Соберите отзывы со всех площадок в одну стену",
+        "font": "display, \"display Fallback\", Georgia, serif",
+        "size": "68px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 162,
+          "y": 186.328125,
+          "width": 556.5,
+          "height": 346.796875
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Почему через скриншоты",
+        "font": "display, \"display Fallback\", Georgia, serif",
+        "size": "41px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 130,
+          "y": 1274,
+          "width": 1180,
+          "height": 47.140625
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Площадка не важна",
+        "font": "display, \"display Fallback\", body, \"body Fallback\", system-ui, sans-serif",
+        "size": "18px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 155,
+          "y": 1547.515625,
+          "width": 330,
+          "height": 20.6875
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Текст не переписывается",
+        "font": "display, \"display Fallback\", body, \"body Fallback\", system-ui, sans-serif",
+        "size": "18px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 555,
+          "y": 1547.515625,
+          "width": 330,
+          "height": 20.6875
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Видно, откуда отзыв",
+        "font": "display, \"display Fallback\", body, \"body Fallback\", system-ui, sans-serif",
+        "size": "18px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 955,
+          "y": 1547.515625,
+          "width": 330,
+          "height": 20.6875
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Сколько это стоит",
+        "font": "display, \"display Fallback\", Georgia, serif",
+        "size": "41px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 162,
+          "y": 1847.203125,
+          "width": 1116,
+          "height": 47.140625
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Free",
+        "font": "display, \"display Fallback\", Georgia, serif",
+        "size": "24px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 187,
+          "y": 2020.03125,
+          "width": 308.65625,
+          "height": 27.59375
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Start",
+        "font": "display, \"display Fallback\", Georgia, serif",
+        "size": "24px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 565.65625,
+          "y": 2057.84375,
+          "width": 308.671875,
+          "height": 27.59375
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Pro",
+        "font": "display, \"display Fallback\", Georgia, serif",
+        "size": "24px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 944.328125,
+          "y": 2020.03125,
+          "width": 308.65625,
+          "height": 27.59375
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Соберите свою стену",
+        "font": "display, \"display Fallback\", Georgia, serif",
+        "size": "41px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 162,
+          "y": 2687.453125,
+          "width": 556.5,
+          "height": 47.140625
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Создать проект",
+        "font": "display, \"display Fallback\", Georgia, serif",
+        "size": "25px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 805.5,
+          "y": 2718.453125,
+          "width": 441.5,
+          "height": 28.75
+        }
+      }
+    ],
+    "controls": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "10px",
+        "padding": "12px 14px",
+        "display": "block",
+        "box": {
+          "x": 805.5,
+          "y": 2822.8125,
+          "width": 441.5,
+          "height": 49.25
+        },
+        "type": "email",
+        "name": "",
+        "placeholder": "",
+        "required": true,
+        "minLength": -1
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "10px",
+        "padding": "12px 14px",
+        "display": "block",
+        "box": {
+          "x": 805.5,
+          "y": 2914.984375,
+          "width": 441.5,
+          "height": 49.25
+        },
+        "type": "password",
+        "name": "",
+        "placeholder": "",
+        "required": true,
+        "minLength": 8
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "10px",
+        "padding": "12px 14px",
+        "display": "block",
+        "box": {
+          "x": 805.5,
+          "y": 3007.15625,
+          "width": 441.5,
+          "height": 49.25
+        },
+        "type": "text",
+        "name": "",
+        "placeholder": "База отдыха «Домотур»",
+        "required": false,
+        "minLength": -1
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "10px",
+        "padding": "12px 14px",
+        "display": "block",
+        "box": {
+          "x": 805.5,
+          "y": 3099.328125,
+          "width": 441.5,
+          "height": 49.25
+        },
+        "type": "text",
+        "name": "",
+        "placeholder": "domotour",
+        "required": false,
+        "minLength": -1
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Создать проект",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(200, 73, 47)",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "11px",
+        "padding": "15px 20px",
+        "display": "inline-block",
+        "box": {
+          "x": 805.5,
+          "y": 3163.578125,
+          "width": 441.5,
+          "height": 54.796875
+        },
+        "type": "submit",
+        "name": ""
+      }
+    ],
+    "links": [
+      {
+        "text": "◆\nproofo",
+        "href": "/"
+      },
+      {
+        "text": "Как это работает",
+        "href": "#how"
+      },
+      {
+        "text": "Тарифы",
+        "href": "#pricing"
+      },
+      {
+        "text": "Войти",
+        "href": "/login"
+      },
+      {
+        "text": "Собрать стену",
+        "href": "#signup"
+      },
+      {
+        "text": "Собрать свою стену",
+        "href": "#signup"
+      },
+      {
+        "text": "Начать бесплатно",
+        "href": "#signup"
+      },
+      {
+        "text": "Начать с Free",
+        "href": "#signup"
+      },
+      {
+        "text": "Начать с Free",
+        "href": "#signup"
+      },
+      {
+        "text": "a@proofo.ru",
+        "href": "mailto:a@proofo.ru"
+      },
+      {
+        "text": "Войти",
+        "href": "/login"
+      },
+      {
+        "text": "Публичная оферта",
+        "href": "/legal/offer"
+      },
+      {
+        "text": "Политика конфиденциальности",
+        "href": "/legal/privacy"
+      },
+      {
+        "text": "Ограничение ответственности",
+        "href": "/legal/liability"
+      },
+      {
+        "text": "a@proofo.ru",
+        "href": "mailto:a@proofo.ru"
+      }
+    ],
+    "sections": [
+      {
+        "id": "",
+        "tag": "SECTION",
+        "text": "ОТЗЫВЫ УЖЕ ЕСТЬ — ИХ ПРОСТО НЕ ВИДНО\n\nСоберите отзывы со всех площадок в одну стену\n\nВаши отзывы лежат на Avito, Суточно, Яндекс.Картах и в переписке. Клиент, к",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "56px 32px 72px",
+        "display": "grid",
+        "box": {
+          "x": 130,
+          "y": 85.25,
+          "width": 1180,
+          "height": 1111.75
+        }
+      },
+      {
+        "id": "how",
+        "tag": "SECTION",
+        "text": "Почему через скриншоты\n\nAvito, Airbnb и Яндекс.Карты закрывают свои страницы от автоматического чтения — забрать оттуда отзывы роботом нельзя, а обходить защиту",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(231, 223, 208)",
+        "border": "",
+        "borderRadius": "0px",
+        "padding": "76px 32px",
+        "display": "block",
+        "box": {
+          "x": 0,
+          "y": 1197,
+          "width": 1440,
+          "height": 574.203125
+        }
+      },
+      {
+        "id": "pricing",
+        "tag": "SECTION",
+        "text": "Сколько это стоит\n\nСтена, виджет и форма сбора работают бесплатно. Платить есть смысл, когда отзывов больше двадцати или когда их нужно перенести со скриншотов.",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "76px 32px",
+        "display": "block",
+        "box": {
+          "x": 130,
+          "y": 1771.203125,
+          "width": 1180,
+          "height": 840.25
+        }
+      },
+      {
+        "id": "signup",
+        "tag": "SECTION",
+        "text": "Соберите свою стену\n\nРегистрация занимает минуту и не требует карты. Сразу получите три адреса: стена отзывов, форма сбора и сниппет виджета для сайта.\n\n✓\nРабот",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "76px 32px",
+        "display": "block",
+        "box": {
+          "x": 130,
+          "y": 2611.453125,
+          "width": 1180,
+          "height": 749.609375
+        }
+      },
+      {
+        "id": "email",
+        "tag": "INPUT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "10px",
+        "padding": "12px 14px",
+        "display": "block",
+        "box": {
+          "x": 805.5,
+          "y": 2822.8125,
+          "width": 441.5,
+          "height": 49.25
+        }
+      },
+      {
+        "id": "password",
+        "tag": "INPUT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "10px",
+        "padding": "12px 14px",
+        "display": "block",
+        "box": {
+          "x": 805.5,
+          "y": 2914.984375,
+          "width": 441.5,
+          "height": 49.25
+        }
+      },
+      {
+        "id": "project",
+        "tag": "INPUT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "10px",
+        "padding": "12px 14px",
+        "display": "block",
+        "box": {
+          "x": 805.5,
+          "y": 3007.15625,
+          "width": 441.5,
+          "height": 49.25
+        }
+      },
+      {
+        "id": "slug",
+        "tag": "INPUT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "10px",
+        "padding": "12px 14px",
+        "display": "block",
+        "box": {
+          "x": 805.5,
+          "y": 3099.328125,
+          "width": 441.5,
+          "height": 49.25
+        }
+      },
+      {
+        "id": "_R_",
+        "tag": "SCRIPT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "none",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    ]
+  },
+  {
+    "name": "login",
+    "url": "https://proofo.ru/login",
+    "status": 200,
+    "width": 1440,
+    "height": 1000,
+    "title": "Вход · Proofo",
+    "body": {
+      "tag": "BODY",
+      "text": "◆\nproofo\nВход\n\nПочта и пароль, указанные при создании стены.\n\nEmail\nПароль\nВойти\n\nЗабыли пароль?\n\nЕщё нет стены? Создать — это займёт минуту.\n\nProofo\n\nОтзывы ва",
+      "font": "body, \"body Fallback\", system-ui, sans-serif",
+      "size": "16px",
+      "weight": "400",
+      "color": "rgb(23, 20, 15)",
+      "background": "rgb(242, 237, 227)",
+      "border": "0px none rgb(23, 20, 15)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "display": "block",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1358.265625
+      }
+    },
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Вход",
+        "font": "display, \"display Fallback\", body, \"body Fallback\", system-ui, sans-serif",
+        "size": "22px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 541,
+          "y": 332.203125,
+          "width": 358,
+          "height": 25.296875
+        }
+      }
+    ],
+    "controls": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(247, 243, 234)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "15px",
+        "padding": "12px 14px",
+        "display": "block",
+        "box": {
+          "x": 541,
+          "y": 431.875,
+          "width": 358,
+          "height": 50.796875
+        },
+        "type": "email",
+        "name": "email",
+        "placeholder": "",
+        "required": true,
+        "minLength": -1
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(247, 243, 234)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "15px",
+        "padding": "12px 14px",
+        "display": "block",
+        "box": {
+          "x": 541,
+          "y": 529.359375,
+          "width": 358,
+          "height": 50.796875
+        },
+        "type": "password",
+        "name": "password",
+        "placeholder": "",
+        "required": true,
+        "minLength": -1
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Войти",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(200, 73, 47)",
+        "border": "1px solid rgba(0, 0, 0, 0)",
+        "borderRadius": "999px",
+        "padding": "13px 26px",
+        "display": "flex",
+        "box": {
+          "x": 541,
+          "y": 598.15625,
+          "width": 358,
+          "height": 52.796875
+        },
+        "type": "submit",
+        "name": ""
+      }
+    ],
+    "links": [
+      {
+        "text": "◆\nproofo",
+        "href": "/"
+      },
+      {
+        "text": "Забыли пароль?",
+        "href": "/forgot"
+      },
+      {
+        "text": "Создать",
+        "href": "/#signup"
+      },
+      {
+        "text": "Публичная оферта",
+        "href": "/legal/offer"
+      },
+      {
+        "text": "Политика конфиденциальности",
+        "href": "/legal/privacy"
+      },
+      {
+        "text": "Ограничение ответственности",
+        "href": "/legal/liability"
+      },
+      {
+        "text": "a@proofo.ru",
+        "href": "mailto:a@proofo.ru"
+      }
+    ],
+    "sections": [
+      {
+        "id": "_R_",
+        "tag": "SCRIPT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "none",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    ]
+  },
+  {
+    "name": "wall",
+    "url": "https://proofo.ru/domotour-ru",
+    "status": 200,
+    "width": 1440,
+    "height": 1000,
+    "title": "Отзывы — domotour-ru · Proofo",
+    "body": {
+      "tag": "BODY",
+      "text": "ОТЗЫВЫ КЛИЕНТОВ\n\ndomotour-ru\n\n★★★★★\n5\nиз 5\n·\n3 оценки\n\n5 отзывов\n\nN\nNikolay Kostarnov\nGeneral director at Mega-Servis\n\nАрендовали с девушкой 20 сентября этот пр",
+      "font": "body, \"body Fallback\", system-ui, sans-serif",
+      "size": "16px",
+      "weight": "400",
+      "color": "rgb(23, 20, 15)",
+      "background": "rgb(242, 237, 227)",
+      "border": "0px none rgb(23, 20, 15)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "display": "block",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1707.828125
+      }
+    },
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "domotour-ru",
+        "font": "display, \"display Fallback\", body, \"body Fallback\", system-ui, sans-serif",
+        "size": "44px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 132,
+          "y": 88.59375,
+          "width": 1176,
+          "height": 50.59375
+        }
+      }
+    ],
+    "controls": [],
+    "links": [
+      {
+        "text": "✓\nПроверить на «Яндекс.Карты»",
+        "href": "https://yandex.ru/maps/org/dubldom/46530532831/reviews/"
+      },
+      {
+        "text": "✓\nПроверить на «Яндекс.Карты»",
+        "href": "https://yandex.ru/maps/org/dubldom/46530532831/reviews/"
+      },
+      {
+        "text": "✓\nПроверить на «Яндекс.Карты»",
+        "href": "https://yandex.ru/maps/org/dubldom/46530532831/reviews/"
+      },
+      {
+        "text": "Proofo",
+        "href": "https://proofo.ru"
+      },
+      {
+        "text": "Публичная оферта",
+        "href": "/legal/offer"
+      },
+      {
+        "text": "Политика конфиденциальности",
+        "href": "/legal/privacy"
+      },
+      {
+        "text": "Ограничение ответственности",
+        "href": "/legal/liability"
+      },
+      {
+        "text": "a@proofo.ru",
+        "href": "mailto:a@proofo.ru"
+      }
+    ],
+    "sections": [
+      {
+        "id": "r-79952e35-c8db-4df8-9705-68cd24d463ec",
+        "tag": "ARTICLE",
+        "text": "N\nNikolay Kostarnov\nGeneral director at Mega-Servis\n\nАрендовали с девушкой 20 сентября этот прекрасный уютный\nдом, остались очень довольны! Действительно удивит",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 253, 248)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "14px",
+        "padding": "20px 22px 18px",
+        "display": "block",
+        "box": {
+          "x": 132,
+          "y": 253.875,
+          "width": 378.65625,
+          "height": 557.140625
+        }
+      },
+      {
+        "id": "r-4504b4d8-c1c8-43d9-a5c1-f62711821d95",
+        "tag": "ARTICLE",
+        "text": "I\nIrina Papayan\nMoscow Pedagogical State University\n\nОчень крутое место! Добрались быстро, дорога комфортная.\nПрирода безумно красивая, за несколько часов успел",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 253, 248)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "14px",
+        "padding": "20px 22px 18px",
+        "display": "block",
+        "box": {
+          "x": 530.65625,
+          "y": 253.875,
+          "width": 378.671875,
+          "height": 408.359375
+        }
+      },
+      {
+        "id": "r-1df664e2-6091-446f-9a24-0ab549490086",
+        "tag": "ARTICLE",
+        "text": "М\nМария Трифонова\n✓\nПроверить на «Яндекс.Карты»\n★★★★★\n\nПервый раз побывали в этом чудесном месте в 2021 году и с тех пор раз в сезон приезжаем сюда, когда на па",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 253, 248)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "14px",
+        "padding": "20px 22px 18px",
+        "display": "block",
+        "box": {
+          "x": 929.328125,
+          "y": 253.875,
+          "width": 378.65625,
+          "height": 928.546875
+        }
+      },
+      {
+        "id": "r-766fa17b-7af8-462e-a578-d728f5f7c255",
+        "tag": "ARTICLE",
+        "text": "N\nNatalya K.\nЗнаток города 9 уровня\n✓\nПроверить на «Яндекс.Карты»\n★★★★★\n\nНесмотря на прохладную погоду, нам все понравилось. Дом милый и\nочень уютный. Есть все,",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 253, 248)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "14px",
+        "padding": "20px 22px 18px",
+        "display": "block",
+        "box": {
+          "x": 530.65625,
+          "y": 680.875,
+          "width": 378.671875,
+          "height": 333.421875
+        }
+      },
+      {
+        "id": "r-cf7f82cd-7749-477e-913a-c3eee13bcdd8",
+        "tag": "ARTICLE",
+        "text": "V\nVladislava S.\nЗнаток города 4 уровня\n✓\nПроверить на «Яндекс.Карты»\n★★★★★\n\nВсе очень понравилось. Для отдыха с детьми есть игрушки в доме.\nДетская площадка не ",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 253, 248)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "14px",
+        "padding": "20px 22px 18px",
+        "display": "block",
+        "box": {
+          "x": 132,
+          "y": 829.875,
+          "width": 378.65625,
+          "height": 383.015625
+        }
+      },
+      {
+        "id": "_R_",
+        "tag": "SCRIPT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "none",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    ]
+  },
+  {
+    "name": "install",
+    "url": "https://proofo.ru/help/install",
+    "status": 200,
+    "width": 1440,
+    "height": 1000,
+    "title": "Как поставить виджет отзывов на сайт · Proofo",
+    "body": {
+      "tag": "BODY",
+      "text": "◆\nproofo\n\nУСТАНОВКА ВИДЖЕТА\n\nКак поставить виджет отзывов на сайт\n\nВиджет — это один тег. Его вставляют в блок «HTML» любого конструктора или прямо в разметку с",
+      "font": "body, \"body Fallback\", system-ui, sans-serif",
+      "size": "16px",
+      "weight": "400",
+      "color": "rgb(23, 20, 15)",
+      "background": "rgb(242, 237, 227)",
+      "border": "0px none rgb(23, 20, 15)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "display": "block",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 2260.890625
+      }
+    },
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Как поставить виджет отзывов на сайт",
+        "font": "display, \"display Fallback\", body, \"body Fallback\", system-ui, sans-serif",
+        "size": "40px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 420,
+          "y": 188.59375,
+          "width": 600,
+          "height": 92
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Код виджета",
+        "font": "display, \"display Fallback\", body, \"body Fallback\", system-ui, sans-serif",
+        "size": "26px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 420,
+          "y": 426.625,
+          "width": 600,
+          "height": 29.890625
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Выберите платформу",
+        "font": "display, \"display Fallback\", body, \"body Fallback\", system-ui, sans-serif",
+        "size": "26px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 420,
+          "y": 635.6875,
+          "width": 600,
+          "height": 29.890625
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Как проверить, что виджет встал",
+        "font": "display, \"display Fallback\", body, \"body Fallback\", system-ui, sans-serif",
+        "size": "26px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 420,
+          "y": 1159.84375,
+          "width": 600,
+          "height": 29.890625
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Виджет не появился",
+        "font": "display, \"display Fallback\", body, \"body Fallback\", system-ui, sans-serif",
+        "size": "26px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 420,
+          "y": 1502.734375,
+          "width": 600,
+          "height": 29.890625
+        }
+      }
+    ],
+    "controls": [],
+    "links": [
+      {
+        "text": "◆\nproofo",
+        "href": "/"
+      },
+      {
+        "text": "Tilda Publishing\nБлок T123 «HTML-код» в обычной странице или элемент «HTML» в Zero Block.",
+        "href": "/help/install/tilda"
+      },
+      {
+        "text": "WordPress\nБлок «HTML» в редакторе записи или виджет «Пользовательский HTML» в сайдбаре.",
+        "href": "/help/install/wordpress"
+      },
+      {
+        "text": "Сайты Битрикс24\nБлок «HTML-код» в редакторе сайтов Битрикс24.",
+        "href": "/help/install/bitrix"
+      },
+      {
+        "text": "Wix\nЭлемент «Вставка кода» → «Вставить HTML» (Embed HTML) в редакторе Wix.",
+        "href": "/help/install/wix"
+      },
+      {
+        "text": "Taplink\nБлок «HTML» в редакторе страницы Taplink.",
+        "href": "/help/install/taplink"
+      },
+      {
+        "text": "Свой сайт на HTML\nОдин тег <script> в том месте разметки, где должны появиться отзывы.",
+        "href": "/help/install/html"
+      },
+      {
+        "text": "Публичная оферта",
+        "href": "/legal/offer"
+      },
+      {
+        "text": "Политика конфиденциальности",
+        "href": "/legal/privacy"
+      },
+      {
+        "text": "Ограничение ответственности",
+        "href": "/legal/liability"
+      },
+      {
+        "text": "a@proofo.ru",
+        "href": "mailto:a@proofo.ru"
+      }
+    ],
+    "sections": [
+      {
+        "id": "_R_",
+        "tag": "SCRIPT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "none",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    ]
+  },
+  {
+    "name": "home-mobile",
+    "url": "https://proofo.ru/",
+    "status": 200,
+    "width": 390,
+    "height": 844,
+    "title": "Proofo — соберите отзывы со всех площадок в одну стену",
+    "body": {
+      "tag": "BODY",
+      "text": "◆\nproofo\nКак это работает\nТарифы\nВойти\nСобрать стену\n\nОТЗЫВЫ УЖЕ ЕСТЬ — ИХ ПРОСТО НЕ ВИДНО\n\nСоберите отзывы со всех площадок в одну стену\n\nВаши отзывы лежат на ",
+      "font": "body, \"body Fallback\", system-ui, sans-serif",
+      "size": "16px",
+      "weight": "400",
+      "color": "rgb(23, 20, 15)",
+      "background": "rgb(242, 237, 227)",
+      "border": "0px none rgb(23, 20, 15)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "display": "block",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 6499.03125
+      }
+    },
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Соберите отзывы со всех площадок в одну стену",
+        "font": "display, \"display Fallback\", Georgia, serif",
+        "size": "38px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 16,
+          "y": 190.78125,
+          "width": 358,
+          "height": 193.75
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Почему через скриншоты",
+        "font": "display, \"display Fallback\", Georgia, serif",
+        "size": "28px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 16,
+          "y": 1884.859375,
+          "width": 358,
+          "height": 64.375
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Площадка не важна",
+        "font": "display, \"display Fallback\", body, \"body Fallback\", system-ui, sans-serif",
+        "size": "18px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 41,
+          "y": 2280.984375,
+          "width": 308,
+          "height": 20.6875
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Текст не переписывается",
+        "font": "display, \"display Fallback\", body, \"body Fallback\", system-ui, sans-serif",
+        "size": "18px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 41,
+          "y": 2522.671875,
+          "width": 308,
+          "height": 20.6875
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Видно, откуда отзыв",
+        "font": "display, \"display Fallback\", body, \"body Fallback\", system-ui, sans-serif",
+        "size": "18px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 41,
+          "y": 2764.359375,
+          "width": 308,
+          "height": 20.6875
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Сколько это стоит",
+        "font": "display, \"display Fallback\", Georgia, serif",
+        "size": "28px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 16,
+          "y": 2968.796875,
+          "width": 358,
+          "height": 32.1875
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Free",
+        "font": "display, \"display Fallback\", Georgia, serif",
+        "size": "24px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 41,
+          "y": 3179.359375,
+          "width": 308,
+          "height": 27.59375
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Start",
+        "font": "display, \"display Fallback\", Georgia, serif",
+        "size": "24px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 41,
+          "y": 3711.75,
+          "width": 308,
+          "height": 27.59375
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Pro",
+        "font": "display, \"display Fallback\", Georgia, serif",
+        "size": "24px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 41,
+          "y": 4147.09375,
+          "width": 308,
+          "height": 27.59375
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Соберите свою стену",
+        "font": "display, \"display Fallback\", Georgia, serif",
+        "size": "28px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 16,
+          "y": 4767.0625,
+          "width": 358,
+          "height": 64.375
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Создать проект",
+        "font": "display, \"display Fallback\", Georgia, serif",
+        "size": "25px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 39,
+          "y": 5239.8125,
+          "width": 312,
+          "height": 28.75
+        }
+      }
+    ],
+    "controls": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "10px",
+        "padding": "12px 14px",
+        "display": "block",
+        "box": {
+          "x": 39,
+          "y": 5365.859375,
+          "width": 312,
+          "height": 49.25
+        },
+        "type": "email",
+        "name": "",
+        "placeholder": "",
+        "required": true,
+        "minLength": -1
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "10px",
+        "padding": "12px 14px",
+        "display": "block",
+        "box": {
+          "x": 39,
+          "y": 5458.03125,
+          "width": 312,
+          "height": 49.25
+        },
+        "type": "password",
+        "name": "",
+        "placeholder": "",
+        "required": true,
+        "minLength": 8
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "10px",
+        "padding": "12px 14px",
+        "display": "block",
+        "box": {
+          "x": 39,
+          "y": 5550.203125,
+          "width": 312,
+          "height": 49.25
+        },
+        "type": "text",
+        "name": "",
+        "placeholder": "База отдыха «Домотур»",
+        "required": false,
+        "minLength": -1
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "10px",
+        "padding": "12px 14px",
+        "display": "block",
+        "box": {
+          "x": 39,
+          "y": 5642.375,
+          "width": 312,
+          "height": 49.25
+        },
+        "type": "text",
+        "name": "",
+        "placeholder": "domotour",
+        "required": false,
+        "minLength": -1
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Создать проект",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(200, 73, 47)",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "11px",
+        "padding": "15px 20px",
+        "display": "inline-block",
+        "box": {
+          "x": 39,
+          "y": 5706.625,
+          "width": 312,
+          "height": 54.796875
+        },
+        "type": "submit",
+        "name": ""
+      }
+    ],
+    "links": [
+      {
+        "text": "◆\nproofo",
+        "href": "/"
+      },
+      {
+        "text": "Как это работает",
+        "href": "#how"
+      },
+      {
+        "text": "Тарифы",
+        "href": "#pricing"
+      },
+      {
+        "text": "Войти",
+        "href": "/login"
+      },
+      {
+        "text": "Собрать стену",
+        "href": "#signup"
+      },
+      {
+        "text": "Собрать свою стену",
+        "href": "#signup"
+      },
+      {
+        "text": "Начать бесплатно",
+        "href": "#signup"
+      },
+      {
+        "text": "Начать с Free",
+        "href": "#signup"
+      },
+      {
+        "text": "Начать с Free",
+        "href": "#signup"
+      },
+      {
+        "text": "a@proofo.ru",
+        "href": "mailto:a@proofo.ru"
+      },
+      {
+        "text": "Войти",
+        "href": "/login"
+      },
+      {
+        "text": "Публичная оферта",
+        "href": "/legal/offer"
+      },
+      {
+        "text": "Политика конфиденциальности",
+        "href": "/legal/privacy"
+      },
+      {
+        "text": "Ограничение ответственности",
+        "href": "/legal/liability"
+      },
+      {
+        "text": "a@proofo.ru",
+        "href": "mailto:a@proofo.ru"
+      }
+    ],
+    "sections": [
+      {
+        "id": "",
+        "tag": "SECTION",
+        "text": "ОТЗЫВЫ УЖЕ ЕСТЬ — ИХ ПРОСТО НЕ ВИДНО\n\nСоберите отзывы со всех площадок в одну стену\n\nВаши отзывы лежат на Avito, Суточно, Яндекс.Картах и в переписке. Клиент, к",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "24px 16px 40px",
+        "display": "grid",
+        "box": {
+          "x": 0,
+          "y": 108.5,
+          "width": 390,
+          "height": 1735.359375
+        }
+      },
+      {
+        "id": "how",
+        "tag": "SECTION",
+        "text": "Почему через скриншоты\n\nAvito, Airbnb и Яндекс.Карты закрывают свои страницы от автоматического чтения — забрать оттуда отзывы роботом нельзя, а обходить защиту",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(231, 223, 208)",
+        "border": "",
+        "borderRadius": "0px",
+        "padding": "40px 16px",
+        "display": "block",
+        "box": {
+          "x": 0,
+          "y": 1843.859375,
+          "width": 390,
+          "height": 1084.9375
+        }
+      },
+      {
+        "id": "pricing",
+        "tag": "SECTION",
+        "text": "Сколько это стоит\n\nСтена, виджет и форма сбора работают бесплатно. Платить есть смысл, когда отзывов больше двадцати или когда их нужно перенести со скриншотов.",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "40px 16px",
+        "display": "block",
+        "box": {
+          "x": 0,
+          "y": 2928.796875,
+          "width": 390,
+          "height": 1798.265625
+        }
+      },
+      {
+        "id": "signup",
+        "tag": "SECTION",
+        "text": "Соберите свою стену\n\nРегистрация занимает минуту и не требует карты. Сразу получите три адреса: стена отзывов, форма сбора и сниппет виджета для сайта.\n\n✓\nРабот",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "40px 16px",
+        "display": "block",
+        "box": {
+          "x": 0,
+          "y": 4727.0625,
+          "width": 390,
+          "height": 1133.046875
+        }
+      },
+      {
+        "id": "email",
+        "tag": "INPUT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "10px",
+        "padding": "12px 14px",
+        "display": "block",
+        "box": {
+          "x": 39,
+          "y": 5365.859375,
+          "width": 312,
+          "height": 49.25
+        }
+      },
+      {
+        "id": "password",
+        "tag": "INPUT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "10px",
+        "padding": "12px 14px",
+        "display": "block",
+        "box": {
+          "x": 39,
+          "y": 5458.03125,
+          "width": 312,
+          "height": 49.25
+        }
+      },
+      {
+        "id": "project",
+        "tag": "INPUT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "10px",
+        "padding": "12px 14px",
+        "display": "block",
+        "box": {
+          "x": 39,
+          "y": 5550.203125,
+          "width": 312,
+          "height": 49.25
+        }
+      },
+      {
+        "id": "slug",
+        "tag": "INPUT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "10px",
+        "padding": "12px 14px",
+        "display": "block",
+        "box": {
+          "x": 39,
+          "y": 5642.375,
+          "width": 312,
+          "height": 49.25
+        }
+      },
+      {
+        "id": "_R_",
+        "tag": "SCRIPT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "none",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    ]
+  },
+  {
+    "name": "login-mobile",
+    "url": "https://proofo.ru/login",
+    "status": 200,
+    "width": 390,
+    "height": 844,
+    "title": "Вход · Proofo",
+    "body": {
+      "tag": "BODY",
+      "text": "◆\nproofo\nВход\n\nПочта и пароль, указанные при создании стены.\n\nEmail\nПароль\nВойти\n\nЗабыли пароль?\n\nЕщё нет стены? Создать — это займёт минуту.\n\nProofo\n\nОтзывы ва",
+      "font": "body, \"body Fallback\", system-ui, sans-serif",
+      "size": "16px",
+      "weight": "400",
+      "color": "rgb(23, 20, 15)",
+      "background": "rgb(242, 237, 227)",
+      "border": "0px none rgb(23, 20, 15)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "display": "block",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 1482.921875
+      }
+    },
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Вход",
+        "font": "display, \"display Fallback\", body, \"body Fallback\", system-ui, sans-serif",
+        "size": "22px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 39,
+          "y": 232.515625,
+          "width": 312,
+          "height": 25.296875
+        }
+      }
+    ],
+    "controls": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(247, 243, 234)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "15px",
+        "padding": "12px 14px",
+        "display": "block",
+        "box": {
+          "x": 39,
+          "y": 353.875,
+          "width": 312,
+          "height": 50.796875
+        },
+        "type": "email",
+        "name": "email",
+        "placeholder": "",
+        "required": true,
+        "minLength": -1
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(247, 243, 234)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "15px",
+        "padding": "12px 14px",
+        "display": "block",
+        "box": {
+          "x": 39,
+          "y": 451.359375,
+          "width": 312,
+          "height": 50.796875
+        },
+        "type": "password",
+        "name": "password",
+        "placeholder": "",
+        "required": true,
+        "minLength": -1
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Войти",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(200, 73, 47)",
+        "border": "1px solid rgba(0, 0, 0, 0)",
+        "borderRadius": "999px",
+        "padding": "13px 26px",
+        "display": "flex",
+        "box": {
+          "x": 39,
+          "y": 520.15625,
+          "width": 312,
+          "height": 52.796875
+        },
+        "type": "submit",
+        "name": ""
+      }
+    ],
+    "links": [
+      {
+        "text": "◆\nproofo",
+        "href": "/"
+      },
+      {
+        "text": "Забыли пароль?",
+        "href": "/forgot"
+      },
+      {
+        "text": "Создать",
+        "href": "/#signup"
+      },
+      {
+        "text": "Публичная оферта",
+        "href": "/legal/offer"
+      },
+      {
+        "text": "Политика конфиденциальности",
+        "href": "/legal/privacy"
+      },
+      {
+        "text": "Ограничение ответственности",
+        "href": "/legal/liability"
+      },
+      {
+        "text": "a@proofo.ru",
+        "href": "mailto:a@proofo.ru"
+      }
+    ],
+    "sections": [
+      {
+        "id": "_R_",
+        "tag": "SCRIPT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "none",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    ]
+  },
+  {
+    "name": "wall-mobile",
+    "url": "https://proofo.ru/domotour-ru",
+    "status": 200,
+    "width": 390,
+    "height": 844,
+    "title": "Отзывы — domotour-ru · Proofo",
+    "body": {
+      "tag": "BODY",
+      "text": "ОТЗЫВЫ КЛИЕНТОВ\n\ndomotour-ru\n\n★★★★★\n5\nиз 5\n·\n3 оценки\n\n5 отзывов\n\nN\nNikolay Kostarnov\nGeneral director at Mega-Servis\n\nАрендовали с девушкой 20 сентября этот пр",
+      "font": "body, \"body Fallback\", system-ui, sans-serif",
+      "size": "16px",
+      "weight": "400",
+      "color": "rgb(23, 20, 15)",
+      "background": "rgb(242, 237, 227)",
+      "border": "0px none rgb(23, 20, 15)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "display": "block",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 3645.671875
+      }
+    },
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "domotour-ru",
+        "font": "display, \"display Fallback\", body, \"body Fallback\", system-ui, sans-serif",
+        "size": "30px",
+        "weight": "800",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "block",
+        "box": {
+          "x": 16,
+          "y": 48.59375,
+          "width": 358,
+          "height": 34.5
+        }
+      }
+    ],
+    "controls": [],
+    "links": [
+      {
+        "text": "✓\nПроверить на «Яндекс.Карты»",
+        "href": "https://yandex.ru/maps/org/dubldom/46530532831/reviews/"
+      },
+      {
+        "text": "✓\nПроверить на «Яндекс.Карты»",
+        "href": "https://yandex.ru/maps/org/dubldom/46530532831/reviews/"
+      },
+      {
+        "text": "✓\nПроверить на «Яндекс.Карты»",
+        "href": "https://yandex.ru/maps/org/dubldom/46530532831/reviews/"
+      },
+      {
+        "text": "Proofo",
+        "href": "https://proofo.ru"
+      },
+      {
+        "text": "Публичная оферта",
+        "href": "/legal/offer"
+      },
+      {
+        "text": "Политика конфиденциальности",
+        "href": "/legal/privacy"
+      },
+      {
+        "text": "Ограничение ответственности",
+        "href": "/legal/liability"
+      },
+      {
+        "text": "a@proofo.ru",
+        "href": "mailto:a@proofo.ru"
+      }
+    ],
+    "sections": [
+      {
+        "id": "r-79952e35-c8db-4df8-9705-68cd24d463ec",
+        "tag": "ARTICLE",
+        "text": "N\nNikolay Kostarnov\nGeneral director at Mega-Servis\n\nАрендовали с девушкой 20 сентября этот прекрасный уютный\nдом, остались очень довольны! Действительно удивит",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 253, 248)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "14px",
+        "padding": "20px 22px 18px",
+        "display": "block",
+        "box": {
+          "x": 16,
+          "y": 181.78125,
+          "width": 358,
+          "height": 557.140625
+        }
+      },
+      {
+        "id": "r-4504b4d8-c1c8-43d9-a5c1-f62711821d95",
+        "tag": "ARTICLE",
+        "text": "I\nIrina Papayan\nMoscow Pedagogical State University\n\nОчень крутое место! Добрались быстро, дорога комфортная.\nПрирода безумно красивая, за несколько часов успел",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 253, 248)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "14px",
+        "padding": "20px 22px 18px",
+        "display": "block",
+        "box": {
+          "x": 16,
+          "y": 756.921875,
+          "width": 358,
+          "height": 408.359375
+        }
+      },
+      {
+        "id": "r-1df664e2-6091-446f-9a24-0ab549490086",
+        "tag": "ARTICLE",
+        "text": "М\nМария Трифонова\n✓\nПроверить на «Яндекс.Карты»\n★★★★★\n\nПервый раз побывали в этом чудесном месте в 2021 году и с тех пор раз в сезон приезжаем сюда, когда на па",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 253, 248)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "14px",
+        "padding": "20px 22px 18px",
+        "display": "block",
+        "box": {
+          "x": 16,
+          "y": 1183.2813720703125,
+          "width": 358,
+          "height": 953.3436279296875
+        }
+      },
+      {
+        "id": "r-766fa17b-7af8-462e-a578-d728f5f7c255",
+        "tag": "ARTICLE",
+        "text": "N\nNatalya K.\nЗнаток города 9 уровня\n✓\nПроверить на «Яндекс.Карты»\n★★★★★\n\nНесмотря на прохладную погоду, нам все понравилось. Дом милый и\nочень уютный. Есть все,",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 253, 248)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "14px",
+        "padding": "20px 22px 18px",
+        "display": "block",
+        "box": {
+          "x": 16,
+          "y": 2154.676513671875,
+          "width": 358,
+          "height": 333.421875
+        }
+      },
+      {
+        "id": "r-cf7f82cd-7749-477e-913a-c3eee13bcdd8",
+        "tag": "ARTICLE",
+        "text": "V\nVladislava S.\nЗнаток города 4 уровня\n✓\nПроверить на «Яндекс.Карты»\n★★★★★\n\nВсе очень понравилось. Для отдыха с детьми есть игрушки в доме.\nДетская площадка не ",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgb(255, 253, 248)",
+        "border": "1px solid rgb(221, 211, 194)",
+        "borderRadius": "14px",
+        "padding": "20px 22px 18px",
+        "display": "block",
+        "box": {
+          "x": 16,
+          "y": 2506.26806640625,
+          "width": 358,
+          "height": 383.015625
+        }
+      },
+      {
+        "id": "_R_",
+        "tag": "SCRIPT",
+        "text": "",
+        "font": "body, \"body Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(23, 20, 15)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(23, 20, 15)",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "display": "none",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    ]
+  }
+]

@@ -24,6 +24,7 @@ services:
     volumes: !override
       - ./deploy/sslip/Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy_data:/data
+      - ./features/proofo-ui/preview:/srv/proofo-preview:ro
     mem_limit: 256m
   postgres:
     mem_limit: 512m

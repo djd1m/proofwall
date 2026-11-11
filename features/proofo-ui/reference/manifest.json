@@ -1,0 +1,24 @@
+{
+  "capturedAt": "2026-11-11",
+  "source": "https://proofo.ru/",
+  "screenshotsAndMeasurements": {
+    "forgot.png": "13d4d770a13a35bbaf42bcfe8d2a3b4ecd7c9f502b384daaebdd7f9ac34fca2b",
+    "home-how.png": "4a0a74e18cce35f0204f819fdbf3b4285ca444dfa620d8a8123d1910e5f79f39",
+    "home-mobile.png": "35a17293cb7d053445ab23f800298a2a0d246b4c50fe6bf18c8e2cd246990152",
+    "home-pricing.png": "6fc02a54edcff3d4964722a12db5f86c001363ff87d3c68b9002d2cc3473f023",
+    "home-signup.png": "f4446735684aab703270bcb051d33f55a464ff0685821b77c21cddb7abc2dbec",
+    "home.png": "3cf18a02764bd5bba3da9e7cc1cf997b3e4102e0b72ec22eb916057d5f90c995",
+    "install-tilda.png": "f437462e889ab2f86944bacb2e670a543ec60441d214f17d503dd86986c12eae",
+    "install.png": "5be45ed3608679bd8fbe8544fc383d92baf641d34df505ffbe27b2de71de1d3a",
+    "legal-offer.png": "dfd8ae72d954b40f014fa760799a6d6f83c1f9a10a7d53f53994d3ceefd96a90",
+    "login-mobile.png": "883055f67a7bcd3c5fb2895eb340a07adc393cfef7f7a0820a5f2e533e5c0030",
+    "login.png": "e9dcd450cecca81a73673ff0bb4d798cdf41690c1f1b25b98e9b43f6aa20e527",
+    "measurements.json": "90974a1d84505142b4a1072e683beab2b2e88868fe4127e6151258eaaea16bd8",
+    "proofwall-before.png": "27da4cf8ec7672a4206558273f6e4925c92c061cee731351547f23a871330b9a",
+    "wall-mobile.png": "13019d70760e1220217290af98191a46f3afd5940cf611d98f890a61a37ac8cf",
+    "wall.png": "501bc28b28963a9b448aa7722f01b0b80fcfe8869fd0f6a2133ac10a171caaf2"
+  },
+  "referenceWritesPerformed": false,
+  "privateAreasObserved": false,
+  "previewUrl": "https://proofwall.78.17.53.233.sslip.io/__design/proofo/"
+}

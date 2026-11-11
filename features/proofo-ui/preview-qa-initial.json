@@ -1,0 +1,89 @@
+{
+  "scope": "Initial static preview browser checks before focused disclaimer/favicon corrections; final checks recorded in 05_independent_audit_review.md",
+  "cases": [
+    {
+      "screen": "home",
+      "width": 1440,
+      "status": 200,
+      "title": "Proofwall · публичный UI preview",
+      "heading": "Соберите отзывы со всех площадок в одну стену",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "forms": 1,
+      "errors": [],
+      "outbound": []
+    },
+    {
+      "screen": "login",
+      "width": 1440,
+      "status": 200,
+      "title": "Proofwall · публичный UI preview",
+      "heading": "Вход",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "forms": 1,
+      "errors": [],
+      "outbound": []
+    },
+    {
+      "screen": "wall",
+      "width": 1440,
+      "status": 200,
+      "title": "Proofwall · публичный UI preview",
+      "heading": "tihiy-bereg · demo",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "forms": 0,
+      "errors": [],
+      "outbound": []
+    },
+    {
+      "screen": "install",
+      "width": 1440,
+      "status": 200,
+      "title": "Proofwall · публичный UI preview",
+      "heading": "Как поставить виджет отзывов на сайт",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "forms": 0,
+      "errors": [],
+      "outbound": []
+    },
+    {
+      "screen": "home",
+      "width": 390,
+      "status": 304,
+      "title": "Proofwall · публичный UI preview",
+      "heading": "Соберите отзывы со всех площадок в одну стену",
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "forms": 1,
+      "errors": [],
+      "outbound": []
+    },
+    {
+      "screen": "login",
+      "width": 390,
+      "status": 304,
+      "title": "Proofwall · публичный UI preview",
+      "heading": "Вход",
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "forms": 1,
+      "errors": [],
+      "outbound": []
+    },
+    {
+      "screen": "forgot",
+      "width": 390,
+      "status": 200,
+      "title": "Proofwall · публичный UI preview",
+      "heading": "Восстановить пароль",
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "forms": 1,
+      "errors": [],
+      "outbound": []
+    }
+  ]
+}

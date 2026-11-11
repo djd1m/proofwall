@@ -11,5 +11,14 @@
     encode gzip zstd
     @widget path /widget.*.js
     header @widget Cache-Control "public, max-age=31536000, immutable"
-    reverse_proxy web:3000
+    # Отдельный статический макет; приложение и его маршруты не изменяются.
+    redir /__design/proofo /__design/proofo/ 308
+    handle_path /__design/proofo/* {
+        root * /srv/proofo-preview
+        header X-Robots-Tag "noindex, nofollow"
+        file_server
+    }
+    handle {
+        reverse_proxy web:3000
+    }
 }
