@@ -1,0 +1,171 @@
+{
+  "date": "2026-11-11",
+  "scope": "Static synthetic cabinet preview only; not application functionality",
+  "renderChecks": [
+    {
+      "screen": "dashboard",
+      "width": 1440,
+      "status": 200,
+      "heading": "Кабинет",
+      "overflow": false,
+      "errors": [],
+      "writes": [],
+      "external": []
+    },
+    {
+      "screen": "dashboard",
+      "width": 390,
+      "status": 304,
+      "heading": "Кабинет",
+      "overflow": false,
+      "errors": [],
+      "writes": [],
+      "external": []
+    },
+    {
+      "screen": "project",
+      "width": 1440,
+      "status": 200,
+      "heading": "Тихий берег · демо",
+      "overflow": false,
+      "errors": [],
+      "writes": [],
+      "external": []
+    },
+    {
+      "screen": "project",
+      "width": 390,
+      "status": 304,
+      "heading": "Тихий берег · демо",
+      "overflow": false,
+      "errors": [],
+      "writes": [],
+      "external": []
+    },
+    {
+      "screen": "branding",
+      "width": 1440,
+      "status": 200,
+      "heading": "Оформление",
+      "overflow": false,
+      "errors": [],
+      "writes": [],
+      "external": []
+    },
+    {
+      "screen": "branding",
+      "width": 390,
+      "status": 304,
+      "heading": "Оформление",
+      "overflow": false,
+      "errors": [],
+      "writes": [],
+      "external": []
+    },
+    {
+      "screen": "collect",
+      "width": 1440,
+      "status": 200,
+      "heading": "Оставьте\nотзыв",
+      "overflow": false,
+      "errors": [],
+      "writes": [],
+      "external": []
+    },
+    {
+      "screen": "collect",
+      "width": 390,
+      "status": 304,
+      "heading": "Оставьте\nотзыв",
+      "overflow": false,
+      "errors": [],
+      "writes": [],
+      "external": []
+    },
+    {
+      "screen": "collect-video",
+      "width": 1440,
+      "status": 200,
+      "heading": "Оставьте\nотзыв",
+      "overflow": false,
+      "errors": [],
+      "writes": [],
+      "external": []
+    },
+    {
+      "screen": "collect-video",
+      "width": 390,
+      "status": 304,
+      "heading": "Оставьте\nотзыв",
+      "overflow": false,
+      "errors": [],
+      "writes": [],
+      "external": []
+    },
+    {
+      "screen": "empty-wall",
+      "width": 1440,
+      "status": 200,
+      "heading": "Тихий берег · демо",
+      "overflow": false,
+      "errors": [],
+      "writes": [],
+      "external": []
+    },
+    {
+      "screen": "empty-wall",
+      "width": 390,
+      "status": 304,
+      "heading": "Тихий берег · демо",
+      "overflow": false,
+      "errors": [],
+      "writes": [],
+      "external": []
+    }
+  ],
+  "interactionChecks": {
+    "results": [
+      {
+        "check": "Text preview uses text nodes",
+        "pass": true
+      },
+      {
+        "check": "Add remains explicitly demo",
+        "pass": true
+      },
+      {
+        "check": "Password form opens",
+        "pass": true
+      },
+      {
+        "check": "Password form cancels",
+        "pass": true
+      },
+      {
+        "check": "Branding save remains demo",
+        "pass": true
+      },
+      {
+        "check": "Video file UI opens",
+        "pass": true
+      },
+      {
+        "check": "Camera explicitly not connected",
+        "pass": true
+      },
+      {
+        "check": "No JS errors",
+        "pass": true
+      },
+      {
+        "check": "No network writes",
+        "pass": true
+      }
+    ],
+    "errors": [],
+    "writes": []
+  },
+  "interactionViewport": 1440,
+  "interactionCleanMode": true,
+  "privateArtifactsPublished": false
+}
