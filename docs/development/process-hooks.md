@@ -186,19 +186,16 @@ input/patch payloads, snapshot paths, read-only research и отказ для ch
 unclassified и XL security/performance gates. Fixture явно не является
 продуктовым evidence.
 
-CI `process-guard.yml` выполняет npm ci --ignore-scripts по lockfile, затем
-npm run process:install, check-config и мутационные тесты. Installer сначала проверяет
-центральные vendor hashes, затем генерирует installation marker и копии навыков.
-Manifest не перегенерируется, поэтому повреждение vendor не маскируется установкой.
-Обязательные проверки этой
-задачи не пропускаются. При diff в apps/services/packages дополнительно обязателен
-check-delivery: CI сравнивает PR base SHA или push before SHA с github.sha, полученными
-через env и проверенными как 40-hex. fetch-depth=0 обязателен; недоступная ревизия
-вызывает отказ. Initial push с нулевым before проверяет весь product tree. Для
-process-only diff проверка готовности продукта не нужна. Branch protection required
-check отдельно; этот файл не объявляет его включённым. Это CI процесса; он не
-подтверждает тесты приложения,
-визуальное сходство, работающий preview и ручную приёмку.
+По решению владельца GitHub CI пока отключён от рабочего процесса. Обязательные
+проверки выполняются локально: process:check, process:test, применимые проверки
+продукта и process:delivery перед поставкой. Native hooks и все локальные gates
+сохраняются; наличие GitHub status check для продолжения не требуется.
+
+Черновик .reference/ci-drafts/process-guard.yml сохранён для возможного будущего
+подключения. Он проверяет чистую установку, configuration/hashes, negative tests
+и актуальный receipt при продуктовой дельте. Эта последовательность проверена
+локально в чистой копии; GitHub Actions и branch protection не включены.
+Перенос файла в .github/workflows/ и изменение GitHub-политик требуют нового поручения.
 
 Receipt — проверяемый локальный документ, не криптографическая аттестация выполнения
 плана. Автор с правом записи может подделать state/report/manifest или отключить hooks;

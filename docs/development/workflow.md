@@ -96,9 +96,12 @@ per-invocation automation режим hook trust для проверенных л
 конфигурация, проверка handler напрямую и наблюдённый native event — разные факты.
 
 `process:delivery` по умолчанию отказывает: UI stage=planned, receipt отсутствует.
-CI проверяет процесс/негативные тесты; фактические visual/E2E jobs добавляются до
-реализации UI. Protected branch и отдельный deploy runner пока не установлены:
-локальные JSON/hook scripts не являются защитой от администратора root.
+По решению владельца пока используем локальные проверки на VPS без GitHub CI.
+Перед поставкой обязательны process:check, process:test, применимые проверки кода,
+независимое ревью и process:delivery с актуальными evidence. Visual/E2E harness
+добавляется до реализации UI. GitHub Actions, required checks и расширение права
+workflow отложены и не блокируют работу. Черновик сохранён локально в
+.reference/ci-drafts/process-guard.yml. Локальные JSON/hooks не защищают от root.
 
 ## Что адаптировано, а что осталось историей
 

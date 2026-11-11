@@ -77,7 +77,7 @@ npm run process:install завершились exit 0. Независимый re
 Контрольный apps/web/.qe-guard-probe не создан. Две дополнительные readonly-формы
 после этого проверены отдельно fixtures и reviewer.
 
-## GitHub CI: внешний доступ пока недостаточен
+## История попытки подключения GitHub CI
 
 GitHub отклонил push `.github/workflows/process-guard.yml`: OAuth App не имеет
 `workflow` scope. Проверенный файл сохранён локально; полный исходный commit
@@ -85,3 +85,10 @@ GitHub отклонил push `.github/workflows/process-guard.yml`: OAuth App н
 запуск Actions и required check/protection main. Остальная установка/документы могут
 публиковаться отдельно. Пользователю предложен `gh auth refresh -h github.com -s workflow`;
 после обновления авторизации — push workflow, настоящий CI и только затем required check.
+
+## Последующее решение владельца: пока без GitHub CI
+
+Ожидание workflow scope снято с блокеров. Тестирование, hooks, независимое ревью
+и проверка delivery receipt остаются локальными на VPS. GitHub Actions и required
+checks не включаются без нового поручения. Черновик перенесён из активного пути
+.github/workflows/ в игнорируемый .reference/ci-drafts/process-guard.yml.
