@@ -1,0 +1,39 @@
+{
+  "serverMode": "next dev",
+  "sourceContentMatchesCommit": "d633b7b",
+  "browser": "Chrome 148.0.7778.97 via puppeteer-core",
+  "scope": "synthetic mocked API UI smoke; actual API and DB separate integration tests; no production browser or inbox rendering claim",
+  "screenshots": [
+    {
+      "path": "features/resend-onboarding/evidence/browser/browser-smoke.json",
+      "sha256": "fec335094865406a37180090dd8e6c59a9a18d4c89ff24058b9907a55f5d13c7",
+      "capturedAt": "2026-11-11T18:51:40.280000+00:00"
+    },
+    {
+      "path": "features/resend-onboarding/evidence/browser/email-1200.png",
+      "sha256": "95f02ea2be0664ba3660f4797c22c5a6292897146e43f33bcfd212681d3b87ab",
+      "capturedAt": "2026-11-11T18:51:40.095000+00:00"
+    },
+    {
+      "path": "features/resend-onboarding/evidence/browser/email-390.png",
+      "sha256": "d241d0bff18ff9e0894aad61397b8d86d081f6cd2ce67908a5a3e0d8c783db91",
+      "capturedAt": "2026-11-11T18:51:40.279000+00:00"
+    },
+    {
+      "path": "features/resend-onboarding/evidence/browser/verify-1200.png",
+      "sha256": "e7b70b9c5cc7e270d159c4dba41dbccb85936b77c62a7627a2a984d92bd1c88b",
+      "capturedAt": "2026-11-11T18:51:30.345000+00:00"
+    },
+    {
+      "path": "features/resend-onboarding/evidence/browser/verify-390.png",
+      "sha256": "149697eb6b9783560c38c8946bfaa57c169690c59dc3c3e9279e5d5c6f005bfd",
+      "capturedAt": "2026-11-11T18:51:31.120000+00:00"
+    }
+  ],
+  "sourceDigests": {
+    "apps/web/src/app/verify-email/page.tsx": "04adff4fdf8b5faac36cc720c49e5ef43dd44adde0259af6688e04fc566017ff",
+    "apps/web/src/app/verify-email/verification-form.tsx": "75fc66481cf66874df1d2cf42be1cf6d50623d08fc3f31eecaf1d33481a689d9",
+    "scripts/check-email-preview.cjs": "dce0f76e89a6d91bd2768e08aefe68a0073773330790c6a3decf8494df638098",
+    "docs/preview/resend-onboarding.html": "34fd282f40e64df8aa71588a0ac2b74da847224b70c6c489edb0ca02afbedb38"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "vulnerabilities": [],
+  "target": "apps/web/src/lib/email-verification.ts",
+  "scanType": "SAST",
+  "checks": [
+    {
+      "name": "SAST",
+      "status": "complete"
+    }
+  ],
+  "status": "complete",
+  "discovery": {
+    "status": "complete",
+    "policy": "aqe-security-source-files@1",
+    "issues": [],
+    "excludedPaths": []
+  },
+  "coverage": {
+    "filesScanned": 1,
+    "linesScanned": 72,
+    "rulesApplied": 35,
+    "rulesAppliedScope": "built-in-patterns"
+  },
+  "evidence": {
+    "schemaVersion": 1,
+    "completeness": "complete",
+    "requestedFiles": 1,
+    "requestedPaths": [
+      "/tmp/proofwall-resend-onboarding/apps/web/src/lib/email-verification.ts"
+    ],
+    "duplicateInputs": 0,
+    "files": [
+      {
+        "path": "/tmp/proofwall-resend-onboarding/apps/web/src/lib/email-verification.ts",
+        "engineId": "patterns",
+        "readLines": 72,
+        "analyzedLines": 72,
+        "sourceDigest": "f067440fcbed869388fe296af0b4bfc85902eb821fde3077c5c7311b9d1f3416",
+        "status": "analyzed"
+      }
+    ],
+    "engines": [
+      {
+        "id": "patterns",
+        "requested": true,
+        "required": true,
+        "scope": "requested-files",
+        "status": "completed",
+        "analyzedFiles": 1,
+        "ruleIds": [
+          "sqli-string-concat",
+          "sqli-template-literal",
+          "sqli-raw-query",
+          "sqli-exec",
+          "xss-innerhtml",
+          "xss-document-write",
+          "xss-dangerously-set",
+          "xss-eval",
+          "xss-new-function",
+          "xss-outerhtml",
+          "secret-aws-access-key",
+          "secret-aws-secret-key",
+          "secret-openai-key",
+          "secret-generic-password",
+          "secret-api-key",
+          "secret-jwt",
+          "secret-private-key",
+          "secret-github-token",
+          "secret-slack-token",
+          "secret-generic-assignment",
+          "path-traversal-readfile",
+          "path-traversal-pattern",
+          "path-traversal-writefile",
+          "path-traversal-createstream",
+          "cmd-injection-exec",
+          "cmd-injection-spawn",
+          "cmd-injection-shell-true",
+          "misc-cors-wildcard",
+          "misc-debug-enabled",
+          "misc-ssl-disabled",
+          "misc-helmet-missing",
+          "deser-yaml-load",
+          "deser-serialize-js",
+          "auth-weak-jwt-secret",
+          "auth-no-algorithm"
+        ],
+        "rulesetDigest": "ddb804c256ddfa750b639fe8b6ef4f628740a85b224ad298efeb57d6190b4385",
+        "ruleCoverage": "known",
+        "errors": [],
+        "limitations": [
+          "Built-in pattern matching covers supported JavaScript and TypeScript inputs only."
+        ]
+      },
+      {
+        "id": "semgrep",
+        "requested": true,
+        "required": false,
+        "status": "unavailable",
+        "scope": "parent-directory",
+        "target": "/tmp/proofwall-resend-onboarding/apps/web/src/lib",
+        "ruleCoverage": "unknown",
+        "errors": [
+          "Semgrep is unavailable."
+        ],
+        "limitations": [
+          "Optional Semgrep scans a parent directory; requested-file membership and executed-rule coverage are unverified."
+        ]
+      }
+    ],
+    "limitations": [
+      "Built-in pattern matching covers supported JavaScript and TypeScript inputs only.",
+      "Optional Semgrep scans a parent directory; requested-file membership and executed-rule coverage are unverified."
+    ]
+  }
+}

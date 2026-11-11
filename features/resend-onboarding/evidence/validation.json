@@ -1,0 +1,30 @@
+{
+  "sourceCommit": "d633b7b278c26d25b68d2da28949f39bea8bc05a",
+  "fullWebTests": {
+    "exitCode": 0,
+    "passed": 904,
+    "skipped": 3,
+    "filesPassed": 49,
+    "filesSkipped": 1,
+    "durationSeconds": 77.5,
+    "skippedSuite": "tests/storage.test.ts: live MinIO, S3_ENDPOINT absent",
+    "logSha256": "f0333781de2fc0bf37a4ac480d68ed2440a9be1b97aab14714200434652d2537"
+  },
+  "workspaceBuild": {
+    "exitCode": 0,
+    "logSha256": "588a33a017a8bf56ce3bd8064c7b903fb22eb326570ce9441b4e3e2ca84aac59"
+  },
+  "webTypecheckAfterFinalSource": {
+    "exitCode": 0
+  },
+  "workspaceTypecheckBeforeFinalResendPrecondition": {
+    "exitCode": 0
+  },
+  "browser": {
+    "exitCode": 0,
+    "mode": "next dev",
+    "api": "synthetic intercepted responses; actual API/DB separately tested"
+  },
+  "liveMailRequests": 0,
+  "liveDatabaseMigrations": 0
+}

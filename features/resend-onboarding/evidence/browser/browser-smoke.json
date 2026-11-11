@@ -1,0 +1,18 @@
+{
+  "mode": "synthetic mocked API UI smoke",
+  "results": [
+    {
+      "width": 1200,
+      "explicitPost": true,
+      "fragmentRemoved": true,
+      "noGetMutation": true
+    },
+    {
+      "width": 390,
+      "explicitPost": true,
+      "fragmentRemoved": true,
+      "noGetMutation": true
+    }
+  ],
+  "errors": []
+}

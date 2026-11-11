@@ -47,6 +47,17 @@ beforeEach(() => {
 const email = () => `owner${unique}-${Date.now()}@example.com`;
 
 describe('FR-001 happy path', () => {
+  it('название с NUL нормализуется до SQL и не откатывает регистрацию', async () => {
+    await inRollback(async c => {
+      const r = await registerAccountAndProject(c, { email: email(), password: 'synthetic-valid-password',
+        project_name: 'Acme\u0000Reviews', desired_slug: `nul-${Date.now()}` });
+      expect(r.ok).toBe(true);
+      if (!r.ok) throw new Error('signup unexpectedly failed');
+      expect(r.projectName).toBe('Acme Reviews');
+      const project = await c.query('select branding from projects where slug=$1', [r.slug]);
+      expect(project.rows[0].branding.name).toBe('Acme Reviews');
+    });
+  });
   it('создаёт аккаунт, проект, сессию и запись аудита одной транзакцией', async () => {
     await inRollback(async (c) => {
       const res = await registerAccountAndProject(c, {
@@ -66,8 +77,9 @@ describe('FR-001 happy path', () => {
       expect(acc.rows[0].password_hash).not.toContain('correct-horse-battery');
       expect(await verifyPassword(acc.rows[0].password_hash, 'correct-horse-battery')).toBe(true);
 
-      const proj = await c.query('select tier, noindex, account_id from projects where slug = $1', [res.slug]);
-      expect(proj.rows[0]).toMatchObject({ tier: 'free', noindex: true, account_id: res.accountId });
+      const proj = await c.query('select tier, noindex, account_id, branding from projects where slug = $1', [res.slug]);
+      expect(proj.rows[0]).toMatchObject({ tier: 'free', noindex: true, account_id: res.accountId, branding: { name: 'Acme Reviews' } });
+      expect(res.email).toContain('@example.com'); expect(res.projectName).toBe('Acme Reviews');
 
       const audit = await c.query(
         "select action, entity_type, actor_id from audit_log where actor_id = $1",

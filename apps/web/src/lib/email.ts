@@ -125,6 +125,7 @@ export async function sendViaResend(message: EmailMessage): Promise<void> {
       text: message.text,
       html: message.html,
     }),
+    redirect: 'error',
     // Верхняя граница ожидания. Без неё висящий чужой сервис занимает обработчик без предела.
     signal: AbortSignal.timeout(EMAIL_TIMEOUT_MS),
   });

@@ -1,0 +1,38 @@
+[
+  {
+    "mutation": "one-use",
+    "test": "A1:",
+    "exitCode": 1,
+    "killed": true
+  },
+  {
+    "mutation": "email-binding",
+    "test": "A2:",
+    "exitCode": 1,
+    "killed": true
+  },
+  {
+    "mutation": "fresh-clock",
+    "test": "TTL проверяется",
+    "exitCode": 1,
+    "killed": true
+  },
+  {
+    "mutation": "html-escape",
+    "test": "экранирует название",
+    "exitCode": 1,
+    "killed": true
+  },
+  {
+    "mutation": "origin-fallback",
+    "test": "invalid origin",
+    "exitCode": 1,
+    "killed": true
+  },
+  {
+    "mutation": "get-consume",
+    "test": "confirm GET отсутствует",
+    "exitCode": 1,
+    "killed": true
+  }
+]

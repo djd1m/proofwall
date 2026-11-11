@@ -1,0 +1,5 @@
+- [x] Требования, reuse, ADR, архитектура и план
+- [x] Реализация в reviewable ветке
+- [x] Focused/full web tests, build/typecheck, mutation probes, synthetic browser smoke
+- [x] Независимое cross-model ревью и исправления
+- [ ] Ручная приёмка владельца и отдельно согласованная production поставка
