@@ -1,0 +1,182 @@
+# Development Guide — Proofwall
+
+Пошаговый цикл разработки MVP-недели. Контекст продукта, стек и non-negotiable ограничения —
+в `CLAUDE.md`. Алгоритмы — `docs/Pseudocode.md`, схема данных и compose — `docs/Architecture.md`.
+
+## 0. Открыть проект правильно (решение D-006)
+
+Репозиторий содержит 8 проектов; корневой `.claude/` — общий пайплайн. Работать над Proofwall
+нужно **из этой директории**, не из корня репозитория:
+
+```bash
+cd projects/01-testimonials-senja
+claude
+```
+
+## 1. Поднять окружение
+
+Стек — Docker Compose, все сервисы свои (Architecture §7, §9 — без managed BaaS):
+
+> ⚠️ **Сначала проверь порты, потом поднимай.** Машина не пустая: `80` и `443` почти всегда
+> уже слушает чужой reverse-proxy, и `docker compose up` упадёт с `port is already allocated`,
+> оставив стек поднятым наполовину. Проверка детерминированная, занимает секунду:
+>
+> ```bash
+> bash scripts/check-port-conflicts.sh .     # 0 — чисто, 1 — конфликт
+> ```
+>
+> При конфликте — задать свободные значения в `.env` (`WEB_PORT`, `HTTP_PORT`, `HTTPS_PORT`);
+> `docker-compose.yml` править не нужно, хостовые порты в нём уже вынесены в переменные.
+> Правило целиком — `.claude/rules/docker-ports.md` в корне репозитория.
+
+```bash
+cp .env.example .env        # заполнить POSTGRES_PASSWORD, DATABASE_URL, SESSION_SECRET, S3_*, PAYMENT_WEBHOOK_SECRET, OPENAI_API_KEY
+bash scripts/check-port-conflicts.sh .      # ОБЯЗАТЕЛЬНО до up
+docker compose up -d
+```
+
+`apps/web` реализован (FR-001…FR-003) — образ собирается и стартует, `docker compose up -d`
+поднимает стек целиком. Историю дефекта, из-за которого раньше не собирался ни один образ,
+см. `decisions/D-008-web-app-missing.md`.
+
+Миграции. `packages/db` — не контейнер compose, а workspace монорепо, поэтому раннер
+запускается с хоста. `DATABASE_URL` из `.env` указывает на хост `postgres` — имя, которое
+резолвится **внутри** сети compose; с хоста нужен адрес контейнера:
+
+```bash
+PGHOST_IP=$(docker compose exec -T postgres hostname -i | tr -d '\r')
+DATABASE_URL="postgres://proofwall:<пароль>@${PGHOST_IP}:5432/proofwall" npm run db:migrate
+```
+
+Раннер идемпотентен: применённые миграции отмечаются в `schema_migrations`, повторный
+запуск — no-op (проверено). Когда появится `apps/web`, тот же шаг сведётся к
+`docker compose run --rm web npm run db:migrate`.
+
+`depends_on: condition: service_healthy` на `postgres`/`minio`/`transcribe` (Architecture §7,
+W-4) — `web`/`worker` не стартуют, пока зависимости не отвечают health-check. У `transcribe`
+health-check появился в Phase 3 (`GET /health`), поэтому его ждут по здоровью, а не по старту.
+
+Тестовая база — отдельная, миграции накатываются в неё тем же раннером:
+
+```bash
+docker compose exec -T postgres psql -U proofwall -d postgres -c "create database proofwall_test"
+TEST_DB="postgres://proofwall:<пароль>@${PGHOST_IP}:5432/proofwall_test"
+DATABASE_URL="$TEST_DB" npm run db:migrate
+TEST_DATABASE_URL="$TEST_DB" npm test          # 62 теста: 23 widget + 9 transcribe + 12 worker + 18 db
+```
+
+Достаточно одного `TEST_DATABASE_URL` — пул `packages/db/src/index.ts` перенаправляется на него
+через `packages/db/tests/env-setup.ts`. Тесты `services/worker` работают в отдельной схеме
+Postgres `worker_test` и не трогают таблицы `public` (D-008) — поэтому `npm test` идемпотентен:
+второй прогон подряд даёт тот же результат.
+
+Проверить, что всё поднялось:
+
+```bash
+docker compose ps                                  # postgres/minio/transcribe — healthy
+bash scripts/check-compose-buildable.sh            # сборочный контракт compose (D-008)
+docker compose exec transcribe node -e "fetch('http://127.0.0.1:7331/health').then(r=>r.text()).then(console.log)"
+```
+
+## 2. Порядок реализации фич
+
+Роадмап — `.claude/feature-roadmap.json`, 12 фич упорядочены по риску growth loop, не по номеру
+FR. Начинать с `status: "next"` (`FR-001`), дальше — по `depends_on`. Для каждой фичи:
+
+```
+/next                 # покажет верхнюю фичу по приоритету/статусу
+/plan <feature-id>     # для фич ≤3 файлов
+/feature <feature-id>  # для фич ≥4 файлов (полный цикл PLAN → VALIDATE → IMPLEMENT → REVIEW)
+```
+
+Перед стартом любой фичи прочитать одновременно (не по одному, см. `CLAUDE.md` «Карта
+документов»): `docs/Specification.md` (FR + Gherkin), `docs/Architecture.md` §10 (канон имён),
+`docs/Pseudocode.md` (алгоритм), соответствующий ADR в `docs/ADR.md`.
+
+## 3. Как проверять во время разработки
+
+```bash
+docker compose -f compose.test.yml up -d postgres   # тестовая Postgres-схема
+npm run test:unit           # resolveAttribution, recomputeContentThreshold, ALLOWED_TRANSITIONS
+npm run test:integration    # submitTestimonial, moderateTestimonial, apiWidgetConfig, onPaymentWebhook
+npm run test:e2e            # форма → модерация → стена → виджет на внешней фикстуре
+npm run build:widget && gzip -9 -c apps/widget/dist/widget.js | wc -c   # ≤30 KB gzip — CI-гейт
+```
+
+Порядок тестирования по риску (не по номеру FR) — `.claude/rules/testing.md` §1: сначала
+мульти-арендная изоляция и XSS, затем идемпотентность вебхука, затем badge/тариф на сервере,
+затем гонка на `widget_installs` (метрика недели), затем остальные growth-механики.
+
+Перед каждым PR — прогнать проверку известных пробелов пайплайна и код-ревью чек-лист из
+`.claude/agents/code-reviewer.md` (4 неявных `@security`-соответствия):
+
+```bash
+bash ../../scripts/check-pipeline-gaps.sh .
+```
+
+## 4. Definition of Done недели (Completion.md)
+
+MVP done, когда одновременно:
+1. `FR-001`…`FR-007` реализованы и проходят acceptance criteria из `docs/Specification.md`.
+2. Метрика недели (виджеты на внешних доменах) **вычисляется** из события `widget_installed`,
+   не подсчитывается вручную.
+
+Ни один `FR-GROWTH-00N` не засчитывается частично — тесты без инструментированной метрики не
+закрывают Definition of Done (`docs/Completion.md` §3, `.claude/rules/testing.md` §9).
+
+Growth-события, обязательные с первого релиза (постфактум не восстанавливаются):
+`invite_shown`, `invite_sent`, `badge_impression`, `badge_click`, `signup_from_badge`,
+`widget_installed`, `referral_attributed`.
+
+## 5. Деплой на VPS
+
+```bash
+# Фактический способ (стенд за уже работающим на машине прокси, как в docs/yookassa-setup.md):
+bash ../../scripts/check-port-conflicts.sh .      # до любого up
+docker compose -f docker-compose.yml -f compose.demo.yml up -d --build
+# точечный перезапуск одного сервиса:
+docker compose -f docker-compose.yml -f compose.demo.yml up -d web
+```
+
+> **Уточнение 28.09.2026 (по меткам контейнеров).** Стенд на этот день поднят с оверрайдом
+> `compose.bridge-release.yml` (выпуск моста F4: `image:` у `web`/`worker` закреплены именами тегов, например
+> `proofwall-web:login-navigation-20260909`), а не `compose.demo.yml`. `up -d --build web` с этим оверрайдом
+> СОБИРАЕТ новый образ под тем же закреплённым тегом и перезаписывает его (так и выложена правка FR-015
+> 28.09 ~21:00 UTC). Для выкладки с сохранением истории образов — задать новый тег в оверрайде перед сборкой.
+
+
+`docker-compose.prod.yml` и CI-конвейер «build → registry → pull по SSH», описанные в
+`docs/Architecture.md` §8, **не созданы** (сверено по файлам 2026-09-28): в проекте есть только
+`docker-compose.yml` (образы собираются на машине из `build:`) и оверрайд `compose.demo.yml`,
+который выключает собственный Caddy — 80/443 на машине держит чужой прокси — и включает `web`
+во внешнюю сеть прокси без публикации портов. Обычный `docker compose up` без оверрайда поднимет
+свой Caddy и упрётся в занятые 80/443.
+
+- Домен должен резолвиться на VPS **до** первого деплоя — иначе первая ACME-попытка Caddy
+  (ADR-007) провалится и уйдёт в backoff до следующей проверки DNS. С `compose.demo.yml` собственный
+  Caddy выключен и сертификат выпускает уже работающий на машине прокси — правило то же.
+- Smoke-проверка после `up -d`, до объявления деплоя успешным: `curl -I
+  https://<домен>/api/widget/config` должен отдать `200` с валидной TLS-цепочкой.
+- Откат — registry нет, поэтому пересборка с предыдущего коммита тем же `up -d --build`. Данные не
+  откатываются вместе с образом.
+- Секреты — в `.env` на сервере (CI secrets появятся вместе с CI), никогда не коммитятся.
+- Бэкапы (Architecture §7): `pg_dump` по расписанию для Postgres, `mc mirror` для `minio_data`,
+  синхронизировать по времени — рассинхрон создаёт «битые» ссылки `video_object_key` после restore.
+  `caddy_data` не бэкапить — переиздаётся автоматически.
+
+## 6. Открытые решения владельца продукта до релиза
+
+Не блокируют начало разработки (`docs/validation/07-final-gate.md` §5), но должны быть закрыты
+до подписания Completion.md: цена платного тарифа, лимит free-тарифа по числу отзывов, домен
+Wall of Love (поддомен vs CNAME), выбор платёжного провайдера, ставка комиссии партнёра по
+умолчанию (блокирует конкретно реализацию `FR-GROWTH-002`, не старт остальной разработки).
+
+## 7. Куда смотреть при затруднении
+
+| Вопрос | Файл |
+|---|---|
+| «Почему тут именно так?» | `docs/ADR.md` + `.claude/agents/architect.md` |
+| «Что считается выполненным?» | `docs/Specification.md` (Gherkin-сценарии) |
+| «Какое имя таблицы/поля/пути канонично?» | `docs/Architecture.md` §10 |
+| «Как это протестировать (гонка/XSS/виджет на чужом домене)?» | `docs/Refinement.md` + `.claude/rules/testing.md` |
+| «Что уже проверено на валидации?» | `docs/validation/07-final-gate.md` |

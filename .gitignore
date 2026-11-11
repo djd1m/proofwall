@@ -1,0 +1,25 @@
+node_modules/
+.next/
+dist/
+build/
+
+.env
+.env.*
+!.env.example
+
+*.log
+coverage/
+.DS_Store
+
+# Бандл виджета раскладывается сборкой (scripts/copy-widget-to-public.mjs), не коммитится
+apps/web/public/widget.*.js
+apps/web/public/widget-manifest.json
+
+# Пароли тестового окружения — генерируются scripts/init-test-env.sh
+.env.test
+
+# артефакт инкрементальной сборки tsc
+*.tsbuildinfo
+
+# Локальные учётные данные стенда. НИКОГДА не коммитить.
+.secrets/

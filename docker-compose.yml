@@ -1,0 +1,187 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    networks: [database]
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD       # секреты — только имена переменных, значения в .env / secrets
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  minio:
+    # Тег закреплён: `minio/minio` без тега = :latest — невоспроизводимая сборка,
+    # на VPS через месяц приедет другой образ (D-008, Phase 3 /start).
+    image: minio/minio:RELEASE.2025-04-22T22-12-26Z
+    networks: [storage]
+    restart: unless-stopped
+    command: server /data
+    environment:
+      - MINIO_ROOT_USER
+      - MINIO_ROOT_PASSWORD
+    volumes:
+      - minio_data:/data
+    expose: ["9000"]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build:
+      context: .                        # корень монорепо: package-lock.json только здесь
+      dockerfile: apps/web/Dockerfile
+    restart: unless-stopped
+    # FR-015 (правка 28.09): письмо восстановления уходит ПОСЛЕ ответа (after() из Next) —
+    # до двух попыток по 8 с с паузой 2 с, то есть до ~18 с. Стандартные 10 с до SIGKILL
+    # обрывали бы его при каждом деплое; 30 с дают Next дождаться отложенных задач.
+    stop_grace_period: 30s
+    networks:
+      - default
+      - talk-ai-public
+      - database
+      - storage
+    environment:
+      - DATABASE_URL             # postgres:// строка, включает роли app_authenticated/app_service
+      # D-010: argon2 при входе считается внутри транзакции и держит соединение ~50 мс.
+      # При пуле в 10 поток входов вычерпал бы его и положил бы вместе с входом
+      # дашборд, витрину, виджет и приём отзывов. Таймаут — чтобы исчерпание пула
+      # было ОТКАЗОМ, а не бесконечной очередью.
+      - PGPOOL_MAX
+      - PGPOOL_CONNECTION_TIMEOUT_MS
+      - SESSION_SECRET
+      # FR-015: почта восстановления пароля. Дефолта у обеих НЕТ намеренно — маршрут в
+      # проде откажет явно, а не ответит «письмо отправлено», ничего не отправив.
+      - RESEND_API_KEY
+      - MAIL_FROM
+      # BASE_URL — внешний адрес приложения. Без него КАЖДАЯ выданная ссылка (форма сбора,
+      # стена, сниппет виджета, href badge) указывает на http://localhost:3000, то есть
+      # на машину посетителя. Владелец получает нерабочие адреса, а badge-петля роста
+      # ведёт в никуда. Пропуск этой переменной ничего не ломает при старте — ошибка
+      # видна только в выданных ссылках, поэтому переменная объявлена ЗДЕСЬ, рядом с
+      # SESSION_SECRET, а не подразумевается.
+      - BASE_URL
+      - APP_DOMAIN               # свой домен: рендер виджета на нём не считается установкой
+      - S3_ENDPOINT
+      - S3_BUCKET
+      - VIDEO_INTAKE_ENABLED     # не задана = приём видео ВЫКЛЮЧЕН (fail-closed)
+      - S3_PHOTO_BUCKET          # фото к отзывам — отдельный бакет: у них другой режим доступа
+      - S3_ACCESS_KEY
+      - S3_SECRET_KEY
+      - TRANSCRIBE_SERVICE_URL=http://transcribe:7331
+      # ЮKassa (D-009). Подписи у уведомлений нет — провайдер её не присылает;
+      # подлинность подтверждается адресом источника и перезапросом статуса.
+      - YANDEX_CLIENT_ID          # вход через Yandex ID (FR-016); без него кнопка отдаёт 503
+      - YANDEX_CLIENT_SECRET
+      - YOOKASSA_SHOP_ID
+      - YOOKASSA_SECRET_KEY
+      - PAYMENTS_STUB            # true = платежи симулируются, реальных вызовов нет
+      - PAID_TIER_PRICE_RUB
+      - N3_BRIDGE_ENABLED
+      - N3_BASE_URL
+      - N3_TENANT_ID
+      - N3_CONNECTOR_KEY
+    # НЕ публикуется наружу. Единственная дверь снаружи — caddy.
+    #
+    # Публикация web ломала бы rate limit 5/час/IP: extractClientIP доверяет ПОСЛЕДНЕМУ
+    # элементу X-Forwarded-For, потому что его дописывает Caddy. При прямом доступе к
+    # web:3000 этот элемент задаёт сам клиент — и, меняя заголовок, обходит лимит
+    # полностью. Проверено на живом контейнере: с ротацией XFF проходят все запросы
+    # подряд, с одним адресом — пять и затем 429.
+    expose: ["3000"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+      transcribe:
+        condition: service_healthy
+
+  worker:
+    networks: [default, database, storage]
+    build:
+      context: .                        # корень монорепо: package-lock.json только здесь
+      dockerfile: services/worker/Dockerfile
+    # Перезапуск обязателен, и вот почему конкретно: воркер стартует раньше, чем
+    # накачены миграции (они запускаются отдельным шагом, см. DEVELOPMENT_GUIDE),
+    # падает на `relation "testimonials" does not exist` и БОЛЬШЕ НЕ ПОДНИМАЕТСЯ.
+    # На стенде это выглядело так: пять сервисов healthy, приложение работает,
+    # а транскрипция не происходит вовсе — воркер лежал девять часов, и об этом
+    # не сообщил никто. `unless-stopped` превращает гонку старта в задержку.
+    restart: unless-stopped
+    environment:
+      # Тот же packages/db, тот же пул — значит и те же настройки (D-010, ревью L-5).
+      # Совпадение умолчаний не оправдывает пробел: расходиться они начнут молча.
+      - PGPOOL_MAX
+      - PGPOOL_CONNECTION_TIMEOUT_MS
+      - DATABASE_URL
+      - N3_BRIDGE_ENABLED
+      - N3_BASE_URL
+      - N3_TENANT_ID
+      - N3_CONNECTOR_KEY
+      - S3_ENDPOINT
+      - S3_BUCKET
+      - S3_PHOTO_BUCKET          # фото к отзывам — отдельный бакет: у них другой режим доступа
+      - S3_ACCESS_KEY
+      - S3_SECRET_KEY
+      - TRANSCRIBE_SERVICE_URL=http://transcribe:7331
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+      transcribe:
+        condition: service_healthy
+
+  # D-007 / ADR-005: раньше mcp-claude — Claude API не принимает аудио, переехало на OpenAI STT.
+  transcribe:
+    build:
+      context: .                        # корень монорепо: package-lock.json только здесь
+      dockerfile: services/transcribe/Dockerfile
+    restart: unless-stopped
+    environment:
+      - OPENAI_API_KEY           # только он: сервис делает ТОЛЬКО транскрипцию (ADR-005)
+      - OPENAI_TRANSCRIBE_MODEL  # опционально; дефолт gpt-4o-mini-transcribe (config.ts)
+    expose: ["7331"]
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    # 80/443 — самые конфликтные порты на любой машине: их почти всегда уже слушает
+    # чужой reverse-proxy. На этой машине их занимает контейнер ai-hub-tls-proxy,
+    # поэтому значения по умолчанию вынесены в переменные, а не зашиты.
+    ports: ["${HTTP_PORT:-80}:80", "${HTTPS_PORT:-443}:443"]
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+    depends_on:
+      web:
+        condition: service_started
+
+volumes:
+  postgres_data:
+  minio_data:
+  caddy_data:
+
+networks:
+  database:
+    internal: true
+  storage:
+    internal: true
+  # Своя сеть проекта — по ней сервисы находят друг друга по имени.
+  default:
+  # Сеть чужого reverse-proxy (ai-hub-tls-proxy), который держит 80/443 на этой машине.
+  # ОБЪЯВЛЕНА ЗДЕСЬ НАМЕРЕННО. Прежде web подключали к ней командой
+  # `docker network connect`, а это состояние КОНТЕЙНЕРА, а не конфигурации: любое
+  # пересоздание (то есть любая выкатка) его теряло, и стенд отдавал 502 при полностью
+  # исправном приложении и нулевых ошибках в журнале. Диагноз уводит в сторону — это
+  # читается как «приложение упало», а упала связность, которой нет в файле.
+  talk-ai-public:
+    external: true

@@ -1,0 +1,150 @@
+// POST /api/webhooks/payment — уведомления ЮKassa (FR-008, ADR-006, D-009).
+//
+// Порядок шагов — требование, а не стиль: подлинность подтверждается ДО записи
+// event_id. При обратном порядке подделка с угаданным идентификатором вытеснит
+// настоящее уведомление, и оплата не применится никогда.
+//
+// Отсюда же следует НЕОЧЕВИДНОЕ: недоступность провайдера обязана быть ИСКЛЮЧЕНИЕМ,
+// а не возвращаемым значением. withService коммитит транзакцию при штатном возврате
+// из колбэка — значит заявка на event_id останется в базе. Мы при этом отдаём 500,
+// ЮKassa повторяет уведомление, повтор упирается в занятый event_id и коротит в
+// 'duplicate' с кодом 200. Оплата не применяется НИКОГДА: деньги списаны, тариф не
+// повышен, повторить нечем. Брошенное исключение откатывает транзакцию и освобождает
+// заявку — только тогда повтор действительно повторяет.
+
+import { NextResponse } from 'next/server';
+import { withService } from '@proofwall/db';
+import {
+  applyTariffUpgrade,
+  claimWebhookEvent,
+  fetchRemotePayment,
+  PaymentProviderError,
+  verifyWebhookOrigin,
+} from '@/lib/payment';
+import { convertAttributionOnPayment } from '@/lib/referral';
+import { extractClientIP } from '@/lib/client-ip';
+import { bridgeNotification } from '@/lib/n3-payment';
+import { N3Error } from '@/lib/n3-runtime';
+import { agentPaymentNotification } from '@/lib/agent-payments/notification';
+import { observeLegacyPayment, releaseCanceledHuman } from '@/lib/agent-payments/legacy';
+
+export const dynamic = 'force-dynamic';
+
+/**
+ * Провайдер недоступен. Именно исключение, а не значение: оно обязано откатить
+ * транзакцию вместе с заявкой на event_id — см. шапку файла.
+ */
+class ProviderUnavailable extends Error {
+  constructor() {
+    super('payment provider unavailable');
+    this.name = 'ProviderUnavailable';
+  }
+}
+
+async function audit(action: string, actor: string, reason: string): Promise<void> {
+  await withService((client) =>
+    client.query(
+      // project_id = null: на этом шаге проект ещё неизвестен, событие привязано к источнику.
+      `insert into audit_log (project_id, entity_type, entity_id, actor_id, action, reason)
+       values (null, 'webhook', gen_random_uuid(), $1, $2, $3)`,
+      [actor, action, reason],
+    ),
+  );
+}
+
+export async function POST(request: Request): Promise<NextResponse> {
+  const ip = extractClientIP(request);
+
+  // ── ШАГ 1: адрес источника из списка сетей ЮKassa ───────────────────────
+  const origin = verifyWebhookOrigin(ip);
+  if (!origin.ok) {
+    await audit('webhook_origin_rejected', ip, origin.reason);
+    // 400, а не 200: у ЮKassa отказ должен быть виден, а не проглочен.
+    return NextResponse.json({ error: 'unknown origin' }, { status: 400 });
+  }
+
+  let body: {
+    event?: unknown;
+    object?: { id?: unknown; status?: unknown; metadata?: Record<string, unknown> };
+  };
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json({ error: 'invalid json' }, { status: 400 });
+  }
+
+  const event = typeof body.event === 'string' ? body.event : '';
+  const paymentId = typeof body.object?.id === 'string' ? body.object.id : '';
+  if (event === '' || paymentId === '') {
+    return NextResponse.json({ error: 'event and object.id required' }, { status: 400 });
+  }
+
+  // У ЮKassa нет отдельного идентификатора события — есть тип события и id объекта.
+  // Пара из них устойчива и различает payment.succeeded и payment.canceled по одному платежу.
+  const eventId = `${event}:${paymentId}`;
+  try {
+    const agent = await agentPaymentNotification(event,paymentId,body.object?.metadata);
+    if (agent !== null) return NextResponse.json({status:agent});
+    const bridge = await bridgeNotification(event, paymentId);
+    if (bridge !== null) return NextResponse.json({ status: bridge });
+  } catch (error) {
+    // No event claim has survived a failed bridge transaction. Capacity, N3 or
+    // provider failures remain retryable; no raw provider metadata is reflected.
+    return NextResponse.json({ status: error instanceof N3Error ? error.code : 'bridge_unavailable' }, { status: 503 });
+  }
+
+  let outcome: 'duplicate' | 'ignored' | 'unknown_payment' | 'not_paid' | 'upgraded' | 'unknown_session' | 'canceled';
+  try {
+    outcome = await withService(async (client) => {
+      // ── ШАГ 2: идемпотентность на уровне схемы ────────────────────────────
+      if (!(await claimWebhookEvent(client, eventId, body))) return 'duplicate' as const;
+      if (event !== 'payment.succeeded' && event!=='payment.canceled') return 'ignored' as const;
+
+      // ── ШАГ 3: статус перезапрашивается у ЮKassa ──────────────────────────
+      // Тело уведомления не является источником истины о том, оплачено ли. Этот шаг
+      // сильнее проверки адреса: он не зависит от точности определения IP.
+      let remote;
+      try {
+        remote = await fetchRemotePayment(paymentId);
+      } catch (err) {
+        // НЕ `return`: штатный возврат закоммитил бы заявку на event_id (см. шапку).
+        if (err instanceof PaymentProviderError) throw new ProviderUnavailable();
+        throw err;
+      }
+      if (!remote) return 'unknown_payment' as const;
+      if(event==='payment.canceled'){
+        if(remote.status!=='canceled'||remote.paid)throw new ProviderUnavailable();
+        const session=(await client.query('select project_id from checkout_sessions where provider_session_id=$1',[paymentId])).rows[0];
+        if(!session)throw new ProviderUnavailable(); // Early cancellation must retry after session persistence.
+        const released=await releaseCanceledHuman(client,session.project_id,paymentId);
+        return released?'canceled' as const:'ignored' as const;
+      }
+      if (!remote.paid || remote.status !== 'succeeded') return 'not_paid' as const;
+
+      // ── ШАГ 4: тариф ──────────────────────────────────────────────────────
+      const upgrade = await applyTariffUpgrade(client, paymentId);
+
+      // ── ШАГ 5: партнёрское начисление (FR-GROWTH-002) ─────────────────────
+      const owner = upgrade.applied ? (await client.query('select account_id from projects where id=$1', [upgrade.projectId])).rows[0] : null;
+      const accountId = owner?.account_id;
+      if (typeof accountId === 'string' && accountId !== '') {
+        await convertAttributionOnPayment(client, accountId, eventId, remote.amount);
+      }
+
+      if (upgrade.applied) await observeLegacyPayment(client,upgrade.projectId,paymentId,String(Math.round(remote.amount*100)));
+      return upgrade.applied ? ('upgraded' as const) : ('unknown_session' as const);
+    });
+  } catch (err) {
+    if (err instanceof ProviderUnavailable) {
+      // 500 намеренно: ЮKassa повторит уведомление, и это правильный исход — мы не
+      // смогли проверить платёж, а не отвергли его. Заявка на event_id откачена
+      // вместе с транзакцией, поэтому повтор пройдёт по полному пути, а не в duplicate.
+      return NextResponse.json({ status: 'provider_unavailable' }, { status: 500 });
+    }
+    throw err;
+  }
+
+  // 200 на всё остальное: ЮKassa повторяет, пока не получит 200, и ретраить то,
+  // что мы сознательно проигнорировали, незачем.
+  return NextResponse.json({ status: outcome }, { status: 200 });
+}
