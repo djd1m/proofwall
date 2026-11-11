@@ -29,6 +29,7 @@ import { emitEvents } from './widget-install';
 import { createPendingAttribution, resolveAttribution } from './referral';
 import { onSignupViaPartnerCode } from './partner';
 import { captureSignup, type N3Receipt } from './n3-referral';
+import { normalizeProjectDisplayName } from './onboarding-email';
 
 export interface RegisterInput {
   email: unknown;
@@ -49,7 +50,7 @@ export interface RegisterInput {
 }
 
 export type RegisterResult =
-  | { ok: true; status: 201; accountId: string; slug: string; token: string; urls: ProjectUrls }
+  | { ok: true; status: 201; accountId: string; slug: string; token: string; urls: ProjectUrls; email: string; projectName: string }
   | { ok: false; status: 400; body: { errors: string[] } }
   | { ok: false; status: 409; body: { error: string; field?: string } };
 
@@ -105,6 +106,7 @@ export async function registerAccountAndProject(
   }
 
   const passwordHash = await hashPassword(input.password as string);
+  const projectName = normalizeProjectDisplayName(input.project_name, slug);
 
   const account = await client.query<{ id: string }>(
     'insert into accounts (email, password_hash) values ($1, $2) returning id',
@@ -116,9 +118,9 @@ export async function registerAccountAndProject(
   const project = await client.query<{ id: string; slug: string }>(
     // tier='free' и noindex=true — явно, а не «по умолчанию из схемы»: FR-GROWTH-005 требует,
     // чтобы новый проект был закрыт от индексации до порога содержательности.
-    `insert into projects (account_id, slug, tier, noindex)
-     values ($1, $2, 'free', true) returning id, slug`,
-    [accountId, slug],
+    `insert into projects (account_id, slug, tier, noindex, branding)
+     values ($1, $2, 'free', true, jsonb_build_object('name', $3::text)) returning id, slug`,
+    [accountId, slug, projectName],
   );
   const projectId = project.rows[0]!.id;
 
@@ -164,5 +166,5 @@ export async function registerAccountAndProject(
     );
   }
 
-  return { ok: true, status: 201, accountId, slug, token, urls: buildProjectUrls(slug) };
+  return { ok: true, status: 201, accountId, slug, token, urls: buildProjectUrls(slug), email, projectName };
 }

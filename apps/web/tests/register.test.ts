@@ -66,8 +66,9 @@ describe('FR-001 happy path', () => {
       expect(acc.rows[0].password_hash).not.toContain('correct-horse-battery');
       expect(await verifyPassword(acc.rows[0].password_hash, 'correct-horse-battery')).toBe(true);
 
-      const proj = await c.query('select tier, noindex, account_id from projects where slug = $1', [res.slug]);
-      expect(proj.rows[0]).toMatchObject({ tier: 'free', noindex: true, account_id: res.accountId });
+      const proj = await c.query('select tier, noindex, account_id, branding from projects where slug = $1', [res.slug]);
+      expect(proj.rows[0]).toMatchObject({ tier: 'free', noindex: true, account_id: res.accountId, branding: { name: 'Acme Reviews' } });
+      expect(res.email).toContain('@example.com'); expect(res.projectName).toBe('Acme Reviews');
 
       const audit = await c.query(
         "select action, entity_type, actor_id from audit_log where actor_id = $1",

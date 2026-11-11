@@ -1,7 +1,7 @@
 // POST /api/auth/register — FR-001. HTTP-обёртка над registerAccountAndProject.
 // Роут отвечает только за транспорт: разбор тела, коды, cookie. Бизнес-правила — в lib/register.ts.
 
-import { NextResponse } from 'next/server';
+import { after, NextResponse } from 'next/server';
 import { MAX_JSON_BODY, readBodyAtMost } from '@/lib/request-body';
 import { withService } from '@proofwall/db';
 import { registerAccountAndProject, type RegisterInput } from '@/lib/register';
@@ -10,11 +10,17 @@ import { extractClientIP } from '@/lib/client-ip';
 import { REF_COOKIE } from '@/lib/referral';
 import { signupReceipt } from '@/lib/n3-referral';
 import { n3Failure } from '@/lib/n3-http';
+import { mailConfigured, sendViaResend, sendWithRetry, type EmailSender, type EmailMessage } from '@/lib/email';
+import { transactionalMailOrigin, emailVerificationUrl, projectWelcomeEmail } from '@/lib/onboarding-email';
+import { issueEmailVerification } from '@/lib/email-verification';
 
 // Роут ходит в БД — статически его пререндерить нельзя.
 export const dynamic = 'force-dynamic';
 
-export async function POST(request: Request): Promise<NextResponse> {
+export async function handleRegister(
+  request: Request, send: EmailSender = sendViaResend,
+  defer: (task: () => Promise<void>) => void = after,
+): Promise<NextResponse> {
   let body: unknown;
   try {
     // L-2 ревью: предел был у входа и отсутствовал здесь — закрытой оставалась одна
@@ -51,10 +57,32 @@ export async function POST(request: Request): Promise<NextResponse> {
   let receipt;
   try { receipt = signupReceipt(request.headers.get('cookie'), (body as { n3_promo_code?: unknown }).n3_promo_code); }
   catch (error) { return n3Failure(error); }
-  const result = await withService((client) => registerAccountAndProject(client, input, receipt));
+  const configured = mailConfigured();
+  const origin = transactionalMailOrigin();
+  let emailDelivery = !configured ? 'not_configured' : !origin ? 'invalid_origin' : 'schedule_failed';
+  const { result, message } = await withService(async (client) => {
+    const result = await registerAccountAndProject(client, input, receipt);
+    let message: EmailMessage | null = null;
+    if (result.ok && configured && origin) {
+      // Проверить фактические URL ДО выпуска token. Ошибка шаблона не отменяет signup.
+      try { projectWelcomeEmail(result.email, result.projectName, result.urls, emailVerificationUrl(origin, 'v'.repeat(43))); }
+      catch { emailDelivery = 'invalid_origin'; return { result, message }; }
+      const issued = await issueEmailVerification(client, result.accountId, result.email);
+      if (issued.kind === 'issued') {
+        message = projectWelcomeEmail(result.email, result.projectName, result.urls, emailVerificationUrl(origin, issued.token));
+      }
+    }
+    return { result, message };
+  });
 
   if (!result.ok) {
     return NextResponse.json(result.body, { status: result.status });
+  }
+  if (message) {
+    try {
+      defer(async () => { await sendWithRetry(send, message, 'onboarding_email'); });
+      emailDelivery = 'scheduled';
+    } catch { console.error('onboarding_email_schedule_failed'); }
   }
 
   const response = NextResponse.json(
@@ -62,6 +90,7 @@ export async function POST(request: Request): Promise<NextResponse> {
       account_id: result.accountId,
       project_slug: result.slug,
       urls: result.urls,
+      email_delivery: emailDelivery,
     },
     { status: 201 },
   );
@@ -70,3 +99,5 @@ export async function POST(request: Request): Promise<NextResponse> {
   response.cookies.set(SESSION_COOKIE, result.token, sessionCookieOptions());
   return response;
 }
+
+export function POST(request: Request): Promise<NextResponse> { return handleRegister(request); }
