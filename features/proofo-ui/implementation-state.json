@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "feature": "proofo-ui",
+  "fullQe": true,
+  "complexityTier": "unclassified",
+  "stage": "planned",
+  "activeProductChange": false,
+  "requiredChecks": [
+    "unit",
+    "integration",
+    "e2e",
+    "visual",
+    "accessibility",
+    "typecheck",
+    "build",
+    "independent-review"
+  ],
+  "receipt": null,
+  "implementationAdmission": null
+}

@@ -1,0 +1,11 @@
+# Local, pinned runtime; no credentials and no automatic LLM worker swarm.
+[mcp_servers.agentic-qe]
+command = "/home/proofwall/node_modules/node/bin/node"
+args = ["/home/proofwall/node_modules/agentic-qe/dist/mcp/bundle.js"]
+startup_timeout_sec = 60
+
+[mcp_servers.agentic-qe.env]
+AQE_PROJECT_ROOT = "/home/proofwall"
+AQE_MEMORY_PATH = "/home/proofwall/.agentic-qe/memory.db"
+AQE_WORKERS_ENABLED = "false"
+AQE_HTTP_PORT = "0"

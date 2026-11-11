@@ -23,12 +23,18 @@
     "logs": "docker compose logs -f",
     "dz": "dz",
     "openspec": "openspec",
-    "process:install": "sh scripts/install-process.sh"
+    "process:install": "sh scripts/install-process.sh",
+    "aqe": "aqe",
+    "process:check": "node scripts/process-guard.mjs check-config",
+    "process:test": "node --test scripts/test-process-guard.mjs",
+    "process:delivery": "node scripts/process-guard.mjs check-delivery",
+    "qe:smoke": "node scripts/smoke-qe.mjs"
   },
   "devDependencies": {
     "@dzhechkov/harness-cli": "0.8.58",
     "@dzhechkov/skills-feature-adr": "1.5.25",
     "@fission-ai/openspec": "1.15.0",
+    "agentic-qe": "3.15.19",
     "node": "22.23.4"
   }
 }
