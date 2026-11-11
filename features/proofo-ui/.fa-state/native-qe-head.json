@@ -1,0 +1,11 @@
+{
+  "journalId": "68499a22-7282-4c58-a734-db366e6d3d08",
+  "projectRoot": "/tmp/proofwall-ui-dashboard",
+  "featurePath": "/tmp/proofwall-ui-dashboard/features/proofo-ui",
+  "ceiling": 3,
+  "schema": "native-qe-head-1",
+  "sequence": 4,
+  "eventDigest": "762e787ddd31b6826b42201368441591bbee69d2f49bf994977cb48f62011b36",
+  "activeCycle": "e4d115cd-8255-453e-830c-69eaee1c21bf",
+  "hostProjectionDigest": "809dbe64f4599706e76556c2ecb8d91200b171b7eed1c95a9c31708d3ebaee01"
+}

@@ -1,0 +1,12 @@
+{
+  "REPORT.md": "a64499a0b064bfe1510e19b3b3754467a97e051f8354f91ca3280306ca91c2a3",
+  "coverage-analysis.json": "cad751c43a5ef39cee51f3ec530d7b3630e79812d9fecd9889a9c6f1e2ab9199",
+  "run-metadata.json": "2ecddb51ab9a4cb1655e40ceb7b625451f0eb51f6ef6e2d115306cd35f4e0d4c",
+  "vitest-run.log": "9aafad5f53351e937b3109c1888a04805adc1fa6e9947d7e4912eb3342be27d4",
+  "raw/coverage-final.json": "998b2dce34bdce888ffd6cf774cb06f8402898ceeafe8a651ade3cbc408a635d",
+  "raw/coverage-summary.json": "6714d429c615e30c9bfccf0e49dbda3d05d81dede46ed2ccd7fd97ae53f3c877",
+  "raw/lcov.info": "d7d9d16c9f8085e4173ef00e8ee850795984946bc91e1b8cbdb6a52106d80f50",
+  "dashboard.vitest.config.mjs": "17c4c65d0d48dd8a2955de79e96f251ef51a78ca4468aaefcc2effa002301477",
+  "run-dashboard-coverage.mjs": "4032c66ac3864eca3b3365cc8307980b20fb4f70afcc659df4e95a97ed60c00f",
+  "analyze-dashboard-coverage.mjs": "ce5a0f83cc8cfa778b6a8f818a9eeec7903c2d08adf48141f0d4f08a7515a601"
+}

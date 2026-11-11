@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "exitCode": 0,
+  "command": "node_modules/node/bin/node scripts/run-dashboard-preview.mjs build",
+  "artifacts": [
+    "features/proofo-ui/evidence/dashboard-final/build.log",
+    "features/proofo-ui/evidence/dashboard-final/operations-artifact.json",
+    "features/proofo-ui/evidence/dashboard-final/operations-focused-review.md"
+  ],
+  "detail": {
+    "lastProductSourceBuild": true,
+    "subsequentChanges": "tests and plan only; production source hashes independently unchanged",
+    "buildId": "u0skKIAfRIAw4AJWplbBw"
+  }
+}

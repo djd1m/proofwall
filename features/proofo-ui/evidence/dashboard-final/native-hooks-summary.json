@@ -1,0 +1,21 @@
+{
+  "scope": "Actual sanitized project native hook event log for author CLI sessions; parent root session is not claimed retroactively activated",
+  "counts": {
+    "SessionStart:allow": 9,
+    "PreToolUse:allow": 326,
+    "Stop:block": 9,
+    "Stop:stopped": 9,
+    "PreToolUse:deny": 6
+  },
+  "eventFieldsOnly": [
+    "event",
+    "timestamp",
+    "decision"
+  ],
+  "codingThread": "01a1cc28-a862-7781-92a0-aa3440eb14e3",
+  "configuredModel": "gpt-6.1-sol",
+  "reasoning": "high",
+  "launcher": "bash scripts/codex-project.sh",
+  "permissions": "Explicit authorized VPS write profile; readonly first attempt did not edit app",
+  "globalHookTrustChanged": false
+}

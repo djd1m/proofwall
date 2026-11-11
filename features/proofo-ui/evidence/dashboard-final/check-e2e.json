@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "exitCode": 0,
+  "command": "node_modules/.bin/node --test tools/visual/dashboard.e2e.test.mjs",
+  "artifacts": [
+    "features/proofo-ui/evidence/dashboard-final/e2e.log",
+    "features/proofo-ui/evidence/dashboard-final/browser-measurements.json"
+  ],
+  "detail": {
+    "passed": 7,
+    "ordinarySession": true,
+    "productionSourceUnchangedByLaterTestOnlyRepair": true,
+    "firstIncompleteEnvironmentAttempt": "features/proofo-ui/evidence/dashboard-final/e2e-incomplete-env.log"
+  }
+}

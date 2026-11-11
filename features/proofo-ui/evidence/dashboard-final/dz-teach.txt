@@ -1,0 +1,5 @@
+Learned: "RLS-тест должен проверять роль и tenant GUC фактического sum..."
+  Domain: general  Reward: 0.8 (default)  Backend: memory (@dzhechkov/memory)
+  Total patterns: 4
+  store (written): /home/proofwall/.dz  [from --project]
+  ID: teach:6e27eb95f25a6367

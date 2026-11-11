@@ -1,0 +1,150 @@
+{
+  "schema": "fa-review-convergence-1",
+  "phase": "qe",
+  "nonce": "690f6976-08de-4023-9747-5782b9c1c20f",
+  "revision": "06f4dce82d3e419861bced5377c6c71ae2fc9a42d87f12c219fee9d2dc1c1840",
+  "author": {
+    "addressed": [
+      "QE-PRIMARY-1",
+      "QE-RISK-1"
+    ],
+    "changedScope": [
+      "apps/web/tests/dashboard-overview-db.test.ts",
+      "apps/web/tests/dashboard-overview.test.ts",
+      "apps/web/tests/dashboard-visual-fixture.test.ts",
+      "features/proofo-ui/06_implementation_plan.md",
+      "apps/web/src/lib/dashboard-summary.ts",
+      "apps/web/src/app/dashboard/dashboard-overview.tsx"
+    ],
+    "classification": "structural",
+    "delta": "Три planned test files: exact literal dynamic imports with explicit .ts/.tsx suffix, no suppressions/classifier changes; actual summary client/transaction authority probe for both accounts before/after statement (role, tenant GUC, BYPASSRLS, ownership four tables, backend PID and transaction ID). Production code unchanged. Plan adds reasoned C9 exclusions only for byte-identical immutable prototype/baseline fonts; exact plan bytes otherwise equal original, same 18 targets. Original K1 precreation evidence retained; measured no-new-names rebinding + real canonical K2 exit0. Genuine external-only dependency artifact matches prefeature manifests/lock and has no checkout/workspace symlink edges; package lookups unified after a documented partial-setup failed attempt.",
+    "evidence": "Root actual installed discrimination-repair.json: measurementValid=true, all3 DISCRIMINATES_VIA_ERROR and greenTIP. This is limited load-error inference, not baseline assertion proof. Existing onboarding remains explicitly NON_DISCRIMINATING preservation coverage. Author focused158pass/typecheck0 and authority mutant real assertion app_service!=app_authenticated in isolated copy; reviewers must rerun independently. Root fullweb postrepair923passed3oldS3skipped. Real coverage4productionfiles100%lines,95.23%branches,criticalsummary92.30%; raw source/test before/after hashes stable. Artifacts under features/proofo-ui/evidence/dashboard-final/ and /tmp/proofwall-qe-test-repair-handoff.json.",
+    "newRisks": {
+      "assessment": "No new production runtime path or permissions introduced. QA observers add diagnostic SQL only inside isolated tests. Explicit module imports alter test loading; old incomplete baseline resolution reports retained. Font exclusions intentionally preserve reference bytes and do not waive app behavior or edit goldens. Coverage gaps invalid-counter throw/paid-only-label remain measured, within explicit thresholds. No further serious product risk identified by author; independent verification still required.",
+      "evidence": "Measured host delta is exactly three test files and plan. App production hashes match previous reviewed snapshot and packaged production build. OPS-1/OPS-2 were separately corrected and independently closed in operations-focused-review.md; public gateway still unchanged.",
+      "conditions": []
+    }
+  },
+  "reviews": [
+    {
+      "reviewer": "qe-primary",
+      "family": "codex",
+      "independent": true,
+      "verdict": "clean",
+      "conditions": [
+        {
+          "id": "QE-PRIMARY-1",
+          "owner": "qe-primary",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "До закрытия обязательного Step-8 discrimination gate получить распознаваемое исполнение load-bearing dashboard tests на genuine pre-feature baseline и текущем snapshot через установленный CLI, с явной оценкой недискриминирующих compatibility tests. Исправить доступность/изоляцию baseline dependencies, не подменяя их tip workspace/dist, не меняя classifier и не трактуя exit 0 как доказательство измерения. Тесты новых модулей могут быть классифицированы DISCRIMINATES_VIA_ERROR только при доказанном green tip control; оставшиеся CANNOT_ISOLATE должны остаться незакрытыми.",
+          "scope": [
+            "features/proofo-ui/06_implementation_plan.md",
+            "apps/web/tests/dashboard-overview.test.ts",
+            "apps/web/tests/dashboard-overview-db.test.ts",
+            "apps/web/tests/dashboard-visual-fixture.test.ts"
+          ],
+          "evidence": "Самостоятельный запуск installed dz discrimination-check --test apps/web/tests/dashboard-overview.test.ts,apps/web/tests/dashboard-overview-db.test.ts,apps/web/tests/dashboard-visual-fixture.test.ts,apps/web/tests/dashboard-onboarding.test.ts --base HEAD --timeout 30000 --json: process exit 0, aggregate CANNOT_ISOLATE, measurementValid=false; каждый из 4 результатов baseline-dependency-unavailable (specifier vitest/config). Полный raw report features/proofo-ui/evidence/qe-primary-discrimination.json. Helper отказал root vitest из-за live workspace edges в adjacent node_modules; package-local vitest отсутствует. Требование инструмента: .agents/skills/feature-adr/modules/08-qe.md:365. Это недоказанный обязательный gate, а не найденный дефект runtime dashboard."
+        }
+      ],
+      "verifications": [
+        {
+          "id": "QE-PRIMARY-1",
+          "revision": "06f4dce82d3e419861bced5377c6c71ae2fc9a42d87f12c219fee9d2dc1c1840",
+          "classification": "structural",
+          "evidence": "Независимо повторён installed dz discrimination-check на genuine HEAD baseline и трёх текущих planned test files: process exit0, measurementValid=true, all3 DISCRIMINATES_VIA_ERROR, exact feature-module-absent attribution (.ts/.tsx), green TIP 7+7+1. Полные raw evidence qe-primary-discrimination-focused.json и binding qe-primary-discrimination-focused-inputs.json: 30/30 manifest hashes совпали до/после; nonce 690f6976-08de-4023-9747-5782b9c1c20f. External artifact links проверены самостоятельно (35, no unsafe/dangling); HEAD/current package manifests и lock равны. Existing onboarding NON_DISCRIMINATING честно сохранён как preservation coverage и не выдан за new-feature property. Это limited load-error inference, не baseline assertion proof. Initial условие и evidence сохранены неизменными.",
+          "implementationVerified": true
+        }
+      ],
+      "newRisks": {
+        "assessment": "Новых подтверждённых рисков после focused review полного actual delta и affected dependencies не выявлено. Собственное QE-PRIMARY-1 проверено и закрыто на текущей ревизии. Это verdict только роли qe-primary; исходные условия других ролей и общую native closure подтверждает координатор отдельно.",
+        "evidence": "Собственный installed gate measurementValid=true/all3 limited DISCRIMINATES_VIA_ERROR+greenTIP15; hash-stable manifest; проверенные external-only dependencies; K2 pass и точная font-only waiver delta. Coverage оставляет две явно измеренные ветви вне исполнения; пороги не снижены, runtime не менялся. Полная история finding и границы inference сохранены в qe-primary.md и qe-primary-entry-initial.json.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": true,
+      "deltaVerification": {
+        "classification": "structural",
+        "evidence": "Прочитан qe-author-delta.json и независимо проверены все четыре host changedPaths: точные literal dynamic imports в трёх тестах, новая authority-проверка summary на том же реальном pg Client/backend/transaction до и после SQL для A/B, без подмены SQL/args/result. Этот DB suite самостоятельно исполнен installed gate TIP: 7/7. Все прежние assertions и fixture values сохранены. Plan отличается только reasoned C9 font exclusions: удаление секции даёт точные исходные bytes b7401a..., все18targets прежние, runtime/prototype/baseline fonts совпадают по SHA. Собственный canonical K2 exit0, 0failures/0warnings/0skips. K1-original и precreation raw сохранены; no-new-names rebinding не заявляет повторный FREE. Production source неизменён. Raw coverage и source/test SHA проверены: 91/91lines,40/42branches, summary24/26branches; gaps invalid-count throw/paid-only label раскрыты. Evidence: qe-primary-focused-delta-check.json, qe-primary-focused-k2.log, dashboard-final/coverage и дополнение qe-primary.md. Новых серьёзных рисков в actual delta не выявлено.",
+        "implementationVerified": true
+      }
+    },
+    {
+      "reviewer": "qe-risk",
+      "family": "codex",
+      "independent": true,
+      "verdict": "clean",
+      "conditions": [
+        {
+          "id": "QE-RISK-1",
+          "owner": "qe-risk",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Добавить independent isolated-PG проверку фактической authority SQL-проекции getDashboardSummary: в той же транзакции и соединении, где выполняется data statement summary, подтвердить current_user=app_authenticated, tenant GUC для запрошенного account, отсутствие BYPASSRLS и владения защищаемыми таблицами; сохранить отдельные unscoped RLS и A/B aggregate проверки. Проверка должна отклонять замену withAccount на withService при сохранённом явном account WHERE, а не проходить только из-за ошибки test mock или отсутствия экспорта.",
+          "scope": [
+            "apps/web/tests/dashboard-overview-db.test.ts",
+            "apps/web/src/lib/dashboard-summary.ts"
+          ],
+          "evidence": "На изолированной временной копии manifest revision 4fb5f45771da845cfb31b82638322ed64f90d265402c5ac42f99e9125c77a72c baseline dashboard-overview-db: 6/6 PASS. Замена только withAccount(accountId, callback) на withService(callback), с сохранением SQL WHERE account_id=$1, дала те же 6/6 PASS: мутант пережил реальную isolated-PG проверку. Отдельный тест current_user/GUC/unscoped RLS вызывает свою транзакцию withAccount и не проверяет реальную authority проекции. Текущий исходный код вызывает withAccount; обнаружен пробел защиты от регрессии, а не доказанная текущая утечка. Unit mock withAccount сам по себе не доказывает реальную database authority. Подробности и результаты остальных мутаций: features/proofo-ui/evidence/qe-risk.md."
+        }
+      ],
+      "verifications": [
+        {
+          "id": "QE-RISK-1",
+          "revision": "06f4dce82d3e419861bced5377c6c71ae2fc9a42d87f12c219fee9d2dc1c1840",
+          "classification": "structural",
+          "evidence": "Независимый focused PG baseline: исходная рабочая копия 7/7; отдельная временная копия с единым физическим pg для теста и db 7/7. Повторён исходный mutant: замена withAccount(accountId, callback) на withService(callback) при сохранённом WHERE account_id=$1; 6/7, новая named PG assertion «proves actual summary statement authority on its own client and transaction» падает с expected app_service to be app_authenticated, не import/setup/mock error. Прочитана новая instrumentation: настоящий SQL исполняется без подмены, до и после на том же Client снимаются current_user, tenant GUC, rolbypassrls, владельцы четырёх таблиц, backend PID и txid для A и B; сохранились unscoped RLS, A/B и отдельный single-data-statement тесты. 30/30 SHA manifest совпали. Первый изолированный baseline при двух разных физических pg экземплярах не наблюдал spy; setup исправлен и ошибочный результат не учитывался. Подробности qe-risk.md.",
+          "implementationVerified": true
+        }
+      ],
+      "newRisks": {
+        "assessment": "Независимый focused review устраняет QE-RISK-1 на новой revision; новых серьёзных условий по своей риск-роли не выявлено. Исходный finding сохранён в conditions, его историческое evidence не переписано. Отсутствие нагрузочного SLA и ограниченность набора мутаций сохраняются как границы доказательств.",
+        "evidence": "PG baseline 7/7; прежний authority mutant отклонён новой named assertion (app_service != app_authenticated); 30/30 manifest hashes совпали. Структура SQL/тарифной логики production не изменена относительно исходной ревизии. Измерения coverage и discrimination координатора прочитаны как отдельные доказательства, не как подмена независимой мутации.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": true,
+      "deltaVerification": {
+        "classification": "structural",
+        "evidence": "Прочитан dashboard-final/qe-author-delta.json; независимо проверены код добавленного PG test и фактический green control/повтор authority mutant. Summary и view SHA совпадают с исходным host; три теста используют указанные literal imports, план содержит C9 исключения для immutable fonts. В discrimination-repair.json measurementValid=true и три DISCRIMINATES_VIA_ERROR, что ограничено доказательством ошибки загрузки на baseline и зелёного tip, а не доказательством assertion; наличие coverage artifacts проверено, полный coverage gate и актуальность остальных общих проверок остаются ответственностью соответствующих ролей. Никаких новых production bytes или полномочий эта проверенная часть не вводит.",
+        "implementationVerified": true
+      }
+    },
+    {
+      "reviewer": "qe-integration",
+      "family": "codex",
+      "independent": true,
+      "verdict": "clean",
+      "conditions": [],
+      "verifications": [],
+      "newRisks": {
+        "assessment": "После независимой проверки author assessment, exact test/plan delta и affected integration dependencies новых серьёзных рисков не выявлено. Production auth/SQL/SSR/view/error/CSS bytes неизменны; observer SQL существует только в isolated tests. Coverage gaps defensive invalid-counter throw и all-paid label раскрыты; limited load-error discrimination не превращён в assertion proof.",
+        "evidence": "qe-integration.md: focused product verification на revision 06f4dce82d3e419861bced5377c6c71ae2fc9a42d87f12c219fee9d2dc1c1840. Собственный 17/17 targeted tests (raw /tmp/qe-integration-focused-product.log SHA ee59f32f78d0214a8933c0c8416447dca5053f032fd9f11360cb0edd44ebb2f1), typecheck0, 30/30 snapshot SHA; raw coverage verified 91/91 lines,40/42 branches и summary24/26. No new HTTP override, external calls, privilege mutation, app change, baseline rewrite or publication. Conditions других originating reviewer остаются в общем receipt; отдельные ops reports не менялись.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": true,
+      "deltaVerification": {
+        "classification": "structural",
+        "evidence": "Независимый focused review current revision 06f4dce82d3e419861bced5377c6c71ae2fc9a42d87f12c219fee9d2dc1c1840, nonce 690f6976-08de-4023-9747-5782b9c1c20f; 30/30 manifest hashes до/после совпали. Прочитан actual qe-author-delta.json (SHA f82c78020e37e9fefc13e8680d115ba899bc7de970b06729376fafb51cbc2838). Обращение только declared test delta восстановило три initial SHA; plan без единственного font-waiver раздела exact original, 18 targets и immutable fonts сохранены. Проверена actual authority-проба на том же pg.Client/transaction до/после неизменённого SQL для A/B, old unscoped RLS/single-statement assertions сохранены. Собственный targeted run 17/17 pass + typecheck exit0. Audited raw mutation/control, discrimination limited load-error + greenTIP и source-bound coverage; чужие runs не объявлены собственными. Полный evidence и пределы в qe-integration.md, focused section. Production runtime не изменён; чужие conditions не подписываются этой ролью.",
+        "implementationVerified": true
+      }
+    },
+    {
+      "reviewer": "qe-regression",
+      "family": "codex",
+      "independent": true,
+      "verdict": "clean",
+      "conditions": [],
+      "verifications": [],
+      "newRisks": {
+        "assessment": "Новых подтверждённых регрессионных рисков структурной дельты трёх тестов и плана на snapshot 06f4dce82d3e419861bced5377c6c71ae2fc9a42d87f12c219fee9d2dc1c1840 не выявлено. Production bytes неизменны; assertions/fixture/18 targets сохранены, pg identity единая. Реальное scoped coverage теперь независимо воспроизведено; differential coverage/trend не измерены, две summary branches остаются непокрытыми. Initial S3 skips и запрет permission mutations сохранены; full-web повторно не объявлялся пройденным этой ролью.",
+        "evidence": "features/proofo-ui/evidence/qe-regression.md, focused section: manifest 30/30; обратная реконструкция трёх тестов/плана совпадает с initial SHA; четыре font twins идентичны runtime. Собственные focused 29/29, typecheck exit 0, K2 exit 0 без failures/warnings/skips. Независимый V8 run 15/15 воспроизвёл raw coverage-final/summary/lcov побайтно: 91/91 lines/statements, 6/6 functions, 40/42 branches; summary 24/26 branches. Семь input hashes стабильны и совпадают с current snapshot; 10 author artifact hashes и command/config binding проверены. Nonce 690f6976-08de-4023-9747-5782b9c1c20f.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": true,
+      "deltaVerification": {
+        "classification": "structural",
+        "evidence": "Самостоятельно проверены фактическая дельта и author handoff features/proofo-ui/evidence/dashboard-final/qe-author-delta.json на revision 06f4dce82d3e419861bced5377c6c71ae2fc9a42d87f12c219fee9d2dc1c1840, nonce 690f6976-08de-4023-9747-5782b9c1c20f. Новый actual-summary observer исполняет native query на том же client и before/after transaction, role/GUC/BYPASS/owners assertions проходят; отдельные unscoped RLS/one statement checks сохранены. Exact dynamic imports не ослабили прежние assertions; font exclusions сохраняют эталон и 18 targets. Независимые focused tests 29/29, typecheck и K2 exit 0; отдельный V8 coverage run 15/15, raw артефакты побайтно равны bound author raw. Подробные команды, ограничения и hashes: features/proofo-ui/evidence/qe-regression.md. Собственные conditions остаются []; чужие originating findings этим entry не закрываются.",
+        "implementationVerified": true
+      }
+    }
+  ]
+}

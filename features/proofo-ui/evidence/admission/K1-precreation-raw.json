@@ -1,0 +1,3508 @@
+{
+  "capturedAt": "2026-11-11T19:44:52.894Z",
+  "stage": "before-product-source-creation",
+  "reports": [
+    {
+      "argv": [
+        "name-check",
+        "--module",
+        "dashboard-summary",
+        "--export",
+        "getDashboardSummary",
+        "--project",
+        "/tmp/proofwall-ui-dashboard",
+        "--json"
+      ],
+      "exitCode": 0,
+      "result": {
+        "outcome": "free",
+        "exit": 0,
+        "results": [
+          {
+            "kind": "module",
+            "name": "dashboard-summary",
+            "verdict": "free",
+            "where": ""
+          },
+          {
+            "kind": "export",
+            "name": "getDashboardSummary",
+            "verdict": "free",
+            "where": ""
+          }
+        ],
+        "reason": "all 2 name(s) are free",
+        "scan": {
+          "status": "complete",
+          "roots": [
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/apps",
+              "canonical": "/tmp/proofwall-ui-dashboard/apps",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 183,
+              "bytes": 1233487,
+              "observedLanguages": [
+                "JavaScript",
+                "TypeScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/packages",
+              "canonical": "/tmp/proofwall-ui-dashboard/packages",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 31,
+              "bytes": 148764,
+              "observedLanguages": [
+                "TypeScript",
+                "JavaScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/scripts",
+              "canonical": "/tmp/proofwall-ui-dashboard/scripts",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 14,
+              "bytes": 93127,
+              "observedLanguages": [
+                "JavaScript",
+                "TypeScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/tests",
+              "canonical": "/tmp/proofwall-ui-dashboard/tests",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 14,
+              "bytes": 62949,
+              "observedLanguages": [
+                "JavaScript"
+              ]
+            }
+          ],
+          "supportedLanguages": [
+            "JavaScript",
+            "TypeScript",
+            "Python (explicit root only)"
+          ],
+          "observedLanguages": [
+            "JavaScript",
+            "TypeScript"
+          ],
+          "files": 242,
+          "bytes": 1539711,
+          "entries": 406,
+          "counts": {
+            "JavaScript": {
+              "files": 37,
+              "bytes": 205110
+            },
+            "TypeScript": {
+              "files": 205,
+              "bytes": 1333217
+            }
+          },
+          "commandManifestBytes": 1384,
+          "exclusions": [
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/Dockerfile",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/next-env.d.ts",
+              "reason": "declaration-file"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/.gitkeep",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-120.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-256.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-512-opaque.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-512.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-alt-512.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-alt.svg",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon.svg",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/src/app/globals.css",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/followup-tests.tap",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/source-sha256.txt",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/tests.tap",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/validation.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/package-lock.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/001_extensions.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/002_roles.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/003_core.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/004_growth.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/005_payments.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/006_rate_limit.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/007_rls.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/008_audit.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/009_partner_owner.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/010_commission_default.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/011_transcript_retry.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/012_partner_dashboard_token.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/013_import.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/014_password_reset.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/015_sso.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/016_demo_source.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/017_platform_proof.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/018_paid_until.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/019_n3_bridge.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/020_agent_payments_host.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/021_email_verification.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-cjm.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-compose-buildable.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-env-wiring.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-pipeline-gaps.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-port-conflicts.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/codex-project.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/complexity-router.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/init-test-env.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/install-process.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/migrate-local.py",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/stand.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/acceptance.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure-before-resume.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure-email-progress.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/run.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/screenshots.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/source-hashes.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/candidate.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/close.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/identity.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/inspect.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/mandate.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/pay.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/purchase.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/revoke.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/run.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/settle.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/source-hashes.json",
+              "reason": "metadata-or-media"
+            }
+          ],
+          "failureCode": null
+        }
+      }
+    },
+    {
+      "argv": [
+        "name-check",
+        "--module",
+        "dashboard-overview",
+        "--export",
+        "DashboardOverview,DashboardOverviewModel",
+        "--project",
+        "/tmp/proofwall-ui-dashboard",
+        "--json"
+      ],
+      "exitCode": 0,
+      "result": {
+        "outcome": "free",
+        "exit": 0,
+        "results": [
+          {
+            "kind": "module",
+            "name": "dashboard-overview",
+            "verdict": "free",
+            "where": ""
+          },
+          {
+            "kind": "export",
+            "name": "DashboardOverview",
+            "verdict": "free",
+            "where": ""
+          },
+          {
+            "kind": "export",
+            "name": "DashboardOverviewModel",
+            "verdict": "free",
+            "where": ""
+          }
+        ],
+        "reason": "all 3 name(s) are free",
+        "scan": {
+          "status": "complete",
+          "roots": [
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/apps",
+              "canonical": "/tmp/proofwall-ui-dashboard/apps",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 183,
+              "bytes": 1233487,
+              "observedLanguages": [
+                "JavaScript",
+                "TypeScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/packages",
+              "canonical": "/tmp/proofwall-ui-dashboard/packages",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 31,
+              "bytes": 148764,
+              "observedLanguages": [
+                "TypeScript",
+                "JavaScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/scripts",
+              "canonical": "/tmp/proofwall-ui-dashboard/scripts",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 14,
+              "bytes": 93127,
+              "observedLanguages": [
+                "JavaScript",
+                "TypeScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/tests",
+              "canonical": "/tmp/proofwall-ui-dashboard/tests",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 14,
+              "bytes": 62949,
+              "observedLanguages": [
+                "JavaScript"
+              ]
+            }
+          ],
+          "supportedLanguages": [
+            "JavaScript",
+            "TypeScript",
+            "Python (explicit root only)"
+          ],
+          "observedLanguages": [
+            "JavaScript",
+            "TypeScript"
+          ],
+          "files": 242,
+          "bytes": 1539711,
+          "entries": 406,
+          "counts": {
+            "JavaScript": {
+              "files": 37,
+              "bytes": 205110
+            },
+            "TypeScript": {
+              "files": 205,
+              "bytes": 1333217
+            }
+          },
+          "commandManifestBytes": 1384,
+          "exclusions": [
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/Dockerfile",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/next-env.d.ts",
+              "reason": "declaration-file"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/.gitkeep",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-120.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-256.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-512-opaque.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-512.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-alt-512.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-alt.svg",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon.svg",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/src/app/globals.css",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/followup-tests.tap",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/source-sha256.txt",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/tests.tap",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/validation.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/package-lock.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/001_extensions.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/002_roles.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/003_core.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/004_growth.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/005_payments.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/006_rate_limit.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/007_rls.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/008_audit.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/009_partner_owner.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/010_commission_default.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/011_transcript_retry.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/012_partner_dashboard_token.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/013_import.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/014_password_reset.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/015_sso.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/016_demo_source.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/017_platform_proof.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/018_paid_until.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/019_n3_bridge.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/020_agent_payments_host.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/021_email_verification.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-cjm.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-compose-buildable.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-env-wiring.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-pipeline-gaps.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-port-conflicts.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/codex-project.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/complexity-router.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/init-test-env.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/install-process.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/migrate-local.py",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/stand.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/acceptance.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure-before-resume.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure-email-progress.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/run.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/screenshots.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/source-hashes.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/candidate.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/close.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/identity.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/inspect.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/mandate.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/pay.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/purchase.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/revoke.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/run.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/settle.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/source-hashes.json",
+              "reason": "metadata-or-media"
+            }
+          ],
+          "failureCode": null
+        }
+      }
+    },
+    {
+      "argv": [
+        "name-check",
+        "--module",
+        "error",
+        "--export",
+        "DashboardOverviewError",
+        "--project",
+        "/tmp/proofwall-ui-dashboard",
+        "--json"
+      ],
+      "exitCode": 0,
+      "result": {
+        "outcome": "free",
+        "exit": 0,
+        "results": [
+          {
+            "kind": "module",
+            "name": "error",
+            "verdict": "free",
+            "where": ""
+          },
+          {
+            "kind": "export",
+            "name": "DashboardOverviewError",
+            "verdict": "free",
+            "where": ""
+          }
+        ],
+        "reason": "all 2 name(s) are free",
+        "scan": {
+          "status": "complete",
+          "roots": [
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/apps",
+              "canonical": "/tmp/proofwall-ui-dashboard/apps",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 183,
+              "bytes": 1233487,
+              "observedLanguages": [
+                "JavaScript",
+                "TypeScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/packages",
+              "canonical": "/tmp/proofwall-ui-dashboard/packages",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 31,
+              "bytes": 148764,
+              "observedLanguages": [
+                "TypeScript",
+                "JavaScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/scripts",
+              "canonical": "/tmp/proofwall-ui-dashboard/scripts",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 14,
+              "bytes": 93127,
+              "observedLanguages": [
+                "JavaScript",
+                "TypeScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/tests",
+              "canonical": "/tmp/proofwall-ui-dashboard/tests",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 14,
+              "bytes": 62949,
+              "observedLanguages": [
+                "JavaScript"
+              ]
+            }
+          ],
+          "supportedLanguages": [
+            "JavaScript",
+            "TypeScript",
+            "Python (explicit root only)"
+          ],
+          "observedLanguages": [
+            "JavaScript",
+            "TypeScript"
+          ],
+          "files": 242,
+          "bytes": 1539711,
+          "entries": 406,
+          "counts": {
+            "JavaScript": {
+              "files": 37,
+              "bytes": 205110
+            },
+            "TypeScript": {
+              "files": 205,
+              "bytes": 1333217
+            }
+          },
+          "commandManifestBytes": 1384,
+          "exclusions": [
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/Dockerfile",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/next-env.d.ts",
+              "reason": "declaration-file"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/.gitkeep",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-120.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-256.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-512-opaque.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-512.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-alt-512.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-alt.svg",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon.svg",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/src/app/globals.css",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/followup-tests.tap",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/source-sha256.txt",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/tests.tap",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/validation.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/package-lock.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/001_extensions.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/002_roles.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/003_core.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/004_growth.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/005_payments.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/006_rate_limit.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/007_rls.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/008_audit.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/009_partner_owner.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/010_commission_default.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/011_transcript_retry.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/012_partner_dashboard_token.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/013_import.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/014_password_reset.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/015_sso.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/016_demo_source.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/017_platform_proof.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/018_paid_until.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/019_n3_bridge.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/020_agent_payments_host.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/021_email_verification.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-cjm.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-compose-buildable.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-env-wiring.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-pipeline-gaps.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-port-conflicts.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/codex-project.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/complexity-router.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/init-test-env.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/install-process.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/migrate-local.py",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/stand.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/acceptance.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure-before-resume.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure-email-progress.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/run.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/screenshots.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/source-hashes.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/candidate.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/close.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/identity.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/inspect.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/mandate.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/pay.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/purchase.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/revoke.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/run.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/settle.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/source-hashes.json",
+              "reason": "metadata-or-media"
+            }
+          ],
+          "failureCode": null
+        }
+      }
+    },
+    {
+      "argv": [
+        "name-check",
+        "--module",
+        "dashboard-overview.test",
+        "--project",
+        "/tmp/proofwall-ui-dashboard",
+        "--json"
+      ],
+      "exitCode": 0,
+      "result": {
+        "outcome": "free",
+        "exit": 0,
+        "results": [
+          {
+            "kind": "module",
+            "name": "dashboard-overview.test",
+            "verdict": "free",
+            "where": ""
+          }
+        ],
+        "reason": "all 1 name(s) are free",
+        "scan": {
+          "status": "complete",
+          "roots": [
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/apps",
+              "canonical": "/tmp/proofwall-ui-dashboard/apps",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 183,
+              "bytes": 1233487,
+              "observedLanguages": [
+                "JavaScript",
+                "TypeScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/packages",
+              "canonical": "/tmp/proofwall-ui-dashboard/packages",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 31,
+              "bytes": 148764,
+              "observedLanguages": [
+                "TypeScript",
+                "JavaScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/scripts",
+              "canonical": "/tmp/proofwall-ui-dashboard/scripts",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 14,
+              "bytes": 93127,
+              "observedLanguages": [
+                "JavaScript",
+                "TypeScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/tests",
+              "canonical": "/tmp/proofwall-ui-dashboard/tests",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 14,
+              "bytes": 62949,
+              "observedLanguages": [
+                "JavaScript"
+              ]
+            }
+          ],
+          "supportedLanguages": [
+            "JavaScript",
+            "TypeScript",
+            "Python (explicit root only)"
+          ],
+          "observedLanguages": [
+            "JavaScript",
+            "TypeScript"
+          ],
+          "files": 242,
+          "bytes": 1539711,
+          "entries": 406,
+          "counts": {
+            "JavaScript": {
+              "files": 37,
+              "bytes": 205110
+            },
+            "TypeScript": {
+              "files": 205,
+              "bytes": 1333217
+            }
+          },
+          "commandManifestBytes": 1384,
+          "exclusions": [
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/Dockerfile",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/next-env.d.ts",
+              "reason": "declaration-file"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/.gitkeep",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-120.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-256.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-512-opaque.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-512.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-alt-512.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-alt.svg",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon.svg",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/src/app/globals.css",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/followup-tests.tap",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/source-sha256.txt",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/tests.tap",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/validation.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/package-lock.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/001_extensions.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/002_roles.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/003_core.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/004_growth.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/005_payments.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/006_rate_limit.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/007_rls.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/008_audit.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/009_partner_owner.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/010_commission_default.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/011_transcript_retry.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/012_partner_dashboard_token.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/013_import.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/014_password_reset.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/015_sso.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/016_demo_source.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/017_platform_proof.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/018_paid_until.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/019_n3_bridge.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/020_agent_payments_host.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/021_email_verification.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-cjm.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-compose-buildable.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-env-wiring.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-pipeline-gaps.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-port-conflicts.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/codex-project.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/complexity-router.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/init-test-env.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/install-process.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/migrate-local.py",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/stand.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/acceptance.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure-before-resume.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure-email-progress.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/run.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/screenshots.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/source-hashes.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/candidate.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/close.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/identity.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/inspect.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/mandate.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/pay.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/purchase.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/revoke.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/run.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/settle.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/source-hashes.json",
+              "reason": "metadata-or-media"
+            }
+          ],
+          "failureCode": null
+        }
+      }
+    },
+    {
+      "argv": [
+        "name-check",
+        "--module",
+        "dashboard-overview-db.test",
+        "--project",
+        "/tmp/proofwall-ui-dashboard",
+        "--json"
+      ],
+      "exitCode": 0,
+      "result": {
+        "outcome": "free",
+        "exit": 0,
+        "results": [
+          {
+            "kind": "module",
+            "name": "dashboard-overview-db.test",
+            "verdict": "free",
+            "where": ""
+          }
+        ],
+        "reason": "all 1 name(s) are free",
+        "scan": {
+          "status": "complete",
+          "roots": [
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/apps",
+              "canonical": "/tmp/proofwall-ui-dashboard/apps",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 183,
+              "bytes": 1233487,
+              "observedLanguages": [
+                "JavaScript",
+                "TypeScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/packages",
+              "canonical": "/tmp/proofwall-ui-dashboard/packages",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 31,
+              "bytes": 148764,
+              "observedLanguages": [
+                "TypeScript",
+                "JavaScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/scripts",
+              "canonical": "/tmp/proofwall-ui-dashboard/scripts",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 14,
+              "bytes": 93127,
+              "observedLanguages": [
+                "JavaScript",
+                "TypeScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/tests",
+              "canonical": "/tmp/proofwall-ui-dashboard/tests",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 14,
+              "bytes": 62949,
+              "observedLanguages": [
+                "JavaScript"
+              ]
+            }
+          ],
+          "supportedLanguages": [
+            "JavaScript",
+            "TypeScript",
+            "Python (explicit root only)"
+          ],
+          "observedLanguages": [
+            "JavaScript",
+            "TypeScript"
+          ],
+          "files": 242,
+          "bytes": 1539711,
+          "entries": 406,
+          "counts": {
+            "JavaScript": {
+              "files": 37,
+              "bytes": 205110
+            },
+            "TypeScript": {
+              "files": 205,
+              "bytes": 1333217
+            }
+          },
+          "commandManifestBytes": 1384,
+          "exclusions": [
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/Dockerfile",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/next-env.d.ts",
+              "reason": "declaration-file"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/.gitkeep",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-120.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-256.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-512-opaque.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-512.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-alt-512.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-alt.svg",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon.svg",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/src/app/globals.css",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/followup-tests.tap",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/source-sha256.txt",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/tests.tap",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/validation.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/package-lock.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/001_extensions.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/002_roles.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/003_core.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/004_growth.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/005_payments.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/006_rate_limit.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/007_rls.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/008_audit.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/009_partner_owner.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/010_commission_default.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/011_transcript_retry.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/012_partner_dashboard_token.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/013_import.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/014_password_reset.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/015_sso.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/016_demo_source.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/017_platform_proof.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/018_paid_until.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/019_n3_bridge.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/020_agent_payments_host.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/021_email_verification.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-cjm.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-compose-buildable.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-env-wiring.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-pipeline-gaps.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-port-conflicts.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/codex-project.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/complexity-router.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/init-test-env.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/install-process.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/migrate-local.py",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/stand.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/acceptance.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure-before-resume.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure-email-progress.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/run.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/screenshots.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/source-hashes.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/candidate.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/close.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/identity.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/inspect.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/mandate.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/pay.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/purchase.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/revoke.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/run.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/settle.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/source-hashes.json",
+              "reason": "metadata-or-media"
+            }
+          ],
+          "failureCode": null
+        }
+      }
+    },
+    {
+      "argv": [
+        "name-check",
+        "--module",
+        "dashboard-visual-fixture.test",
+        "--project",
+        "/tmp/proofwall-ui-dashboard",
+        "--json"
+      ],
+      "exitCode": 0,
+      "result": {
+        "outcome": "free",
+        "exit": 0,
+        "results": [
+          {
+            "kind": "module",
+            "name": "dashboard-visual-fixture.test",
+            "verdict": "free",
+            "where": ""
+          }
+        ],
+        "reason": "all 1 name(s) are free",
+        "scan": {
+          "status": "complete",
+          "roots": [
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/apps",
+              "canonical": "/tmp/proofwall-ui-dashboard/apps",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 183,
+              "bytes": 1233487,
+              "observedLanguages": [
+                "JavaScript",
+                "TypeScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/packages",
+              "canonical": "/tmp/proofwall-ui-dashboard/packages",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 31,
+              "bytes": 148764,
+              "observedLanguages": [
+                "TypeScript",
+                "JavaScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/scripts",
+              "canonical": "/tmp/proofwall-ui-dashboard/scripts",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 14,
+              "bytes": 93127,
+              "observedLanguages": [
+                "JavaScript",
+                "TypeScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/tests",
+              "canonical": "/tmp/proofwall-ui-dashboard/tests",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 14,
+              "bytes": 62949,
+              "observedLanguages": [
+                "JavaScript"
+              ]
+            }
+          ],
+          "supportedLanguages": [
+            "JavaScript",
+            "TypeScript",
+            "Python (explicit root only)"
+          ],
+          "observedLanguages": [
+            "JavaScript",
+            "TypeScript"
+          ],
+          "files": 242,
+          "bytes": 1539711,
+          "entries": 406,
+          "counts": {
+            "JavaScript": {
+              "files": 37,
+              "bytes": 205110
+            },
+            "TypeScript": {
+              "files": 205,
+              "bytes": 1333217
+            }
+          },
+          "commandManifestBytes": 1384,
+          "exclusions": [
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/Dockerfile",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/next-env.d.ts",
+              "reason": "declaration-file"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/.gitkeep",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-120.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-256.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-512-opaque.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-512.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-alt-512.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-alt.svg",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon.svg",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/src/app/globals.css",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/followup-tests.tap",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/source-sha256.txt",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/tests.tap",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/validation.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/package-lock.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/001_extensions.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/002_roles.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/003_core.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/004_growth.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/005_payments.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/006_rate_limit.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/007_rls.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/008_audit.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/009_partner_owner.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/010_commission_default.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/011_transcript_retry.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/012_partner_dashboard_token.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/013_import.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/014_password_reset.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/015_sso.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/016_demo_source.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/017_platform_proof.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/018_paid_until.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/019_n3_bridge.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/020_agent_payments_host.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/021_email_verification.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-cjm.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-compose-buildable.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-env-wiring.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-pipeline-gaps.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-port-conflicts.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/codex-project.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/complexity-router.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/init-test-env.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/install-process.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/migrate-local.py",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/stand.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/acceptance.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure-before-resume.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure-email-progress.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/run.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/screenshots.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/source-hashes.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/candidate.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/close.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/identity.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/inspect.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/mandate.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/pay.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/purchase.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/revoke.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/run.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/settle.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/source-hashes.json",
+              "reason": "metadata-or-media"
+            }
+          ],
+          "failureCode": null
+        }
+      }
+    },
+    {
+      "argv": [
+        "name-check",
+        "--module",
+        "render-dashboard-fixture",
+        "--project",
+        "/tmp/proofwall-ui-dashboard",
+        "--json"
+      ],
+      "exitCode": 0,
+      "result": {
+        "outcome": "free",
+        "exit": 0,
+        "results": [
+          {
+            "kind": "module",
+            "name": "render-dashboard-fixture",
+            "verdict": "free",
+            "where": ""
+          }
+        ],
+        "reason": "all 1 name(s) are free",
+        "scan": {
+          "status": "complete",
+          "roots": [
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/apps",
+              "canonical": "/tmp/proofwall-ui-dashboard/apps",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 183,
+              "bytes": 1233487,
+              "observedLanguages": [
+                "JavaScript",
+                "TypeScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/packages",
+              "canonical": "/tmp/proofwall-ui-dashboard/packages",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 31,
+              "bytes": 148764,
+              "observedLanguages": [
+                "TypeScript",
+                "JavaScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/scripts",
+              "canonical": "/tmp/proofwall-ui-dashboard/scripts",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 14,
+              "bytes": 93127,
+              "observedLanguages": [
+                "JavaScript",
+                "TypeScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/tests",
+              "canonical": "/tmp/proofwall-ui-dashboard/tests",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 14,
+              "bytes": 62949,
+              "observedLanguages": [
+                "JavaScript"
+              ]
+            }
+          ],
+          "supportedLanguages": [
+            "JavaScript",
+            "TypeScript",
+            "Python (explicit root only)"
+          ],
+          "observedLanguages": [
+            "JavaScript",
+            "TypeScript"
+          ],
+          "files": 242,
+          "bytes": 1539711,
+          "entries": 406,
+          "counts": {
+            "JavaScript": {
+              "files": 37,
+              "bytes": 205110
+            },
+            "TypeScript": {
+              "files": 205,
+              "bytes": 1333217
+            }
+          },
+          "commandManifestBytes": 1384,
+          "exclusions": [
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/Dockerfile",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/next-env.d.ts",
+              "reason": "declaration-file"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/.gitkeep",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-120.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-256.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-512-opaque.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-512.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-alt-512.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-alt.svg",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon.svg",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/src/app/globals.css",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/followup-tests.tap",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/source-sha256.txt",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/tests.tap",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/validation.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/package-lock.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/001_extensions.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/002_roles.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/003_core.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/004_growth.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/005_payments.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/006_rate_limit.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/007_rls.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/008_audit.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/009_partner_owner.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/010_commission_default.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/011_transcript_retry.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/012_partner_dashboard_token.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/013_import.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/014_password_reset.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/015_sso.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/016_demo_source.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/017_platform_proof.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/018_paid_until.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/019_n3_bridge.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/020_agent_payments_host.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/021_email_verification.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-cjm.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-compose-buildable.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-env-wiring.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-pipeline-gaps.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-port-conflicts.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/codex-project.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/complexity-router.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/init-test-env.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/install-process.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/migrate-local.py",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/stand.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/acceptance.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure-before-resume.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure-email-progress.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/run.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/screenshots.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/source-hashes.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/candidate.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/close.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/identity.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/inspect.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/mandate.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/pay.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/purchase.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/revoke.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/run.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/settle.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/source-hashes.json",
+              "reason": "metadata-or-media"
+            }
+          ],
+          "failureCode": null
+        }
+      }
+    },
+    {
+      "argv": [
+        "name-check",
+        "--module",
+        "dashboard.e2e.test",
+        "--project",
+        "/tmp/proofwall-ui-dashboard",
+        "--json"
+      ],
+      "exitCode": 0,
+      "result": {
+        "outcome": "free",
+        "exit": 0,
+        "results": [
+          {
+            "kind": "module",
+            "name": "dashboard.e2e.test",
+            "verdict": "free",
+            "where": ""
+          }
+        ],
+        "reason": "all 1 name(s) are free",
+        "scan": {
+          "status": "complete",
+          "roots": [
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/apps",
+              "canonical": "/tmp/proofwall-ui-dashboard/apps",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 183,
+              "bytes": 1233487,
+              "observedLanguages": [
+                "JavaScript",
+                "TypeScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/packages",
+              "canonical": "/tmp/proofwall-ui-dashboard/packages",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 31,
+              "bytes": 148764,
+              "observedLanguages": [
+                "TypeScript",
+                "JavaScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/scripts",
+              "canonical": "/tmp/proofwall-ui-dashboard/scripts",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 14,
+              "bytes": 93127,
+              "observedLanguages": [
+                "JavaScript",
+                "TypeScript"
+              ]
+            },
+            {
+              "requested": "/tmp/proofwall-ui-dashboard/tests",
+              "canonical": "/tmp/proofwall-ui-dashboard/tests",
+              "kind": "default",
+              "status": "complete",
+              "packages": 0,
+              "files": 14,
+              "bytes": 62949,
+              "observedLanguages": [
+                "JavaScript"
+              ]
+            }
+          ],
+          "supportedLanguages": [
+            "JavaScript",
+            "TypeScript",
+            "Python (explicit root only)"
+          ],
+          "observedLanguages": [
+            "JavaScript",
+            "TypeScript"
+          ],
+          "files": 242,
+          "bytes": 1539711,
+          "entries": 406,
+          "counts": {
+            "JavaScript": {
+              "files": 37,
+              "bytes": 205110
+            },
+            "TypeScript": {
+              "files": 205,
+              "bytes": 1333217
+            }
+          },
+          "commandManifestBytes": 1384,
+          "exclusions": [
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/Dockerfile",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/next-env.d.ts",
+              "reason": "declaration-file"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/.gitkeep",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-120.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-256.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-512-opaque.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-512.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-alt-512.png",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon-alt.svg",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/public/brand/icon.svg",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/src/app/globals.css",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/web/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/apps/widget/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/followup-tests.tap",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/source-sha256.txt",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/tests.tap",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/docs/evidence/validation.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/package-lock.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/agent-payments/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/001_extensions.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/002_roles.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/003_core.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/004_growth.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/005_payments.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/006_rate_limit.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/007_rls.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/008_audit.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/009_partner_owner.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/010_commission_default.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/011_transcript_retry.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/012_partner_dashboard_token.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/013_import.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/014_password_reset.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/015_sso.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/016_demo_source.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/017_platform_proof.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/018_paid_until.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/019_n3_bridge.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/020_agent_payments_host.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/migrations/021_email_verification.sql",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/package.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/packages/db/tsconfig.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-cjm.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-compose-buildable.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-env-wiring.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-pipeline-gaps.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/check-port-conflicts.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/codex-project.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/complexity-router.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/init-test-env.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/install-process.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/migrate-local.py",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/scripts/stand.sh",
+              "reason": "language-policy"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/acceptance.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure-before-resume.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure-email-progress.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/failure.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/run.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/screenshots.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-e2e/evidence/source-hashes.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/.gitignore",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/README.md",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/candidate.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/close.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/identity.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/inspect.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/mandate.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/pay.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/purchase.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/revoke.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/run.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/settle.json",
+              "reason": "metadata-or-media"
+            },
+            {
+              "path": "/tmp/proofwall-ui-dashboard/tests/agent-payments-pilot/evidence/source-hashes.json",
+              "reason": "metadata-or-media"
+            }
+          ],
+          "failureCode": null
+        }
+      }
+    }
+  ]
+}

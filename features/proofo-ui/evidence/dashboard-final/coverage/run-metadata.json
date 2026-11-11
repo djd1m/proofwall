@@ -1,0 +1,71 @@
+{
+  "started": "2026-11-11T20:44:49.910Z",
+  "finished": "2026-11-11T20:44:55.054Z",
+  "scope": [
+    "apps/web/src/lib/dashboard-summary.ts",
+    "apps/web/src/app/dashboard/page.tsx",
+    "apps/web/src/app/dashboard/dashboard-overview.tsx",
+    "apps/web/src/app/dashboard/error.tsx"
+  ],
+  "tests": [
+    "apps/web/tests/dashboard-overview.test.ts",
+    "apps/web/tests/dashboard-overview-db.test.ts",
+    "apps/web/tests/dashboard-visual-fixture.test.ts"
+  ],
+  "command": [
+    "/tmp/proofwall-ui-dashboard/node_modules/node/bin/node",
+    "/tmp/proofwall-ui-dashboard/apps/web/node_modules/vitest/vitest.mjs",
+    "run",
+    "--config",
+    "/tmp/proofwall-dashboard-coverage-tools/dashboard.vitest.config.mjs"
+  ],
+  "cwd": "/tmp/proofwall-ui-dashboard/apps/web",
+  "node": "v22.23.4",
+  "v8": "12.4.254.21-node.57",
+  "versions": {
+    "vitest": "2.1.9",
+    "provider": "2.1.9"
+  },
+  "provider": "actual @vitest/coverage-v8",
+  "providerDirectory": "/tmp/proofwall-dashboard-coverage-tools/node_modules/@vitest/coverage-v8",
+  "sharedVitestDirectory": "/tmp/proofwall-ui-dashboard/apps/web/node_modules/vitest",
+  "safeEnvironment": "Only DATABASE_URL and TEST_DATABASE_URL loaded programmatically; both validated as loopback /proofwall_ui_test. Values redacted.",
+  "fixtureOutput": "unset; fixture is executed but does not generate or modify any visual baseline",
+  "thresholds": {
+    "newCode": 80,
+    "critical": 90,
+    "metrics": [
+      "lines",
+      "branches",
+      "functions",
+      "statements"
+    ],
+    "criticalFiles": [
+      "apps/web/src/lib/dashboard-summary.ts",
+      "apps/web/src/app/dashboard/page.tsx",
+      "apps/web/src/app/dashboard/error.tsx"
+    ]
+  },
+  "exitCode": 0,
+  "signal": null,
+  "sourceAndTestHashesBefore": {
+    "apps/web/src/lib/dashboard-summary.ts": "55dfb5bad26f217997894917b3328043977577ddde577c761f371cd5152621e1",
+    "apps/web/src/app/dashboard/page.tsx": "3ad9f0a373bdb62f1655645986721898e55930f1b22e847eb85aea9d1801640d",
+    "apps/web/src/app/dashboard/dashboard-overview.tsx": "4f1cab6df35ccd0bddb743635cea96c9ec71222be94e945eaa012c7b3bcd9e8e",
+    "apps/web/src/app/dashboard/error.tsx": "d1fb986b327bf14b509cf073d210206269e919520cd11eea9513d4dde385778b",
+    "apps/web/tests/dashboard-overview.test.ts": "fbeddbe142dedb9e91b1d2ab041ba835d942fc3fabae124bc98496d432393f4f",
+    "apps/web/tests/dashboard-overview-db.test.ts": "46761154f21ee03fd377d6b7cfce01fba4f09a9f3e9d06969c6e1542016703e9",
+    "apps/web/tests/dashboard-visual-fixture.test.ts": "1a4af84a9c68955c3bae8c3bcfebc79943226e48fefdfccf9063aa7997d54426"
+  },
+  "sourceAndTestHashesAfter": {
+    "apps/web/src/lib/dashboard-summary.ts": "55dfb5bad26f217997894917b3328043977577ddde577c761f371cd5152621e1",
+    "apps/web/src/app/dashboard/page.tsx": "3ad9f0a373bdb62f1655645986721898e55930f1b22e847eb85aea9d1801640d",
+    "apps/web/src/app/dashboard/dashboard-overview.tsx": "4f1cab6df35ccd0bddb743635cea96c9ec71222be94e945eaa012c7b3bcd9e8e",
+    "apps/web/src/app/dashboard/error.tsx": "d1fb986b327bf14b509cf073d210206269e919520cd11eea9513d4dde385778b",
+    "apps/web/tests/dashboard-overview.test.ts": "fbeddbe142dedb9e91b1d2ab041ba835d942fc3fabae124bc98496d432393f4f",
+    "apps/web/tests/dashboard-overview-db.test.ts": "46761154f21ee03fd377d6b7cfce01fba4f09a9f3e9d06969c6e1542016703e9",
+    "apps/web/tests/dashboard-visual-fixture.test.ts": "1a4af84a9c68955c3bae8c3bcfebc79943226e48fefdfccf9063aa7997d54426"
+  },
+  "sourceAndTestsStable": true,
+  "configSha256": "17c4c65d0d48dd8a2955de79e96f251ef51a78ca4468aaefcc2effa002301477"
+}

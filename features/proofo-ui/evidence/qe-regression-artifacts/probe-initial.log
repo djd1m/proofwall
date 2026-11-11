@@ -1,0 +1,884 @@
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+... Skipped lines
+
+  [
+    {
+      i: 0,
+      rect: {
+        height: 3455.984375,
+...
+      rect: {
++       height: 32.1875,
+-       height: 32.18749237060547,
+        width: 279.53125
+      },
+      selector: 'h1',
+      styles: {
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+...
+      rect: {
++       height: 43.375,
+-       height: 43.375030517578125,
+        width: 242
+      },
+      selector: 'a',
+      styles: {
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+
+    at file:///tmp/proofwall-qe-regression-probe.mjs:57:12 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [
+    {
+      selector: 'body',
+      i: 0,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '16px',
+        lineHeight: '24.8px',
+        fontWeight: '400',
+        color: 'rgb(31, 41, 55)',
+        backgroundColor: 'rgb(30, 10, 60)',
+        backgroundImage: 'radial-gradient(1100px 700px at 78% -8%, rgba(103, 1, 239, 0.42), rgba(0, 0, 0, 0) 62%), radial-gradient(900px 620px at 8% 108%, rgba(120, 60, 220, 0.28), rgba(0, 0, 0, 0) 60%)',
+        backgroundSize: 'auto, auto',
+        backgroundPosition: '0% 0%, 0% 0%',
+        margin: '0px',
+        padding: '0px',
+        border: '0px none rgb(31, 41, 55)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 360, height: 3455.984375 }
+    },
+    {
+      selector: 'h1',
+      i: 0,
+      styles: {
+        fontFamily: '"Bricolage Grotesque", "Bricolage Grotesque Fallback", "DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '28px',
+        lineHeight: '32.2px',
+        fontWeight: '800',
+        color: 'rgb(30, 10, 60)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '0px',
+        border: '0px none rgb(30, 10, 60)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 279.53125, height: 32.1875 }
+    },
+    {
+      selector: 'h2',
+      i: 0,
+      styles: {
+        fontFamily: '"Bricolage Grotesque", "Bricolage Grotesque Fallback", "DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '20px',
+        lineHeight: '23px',
+        fontWeight: '800',
+        color: 'rgb(30, 10, 60)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '0px',
+        border: '0px none rgb(30, 10, 60)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 280, height: 23 }
+    },
+    {
+      selector: 'h2',
+      i: 1,
+      styles: {
+        fontFamily: '"Bricolage Grotesque", "Bricolage Grotesque Fallback", "DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '20px',
+        lineHeight: '23px',
+        fontWeight: '800',
+        color: 'rgb(30, 10, 60)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '32px 0px 0px',
+        padding: '0px',
+        border: '0px none rgb(30, 10, 60)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 280, height: 23 }
+    },
+    {
+      selector: 'h2',
+      i: 2,
+      styles: {
+        fontFamily: '"Bricolage Grotesque", "Bricolage Grotesque Fallback", "DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '20px',
+        lineHeight: '23px',
+        fontWeight: '800',
+        color: 'rgb(30, 10, 60)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '32px 0px 0px',
+        padding: '0px',
+        border: '0px none rgb(30, 10, 60)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 280, height: 23 }
+    },
+    {
+      selector: 'p',
+      i: 0,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '12px',
+        lineHeight: '18.6px',
+        fontWeight: '700',
+        color: 'rgb(103, 1, 239)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '0px',
+        border: '0px none rgb(103, 1, 239)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 279.53125, height: 18.59375 }
+    },
+    {
+      selector: 'p',
+      i: 1,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '14px',
+        lineHeight: '21.7px',
+        fontWeight: '400',
+        color: 'rgb(107, 114, 128)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '8px 0px 0px',
+        padding: '0px',
+        border: '0px none rgb(107, 114, 128)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 280, height: 43.375 }
+    },
+    {
+      selector: 'p',
+      i: 2,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '14px',
+        lineHeight: '21.7px',
+        fontWeight: '400',
+        color: 'rgb(31, 41, 55)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '16px 0px 0px',
+        padding: '0px',
+        border: '0px none rgb(31, 41, 55)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 280, height: 65.0625 }
+    },
+    {
+      selector: 'a',
+      i: 0,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '14px',
+        lineHeight: '21.7px',
+        fontWeight: '400',
+        color: 'rgb(103, 1, 239)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '0px',
+        border: '0px none rgb(103, 1, 239)',
+        boxSizing: 'border-box',
+        display: 'inline'
+      },
+      rect: { width: 246.546875, height: 39.6875 }
+    },
+    {
+      selector: 'a',
+      i: 1,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '14px',
+        lineHeight: '21.7px',
+        fontWeight: '400',
+        color: 'rgb(103, 1, 239)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '0px',
+        border: '0px none rgb(103, 1, 239)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 242, height: 43.375 }
+    },
+    {
+      selector: 'a',
+      i: 2,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '14px',
+        lineHeight: '21.7px',
+        fontWeight: '400',
+        color: 'rgb(103, 1, 239)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '0px',
+        border: '0px none rgb(103, 1, 239)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 242, height: 43.375 }
+    },
+    {
+      selector: 'button',
+      i: 0,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '16px',
+        lineHeight: '24.8px',
+        fontWeight: '700',
+        color: 'rgb(255, 255, 255)',
+        backgroundColor: 'rgb(103, 1, 239)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '13px 26px',
+        border: '1px solid rgba(0, 0, 0, 0)',
+        boxSizing: 'border-box',
+        display: 'inline-flex'
+      },
+      rect: { width: 280, height: 77.59375 }
+    },
+    {
+      selector: 'button',
+      i: 1,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '16px',
+        lineHeight: '24.8px',
+        fontWeight: '700',
+        color: 'rgb(255, 255, 255)',
+        backgroundColor: 'rgb(103, 1, 239)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '13px 26px',
+        border: '1px solid rgba(0, 0, 0, 0)',
+        boxSizing: 'border-box',
+        display: 'flex'
+      },
+      rect: { width: 280, height: 52.796875 }
+    },
+    {
+      selector: 'button',
+      i: 2,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '14px',
+        lineHeight: '21.7px',
+        fontWeight: '600',
+        color: 'rgb(31, 41, 55)',
+        backgroundColor: 'rgb(255, 255, 255)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '8px 16px',
+        border: '1px solid rgb(228, 230, 238)',
+        boxSizing: 'border-box',
+        display: 'flex'
+      },
+      rect: { width: 280, height: 61.375 }
+    },
+    {
+      selector: 'input',
+      i: 0,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '16px',
+        lineHeight: '24.8px',
+        fontWeight: '400',
+        color: 'rgb(31, 41, 55)',
+        backgroundColor: 'rgb(247, 248, 250)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '12px 14px',
+        border: '1px solid rgb(228, 230, 238)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 280, height: 50.796875 }
+    },
+    {
+      selector: 'input',
+      i: 1,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '16px',
+        lineHeight: '24.8px',
+        fontWeight: '400',
+        color: 'rgb(31, 41, 55)',
+        backgroundColor: 'rgb(247, 248, 250)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '12px 14px',
+        border: '1px solid rgb(228, 230, 238)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 280, height: 50.796875 }
+    },
+    {
+      selector: 'input',
+      i: 2,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '16px',
+        lineHeight: '24.8px',
+        fontWeight: '400',
+        color: 'rgb(31, 41, 55)',
+        backgroundColor: 'rgb(247, 248, 250)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '12px 14px',
+        border: '1px solid rgb(228, 230, 238)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 280, height: 50.796875 }
+    },
+    {
+      selector: '.brand',
+      i: 0,
+      styles: {
+        fontFamily: '"Bricolage Grotesque", "Bricolage Grotesque Fallback", sans-serif',
+        fontSize: '19px',
+        lineHeight: '29.45px',
+        fontWeight: '800',
+        color: 'rgba(255, 255, 255, 0.92)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px 0px 16px',
+        padding: '0px',
+        border: '0px none rgba(255, 255, 255, 0.92)',
+        boxSizing: 'border-box',
+        display: 'flex'
+      },
+      rect: { width: 328, height: 30 }
+    },
+    {
+      selector: '.stage',
+      i: 0,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '16px',
+        lineHeight: '24.8px',
+        fontWeight: '400',
+        color: 'rgb(31, 41, 55)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '24px 16px 64px',
+        border: '0px none rgb(31, 41, 55)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 360, height: 3455.984375 }
+    },
+    {
+      selector: '.card',
+      i: 0,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '16px',
+        lineHeight: '24.8px',
+        fontWeight: '400',
+        color: 'rgb(31, 41, 55)',
+        backgroundColor: 'rgb(255, 255, 255)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '24px',
+        border: '0px none rgb(31, 41, 55)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 328, height: 3321.984375 }
+    }
+  ],
+  expected: [
+    {
+      selector: 'body',
+      i: 0,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '16px',
+        lineHeight: '24.8px',
+        fontWeight: '400',
+        color: 'rgb(31, 41, 55)',
+        backgroundColor: 'rgb(30, 10, 60)',
+        backgroundImage: 'radial-gradient(1100px 700px at 78% -8%, rgba(103, 1, 239, 0.42), rgba(0, 0, 0, 0) 62%), radial-gradient(900px 620px at 8% 108%, rgba(120, 60, 220, 0.28), rgba(0, 0, 0, 0) 60%)',
+        backgroundSize: 'auto, auto',
+        backgroundPosition: '0% 0%, 0% 0%',
+        margin: '0px',
+        padding: '0px',
+        border: '0px none rgb(31, 41, 55)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 360, height: 3455.984375 }
+    },
+    {
+      selector: 'h1',
+      i: 0,
+      styles: {
+        fontFamily: '"Bricolage Grotesque", "Bricolage Grotesque Fallback", "DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '28px',
+        lineHeight: '32.2px',
+        fontWeight: '800',
+        color: 'rgb(30, 10, 60)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '0px',
+        border: '0px none rgb(30, 10, 60)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 279.53125, height: 32.18749237060547 }
+    },
+    {
+      selector: 'h2',
+      i: 0,
+      styles: {
+        fontFamily: '"Bricolage Grotesque", "Bricolage Grotesque Fallback", "DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '20px',
+        lineHeight: '23px',
+        fontWeight: '800',
+        color: 'rgb(30, 10, 60)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '0px',
+        border: '0px none rgb(30, 10, 60)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 280, height: 23 }
+    },
+    {
+      selector: 'h2',
+      i: 1,
+      styles: {
+        fontFamily: '"Bricolage Grotesque", "Bricolage Grotesque Fallback", "DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '20px',
+        lineHeight: '23px',
+        fontWeight: '800',
+        color: 'rgb(30, 10, 60)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '32px 0px 0px',
+        padding: '0px',
+        border: '0px none rgb(30, 10, 60)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 280, height: 23 }
+    },
+    {
+      selector: 'h2',
+      i: 2,
+      styles: {
+        fontFamily: '"Bricolage Grotesque", "Bricolage Grotesque Fallback", "DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '20px',
+        lineHeight: '23px',
+        fontWeight: '800',
+        color: 'rgb(30, 10, 60)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '32px 0px 0px',
+        padding: '0px',
+        border: '0px none rgb(30, 10, 60)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 280, height: 23 }
+    },
+    {
+      selector: 'p',
+      i: 0,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '12px',
+        lineHeight: '18.6px',
+        fontWeight: '700',
+        color: 'rgb(103, 1, 239)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '0px',
+        border: '0px none rgb(103, 1, 239)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 279.53125, height: 18.59375 }
+    },
+    {
+      selector: 'p',
+      i: 1,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '14px',
+        lineHeight: '21.7px',
+        fontWeight: '400',
+        color: 'rgb(107, 114, 128)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '8px 0px 0px',
+        padding: '0px',
+        border: '0px none rgb(107, 114, 128)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 280, height: 43.375 }
+    },
+    {
+      selector: 'p',
+      i: 2,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '14px',
+        lineHeight: '21.7px',
+        fontWeight: '400',
+        color: 'rgb(31, 41, 55)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '16px 0px 0px',
+        padding: '0px',
+        border: '0px none rgb(31, 41, 55)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 280, height: 65.0625 }
+    },
+    {
+      selector: 'a',
+      i: 0,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '14px',
+        lineHeight: '21.7px',
+        fontWeight: '400',
+        color: 'rgb(103, 1, 239)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '0px',
+        border: '0px none rgb(103, 1, 239)',
+        boxSizing: 'border-box',
+        display: 'inline'
+      },
+      rect: { width: 246.546875, height: 39.6875 }
+    },
+    {
+      selector: 'a',
+      i: 1,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '14px',
+        lineHeight: '21.7px',
+        fontWeight: '400',
+        color: 'rgb(103, 1, 239)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '0px',
+        border: '0px none rgb(103, 1, 239)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 242, height: 43.375030517578125 }
+    },
+    {
+      selector: 'a',
+      i: 2,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '14px',
+        lineHeight: '21.7px',
+        fontWeight: '400',
+        color: 'rgb(103, 1, 239)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '0px',
+        border: '0px none rgb(103, 1, 239)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 242, height: 43.375 }
+    },
+    {
+      selector: 'button',
+      i: 0,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '16px',
+        lineHeight: '24.8px',
+        fontWeight: '700',
+        color: 'rgb(255, 255, 255)',
+        backgroundColor: 'rgb(103, 1, 239)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '13px 26px',
+        border: '1px solid rgba(0, 0, 0, 0)',
+        boxSizing: 'border-box',
+        display: 'inline-flex'
+      },
+      rect: { width: 280, height: 77.59375 }
+    },
+    {
+      selector: 'button',
+      i: 1,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '16px',
+        lineHeight: '24.8px',
+        fontWeight: '700',
+        color: 'rgb(255, 255, 255)',
+        backgroundColor: 'rgb(103, 1, 239)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '13px 26px',
+        border: '1px solid rgba(0, 0, 0, 0)',
+        boxSizing: 'border-box',
+        display: 'flex'
+      },
+      rect: { width: 280, height: 52.796875 }
+    },
+    {
+      selector: 'button',
+      i: 2,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '14px',
+        lineHeight: '21.7px',
+        fontWeight: '600',
+        color: 'rgb(31, 41, 55)',
+        backgroundColor: 'rgb(255, 255, 255)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '8px 16px',
+        border: '1px solid rgb(228, 230, 238)',
+        boxSizing: 'border-box',
+        display: 'flex'
+      },
+      rect: { width: 280, height: 61.375 }
+    },
+    {
+      selector: 'input',
+      i: 0,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '16px',
+        lineHeight: '24.8px',
+        fontWeight: '400',
+        color: 'rgb(31, 41, 55)',
+        backgroundColor: 'rgb(247, 248, 250)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '12px 14px',
+        border: '1px solid rgb(228, 230, 238)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 280, height: 50.796875 }
+    },
+    {
+      selector: 'input',
+      i: 1,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '16px',
+        lineHeight: '24.8px',
+        fontWeight: '400',
+        color: 'rgb(31, 41, 55)',
+        backgroundColor: 'rgb(247, 248, 250)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '12px 14px',
+        border: '1px solid rgb(228, 230, 238)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 280, height: 50.796875 }
+    },
+    {
+      selector: 'input',
+      i: 2,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '16px',
+        lineHeight: '24.8px',
+        fontWeight: '400',
+        color: 'rgb(31, 41, 55)',
+        backgroundColor: 'rgb(247, 248, 250)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '12px 14px',
+        border: '1px solid rgb(228, 230, 238)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 280, height: 50.796875 }
+    },
+    {
+      selector: '.brand',
+      i: 0,
+      styles: {
+        fontFamily: '"Bricolage Grotesque", "Bricolage Grotesque Fallback", sans-serif',
+        fontSize: '19px',
+        lineHeight: '29.45px',
+        fontWeight: '800',
+        color: 'rgba(255, 255, 255, 0.92)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px 0px 16px',
+        padding: '0px',
+        border: '0px none rgba(255, 255, 255, 0.92)',
+        boxSizing: 'border-box',
+        display: 'flex'
+      },
+      rect: { width: 328, height: 30 }
+    },
+    {
+      selector: '.stage',
+      i: 0,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '16px',
+        lineHeight: '24.8px',
+        fontWeight: '400',
+        color: 'rgb(31, 41, 55)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '24px 16px 64px',
+        border: '0px none rgb(31, 41, 55)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 360, height: 3455.984375 }
+    },
+    {
+      selector: '.card',
+      i: 0,
+      styles: {
+        fontFamily: '"DM Sans", "DM Sans Fallback", system-ui, sans-serif',
+        fontSize: '16px',
+        lineHeight: '24.8px',
+        fontWeight: '400',
+        color: 'rgb(31, 41, 55)',
+        backgroundColor: 'rgb(255, 255, 255)',
+        backgroundImage: 'none',
+        backgroundSize: 'auto',
+        backgroundPosition: '0% 0%',
+        margin: '0px',
+        padding: '24px',
+        border: '0px none rgb(31, 41, 55)',
+        boxSizing: 'border-box',
+        display: 'block'
+      },
+      rect: { width: 328, height: 3321.984375 }
+    }
+  ],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.23.4

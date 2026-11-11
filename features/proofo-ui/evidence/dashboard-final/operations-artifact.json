@@ -1,0 +1,1312 @@
+{
+  "artifact": "/opt/proofwall-ui-preview/artifacts/u0skKIAfRIAw4AJWplbBw",
+  "buildId": "u0skKIAfRIAw4AJWplbBw",
+  "effectiveUserExpected": "proofwall-preview",
+  "uid": 20001,
+  "gid": 988,
+  "sourceWorktree": "/tmp/proofwall-ui-dashboard",
+  "copiedOnly": [
+    "production Next build (cache excluded)",
+    "public",
+    "root installed external dependencies/workspace links",
+    "tracked package sources/manifests",
+    "compiled agent-payments dist"
+  ],
+  "envOrPrivateFilesCopied": false,
+  "artifactFiles": [
+    {
+      "path": "apps/web/.next/BUILD_ID",
+      "sha256": "c843f26d0ab43a82181aae70bd62687c94d1f024346e7bb789c4e2aa2cbf0003"
+    },
+    {
+      "path": "apps/web/.next/app-build-manifest.json",
+      "sha256": "7396640d6e7282901fbe83fa70af286b8c110b09bbdb649188f70c27a0df3738"
+    },
+    {
+      "path": "apps/web/.next/app-path-routes-manifest.json",
+      "sha256": "aed109d88d4efcbdfa94bb084c9926489459ed0e366bfe07e6093bfea122eecb"
+    },
+    {
+      "path": "apps/web/.next/build-manifest.json",
+      "sha256": "81506405d90660e3e57e219024ec1bd1b47c57eec928a6d207422776222aa4ec"
+    },
+    {
+      "path": "apps/web/.next/diagnostics/build-diagnostics.json",
+      "sha256": "7791dabafe22e1fbe99d0207b1f5eeb12605b298898125bcee0aee4a4d81381c"
+    },
+    {
+      "path": "apps/web/.next/diagnostics/framework.json",
+      "sha256": "6b1668f6195fe186ac737215f22ef229d488aa6cce968cbd27a242f7eee2b6f7"
+    },
+    {
+      "path": "apps/web/.next/export-marker.json",
+      "sha256": "82356527db218adb95bd1eca0ede6f3391165b38b22d667d064e62e6b539d974"
+    },
+    {
+      "path": "apps/web/.next/images-manifest.json",
+      "sha256": "aa214cfadf69e21be1f4300f1c33b0266167f3eb9108825ac6238b295ac510ad"
+    },
+    {
+      "path": "apps/web/.next/next-minimal-server.js.nft.json",
+      "sha256": "5cfb9333e92b5a6f7ea747a970d15bbe3ed372ddd9b5e7dee4c9f4dece2c587b"
+    },
+    {
+      "path": "apps/web/.next/next-server.js.nft.json",
+      "sha256": "30ad0db73c7d960ee7d861f71fc5d21c93f13c531baa7c5bcc65e33eea82ead6"
+    },
+    {
+      "path": "apps/web/.next/package.json",
+      "sha256": "091a04fa67c7907b98e106fcff8b964e13129754fce72d24f3025b97c4887fa3"
+    },
+    {
+      "path": "apps/web/.next/prerender-manifest.json",
+      "sha256": "faf4dc2596b906a1c7d1b5a35d4852e75974d5062a4cc3b191ed42d39ca9c806"
+    },
+    {
+      "path": "apps/web/.next/react-loadable-manifest.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "apps/web/.next/required-server-files.json",
+      "sha256": "5b56939b11febe6343f1b43efcaafada879bd6cf675ec066cb7903f38ad31dc4"
+    },
+    {
+      "path": "apps/web/.next/routes-manifest.json",
+      "sha256": "54d4dee7583dba305a0ccf632fdacb946a2a666c4a47f0f7f22159c7299561cb"
+    },
+    {
+      "path": "apps/web/.next/server/app/_not-found/page.js",
+      "sha256": "af7a0109c36449bccf64d203d4c9fc075e40531d4460e9afa94171b7b9a1b4b1"
+    },
+    {
+      "path": "apps/web/.next/server/app/_not-found/page.js.nft.json",
+      "sha256": "c056cfd7b5d8c499693ac9cba6d966948c046d22b08cb80367d81a074c562b8f"
+    },
+    {
+      "path": "apps/web/.next/server/app/_not-found/page_client-reference-manifest.js",
+      "sha256": "c62e05a33537847f59f2df8b326843f5e1efa00f043e10a51e7632f5ad095044"
+    },
+    {
+      "path": "apps/web/.next/server/app/_not-found.html",
+      "sha256": "d5fbc628d81d7387cc16a2cd8f19e21a713022cb25ca749865a6fae62c627ec5"
+    },
+    {
+      "path": "apps/web/.next/server/app/_not-found.meta",
+      "sha256": "d2b0809d85d7e8932a2288cdcddbf8886f4c8c5a1a5c0a2414e63c3f5f5ef600"
+    },
+    {
+      "path": "apps/web/.next/server/app/_not-found.rsc",
+      "sha256": "1785edbca20dc1d03bad98ac63a5773316150037e10c47d8cda978ec50d894e9"
+    },
+    {
+      "path": "apps/web/.next/server/app/agent-payments/page.js",
+      "sha256": "2ff4567361b323a2e6278c8a99cd95c1c48ae4bff30ab3423cc39a7ea39ca1de"
+    },
+    {
+      "path": "apps/web/.next/server/app/agent-payments/page.js.nft.json",
+      "sha256": "c056cfd7b5d8c499693ac9cba6d966948c046d22b08cb80367d81a074c562b8f"
+    },
+    {
+      "path": "apps/web/.next/server/app/agent-payments/page_client-reference-manifest.js",
+      "sha256": "f4c31766ae1af39fac9f5ef130e6847a1b602f0d72236366dd66c08d4fcf4453"
+    },
+    {
+      "path": "apps/web/.next/server/app/agent-payments.html",
+      "sha256": "f189032568371dbd5bfce30dcf2319c53861f8f3923ff8880776f5d030f622fb"
+    },
+    {
+      "path": "apps/web/.next/server/app/agent-payments.meta",
+      "sha256": "ab70abcb8f9d162da3947f1fb2698e8eb4aba78b58e1feeda60c2097a6bb0c41"
+    },
+    {
+      "path": "apps/web/.next/server/app/agent-payments.rsc",
+      "sha256": "583aeae8a0706aafa061e923e51b5fe8501fd52d7157f7f038089275e1ec4433"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/agent-payments/commands/route.js",
+      "sha256": "953441e987301be4fffd28290a43a57479f7041a1debada9ae9bc4b3343dc8f1"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/agent-payments/commands/route.js.nft.json",
+      "sha256": "1385477aa6f1b301689a6bcb03dc07f80ee22c3a7eb0a0abfd98fd5af737b27a"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/agent-payments/commands/route_client-reference-manifest.js",
+      "sha256": "dba01559e4034a9b3d990eefff9e23932da85f27e67829808b35edb1324910ee"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/agent-payments/human/route.js",
+      "sha256": "0418275a76b7690f638d959f5ff9faae29581c7fed16b4d2fbc38ee39c56d2ae"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/agent-payments/human/route.js.nft.json",
+      "sha256": "3149693406961992f2c15aae6b53961897ac8034048723b75c72ecedce1bcbfe"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/agent-payments/human/route_client-reference-manifest.js",
+      "sha256": "c54aceb7149c88b555f566a3deb73aa8892c4f12dbd5f9e1ed6a82267a702c28"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/agent-payments/reconcile/route.js",
+      "sha256": "e47793b308159123f1ab63b9d1eaeebb8185fc0fd8b7c81dc88b4d3c31e5f954"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/agent-payments/reconcile/route.js.nft.json",
+      "sha256": "1385477aa6f1b301689a6bcb03dc07f80ee22c3a7eb0a0abfd98fd5af737b27a"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/agent-payments/reconcile/route_client-reference-manifest.js",
+      "sha256": "f6ab541079febd1df07aa0562bdd3bbb9348f913061d1824a9c39fac0bd4450f"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/agent-payments/webhook/route.js",
+      "sha256": "7b7751eecfabdfad7821ad27cf841e1731b84c2f90fc123ccf115d43a549e179"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/agent-payments/webhook/route.js.nft.json",
+      "sha256": "1385477aa6f1b301689a6bcb03dc07f80ee22c3a7eb0a0abfd98fd5af737b27a"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/agent-payments/webhook/route_client-reference-manifest.js",
+      "sha256": "400ccad715e8f63bc4434d0078f9f27b2fa5eb8027362e3990b7546ddb87c6a2"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/forgot/route.js",
+      "sha256": "bb79b082d425c9dc1001e3c93bcd28906daa930dc29d7426af66bc472aa9d292"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/forgot/route.js.nft.json",
+      "sha256": "1fbf773e51b5c2b4b2a5c3f195aa4580e8c174c186b2d4fc949250808ad283ac"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/forgot/route_client-reference-manifest.js",
+      "sha256": "71e3c8ea138bf21fa930583f9f67cd9e0ca3300e1acfa13c93524601c441d0df"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/login/route.js",
+      "sha256": "c9db5ed97482f90f5e0e13ce6e552c221f4c77fa32a55d7e9fa47b757e754469"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/login/route.js.nft.json",
+      "sha256": "1fbf773e51b5c2b4b2a5c3f195aa4580e8c174c186b2d4fc949250808ad283ac"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/login/route_client-reference-manifest.js",
+      "sha256": "978df937aa3b6fb088467d5778e1f4b4ffdf1338a1c0f2fdcf5446c24497c065"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/password/route.js",
+      "sha256": "115888c18b73c9367f4b972fc2dfd1762662e8173071f489a9f0feccac87ce7c"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/password/route.js.nft.json",
+      "sha256": "6f91e3041cb059ce36dd351e8e96f4e77ea7acca7a4be15dc74e244bcfb0b6bf"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/password/route_client-reference-manifest.js",
+      "sha256": "4d30b5504a7ae0549bdb71104866f6b8f03c8a9da5cfb7200639aa3958ee3d95"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/register/route.js",
+      "sha256": "7339b4348e791acc289c331cf9dc39cce36a99972afe688deb5b0a51a596fd57"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/register/route.js.nft.json",
+      "sha256": "908198a8f6ff49b10388f86d1764a32158bd65388cf4099150924c0198b59caa"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/register/route_client-reference-manifest.js",
+      "sha256": "404585aa028c4823570353ce4c0e32e76b5986482c6ed4d6dc3fa80acd5682a4"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/resend-verification/route.js",
+      "sha256": "3f5190ff74cb099a884629e1d635431d720880745324ed7e77a83494dc4e7519"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/resend-verification/route.js.nft.json",
+      "sha256": "d213f17721f23fa2549001067d1a6d064055a3f0aee04238517afd339807c4bc"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/resend-verification/route_client-reference-manifest.js",
+      "sha256": "00ce2794583dcfd5833c49256b7210d681d5cd93c893932ba56c38d371744f0a"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/reset/route.js",
+      "sha256": "9f38677cfbcec927036dd19b4bfc2ab5a1dd4330d7c028b06bc73fa198ee6565"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/reset/route.js.nft.json",
+      "sha256": "d0c5a45d0fc310c0f4d77127ae65633ecfdbd4a0c80463194671c620310265de"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/reset/route_client-reference-manifest.js",
+      "sha256": "a13ee54c4e99612d725256efeebebc7de37651c6b07985cd124e6981ed9956c0"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/verify-email/route.js",
+      "sha256": "7d2985531d98cdb4b0ecebd2b9d235eb0cf4999043934f064fa2bf9091f1b12f"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/verify-email/route.js.nft.json",
+      "sha256": "92eb405c3711f0a32d81a53e8fb697275ccf3439f438b312bb2255cc84ef9811"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/verify-email/route_client-reference-manifest.js",
+      "sha256": "160fccb0167d2c19aadcd8e3739a8069d4c0d17d714b858847c02b3796f5922c"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/yandex/callback/route.js",
+      "sha256": "f3075a8d949eba0de10220f947748462958797cee7183dcde80b40bedc274edd"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/yandex/callback/route.js.nft.json",
+      "sha256": "5c4ac5eb640ebe2c4c163c8afb25f1cf6ed29ea4c3241ba876bf409ac07cedc1"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/yandex/callback/route_client-reference-manifest.js",
+      "sha256": "8141e248891e0b07e664265487ecd3714f255a2395aa18e2178730960265839c"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/yandex/start/route.js",
+      "sha256": "33c8a627b134013c4d670af25714b9c9c0388a633b2879c32d6e2a7aa9e626e4"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/yandex/start/route.js.nft.json",
+      "sha256": "6f60db67b3f0738c2e429bc0f47557f3c492fc65f95d2a44fae47bc784b8e95c"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/auth/yandex/start/route_client-reference-manifest.js",
+      "sha256": "6d43a2afa45cc389535c4d6c56d1762a51ffb1fe8b618d8b186e9b18f8ae237d"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/checkout/route.js",
+      "sha256": "8d23ef6cb8f9ab09f36bc14145710c08eed96ae74a7ed63735fe33e610586c19"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/checkout/route.js.nft.json",
+      "sha256": "03702bdbfad937e9fdee5d26999ba142711ca9944bc9eef64fe0b2ae925f642a"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/checkout/route_client-reference-manifest.js",
+      "sha256": "030fbe68f5d4cc18ee41874e600eca39e3e986e35a77a1b4d150b30bbb35e621"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/import/route.js",
+      "sha256": "db346f05381378df2d4352a14faf1a094c878357529f972d625a35c60b923a2c"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/import/route.js.nft.json",
+      "sha256": "9ebdc5e2aaf80e2efe2a975cc745b885c0aebf382e865e5169cca93754364179"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/import/route_client-reference-manifest.js",
+      "sha256": "b9d40727ca4f07b530e1d7cfa0faf386d9c590d5350070c05c5589bfcd00b369"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/n3/program/route.js",
+      "sha256": "52f8f626dc0c4dbeb2eef59f1e624620744eebd2d26d896d6c66880ab4449e66"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/n3/program/route.js.nft.json",
+      "sha256": "f407c3363ab5642dc50efb77c2ab7add4ca378b41953bc72d0d4d24804b23c4a"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/n3/program/route_client-reference-manifest.js",
+      "sha256": "d304741263a368ecfeea660478bac7d2b7e5b7e5c56a62bcbfeca077830cff34"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/n3/proof/route.js",
+      "sha256": "8e3d6e6d5a2a2d1015c4bbc192793a24f3dcd73785840a5fda11c73b38664ae8"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/n3/proof/route.js.nft.json",
+      "sha256": "3140e4952e0dcf10dcdb82a466353846d7ddaedbedd046145fd19e0e2f355b42"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/n3/proof/route_client-reference-manifest.js",
+      "sha256": "1da5324c257465158ef6fbe32e62ab6f2eb3eef69494c7778cd2687b4b326a91"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/n3/status/route.js",
+      "sha256": "2008d596714f971beef6b126bb8ca18fc35bfb195806f07356fb6590c9aa80e2"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/n3/status/route.js.nft.json",
+      "sha256": "8d94addc95cb1982a19440cd7614e60761730da7511b51f1ced59047fe2396b4"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/n3/status/route_client-reference-manifest.js",
+      "sha256": "639743f2307fcde7fe61ba4412c95953880ba09b279367cef4b396a2e8822242"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/partner/session/route.js",
+      "sha256": "5ef05710cc5293d1374cb6e01bb4ca03738cf8f01f710c8c6ff0819802b3ec0a"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/partner/session/route.js.nft.json",
+      "sha256": "1fbf773e51b5c2b4b2a5c3f195aa4580e8c174c186b2d4fc949250808ad283ac"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/partner/session/route_client-reference-manifest.js",
+      "sha256": "853e45c9bbec96633780795b0bcf279419340d3064368dde1bfff90a647c8846"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/photo/[...key]/route.js",
+      "sha256": "bd727cdcb6d4c18b520360d48d30f4659ad42e069b83ddc995c217aeaffc978e"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/photo/[...key]/route.js.nft.json",
+      "sha256": "222f34e5ec5e28375f89fdcc8a58c21cdff0c50226780a08903bcecffbe8be83"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/photo/[...key]/route_client-reference-manifest.js",
+      "sha256": "f9e018b3f3499b031d6dd87319a4d39f21d27c15a57272617ea7cb97db8f76bb"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/projects/slug-available/route.js",
+      "sha256": "2a8ea9572343b526217cb363fe6f03d5baab93b12a4c8ca570733d72d790ec89"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/projects/slug-available/route.js.nft.json",
+      "sha256": "92eb405c3711f0a32d81a53e8fb697275ccf3439f438b312bb2255cc84ef9811"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/projects/slug-available/route_client-reference-manifest.js",
+      "sha256": "c2e7072d314896f000e9a79bac4248104e273f670c68349e55010b1f8965920a"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/share/route.js",
+      "sha256": "a594347b4443eb062f40f5f36aef9397613509a1f254ecfc64a5b577b03668eb"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/share/route.js.nft.json",
+      "sha256": "538504a1a01a6edb5aa469a74f8e55eb3943af45b8a951ff50bed980f0c5a2b8"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/share/route_client-reference-manifest.js",
+      "sha256": "46a00d4fe227e70689467bde7898dca95c862286009ece4efa987fc092b06c0b"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/testimonials/[id]/moderate/route.js",
+      "sha256": "15198b82b04e2a6fb65e39c80004cb8cc1e701e1b81720203d0b547d35944471"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/testimonials/[id]/moderate/route.js.nft.json",
+      "sha256": "b4314a7260ec2687e7f98d86b959130cb49512122516e42828295bb7c98d5a93"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/testimonials/[id]/moderate/route_client-reference-manifest.js",
+      "sha256": "de6a5885bb26b01c544fe47730bdbf708d520881620c45da96e54a2741c8a25a"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/testimonials/platform/route.js",
+      "sha256": "112c68bc6f92aaeaf3d7c5e616f32b6c4f0e676823520d9f91cee31c7eb00e46"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/testimonials/platform/route.js.nft.json",
+      "sha256": "48826346991f4d47b0cfb65e34eee39cbe37f61ebe768f7ed134b109b876dd8a"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/testimonials/platform/route_client-reference-manifest.js",
+      "sha256": "6986d69b7144ac1db47ffcd863214ea193c7989454b28629e2b1f1d3f4fa9cb0"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/testimonials/route.js",
+      "sha256": "0298d7abdd9da97783c54483618982ff4f881f350b1552bf49ddcae91453f307"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/testimonials/route.js.nft.json",
+      "sha256": "c90b0c701e35f7de544f04050ffafa0069ab1af7fc7c8c3da770dcd93f2aa7bb"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/testimonials/route_client-reference-manifest.js",
+      "sha256": "dcd4ffce92a32164f92a3b0536681514830406768c257959bd8ff0c79b90128f"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/testimonials/video/route.js",
+      "sha256": "7c9936406d859fe717062244ae503ee82beb725dec7291d68dfb01db38d7af5c"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/testimonials/video/route.js.nft.json",
+      "sha256": "d43358346ea4688d899e76096bbcf0a7a7fc231881bcdf6447ad85eb0051ad81"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/testimonials/video/route_client-reference-manifest.js",
+      "sha256": "e22466a3229bede111596597ff62701b476aae8d7e2f7f0ef5b84353a3c2e43a"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/webhooks/payment/route.js",
+      "sha256": "8d2473bd77b38cd0200d3e5ef5332cc47463fbf79e93ef3179455bdd08106987"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/webhooks/payment/route.js.nft.json",
+      "sha256": "1385477aa6f1b301689a6bcb03dc07f80ee22c3a7eb0a0abfd98fd5af737b27a"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/webhooks/payment/route_client-reference-manifest.js",
+      "sha256": "1dd08673f66813f6483b61fc5967109d29fd77d2ab1066cf93730ba95f36f94b"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/widget/badge-click/route.js",
+      "sha256": "569abf2b89dafa01b1a1b3139ed155880722691273eb112646000a1db4545b34"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/widget/badge-click/route.js.nft.json",
+      "sha256": "7dee991948f783f91831d2925c48747968a10ecbc57fea7201028c82f93cdb17"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/widget/badge-click/route_client-reference-manifest.js",
+      "sha256": "2c259901c2ab25553b4b6003997f2cd59baa60c0c3aeb5ab3e132e544bca57ee"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/widget/config/route.js",
+      "sha256": "8de39d7f11b0ad9582eeed7114b51e2d35cc398431dc5243a5adfc133ecd336d"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/widget/config/route.js.nft.json",
+      "sha256": "0da186d6bc577a1b9333e1d847147eb80854b35ff840f96251326f0beeac12ae"
+    },
+    {
+      "path": "apps/web/.next/server/app/api/widget/config/route_client-reference-manifest.js",
+      "sha256": "1227347bd3c2c449e45e65bbf5694ee542aa880045400535b85f642040f0fff6"
+    },
+    {
+      "path": "apps/web/.next/server/app/dashboard/[slug]/page.js",
+      "sha256": "7bc0ecb88bfc3699a2e1b615d4238a5a9644318203d990e52a8e657f8aef14f3"
+    },
+    {
+      "path": "apps/web/.next/server/app/dashboard/[slug]/page.js.nft.json",
+      "sha256": "c721539a068d34f46944131fc1fb259719a8792c40a0d9796d69c28302998049"
+    },
+    {
+      "path": "apps/web/.next/server/app/dashboard/[slug]/page_client-reference-manifest.js",
+      "sha256": "24de72bd0104576ca5c4bdf1f1701af4cf23c1d360bd20902a396c13bc30726e"
+    },
+    {
+      "path": "apps/web/.next/server/app/dashboard/page.js",
+      "sha256": "3bd4d70f0ee223809ccb0aa8478f511d0b1f9402db3df77a24d75e8fe827ee03"
+    },
+    {
+      "path": "apps/web/.next/server/app/dashboard/page.js.nft.json",
+      "sha256": "70a3b9081dcf2d169f528419ac3da3645e77f687bb6b27983b803f2aae192863"
+    },
+    {
+      "path": "apps/web/.next/server/app/dashboard/page_client-reference-manifest.js",
+      "sha256": "01f05a07463b9ab8bb320bacbd894308d0b2f27ad5a7c762d6668a6425b49459"
+    },
+    {
+      "path": "apps/web/.next/server/app/f/[slug]/page.js",
+      "sha256": "80481d8e336b4691ffac72e059bfd48c2ddfbf70a7f5ca04323f6c3f72d0ec4c"
+    },
+    {
+      "path": "apps/web/.next/server/app/f/[slug]/page.js.nft.json",
+      "sha256": "f830570c713a7466e07f16c4e6fa0c1b4257ba9d9ab1c816a94ed0d05dd8b78f"
+    },
+    {
+      "path": "apps/web/.next/server/app/f/[slug]/page_client-reference-manifest.js",
+      "sha256": "4b399a9fe47817205843864a5f9031f3e0cba81e000508309c9889c9e9dd80c6"
+    },
+    {
+      "path": "apps/web/.next/server/app/forgot/page.js",
+      "sha256": "8539682765858ef1ff4a4cefb480db5842f951705ee04c6d7bb15cc4cfeca38d"
+    },
+    {
+      "path": "apps/web/.next/server/app/forgot/page.js.nft.json",
+      "sha256": "164fadca7237465702cd090d6ad740bcfa7d2fabc7546f78be712c3e9de735e5"
+    },
+    {
+      "path": "apps/web/.next/server/app/forgot/page_client-reference-manifest.js",
+      "sha256": "1225ca5048fbfc035efd27cf0be65014981902c5dd89f47e21c57713dcef5804"
+    },
+    {
+      "path": "apps/web/.next/server/app/index.html",
+      "sha256": "19e7a26f703d4334e5a44a84a24d1c4cb005849a30740c14eb1df078bc6dc950"
+    },
+    {
+      "path": "apps/web/.next/server/app/index.meta",
+      "sha256": "180ed960ec26551a486c0ef439325ec2b5de832b94cf6a63f27c1f195d4d82e0"
+    },
+    {
+      "path": "apps/web/.next/server/app/index.rsc",
+      "sha256": "5fc0378371f9959c11c8fda9c50046900a867bd0758eb62cf65e67a404b9c6bb"
+    },
+    {
+      "path": "apps/web/.next/server/app/login/page.js",
+      "sha256": "8f03fc086337c1e3489d873c84cfd7d06a6139d47fe929dfad9b38b3cc4f9f07"
+    },
+    {
+      "path": "apps/web/.next/server/app/login/page.js.nft.json",
+      "sha256": "56d8810976762d25581bba211da89ee7587fbc7712a09844de7bf57809b262af"
+    },
+    {
+      "path": "apps/web/.next/server/app/login/page_client-reference-manifest.js",
+      "sha256": "0253ec19fe4b4d6cc153d1fafe118e568e7ebf89ef69280cef3463e4480ed9e9"
+    },
+    {
+      "path": "apps/web/.next/server/app/n3/start/route.js",
+      "sha256": "627b74c5125c47dc77490e46206fa98bc3b81f3c54a0ab8d6dcb1607a9e29f81"
+    },
+    {
+      "path": "apps/web/.next/server/app/n3/start/route.js.nft.json",
+      "sha256": "4ee28650a2263fa24d80f00317519fb683b1efe1f3053b31f523856b480ab9cb"
+    },
+    {
+      "path": "apps/web/.next/server/app/n3/start/route_client-reference-manifest.js",
+      "sha256": "7da764926c3821fd3a9a7d5dd8215169438b08e2acea0e8cc6f8d7b5805ec74d"
+    },
+    {
+      "path": "apps/web/.next/server/app/n3/verify/page.js",
+      "sha256": "c04a3d60192ee9f39db144a03387175250481f43d0dd2fbfe7d26f79c8f2d3d3"
+    },
+    {
+      "path": "apps/web/.next/server/app/n3/verify/page.js.nft.json",
+      "sha256": "051f23e1fc1239a504a8ae783ef5d21817a4ae7c51f3aaf42c383bcfe053e6e6"
+    },
+    {
+      "path": "apps/web/.next/server/app/n3/verify/page_client-reference-manifest.js",
+      "sha256": "a063ad3c05a22ca3bc421dde901a60997b843c2976ef0e8513267e7d876e4bd9"
+    },
+    {
+      "path": "apps/web/.next/server/app/n3/verify.html",
+      "sha256": "5c5bceeaa2b454d88c789dbc496cd776f7beebfa1cec977247b85ac16e5e8438"
+    },
+    {
+      "path": "apps/web/.next/server/app/n3/verify.meta",
+      "sha256": "7b0db55f8e42d0da6619af2f366d041d4e2ea18ceef685394cd330e1e622fb6a"
+    },
+    {
+      "path": "apps/web/.next/server/app/n3/verify.rsc",
+      "sha256": "ffaba95ee1e95885b4f3fcad4b73e1be338a3f355168335086b1e3f18fd2ffc1"
+    },
+    {
+      "path": "apps/web/.next/server/app/page.js",
+      "sha256": "68edd62118b64700d42fbddd03850b11254d250c2d993e45eb2fd5b0ca1d1014"
+    },
+    {
+      "path": "apps/web/.next/server/app/page.js.nft.json",
+      "sha256": "8ab4ba611df2eb378622141cf07dd0885ae65d4be004b292e30435a8f45df074"
+    },
+    {
+      "path": "apps/web/.next/server/app/page_client-reference-manifest.js",
+      "sha256": "965ce603d9744d3e02710fe2a5eae74b761849b7cce28b6fdb3f7aee1f8583e0"
+    },
+    {
+      "path": "apps/web/.next/server/app/partner/dashboard/page.js",
+      "sha256": "8a666558cf3bda47078ff76df3a8f506b64d28b6c51bb8dc2efa5963c3289c17"
+    },
+    {
+      "path": "apps/web/.next/server/app/partner/dashboard/page.js.nft.json",
+      "sha256": "95701ada29df4b062a2412384d15d4fe3e26b45df710d0071baab895bde565e1"
+    },
+    {
+      "path": "apps/web/.next/server/app/partner/dashboard/page_client-reference-manifest.js",
+      "sha256": "22298d8821ea67cd277fa9eccb4561838d56235f6e72494f9d6acb4707a10252"
+    },
+    {
+      "path": "apps/web/.next/server/app/partner/page.js",
+      "sha256": "4b1ff14ba3c2dcd0c7f16f47673aa5179ed46400f3ac85f993d32a968d0e1779"
+    },
+    {
+      "path": "apps/web/.next/server/app/partner/page.js.nft.json",
+      "sha256": "3d08792185f16b1f92b732e98ddb57fe3d9899df2ea069314430811775115db8"
+    },
+    {
+      "path": "apps/web/.next/server/app/partner/page_client-reference-manifest.js",
+      "sha256": "f64a21336691918fc46bbd5a57a4e8ab34483fac5d3d8888c14c6d05d79e7b46"
+    },
+    {
+      "path": "apps/web/.next/server/app/reset/page.js",
+      "sha256": "af179af6de3a058315f7504ba360025a839df6e5d122a3672d2de4ebae0ac32d"
+    },
+    {
+      "path": "apps/web/.next/server/app/reset/page.js.nft.json",
+      "sha256": "3d08792185f16b1f92b732e98ddb57fe3d9899df2ea069314430811775115db8"
+    },
+    {
+      "path": "apps/web/.next/server/app/reset/page_client-reference-manifest.js",
+      "sha256": "3b6a371b2efe7fbf31c0bbe7e824aff7a9525e22002d7a02177e3fd3912c573f"
+    },
+    {
+      "path": "apps/web/.next/server/app/verify-email/page.js",
+      "sha256": "12a5c74544ac7fea3e5ad38cd95f9292190b77aa45d2301ec0034f378f8ba833"
+    },
+    {
+      "path": "apps/web/.next/server/app/verify-email/page.js.nft.json",
+      "sha256": "58d09061b13b7c69db618147c60a23b2d7742fdb6959971d6399fe4fe4a2fd95"
+    },
+    {
+      "path": "apps/web/.next/server/app/verify-email/page_client-reference-manifest.js",
+      "sha256": "2f5e5d6d47d911ff34bceb853091732e4c40a9da719f6bbb728897eed3477471"
+    },
+    {
+      "path": "apps/web/.next/server/app/w/[slug]/page.js",
+      "sha256": "965acf1bc7c5ecf3a0e957014a6252de5ecc7a8c9043cec13b5304956ff37ce5"
+    },
+    {
+      "path": "apps/web/.next/server/app/w/[slug]/page.js.nft.json",
+      "sha256": "f830570c713a7466e07f16c4e6fa0c1b4257ba9d9ab1c816a94ed0d05dd8b78f"
+    },
+    {
+      "path": "apps/web/.next/server/app/w/[slug]/page_client-reference-manifest.js",
+      "sha256": "e8c8a2427a255221f0a6048ef4d6b7d0633e65ecf9c50e8a39a3f0572b25f96c"
+    },
+    {
+      "path": "apps/web/.next/server/app-paths-manifest.json",
+      "sha256": "b668d9477664b1412558979e98f4ce81dd9bf4bb6544a4259ed70b720179d836"
+    },
+    {
+      "path": "apps/web/.next/server/chunks/383.js",
+      "sha256": "73575c739afe69b49866e673929a4f9a830d6ad2dbf50663b4611dd7d0922351"
+    },
+    {
+      "path": "apps/web/.next/server/chunks/4364.js",
+      "sha256": "602d3c65f4ab82b4f3d2aca1a898afbe6dfaeb566371fdefa8333840315bdb9d"
+    },
+    {
+      "path": "apps/web/.next/server/chunks/4653.js",
+      "sha256": "fed4345f2366d3cdd562fe1518cf0d6a87bb11c09bd2e748a984c9b1f8f07b5c"
+    },
+    {
+      "path": "apps/web/.next/server/chunks/5211.js",
+      "sha256": "c095eef324c200fa2021775425a505bbf5a8f865a0af614e51bd9b82235ee964"
+    },
+    {
+      "path": "apps/web/.next/server/chunks/5284.js",
+      "sha256": "e7ce6ecf9778377b1ad49720d353a0cd9a44be457c1e8205b2949a754b5e6651"
+    },
+    {
+      "path": "apps/web/.next/server/chunks/5657.js",
+      "sha256": "62a1a420e3ab699523bce05164408e721acdbfe176aae10482004e31e918fbcc"
+    },
+    {
+      "path": "apps/web/.next/server/chunks/5901.js",
+      "sha256": "d176026a64a47d729e0d81b1cd9c279e5744b2542fb3bd6e2b8a888ceeb504a6"
+    },
+    {
+      "path": "apps/web/.next/server/chunks/6057.js",
+      "sha256": "d710d26d555ac8730ed0cfacbe6ee694e61424fea7c699f297758d1c839e366e"
+    },
+    {
+      "path": "apps/web/.next/server/chunks/7249.js",
+      "sha256": "e7e95cd1c97457753b64c554d6c3b7001d6b83edd469844f6d4de7d65f90db1e"
+    },
+    {
+      "path": "apps/web/.next/server/chunks/7489.js",
+      "sha256": "7f1a7913fd6149c1f6bf94bc2dc74b0bfab66ec94cb065319c712b388750836b"
+    },
+    {
+      "path": "apps/web/.next/server/chunks/8222.js",
+      "sha256": "fa961275060675dace0d6ef2394d98b7378119e8cbb87368e821f3f83bfb7f82"
+    },
+    {
+      "path": "apps/web/.next/server/chunks/8434.js",
+      "sha256": "8b7c12daaf46ce3464ceb2e19ffd9f94149066622eaf6a1ad5e7151030b46ff7"
+    },
+    {
+      "path": "apps/web/.next/server/chunks/871.js",
+      "sha256": "f9cc435d6805bc9aeb41c4281f045a8913cede15b72179e038ba223c76529ddb"
+    },
+    {
+      "path": "apps/web/.next/server/chunks/8825.js",
+      "sha256": "1e3ecbc035ac80dcb1aea168cccd3d14707f2f1fbc3751078287a20caba2756a"
+    },
+    {
+      "path": "apps/web/.next/server/chunks/9901.js",
+      "sha256": "c5c9fa4e428a4681c10bc9de0cef9f84798032892f4e0a7d1407c6dd9e60b523"
+    },
+    {
+      "path": "apps/web/.next/server/functions-config-manifest.json",
+      "sha256": "e7d9c7de4b1a0e8ed521c8ca071261fb4a0de053afc0040538c0a50e5e4c1ee4"
+    },
+    {
+      "path": "apps/web/.next/server/interception-route-rewrite-manifest.js",
+      "sha256": "fc5133e40acf09e6517b073ddd7b5c0c218d09938848902210f2cc13f08e1c81"
+    },
+    {
+      "path": "apps/web/.next/server/middleware-build-manifest.js",
+      "sha256": "3086757eb8cf38bb1ab6da92c0ba6f6ad667160a395a2e3e4684b4abadb67db3"
+    },
+    {
+      "path": "apps/web/.next/server/middleware-manifest.json",
+      "sha256": "0a8520bc7e076f7ae717c2d62713990c83e8a3d74626f327a3844bc0504e210c"
+    },
+    {
+      "path": "apps/web/.next/server/middleware-react-loadable-manifest.js",
+      "sha256": "ad2e79ec91e2a5440840da3d8bd222c279b3b4c47e89a968327a66f6cb12eb82"
+    },
+    {
+      "path": "apps/web/.next/server/next-font-manifest.js",
+      "sha256": "1a05349d78c9ff3c1600529a4790dbe7f21ef5581c7246bc7b3224f3f5c7a8bb"
+    },
+    {
+      "path": "apps/web/.next/server/next-font-manifest.json",
+      "sha256": "6e0692e9d391c223080a18408778ee9dbabb526e3f99c285736e49df44eb37a2"
+    },
+    {
+      "path": "apps/web/.next/server/pages/404.html",
+      "sha256": "d5fbc628d81d7387cc16a2cd8f19e21a713022cb25ca749865a6fae62c627ec5"
+    },
+    {
+      "path": "apps/web/.next/server/pages/500.html",
+      "sha256": "799881420a188eab92fb83a5ddd2ca89a2da231e94042ecf924746b8877840b6"
+    },
+    {
+      "path": "apps/web/.next/server/pages/_app.js",
+      "sha256": "44f2471501cd2ec2af38b86a26e65a1a7a871fdff6715a836a3a099c1b872463"
+    },
+    {
+      "path": "apps/web/.next/server/pages/_app.js.nft.json",
+      "sha256": "0fa255a0a6b88aaf82bbb4d7f580c403ccece57ad5757ab8d02e14ef85bffa38"
+    },
+    {
+      "path": "apps/web/.next/server/pages/_document.js",
+      "sha256": "64557b7c7d44a097e9bf272bece50f0ff5acfcdb60394c13171725c09b804638"
+    },
+    {
+      "path": "apps/web/.next/server/pages/_document.js.nft.json",
+      "sha256": "955649ab860a9e68991c41f34b41707016d52e87761ced82f1ca49ee286cda15"
+    },
+    {
+      "path": "apps/web/.next/server/pages/_error.js",
+      "sha256": "1e43ef15570847342826c8b3e37e0bbce8f5b07e6e8d72f23043efed09a29cca"
+    },
+    {
+      "path": "apps/web/.next/server/pages/_error.js.nft.json",
+      "sha256": "f38ed7a96c1de2ede0e27495ad383cd352193b30b4d93b4f1d5be0b15e6d8804"
+    },
+    {
+      "path": "apps/web/.next/server/pages-manifest.json",
+      "sha256": "fd8230c49dec37f22f8280013828df11bb3ec8946f4fe562e6369dd1741ee1ea"
+    },
+    {
+      "path": "apps/web/.next/server/server-reference-manifest.js",
+      "sha256": "ce01006c00e1f63bcbfe41b3f7edd260d969b41d0a323b705c44e1ef9df13d8c"
+    },
+    {
+      "path": "apps/web/.next/server/server-reference-manifest.json",
+      "sha256": "c4e8ecd28c657672402a682cf1a1c6a112f418cc0f5b463365e734fd9daf12f7"
+    },
+    {
+      "path": "apps/web/.next/server/webpack-runtime.js",
+      "sha256": "85eb500b939c15caa433f44407e3db7a5a286ec5c6b0b5f2dea04dc1086f953c"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/18-51732c0e3a66e117.js",
+      "sha256": "16226d06e50bf4f9bb7321575e1e4e5ef2282a139d487faea4ae30ae36edd64d"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/87c73c54-24122e7b92478d00.js",
+      "sha256": "0d30e73d8f3c24eee6941dd0861b15e22d943c0aec3bfc571eecfecb0e06b7c3"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/_not-found/page-085991a369a6c35a.js",
+      "sha256": "2486b0d116847ad9e843514925580e8db7dda1a8c096f09c2796a31b999d4e61"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/agent-payments/page-f6e1313290813c63.js",
+      "sha256": "97c1148f26ef34a0b7de82b8801b8f3f5f0a5b15e29b8887f57687eba35259cd"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/agent-payments/commands/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/agent-payments/human/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/agent-payments/reconcile/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/agent-payments/webhook/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/auth/forgot/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/auth/login/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/auth/password/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/auth/register/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/auth/resend-verification/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/auth/reset/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/auth/verify-email/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/auth/yandex/callback/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/auth/yandex/start/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/checkout/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/import/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/n3/program/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/n3/proof/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/n3/status/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/partner/session/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/photo/[...key]/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/projects/slug-available/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/share/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/testimonials/[id]/moderate/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/testimonials/platform/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/testimonials/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/testimonials/video/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/webhooks/payment/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/widget/badge-click/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/widget/config/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/dashboard/[slug]/page-524c4e723e133273.js",
+      "sha256": "1263ae3b91d8c08b352ac16f33c1be3333201d2a3be5c7fdc7be7026d6231a5e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/dashboard/error-18403b533e8f49ba.js",
+      "sha256": "1428461e3f931db351a6e7b9648647d5a61f74828c2b767dc86172a68e99b2ba"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/dashboard/page-d9f5b4cf9803cc18.js",
+      "sha256": "c2f10ef5805221b62378fe56406c9246cb9793ebc121f62a22204a99e2c12462"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/f/[slug]/page-21de2af5f38758f7.js",
+      "sha256": "b1248cd542498fc7e4f9e88ca5c35beac54fe91424de2acf87ac52a35ef8f37c"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/forgot/page-86ef1604237028ee.js",
+      "sha256": "e354370557c3018a9d702a3edead13a57dc67209c0d99b4710c85b0507bf480a"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/layout-51f4d7b406bb8c8e.js",
+      "sha256": "35fdc0ca3131c5c105a5741b9c5d708987b8415e601a65a27b32eebe7ecebb93"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/login/page-de13fa4a21aa57f7.js",
+      "sha256": "3e619651f27c6dce49ac100746738ddb90f4cbc2be2c83d9265fb9f8e64bfdfa"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/n3/start/route-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/n3/verify/page-1e4f1c0985e6ab28.js",
+      "sha256": "9cc3898e41793aec8719c740c76eb67279fa30017b168906dbfb928f4277b040"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/page-3a582413068e8f23.js",
+      "sha256": "85ffce1493574644ede0a36c96aa76f45b8ec1ddb2bfe315957eb642836ea715"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/partner/dashboard/page-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/partner/page-5ce262663a60a848.js",
+      "sha256": "001f540d000f377ee7c3aa82758b41217f7169621aaaec0287d6b345ca142b73"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/reset/page-d708e1dc234a25bc.js",
+      "sha256": "225e1d10356fc2cd16723717273fd395e155a7c54d21a2fe7c16b879e26dbf6a"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/verify-email/page-a8326ce8ac935d5c.js",
+      "sha256": "bbd23d62772c10362c6436d25f11dd573a3c03cd8a786eecab0a405e6314d6ba"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/w/[slug]/page-bd37311f30072e40.js",
+      "sha256": "b3abfb71e859f88c85aa79648667dfdd0f6bc8e93e86c923e19d95f55781951e"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/framework-8cbae44638a30474.js",
+      "sha256": "acc1aa513ec2e18e9956e89c9f5eb34aefe97f7af034af9216e1ea7c7c54b2c0"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/main-941b62335fecdd85.js",
+      "sha256": "a5ee35219f757c0c9af32612c3f625030e0e27b943dda817f70e6a141d31f014"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/main-app-e81da0fd95dc6252.js",
+      "sha256": "183536aa4a6249e4c8522d96aebe7ce4b2fffdb63beba2fdfafcc0017d299b38"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/pages/_app-50fa07b56b2d29ac.js",
+      "sha256": "81fcc02878b745b9ceb63c6d984988f94037ec9d2b3b263a65671cf9b3bf5863"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/pages/_error-fed8688bdd23f211.js",
+      "sha256": "4bde83cce4605d29668d4b06b38c57c77c3726664ff2dfa0dcbf391e3c6d8b09"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/polyfills-42372ed130431b0a.js",
+      "sha256": "0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683"
+    },
+    {
+      "path": "apps/web/.next/static/chunks/webpack-00d95d2deccf624e.js",
+      "sha256": "b7b267f388b45110cc41430781ff563ad6ae09ffe1749cd5263be764c9b588ca"
+    },
+    {
+      "path": "apps/web/.next/static/css/488652bbaae55355.css",
+      "sha256": "74a9fbc6be5b6fe209380316c197350d8afbfac474de39fd8bd93d11657e2740"
+    },
+    {
+      "path": "apps/web/.next/static/css/d0f4a0db24a09508.css",
+      "sha256": "25aa4af6c843183d6e007aed0f78e5fdf8157740bd8f4b3de687d8bc5101adde"
+    },
+    {
+      "path": "apps/web/.next/static/media/13971731025ec697-s.p.woff2",
+      "sha256": "468d56b6b25b05b70190b6c233d773f6f1770e8579827ce022a57f03fa8002fb"
+    },
+    {
+      "path": "apps/web/.next/static/media/7ab938503e4547a1-s.p.woff2",
+      "sha256": "219b02c7d8884817d3d6ad4c8771f2c000ce4c5669a67ef4e2e5617ffa25c4cc"
+    },
+    {
+      "path": "apps/web/.next/static/media/93a6e477e1480c92-s.woff2",
+      "sha256": "ea16948d4a91b77221f119ad27d4ac7a7581c98cf990712047f89a531a49ef28"
+    },
+    {
+      "path": "apps/web/.next/static/media/9d5a263311222317-s.p.woff2",
+      "sha256": "4fd48b2c1ab27220e71f15f990550261b35245c3bdfd8d8025b4bdac0459ee2d"
+    },
+    {
+      "path": "apps/web/.next/static/media/c7e0cf6c760983e7-s.p.woff2",
+      "sha256": "a22c997a894377f36d81c904163e0c05fbbcd32f0ca2e7beedb86b39be1296a1"
+    },
+    {
+      "path": "apps/web/.next/static/u0skKIAfRIAw4AJWplbBw/_buildManifest.js",
+      "sha256": "fcdbe4a527ef2f0a2260902a11048edd9cd2fc672f6952d75feea0b8ac1db7f2"
+    },
+    {
+      "path": "apps/web/.next/static/u0skKIAfRIAw4AJWplbBw/_ssgManifest.js",
+      "sha256": "678f6ce2cb80b1fe72fc67e7412be6e2ab6ada083111b64f7c40d35e3cba5e00"
+    },
+    {
+      "path": "apps/web/.next/trace",
+      "sha256": "8cf65833c14cac4ab64213d225709773ec657173a62c0781941e7e41f5609b1f"
+    },
+    {
+      "path": "apps/web/.next/types/app/agent-payments/page.ts",
+      "sha256": "95f601dc452c2e6a0366a19a3e3f9818deedfb491ef17304f2951c6ce0c4e8bd"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/agent-payments/commands/route.ts",
+      "sha256": "7c5172e92dde25fe3aaafc980c1fc529a2293d91cb918416747791db23efab8b"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/agent-payments/human/route.ts",
+      "sha256": "692cabc1f1fcf959f66547c65917fa0040d7aabdd727ff5a2ec35cfa33c48430"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/agent-payments/reconcile/route.ts",
+      "sha256": "36b3e793ffabf62316a1b21502caf0f8c4e13c77ecb360945079e313d4664dac"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/agent-payments/webhook/route.ts",
+      "sha256": "1b13d6ff85238b2d88a8ad92758f172ab6817d93ddd19859306f574d066ebb48"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/auth/forgot/route.ts",
+      "sha256": "1e5fb92fe6349d85f7237ac55ef72c19fa2e3a9ae3e1c35830c04f82d6fb4f1b"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/auth/password/route.ts",
+      "sha256": "311b57e3ab9a92fb2c5be1a75e79ba6ee2157ed8315749efffff1055c5e2768b"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/auth/register/route.ts",
+      "sha256": "2cefb4bd61dcbabc166f22401aeacca5f326a9d8b344201d5f096098d595c87b"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/auth/resend-verification/route.ts",
+      "sha256": "1064cb4a4993e4db4c088689419bb26701d3519e9fb6b985c1b145dd6b5f458f"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/auth/reset/route.ts",
+      "sha256": "bd5a1169f19eb1cd4b7f0610ebd240c16f48e73773e4615c105825547c594204"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/auth/verify-email/route.ts",
+      "sha256": "7b40fdb5bb51b119c5eb40cab2f355540c2187c04b2671280ff4324ba359b865"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/auth/yandex/callback/route.ts",
+      "sha256": "30bb4e98ea46e742afe9d5f878434d1714d0c6186d008e8a6a254b83466da251"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/auth/yandex/start/route.ts",
+      "sha256": "a9fe965358abc9814ed964551e444b240fd6d075c571fa67977c51fdfaa79264"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/checkout/route.ts",
+      "sha256": "dff1c7eef79ee54b681f3fd13a1af53108364dafaf2c62939522989a20078821"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/import/route.ts",
+      "sha256": "77328696ee44228ce0018ab0244eb7da0c003ad2ab8c59de2bbe0fd028b2dafc"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/n3/program/route.ts",
+      "sha256": "e606f0945195ae177597edf3ac1d9b8fd02eef09197117cb979196e8f06f15c9"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/n3/proof/route.ts",
+      "sha256": "4474bc8ee3032c335df222d8cea5a26c596ed48ceb747a6891fbb238df3ab045"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/n3/status/route.ts",
+      "sha256": "ec376dc8128bb34e046e8fd01b2879a7608541bb4a5b835a8c735f99db76aa56"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/partner/session/route.ts",
+      "sha256": "813471bac44576a77d6bab8141536fc65882e33634800403dd7830bef3e138dc"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/photo/[...key]/route.ts",
+      "sha256": "ea21de909418580547519e92de012ad879a8b7f647f9a73edcc5b4273a931bc1"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/projects/slug-available/route.ts",
+      "sha256": "b019e7bc05a16a5f52e9c2c7e977abd5238ba31e41991d104829348fe3afc65a"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/share/route.ts",
+      "sha256": "a8fbefc23f8621cfe39e025d6c06606feddf0fdc39f39419d51759c50b79d810"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/testimonials/[id]/moderate/route.ts",
+      "sha256": "885f9ef5d093c3158f8098e5238e978a2e427601ee1054c0a238f137dbfa9068"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/testimonials/platform/route.ts",
+      "sha256": "b4c7235a3bc29160ef5de00543412f483382ffc8d19476ec7425ee6c91250dc7"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/testimonials/route.ts",
+      "sha256": "d2b44ffbe8e0c4e5211e669c7f9bdc4d664fce631364a9c9a5f366c6f6508434"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/testimonials/video/route.ts",
+      "sha256": "4f8402b35e9016de85904b79b297702184c0bb9322b123728283150127f58874"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/webhooks/payment/route.ts",
+      "sha256": "4387e3d90b82a18df4cf814a637ad3737eb65467d0cca1825b6a2c1fd274b3dc"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/widget/badge-click/route.ts",
+      "sha256": "0893000d1b5f0f3624073a6587416159fe1067e793cf40b5b0187238ad5cb279"
+    },
+    {
+      "path": "apps/web/.next/types/app/api/widget/config/route.ts",
+      "sha256": "dc37fb0cc7d68f4ad9509c72911e3a50110885b59b87fbb73e7d6df14002e65b"
+    },
+    {
+      "path": "apps/web/.next/types/app/dashboard/[slug]/page.ts",
+      "sha256": "76b3b474687449f5cb264fca5c1559833464d0d89eba5043bcd1fe451200aae2"
+    },
+    {
+      "path": "apps/web/.next/types/app/dashboard/page.ts",
+      "sha256": "97d123c1d715b625cf0f961c2972685f2cdcd6ca9a90ef612e1e0abf20fbd9b0"
+    },
+    {
+      "path": "apps/web/.next/types/app/f/[slug]/page.ts",
+      "sha256": "73d1a644ca8a4ed82af52fdddb79604e0fca3cb1ad6af6f92ff0ac0876a6c814"
+    },
+    {
+      "path": "apps/web/.next/types/app/forgot/page.ts",
+      "sha256": "7f57a7e5056a9d230f138f2b338e467b161c9e8a9ed59c9aa7cbe25fe3a4ec95"
+    },
+    {
+      "path": "apps/web/.next/types/app/layout.ts",
+      "sha256": "9499d0d3fb972c583217549d4cf6a89b677e75e7791d46d690fb80994e72941c"
+    },
+    {
+      "path": "apps/web/.next/types/app/login/page.ts",
+      "sha256": "a92ce3ce62ace2072f8959c7975dcfa48ecdf0fdcdeea35887a766563d240f63"
+    },
+    {
+      "path": "apps/web/.next/types/app/n3/start/route.ts",
+      "sha256": "682dc7d86413b6ccb46019445d74e9b4cdc5919ad722a96c1a995ab0651766fc"
+    },
+    {
+      "path": "apps/web/.next/types/app/n3/verify/page.ts",
+      "sha256": "d4f9ccd3cbd57550092d41a4717a0e069c843271666112e0fce8503359b08ee3"
+    },
+    {
+      "path": "apps/web/.next/types/app/page.ts",
+      "sha256": "c419ec6be90f69431790de0fb96083e35ce01bfa5772f1ec79e6fb7f1bdc02b7"
+    },
+    {
+      "path": "apps/web/.next/types/app/partner/dashboard/page.ts",
+      "sha256": "c821b3c6fa91188ebf710404b648bd06b150293d71c40bc229c665f231943566"
+    },
+    {
+      "path": "apps/web/.next/types/app/partner/page.ts",
+      "sha256": "e9c9ef97aae8c68220e1e25bd52c75fc076672dc2ca83bb663cf6f7b6c63f9db"
+    },
+    {
+      "path": "apps/web/.next/types/app/reset/page.ts",
+      "sha256": "e32c9f7970e9b61fd333c40a91a73c6dd5b5c9c1563f9fc8c9cb9cb1552b0047"
+    },
+    {
+      "path": "apps/web/.next/types/app/verify-email/page.ts",
+      "sha256": "38e1db7303c0f22a05e91d88a22a1c22e62425b298824e0a7d2c4ba6955ce317"
+    },
+    {
+      "path": "apps/web/.next/types/app/w/[slug]/page.ts",
+      "sha256": "818fa44085aef77390a3d79048474f652a1157154f4fd1147d66b080e8dc03f7"
+    },
+    {
+      "path": "apps/web/.next/types/cache-life.d.ts",
+      "sha256": "2552a31fad45a9ed1bde87e51b038dc0e786cd364b597162263abbf57018949b"
+    },
+    {
+      "path": "apps/web/.next/types/package.json",
+      "sha256": "e3d5a4a2d8551aa52c5a01d2a0efb2e06a2d9711b4f5c5f1d20de6e21807e2cd"
+    },
+    {
+      "path": "apps/web/.next/types/routes.d.ts",
+      "sha256": "02ce9ddcb920109b2cbeb9526a117886b98b1f7b588fc073c51117ec3c371489"
+    },
+    {
+      "path": "apps/web/.next/types/validator.ts",
+      "sha256": "290f85b5fc487f87077ec4d05a81e3820beaaff96845db2312a7766c8909d51f"
+    },
+    {
+      "path": "apps/web/public/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/web/public/brand/icon-120.png",
+      "sha256": "7c1234e7cccf7126562c7792298dabe9011a2845d68bc51686611f833b5d1f5d"
+    },
+    {
+      "path": "apps/web/public/brand/icon-256.png",
+      "sha256": "20f624f70ecd51be81cdfcf7c45afd15189d987b7f66e2643beddd81dda079e7"
+    },
+    {
+      "path": "apps/web/public/brand/icon-512-opaque.png",
+      "sha256": "ed9ae42225fb85d5aade8400b8271772704b2692c529a24697b54e3db8742813"
+    },
+    {
+      "path": "apps/web/public/brand/icon-512.png",
+      "sha256": "33276bdcb27f9086ce4dae97d0a8c9a00284064ed6a61b9842a4d333a14b82c3"
+    },
+    {
+      "path": "apps/web/public/brand/icon-alt-512.png",
+      "sha256": "7caf7a732b698f9d09fd36d2646927d116217fc94368f71b94fcec4625aa09ed"
+    },
+    {
+      "path": "apps/web/public/brand/icon-alt.svg",
+      "sha256": "95a2156afbe3c1875f5489309e059e9cf764f74761b25bac404c36373d5950d2"
+    },
+    {
+      "path": "apps/web/public/brand/icon.svg",
+      "sha256": "10a43c82dd3e3e5d0efd6d3086fcff0c20baa4c95a1d48321c994522320405db"
+    },
+    {
+      "path": "apps/web/public/proofo/body.woff2",
+      "sha256": "d46c189e06e905afb249cac3de1e6f532ddc7b7bcf046193027f6bfd22a0d985"
+    },
+    {
+      "path": "apps/web/public/proofo/display.woff2",
+      "sha256": "21f1068a46ae7111c5887098ec1aa173204d0a72585d1f8cff99d38ac3833158"
+    },
+    {
+      "path": "apps/web/public/widget-manifest.json",
+      "sha256": "a704a869a9583b8ba7a03bea5689df71e3903c6262f14d576500e8121a5e4dc8"
+    },
+    {
+      "path": "apps/web/public/widget.b697d478.js",
+      "sha256": "b697d4782c014b87c37def0b078ca7259afab1d82eb962c1fa3f5001786448ff"
+    }
+  ],
+  "sourceApplicationUnchangedByOperation": true,
+  "packagingRepair": {
+    "reason": "Complete traced worker package manifest and resolve internal workspace package-directory links without adding private files or rebuilding app",
+    "addedTrackedPackageManifests": [
+      {
+        "path": "apps/widget/package.json",
+        "sha256": "d71b08b3a70074048d3d0345d662a90ca973cf70acbd6bfd6d02f74169c03242"
+      },
+      {
+        "path": "services/agent-api/package.json",
+        "sha256": "944b77fda10262960a1c80d05155218e481c5d8a8ab6447285b242f4b02ce326"
+      },
+      {
+        "path": "services/transcribe/package.json",
+        "sha256": "9f15f15229077f61385e23cefccb83e2d638ed13a1c4b6757c5c79bb5ac3a8b6"
+      },
+      {
+        "path": "services/worker/package.json",
+        "sha256": "ff4915c1b2e5abce541d4c6bde95a5b668550a5d6006d9ad4c3a02e806fa3c5a"
+      }
+    ]
+  }
+}

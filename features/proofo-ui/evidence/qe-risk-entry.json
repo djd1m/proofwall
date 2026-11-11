@@ -1,0 +1,40 @@
+{
+  "reviewer": "qe-risk",
+  "family": "codex",
+  "independent": true,
+  "verdict": "clean",
+  "conditions": [
+    {
+      "id": "QE-RISK-1",
+      "owner": "qe-risk",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "Добавить independent isolated-PG проверку фактической authority SQL-проекции getDashboardSummary: в той же транзакции и соединении, где выполняется data statement summary, подтвердить current_user=app_authenticated, tenant GUC для запрошенного account, отсутствие BYPASSRLS и владения защищаемыми таблицами; сохранить отдельные unscoped RLS и A/B aggregate проверки. Проверка должна отклонять замену withAccount на withService при сохранённом явном account WHERE, а не проходить только из-за ошибки test mock или отсутствия экспорта.",
+      "scope": [
+        "apps/web/tests/dashboard-overview-db.test.ts",
+        "apps/web/src/lib/dashboard-summary.ts"
+      ],
+      "evidence": "На изолированной временной копии manifest revision 4fb5f45771da845cfb31b82638322ed64f90d265402c5ac42f99e9125c77a72c baseline dashboard-overview-db: 6/6 PASS. Замена только withAccount(accountId, callback) на withService(callback), с сохранением SQL WHERE account_id=$1, дала те же 6/6 PASS: мутант пережил реальную isolated-PG проверку. Отдельный тест current_user/GUC/unscoped RLS вызывает свою транзакцию withAccount и не проверяет реальную authority проекции. Текущий исходный код вызывает withAccount; обнаружен пробел защиты от регрессии, а не доказанная текущая утечка. Unit mock withAccount сам по себе не доказывает реальную database authority. Подробности и результаты остальных мутаций: features/proofo-ui/evidence/qe-risk.md."
+    }
+  ],
+  "verifications": [
+    {
+      "id": "QE-RISK-1",
+      "revision": "06f4dce82d3e419861bced5377c6c71ae2fc9a42d87f12c219fee9d2dc1c1840",
+      "classification": "structural",
+      "evidence": "Независимый focused PG baseline: исходная рабочая копия 7/7; отдельная временная копия с единым физическим pg для теста и db 7/7. Повторён исходный mutant: замена withAccount(accountId, callback) на withService(callback) при сохранённом WHERE account_id=$1; 6/7, новая named PG assertion «proves actual summary statement authority on its own client and transaction» падает с expected app_service to be app_authenticated, не import/setup/mock error. Прочитана новая instrumentation: настоящий SQL исполняется без подмены, до и после на том же Client снимаются current_user, tenant GUC, rolbypassrls, владельцы четырёх таблиц, backend PID и txid для A и B; сохранились unscoped RLS, A/B и отдельный single-data-statement тесты. 30/30 SHA manifest совпали. Первый изолированный baseline при двух разных физических pg экземплярах не наблюдал spy; setup исправлен и ошибочный результат не учитывался. Подробности qe-risk.md.",
+      "implementationVerified": true
+    }
+  ],
+  "newRisks": {
+    "assessment": "Независимый focused review устраняет QE-RISK-1 на новой revision; новых серьёзных условий по своей риск-роли не выявлено. Исходный finding сохранён в conditions, его историческое evidence не переписано. Отсутствие нагрузочного SLA и ограниченность набора мутаций сохраняются как границы доказательств.",
+    "evidence": "PG baseline 7/7; прежний authority mutant отклонён новой named assertion (app_service != app_authenticated); 30/30 manifest hashes совпали. Структура SQL/тарифной логики production не изменена относительно исходной ревизии. Измерения coverage и discrimination координатора прочитаны как отдельные доказательства, не как подмена независимой мутации.",
+    "conditions": []
+  },
+  "authorAssessmentChecked": true,
+  "deltaVerification": {
+    "classification": "structural",
+    "evidence": "Прочитан dashboard-final/qe-author-delta.json; независимо проверены код добавленного PG test и фактический green control/повтор authority mutant. Summary и view SHA совпадают с исходным host; три теста используют указанные literal imports, план содержит C9 исключения для immutable fonts. В discrimination-repair.json measurementValid=true и три DISCRIMINATES_VIA_ERROR, что ограничено доказательством ошибки загрузки на baseline и зелёного tip, а не доказательством assertion; наличие coverage artifacts проверено, полный coverage gate и актуальность остальных общих проверок остаются ответственностью соответствующих ролей. Никаких новых production bytes или полномочий эта проверенная часть не вводит.",
+    "implementationVerified": true
+  }
+}

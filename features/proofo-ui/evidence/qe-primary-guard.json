@@ -1,0 +1,22 @@
+
+> proofwall@0.1.0 dz
+> dz guard check --op code --json
+
+{
+  "op": "code",
+  "verdict": "pass",
+  "violations": [],
+  "checked": [
+    "no-skill-drift"
+  ],
+  "notEstablished": [
+    "signature-fresh"
+  ],
+  "audit": {
+    "written": false,
+    "reason": "guard-audit-store-absent",
+    "root": "/tmp/proofwall-ui-dashboard",
+    "detail": "no .dz store at /tmp/proofwall-ui-dashboard — nothing was created; run from the project root (or `dz init` there) to keep an audit"
+  },
+  "forced": false
+}

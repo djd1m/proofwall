@@ -1,0 +1,277 @@
+{
+  "version": 3,
+  "kind": "initial-frozen-reference",
+  "source": {
+    "commit": "e2e2f963b1a0199d597396cfba1aef369b7e969d",
+    "path": "features/proofo-ui/preview",
+    "tree": "d9acba4e57aacbd35c2736523d08a8874f744b30"
+  },
+  "approval": "Ранее данное владельцем «да давай» для начала инкремента и трёх макетов; новые состояния приложения этим не утверждаются.",
+  "capturedAt": "2026-11-11T19:32:06.573Z",
+  "environment": {
+    "node": "v22.23.4",
+    "platform": "linux",
+    "arch": "x64",
+    "kernel": "6.8.0-138-generic",
+    "osRelease": "PRETTY_NAME=\"Ubuntu 24.04 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+    "chromiumExecutable": "/root/.cache/puppeteer/chrome/linux-148.0.7778.97/chrome-linux64/chrome",
+    "chromiumSha256": "7f5c687c69c06c2b49f80755087b0575fa67633f359b0cdbe2ee40c33235fc98",
+    "tooling": {
+      "playwright": "1.65.0",
+      "pixelmatch": "8.0.0",
+      "pngjs": "7.0.0"
+    },
+    "browserVersion": "148.0.7778.97"
+  },
+  "render": {
+    "selector": ".cab-shell",
+    "fullPage": true,
+    "rasterSize": "ceil(measured shell width/height)",
+    "scroll": [
+      0,
+      0
+    ],
+    "DPR": 1,
+    "locale": "ru-RU",
+    "timezone": "UTC",
+    "clock": "2026-11-11T12:00:00.000Z",
+    "colorScheme": "light",
+    "reducedMotion": "reduce",
+    "CSP": "enabled; bypass only in ephemeral mutation contexts",
+    "masks": [],
+    "normalizations": [
+      {
+        "selector": ".cab-notice",
+        "display": "none!important",
+        "reason": "Demo-only banner excluded before capture, no app spacer"
+      },
+      {
+        "selector": "#preview-tools",
+        "display": "none!important",
+        "reason": "Demo-only floating navigator; also clean=1"
+      }
+    ],
+    "excluded": [
+      "body > #app > .footer: outside crop, contains prototype-only text"
+    ]
+  },
+  "cases": [
+    {
+      "id": "dashboard/1440x900",
+      "screen": "dashboard",
+      "state": "initial-idle",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "image": "dashboard/1440x900.png",
+      "measurements": "dashboard/1440x900.json"
+    },
+    {
+      "id": "dashboard/390x844",
+      "screen": "dashboard",
+      "state": "initial-idle",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "image": "dashboard/390x844.png",
+      "measurements": "dashboard/390x844.json"
+    },
+    {
+      "id": "dashboard/360x800",
+      "screen": "dashboard",
+      "state": "initial-idle",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "image": "dashboard/360x800.png",
+      "measurements": "dashboard/360x800.json"
+    },
+    {
+      "id": "branding/1440x900",
+      "screen": "branding",
+      "state": "initial-idle",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "image": "branding/1440x900.png",
+      "measurements": "branding/1440x900.json"
+    },
+    {
+      "id": "branding/390x844",
+      "screen": "branding",
+      "state": "initial-idle",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "image": "branding/390x844.png",
+      "measurements": "branding/390x844.json"
+    },
+    {
+      "id": "branding/360x800",
+      "screen": "branding",
+      "state": "initial-idle",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "image": "branding/360x800.png",
+      "measurements": "branding/360x800.json"
+    },
+    {
+      "id": "collect/1440x900",
+      "screen": "collect",
+      "state": "initial-idle",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "image": "collect/1440x900.png",
+      "measurements": "collect/1440x900.json"
+    },
+    {
+      "id": "collect/390x844",
+      "screen": "collect",
+      "state": "initial-idle",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "image": "collect/390x844.png",
+      "measurements": "collect/390x844.json"
+    },
+    {
+      "id": "collect/360x800",
+      "screen": "collect",
+      "state": "initial-idle",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "image": "collect/360x800.png",
+      "measurements": "collect/360x800.json"
+    }
+  ],
+  "files": {
+    "branding/1440x900.json": {
+      "sha256": "269009357dc36c49288cf8b09b17b93c35cc9f8bbf21f7434ccce87c0ec26e50",
+      "bytes": 15343
+    },
+    "branding/1440x900.png": {
+      "sha256": "769c1994ca5ffc701b7097f25c19de424e5077642c8517c2b27e7eb20515cb8a",
+      "bytes": 101756
+    },
+    "branding/360x800.json": {
+      "sha256": "ac34febeeb2e31351aef58a1e2cd870b0af740a0e35d54050913973aa26000fe",
+      "bytes": 15342
+    },
+    "branding/360x800.png": {
+      "sha256": "0f51f25f22ba54978a5bdf2af260f65b781417b3c21ba383b36ebe19e3271d35",
+      "bytes": 92853
+    },
+    "branding/390x844.json": {
+      "sha256": "028dc57be045331695771b5fd3299ef92963fac4316aaa0c507406e3821d7bf7",
+      "bytes": 15337
+    },
+    "branding/390x844.png": {
+      "sha256": "fa9d177be53f24c23a08b7aca9ce0e2fc104c26344f52ff2c11b3e1e771359d3",
+      "bytes": 93529
+    },
+    "collect/1440x900.json": {
+      "sha256": "81f999f215250bcdc5bee5be47fcb240f528bfcb72a31a7e6675c954a8e8fb4e",
+      "bytes": 10699
+    },
+    "collect/1440x900.png": {
+      "sha256": "175636160f339a9a8d667c442f2c65f8f9038084685dd8373a0b995f85d144e2",
+      "bytes": 81280
+    },
+    "collect/360x800.json": {
+      "sha256": "adabe6e8063534ce247212fc5440a3cc20267f73cab2c76698316404762746e9",
+      "bytes": 10693
+    },
+    "collect/360x800.png": {
+      "sha256": "45cae2ae5000f33dc99e9eea8945aa0b53b672d5f1c0c50db73ec33872578e55",
+      "bytes": 71947
+    },
+    "collect/390x844.json": {
+      "sha256": "44ecfd5ff66a7baf64c04f5a02228a14487deca2d3ba444de702450d48156b6a",
+      "bytes": 10701
+    },
+    "collect/390x844.png": {
+      "sha256": "3aa12ec210f1077fe07d26fcf85265949300e1ba47da8c04d7e23750f5e1fffd",
+      "bytes": 72061
+    },
+    "dashboard/1440x900.json": {
+      "sha256": "6e03313cfc03675998cd025475024d369281489d7cd125e1c73e681f00030366",
+      "bytes": 23244
+    },
+    "dashboard/1440x900.png": {
+      "sha256": "11acc7dc151259c61b8389654c0be6938bfe385cec7f85fd5aaecaeb931d729a",
+      "bytes": 95431
+    },
+    "dashboard/360x800.json": {
+      "sha256": "e365df2fffd96e89064187e09e74126899b5750d1eea54ba6fd407fe0982ce3e",
+      "bytes": 23220
+    },
+    "dashboard/360x800.png": {
+      "sha256": "6f0b3986592d9831da4048bae26b779227918f04eb684d4b9d74083261580223",
+      "bytes": 87123
+    },
+    "dashboard/390x844.json": {
+      "sha256": "7a3358c7092cfc8d0d3b592c3120c4d42f853d13d79d4cebd7c712583acfdc19",
+      "bytes": 23208
+    },
+    "dashboard/390x844.png": {
+      "sha256": "527e699f2c088f605bb77d7423de2a8dad69b4390a0ff2b21064caba6b51da7c",
+      "bytes": 87475
+    },
+    "resources/README.md": {
+      "sha256": "23a8717f9da203bc41adfc9e06a94fe317fbafe46a70239533987e62d5aefc82",
+      "bytes": 4266
+    },
+    "resources/assets/body.woff2": {
+      "sha256": "d46c189e06e905afb249cac3de1e6f532ddc7b7bcf046193027f6bfd22a0d985",
+      "bytes": 54816
+    },
+    "resources/assets/display.woff2": {
+      "sha256": "21f1068a46ae7111c5887098ec1aa173204d0a72585d1f8cff99d38ac3833158",
+      "bytes": 97488
+    },
+    "resources/cabinet-README.md": {
+      "sha256": "386b5180e3a7640f27fe0740d76123720531c85306cf9d68d9c69a0d871c3099",
+      "bytes": 4370
+    },
+    "resources/cabinet.css": {
+      "sha256": "e85f2e80675067996755250b7637c184b8424ffff1356cee87905839c59e1740",
+      "bytes": 9857
+    },
+    "resources/cabinet.js": {
+      "sha256": "278850cf4c47543b50b103e5163b77296f7488453307eeb5720bc8c2a0b24082",
+      "bytes": 19919
+    },
+    "resources/email-onboarding.html": {
+      "sha256": "173aed813253d3c4bbe454b47c84ae53ef289abdf5a37fe470781ab89384107c",
+      "bytes": 3127
+    },
+    "resources/favicon.svg": {
+      "sha256": "79af9ab65c653e6497c3bbdfa618b7ba7d8e80f3270b21e9155f724a9ad4a4ff",
+      "bytes": 163
+    },
+    "resources/index.html": {
+      "sha256": "72e77e620fecd019bbc09389a8129ae006012574a2450b85c6e080c94eab5e90",
+      "bytes": 1324
+    },
+    "resources/preview.js": {
+      "sha256": "3c50db8608144769b27df4567a3d5bc6e46a5d583dd9ff16917e72223d9152c8",
+      "bytes": 17321
+    },
+    "resources/style.css": {
+      "sha256": "0017593280638dac50b3c4c769bc46e99b364baf9f1e0c19c4ea277a619eb7b9",
+      "bytes": 10941
+    }
+  }
+}

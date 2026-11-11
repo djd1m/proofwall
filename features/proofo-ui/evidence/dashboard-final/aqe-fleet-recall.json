@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "data": {
+    "entries": [],
+    "total": 0,
+    "hasMore": false,
+    "searchType": "pattern"
+  }
+}

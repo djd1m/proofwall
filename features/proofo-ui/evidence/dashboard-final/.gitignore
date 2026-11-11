@@ -1,0 +1,3 @@
+# Сохраняем проверяемые coverage artifacts этого инкремента.
+!coverage/
+!coverage/**

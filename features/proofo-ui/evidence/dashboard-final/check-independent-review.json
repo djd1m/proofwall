@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "exitCode": 0,
+  "command": "node_modules/.bin/node node_modules/@dzhechkov/harness-cli/dist/bin.js qe-rounds --source native --action evaluate --project /tmp/proofwall-ui-dashboard --feature-dir /tmp/proofwall-ui-dashboard/features/proofo-ui --json",
+  "artifacts": [
+    "features/proofo-ui/evidence/dashboard-final/qe-closed.json",
+    "features/proofo-ui/evidence/qe-primary-entry.json",
+    "features/proofo-ui/evidence/qe-risk-entry.json",
+    "features/proofo-ui/evidence/qe-integration-entry.json",
+    "features/proofo-ui/evidence/qe-regression-entry.json"
+  ],
+  "detail": {
+    "verdict": "closed",
+    "rounds": 2,
+    "unresolved": [],
+    "sourceRevision": "06f4dce82d3e419861bced5377c6c71ae2fc9a42d87f12c219fee9d2dc1c1840"
+  }
+}

@@ -1,0 +1,8 @@
+
+> proofwall@0.1.0 dz
+> dz recall фактического summary statement tenant GUC withService --project /home/proofwall --limit 3
+
+dz recall "фактического summary statement tenant GUC withService"  —  1 hit(s), SQLite FTS5 ranking (lexical), 2 stores
+  store (read): /home/proofwall/.dz  [from --project]
+  store (read): /root/.dz  [cross-project]
+  [0.80] (general) {project} RLS-тест должен проверять роль и tenant GUC фактического summary statement на том же client/transaction; отдельный тест helper-транзакции пропускает withService

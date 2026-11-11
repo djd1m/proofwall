@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "exitCode": 0,
+  "command": "node_modules/.bin/node scripts/run-dashboard-preview.mjs test",
+  "artifacts": [
+    "features/proofo-ui/evidence/dashboard-final/web-after-repair.log"
+  ],
+  "detail": {
+    "passed": 923,
+    "skipped": 3,
+    "scope": "web suites; three pre-existing live S3 skips explicitly excluded from pass claims"
+  }
+}

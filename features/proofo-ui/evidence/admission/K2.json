@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "exitCode": 0,
+  "command": "node .agents/skills/feature-adr/scripts/check-plan-completeness.mjs features/proofo-ui --tier=L --require-requirements --acid=A1,A2,A3,A4,A5,A6,A7",
+  "designDigest": "942b0056da05fb680ad67ebd581fe23de482c9a206e1da367e0215e9c772ac49",
+  "rawEvidence": "features/proofo-ui/evidence/admission/K2-twin-waiver.stdout.txt"
+}

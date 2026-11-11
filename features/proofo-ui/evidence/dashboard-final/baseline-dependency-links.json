@@ -1,0 +1,13 @@
+{
+  "externalStore": "/tmp/proofwall-dashboard-baseline-external/node_modules",
+  "symlinksInspected": 35,
+  "sourceWorkspaceOrOriginalCheckoutSymlinkEdges": [],
+  "dangling": [],
+  "appWorkspaceEntriesAbsent": [
+    "@proofwall/db",
+    "@proofwall/shared-types",
+    "@proofwall/ui",
+    "@course/agent-payments"
+  ],
+  "note": "Traversal does not follow directory symlinks; no unsafe source edge identified among listed artifact links. Installed mapper remains authoritative."
+}

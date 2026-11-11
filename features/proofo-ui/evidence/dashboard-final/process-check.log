@@ -1,0 +1,5 @@
+
+> proofwall@0.1.0 process:check
+> node scripts/process-guard.mjs check-config
+
+Process configuration and vendor hashes valid

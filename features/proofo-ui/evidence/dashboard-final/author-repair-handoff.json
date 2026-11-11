@@ -1,0 +1,120 @@
+{
+  "kind": "author-test-repair-handoff-not-a-review-receipt",
+  "repo": "/tmp/proofwall-ui-dashboard",
+  "branch": "feature/proofo-dashboard",
+  "description": "Точечный repair трёх тестов по QE-RISK-1 и import-части QE-PRIMARY-1; closure исходных условий и независимое focused review выполняет root.",
+  "repairDiff": "/tmp/proofwall-qe-test-repair.diff",
+  "scopeReport": "/tmp/proofwall-qe-test-repair-scope.json",
+  "changedFiles": [
+    "apps/web/tests/dashboard-overview-db.test.ts",
+    "apps/web/tests/dashboard-overview.test.ts",
+    "apps/web/tests/dashboard-visual-fixture.test.ts"
+  ],
+  "admission": {
+    "K2": {
+      "command": "node_modules/node/bin/node .agents/skills/feature-adr/scripts/check-plan-completeness.mjs features/proofo-ui --tier=L --require-requirements --acid=A1,A2,A3,A4,A5,A6,A7",
+      "exitCode": 0,
+      "failures": 0,
+      "warnings": 0,
+      "skips": 0,
+      "targets": 18
+    },
+    "codeTargets": {
+      "command": "node_modules/node/bin/node .agents/skills/feature-adr/scripts/check-code-targets.mjs --repo /tmp/proofwall-ui-dashboard --feature /tmp/proofwall-ui-dashboard/features/proofo-ui",
+      "exitCode": 0,
+      "status": "admitted",
+      "reasons": [],
+      "beforeRepairDigest": "75389ed9d3d6b01d941dd58be3fcb866b62af5e1d87fadc2c07025489be9493d",
+      "afterRepairDigest": "43d86197353f6a5e9fcc94c2b1e5ea3f7bd57788e19fb6fdb164003d42897a58"
+    },
+    "context": {
+      "command": "node_modules/node/bin/node .agents/skills/feature-adr/scripts/build-coder-context.mjs /tmp/proofwall-ui-dashboard/features/proofo-ui --tier=L",
+      "exitCode": 0,
+      "status": "complete",
+      "digest": "a854c4131be257517670d09fcfb03ab8f6e148ba7b708a8e5807310774c1b7be"
+    }
+  },
+  "changes": {
+    "QE-RISK-1": "Новый тест proves actual summary statement authority on its own client and transaction: на настоящем Client.prototype.query инструментально наблюдается фактический WITH owned statement. Исходный native pg query исполняется с исходными args, result возвращается неизменным. Два observer SQL на том же this до/после проверяют current_user, tenant GUC, rolbypassrls, владельцев всех четырёх таблиц, backend PID и transaction ID. Проверены аккаунты A и B. Отдельные unscoped RLS, aggregate isolation и single-data-statement assertions сохранены без ослабления.",
+    "QE-PRIMARY-1": "Импорты новых summary.ts/overview.tsx/error.tsx в трёх тестах заменены на literal dynamic import с расширением, as string и typeof import(extensionless) для типов. DTO импортирован отдельно через erased import type. Нет new URL.href, suppression, classifier/guard patch или изменения app imports. Содержимое synthetic fixture и все существующие assertions сохранены."
+  },
+  "validation": {
+    "focused": {
+      "command": "node_modules/node/bin/node scripts/run-dashboard-preview.mjs test tests/dashboard-overview.test.ts tests/dashboard-overview-db.test.ts tests/dashboard-visual-fixture.test.ts tests/dashboard-onboarding.test.ts tests/tariff.test.ts tests/design-tokens.test.ts",
+      "exitCode": 0,
+      "suitesPassed": 6,
+      "testsPassed": 158,
+      "skipped": 0,
+      "breakdown": {
+        "dashboardPg": 7,
+        "dashboardUnit": 7,
+        "fixture": 1,
+        "onboardingPreservation": 2,
+        "tariff": 12,
+        "designTokens": 129
+      },
+      "log": "/tmp/proofwall-qe-test-repair-focus.log"
+    },
+    "typecheck": {
+      "command": "node_modules/node/bin/node scripts/run-dashboard-preview.mjs typecheck",
+      "exitCode": 0,
+      "log": "/tmp/proofwall-qe-test-repair-typecheck.log"
+    },
+    "mutation": {
+      "report": "/tmp/proofwall-qe-authority-mutation.json",
+      "copy": "/tmp/proofwall-summary-authority-mutant-IaMnPF",
+      "command": "/tmp/proofwall-ui-dashboard/node_modules/node/bin/node /tmp/proofwall-ui-dashboard/node_modules/vitest/vitest.mjs run tests/dashboard-overview-db.test.ts",
+      "cwd": "/tmp/proofwall-summary-authority-mutant-IaMnPF/apps/web",
+      "environment": "Синтетический dashboard-test.env прочитан через util.parseEnv и передан subprocess, без печати значений или credentials в argv; проверен loopback/proofwall_ui_test, внешние mail/storage/payment credentials удалены.",
+      "greenControl": {
+        "exitCode": 0,
+        "passed": 7,
+        "log": "/tmp/proofwall-qe-authority-control.log"
+      },
+      "withServiceMutant": {
+        "diff": "/tmp/proofwall-qe-authority-product-mutant.diff",
+        "exitCode": 1,
+        "passed": 6,
+        "failed": 1,
+        "assertion": "AssertionError: expected 'app_service' to be 'app_authenticated'",
+        "log": "/tmp/proofwall-qe-authority-mutant.log",
+        "notes": "Временная копия изменяет только import withAccount→withService и вызов wrapper. Явный account WHERE и bind-параметры сохранены. Тест summary реально исполнен на PG, падение не связано с setup/mock/export/import. Оригинальный app source не менялся."
+      },
+      "limit": "Мутационная копия использует текущие зависимости для directed regression probe. Это не genuine pre-feature baseline, не installed discrimination run и не оценка mutation score/coverage.",
+      "argv": [
+        "/tmp/proofwall-ui-dashboard/node_modules/node/bin/node",
+        "/tmp/proofwall-ui-dashboard/node_modules/vitest/vitest.mjs",
+        "run",
+        "tests/dashboard-overview-db.test.ts"
+      ]
+    },
+    "scope": "По SHA-256 относительно снимка перед repair изменились ровно три разрешённых теста; 30 остальных наблюдаемых файлов, включая app source, plan/spec/state, tools и root package/lock, неизменны. Root package/lock дополнительно git diff --exit-code HEAD: exit 0. git diff --check: exit 0."
+  },
+  "remaining": [
+    "Root должен повторить установленный discrimination-check для трёх новых test files на genuine base HEAD и green TIP. Limited DISCRIMINATES_VIA_ERROR не является assertion proof; этот repair не присваивает классификацию самостоятельно.",
+    "Existing dashboard-onboarding остаётся preservation test; baseline green не выдаётся за new feature property.",
+    "Независимые focused verification исходных QE-RISK-1/QE-PRIMARY-1 и native evaluate на новом snapshot остаются root; старые entry/host/history/receipts не менялись."
+  ],
+  "independentReview": "pending",
+  "deliveryReceipt": null,
+  "notes": [
+    "Серверы и порты root 33181/33182/33183 не трогались; новые серверы не запускались.",
+    "Приложение не пересобиралось: app source неизменён.",
+    "Коммитов, push, публикации и production-действий не было; hooks не отключались.",
+    "K1 pre-creation не переиздавался; новых экспортов и production module names не создано."
+  ],
+  "fileHashes": [
+    {
+      "path": "apps/web/tests/dashboard-overview-db.test.ts",
+      "sha256": "46761154f21ee03fd377d6b7cfce01fba4f09a9f3e9d06969c6e1542016703e9"
+    },
+    {
+      "path": "apps/web/tests/dashboard-overview.test.ts",
+      "sha256": "fbeddbe142dedb9e91b1d2ab041ba835d942fc3fabae124bc98496d432393f4f"
+    },
+    {
+      "path": "apps/web/tests/dashboard-visual-fixture.test.ts",
+      "sha256": "1a4af84a9c68955c3bae8c3bcfebc79943226e48fefdfccf9063aa7997d54426"
+    }
+  ]
+}

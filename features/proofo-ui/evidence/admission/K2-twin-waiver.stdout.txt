@@ -1,0 +1,3 @@
+NOTE  C9: twin scan over 18 target(s), 18 on disk, 0 unlisted twins (byte-identical only; drifted copies need identity tests)
+NOTE  C8: all 10 requirement ids referenced
+K2 plan-completeness: PASS (0 failure(s), 0 warning(s), 0 skip(s)) over 2 ADRs, tier L, in /tmp/proofwall-ui-dashboard/features/proofo-ui

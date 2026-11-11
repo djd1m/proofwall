@@ -1,0 +1,30 @@
+{
+  "reviewer": "qe-primary",
+  "family": "codex",
+  "independent": true,
+  "verdict": "conditional",
+  "conditions": [
+    {
+      "id": "QE-PRIMARY-1",
+      "owner": "qe-primary",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "До закрытия обязательного Step-8 discrimination gate получить распознаваемое исполнение load-bearing dashboard tests на genuine pre-feature baseline и текущем snapshot через установленный CLI, с явной оценкой недискриминирующих compatibility tests. Исправить доступность/изоляцию baseline dependencies, не подменяя их tip workspace/dist, не меняя classifier и не трактуя exit 0 как доказательство измерения. Тесты новых модулей могут быть классифицированы DISCRIMINATES_VIA_ERROR только при доказанном green tip control; оставшиеся CANNOT_ISOLATE должны остаться незакрытыми.",
+      "scope": [
+        "features/proofo-ui/06_implementation_plan.md",
+        "apps/web/tests/dashboard-overview.test.ts",
+        "apps/web/tests/dashboard-overview-db.test.ts",
+        "apps/web/tests/dashboard-visual-fixture.test.ts"
+      ],
+      "evidence": "Самостоятельный запуск installed dz discrimination-check --test apps/web/tests/dashboard-overview.test.ts,apps/web/tests/dashboard-overview-db.test.ts,apps/web/tests/dashboard-visual-fixture.test.ts,apps/web/tests/dashboard-onboarding.test.ts --base HEAD --timeout 30000 --json: process exit 0, aggregate CANNOT_ISOLATE, measurementValid=false; каждый из 4 результатов baseline-dependency-unavailable (specifier vitest/config). Полный raw report features/proofo-ui/evidence/qe-primary-discrimination.json. Helper отказал root vitest из-за live workspace edges в adjacent node_modules; package-local vitest отсутствует. Требование инструмента: .agents/skills/feature-adr/modules/08-qe.md:365. Это недоказанный обязательный gate, а не найденный дефект runtime dashboard."
+    }
+  ],
+  "verifications": [],
+  "newRisks": {
+    "assessment": "После полного review dashboard scope новых подтверждённых дефектов runtime не выявлено. Остаётся собственное условие QE-PRIMARY-1 о достоверности обязательного gate; условие другого reviewer по связи summary с RLS отдельно не присваивается этой роли.",
+    "evidence": "30/30 manifest hashes совпали с revision 4fb5f45771da845cfb31b82638322ed64f90d265402c5ac42f99e9125c77a72c, nonce c31c4bbe-bef2-49ee-9d89-863decf9f99b. Собственные unit/SSR/onboarding 10/10, isolated PG 6/6, visual 12/12 с zero-pixel originals и 9 detected mutations, path guard 7/7, HTTP missing/expired/revoked session и 9 responsive widths pass; FR001..010 traceability и ограничения в features/proofo-ui/evidence/qe-primary.md.",
+    "conditions": []
+  },
+  "authorAssessmentChecked": false,
+  "deltaVerification": null
+}

@@ -1,0 +1,53 @@
+TAP version 13
+# Subtest: dashboard requires an ordinary session and opens the owned project
+ok 1 - dashboard requires an ordinary session and opens the owned project
+  ---
+  duration_ms: 5177.737636
+  type: 'test'
+  ...
+# Subtest: zero and single project accounts stay in overview
+ok 2 - zero and single project accounts stay in overview
+  ---
+  duration_ms: 1830.638651
+  type: 'test'
+  ...
+# Subtest: summary permission failure recovers through retry after valid login
+ok 3 - summary permission failure recovers through retry after valid login
+  ---
+  duration_ms: 733.525476
+  type: 'test'
+  ...
+# Subtest: session store failure does not render owned data
+ok 4 - session store failure does not render owned data
+  ---
+  duration_ms: 513.102299
+  type: 'test'
+  ...
+# Subtest: live dashboard and fixture share body styles and shell geometry
+ok 5 - live dashboard and fixture share body styles and shell geometry
+  ---
+  duration_ms: 2472.408249
+  type: 'test'
+  ...
+# Subtest: frozen fixture has zero changed pixels and detects font margin color mutations
+ok 6 - frozen fixture has zero changed pixels and detects font margin color mutations
+  ---
+  duration_ms: 8843.566523
+  type: 'test'
+  ...
+# Subtest: long Unicode titles remain visible and keyboard reachable on every viewport
+ok 7 - long Unicode titles remain visible and keyboard reachable on every viewport
+  ---
+  duration_ms: 7915.548599
+  type: 'test'
+  ...
+# Browser measurements: /tmp/proofwall-dashboard-e2e-SnKi1T/measurements.json
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 28430.604053

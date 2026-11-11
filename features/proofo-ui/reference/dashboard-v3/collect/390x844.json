@@ -1,0 +1,359 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "clip": {
+    "x": 0,
+    "y": 28,
+    "width": 390,
+    "height": 1100.015625
+  },
+  "rasterClip": {
+    "x": 0,
+    "y": 28,
+    "width": 390,
+    "height": 1101
+  },
+  "pixelSize": {
+    "width": 390,
+    "height": 1101
+  },
+  "mutationContext": null,
+  "dom": {
+    "metrics": {
+      ".cab-shell": [
+        {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 1100.015625
+          },
+          "style": {
+            "fontFamily": "body, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24.8px",
+            "letterSpacing": "normal",
+            "color": "rgb(23, 20, 15)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderColor": "rgb(23, 20, 15)",
+            "borderRadius": "0px",
+            "marginTop": "28px",
+            "marginBottom": "80px",
+            "paddingTop": "0px",
+            "paddingRight": "16px",
+            "paddingBottom": "0px",
+            "paddingLeft": "16px",
+            "gap": "normal"
+          }
+        }
+      ],
+      ".cab-top": [],
+      ".cab-paper": [
+        {
+          "box": {
+            "x": 16,
+            "y": 0,
+            "width": 358,
+            "height": 1048.328125
+          },
+          "style": {
+            "fontFamily": "body, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24.8px",
+            "letterSpacing": "normal",
+            "color": "rgb(23, 20, 15)",
+            "backgroundColor": "rgb(255, 253, 248)",
+            "borderColor": "rgb(23, 20, 15)",
+            "borderRadius": "25px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "paddingTop": "30px",
+            "paddingRight": "24px",
+            "paddingBottom": "30px",
+            "paddingLeft": "24px",
+            "gap": "normal"
+          }
+        }
+      ],
+      ".cab-title": [],
+      "h1": [
+        {
+          "box": {
+            "x": 40,
+            "y": 30,
+            "width": 310,
+            "height": 79.78125
+          },
+          "style": {
+            "fontFamily": "display, Arial, sans-serif",
+            "fontSize": "38px",
+            "fontWeight": "800",
+            "lineHeight": "39.9px",
+            "letterSpacing": "-0.57px",
+            "color": "rgb(200, 73, 47)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderColor": "rgb(200, 73, 47)",
+            "borderRadius": "0px",
+            "marginTop": "0px",
+            "marginBottom": "16px",
+            "paddingTop": "0px",
+            "paddingRight": "0px",
+            "paddingBottom": "0px",
+            "paddingLeft": "0px",
+            "gap": "normal"
+          }
+        }
+      ],
+      "h2": [],
+      "h3": [],
+      ".brand": [],
+      ".cab-back": [],
+      ".cab-summary": [],
+      ".cab-subscription": [],
+      ".cab-section": [],
+      ".cab-metrics": [],
+      ".cab-metrics>div": [],
+      ".cab-walls": [],
+      ".cab-wall-card": [],
+      ".cab-card-bottom": [],
+      ".cab-field": [
+        {
+          "box": {
+            "x": 40,
+            "y": 322.9375,
+            "width": 310,
+            "height": 80.875
+          },
+          "style": {
+            "fontFamily": "body, Arial, sans-serif",
+            "fontSize": "14px",
+            "fontWeight": "700",
+            "lineHeight": "21.7px",
+            "letterSpacing": "normal",
+            "color": "rgb(23, 20, 15)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderColor": "rgb(23, 20, 15)",
+            "borderRadius": "0px",
+            "marginTop": "20px",
+            "marginBottom": "18px",
+            "paddingTop": "0px",
+            "paddingRight": "0px",
+            "paddingBottom": "0px",
+            "paddingLeft": "0px",
+            "gap": "8px"
+          }
+        },
+        {
+          "box": {
+            "x": 40,
+            "y": 423.8125,
+            "width": 310,
+            "height": 80.875
+          },
+          "style": {
+            "fontFamily": "body, Arial, sans-serif",
+            "fontSize": "14px",
+            "fontWeight": "700",
+            "lineHeight": "21.7px",
+            "letterSpacing": "normal",
+            "color": "rgb(23, 20, 15)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderColor": "rgb(23, 20, 15)",
+            "borderRadius": "0px",
+            "marginTop": "20px",
+            "marginBottom": "18px",
+            "paddingTop": "0px",
+            "paddingRight": "0px",
+            "paddingBottom": "0px",
+            "paddingLeft": "0px",
+            "gap": "8px"
+          }
+        },
+        {
+          "box": {
+            "x": 40,
+            "y": 524.6875,
+            "width": 310,
+            "height": 201.125
+          },
+          "style": {
+            "fontFamily": "body, Arial, sans-serif",
+            "fontSize": "14px",
+            "fontWeight": "700",
+            "lineHeight": "21.7px",
+            "letterSpacing": "normal",
+            "color": "rgb(23, 20, 15)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderColor": "rgb(23, 20, 15)",
+            "borderRadius": "0px",
+            "marginTop": "20px",
+            "marginBottom": "18px",
+            "paddingTop": "0px",
+            "paddingRight": "0px",
+            "paddingBottom": "0px",
+            "paddingLeft": "0px",
+            "gap": "8px"
+          }
+        },
+        {
+          "box": {
+            "x": 40,
+            "y": 745.8125,
+            "width": 310,
+            "height": 97.6875
+          },
+          "style": {
+            "fontFamily": "body, Arial, sans-serif",
+            "fontSize": "14px",
+            "fontWeight": "700",
+            "lineHeight": "21.7px",
+            "letterSpacing": "normal",
+            "color": "rgb(23, 20, 15)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderColor": "rgb(23, 20, 15)",
+            "borderRadius": "0px",
+            "marginTop": "20px",
+            "marginBottom": "18px",
+            "paddingTop": "0px",
+            "paddingRight": "0px",
+            "paddingBottom": "0px",
+            "paddingLeft": "0px",
+            "gap": "8px"
+          }
+        }
+      ],
+      ".cab-check": [],
+      ".cab-color": [],
+      ".cab-collect-tabs": [
+        {
+          "box": {
+            "x": 40,
+            "y": 171.46875,
+            "width": 310,
+            "height": 47.046875
+          },
+          "style": {
+            "fontFamily": "body, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24.8px",
+            "letterSpacing": "normal",
+            "color": "rgb(23, 20, 15)",
+            "backgroundColor": "rgb(236, 230, 218)",
+            "borderColor": "rgb(23, 20, 15)",
+            "borderRadius": "999px",
+            "marginTop": "24px",
+            "marginBottom": "24px",
+            "paddingTop": "5px",
+            "paddingRight": "5px",
+            "paddingBottom": "5px",
+            "paddingLeft": "5px",
+            "gap": "normal"
+          }
+        }
+      ],
+      ".cab-button": [
+        {
+          "box": {
+            "x": 40,
+            "y": 958.734375,
+            "width": 310,
+            "height": 45.59375
+          },
+          "style": {
+            "fontFamily": "body, Arial, sans-serif",
+            "fontSize": "14px",
+            "fontWeight": "700",
+            "lineHeight": "19.6px",
+            "letterSpacing": "normal",
+            "color": "rgb(255, 255, 255)",
+            "backgroundColor": "rgb(200, 73, 47)",
+            "borderColor": "rgb(200, 73, 47)",
+            "borderRadius": "999px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "paddingTop": "12px",
+            "paddingRight": "24px",
+            "paddingBottom": "12px",
+            "paddingLeft": "24px",
+            "gap": "normal"
+          }
+        }
+      ],
+      ".cab-attribution": [
+        {
+          "box": {
+            "x": 16,
+            "y": 1078.328125,
+            "width": 358,
+            "height": 21.6875
+          },
+          "style": {
+            "fontFamily": "body, Arial, sans-serif",
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "lineHeight": "21.7px",
+            "letterSpacing": "normal",
+            "color": "rgb(92, 85, 74)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderColor": "rgb(92, 85, 74)",
+            "borderRadius": "0px",
+            "marginTop": "30px",
+            "marginBottom": "0px",
+            "paddingTop": "0px",
+            "paddingRight": "0px",
+            "paddingBottom": "0px",
+            "paddingLeft": "0px",
+            "gap": "normal"
+          }
+        }
+      ]
+    },
+    "text": "Оставьте\nотзыв\n\nЗаймёт минуту. Регистрироваться не нужно.\n\n✍ Написать текстом\nЗаписать видео\n\nДемонстрационная форма: вводите только вымышленные данные. Отправка не выполняется.\n\nВаше имя\nРоль или компания (необязательно)\nВаш отзыв\n0 / 2000\nВаше фото (необязательно)\nJPEG, PNG или WebP, до 5 МБ. Файл не читается и не загружается.\n\nОтправляя отзыв, вы разрешаете владельцу опубликовать ваше имя и фото. Текст публикуется без изменений после проверки. Согласие можно отозвать. Это текст исследованной формы; макет ничего не отправляет.\n\nОтправить отзыв\n\nОтзывы собирает Proofwall",
+    "values": [
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "value": "",
+        "checked": false
+      },
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "value": "",
+        "checked": false
+      },
+      {
+        "tag": "TEXTAREA",
+        "type": "textarea",
+        "value": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "file",
+        "value": "",
+        "checked": false
+      }
+    ],
+    "fonts": [
+      {
+        "family": "display",
+        "status": "loaded",
+        "weight": "600 800"
+      },
+      {
+        "family": "body",
+        "status": "loaded",
+        "weight": "400 700"
+      }
+    ],
+    "body": {
+      "background": "rgb(242, 237, 227)",
+      "font": "body, Arial, sans-serif"
+    }
+  }
+}

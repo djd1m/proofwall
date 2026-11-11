@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "scope": "Exact known private preview/QA database passwords, preview session secret and preview login password; values not written",
+  "filesScanned": 1073,
+  "matchedFiles": [],
+  "productionOrProofoCredentialsRead": false
+}

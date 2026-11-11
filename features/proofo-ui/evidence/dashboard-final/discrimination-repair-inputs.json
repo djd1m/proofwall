@@ -1,0 +1,15 @@
+{
+  "command": "/tmp/proofwall-ui-dashboard/node_modules/node/bin/node node_modules/@dzhechkov/harness-cli/dist/bin.js discrimination-check --test apps/web/tests/dashboard-overview.test.ts,apps/web/tests/dashboard-overview-db.test.ts,apps/web/tests/dashboard-visual-fixture.test.ts --base HEAD --timeout 30000 --json",
+  "exitCode": 0,
+  "inputsBefore": {
+    "apps/web/tests/dashboard-overview.test.ts": "fbeddbe142dedb9e91b1d2ab041ba835d942fc3fabae124bc98496d432393f4f",
+    "apps/web/tests/dashboard-overview-db.test.ts": "46761154f21ee03fd377d6b7cfce01fba4f09a9f3e9d06969c6e1542016703e9",
+    "apps/web/tests/dashboard-visual-fixture.test.ts": "1a4af84a9c68955c3bae8c3bcfebc79943226e48fefdfccf9063aa7997d54426"
+  },
+  "inputsAfter": {
+    "apps/web/tests/dashboard-overview.test.ts": "fbeddbe142dedb9e91b1d2ab041ba835d942fc3fabae124bc98496d432393f4f",
+    "apps/web/tests/dashboard-overview-db.test.ts": "46761154f21ee03fd377d6b7cfce01fba4f09a9f3e9d06969c6e1542016703e9",
+    "apps/web/tests/dashboard-visual-fixture.test.ts": "1a4af84a9c68955c3bae8c3bcfebc79943226e48fefdfccf9063aa7997d54426"
+  },
+  "sourceUnchanged": true
+}

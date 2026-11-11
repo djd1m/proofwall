@@ -1,0 +1,561 @@
+{
+  "reviewer": "qe-integration",
+  "timestamp": "2026-11-11T20:29:08.612Z",
+  "base": "http://127.0.0.1:33181",
+  "privilegeMutations": false,
+  "checks": [
+    {
+      "name": "No-session and query override",
+      "passed": true,
+      "detail": "Anonymous request redirects to /login?next=/dashboard; no summary rendered."
+    },
+    {
+      "name": "Ordinary login → SSR → actual DB",
+      "passed": true,
+      "detail": "2 own active projects, all-time 4/1, unknown metrics —/—, current 2/2; foreign/inactive absent."
+    },
+    {
+      "name": "Scoped CSS + real project navigation",
+      "passed": true,
+      "detail": "At 1440/390/360, card opens actual project; project computed body/main/h1/brand/card/button styles unchanged even with dashboard stylesheet present."
+    },
+    {
+      "name": "Email delivery/recovery",
+      "passed": true,
+      "detail": "Actual project not_configured notice is visible; recovery link opens /verify-email for current account, no mail submitted."
+    },
+    {
+      "name": "Public links",
+      "passed": true,
+      "detail": "Owned project collection form and wall both resolve HTTP 200."
+    },
+    {
+      "name": "Foreign project refusal",
+      "passed": true,
+      "detail": "Authenticated cross-account project URL returns HTTP 404 without title."
+    },
+    {
+      "name": "Fixture is not a Next route",
+      "passed": true,
+      "detail": "/dashboard.html, /__test/dashboard and /dashboard/dashboard.html return HTTP 404."
+    },
+    {
+      "name": "Read after own DB update",
+      "passed": true,
+      "detail": "Fresh HTTP overview reflects changed stored title and effective paid state."
+    },
+    {
+      "name": "Revoked real session",
+      "passed": true,
+      "detail": "Revocation of own issued session redirects to login and renders no cards."
+    },
+    {
+      "name": "Expired real session",
+      "passed": true,
+      "detail": "Expired own issued session redirects to login."
+    },
+    {
+      "name": "External service boundary",
+      "passed": true,
+      "detail": "No external browser requests were attempted in the exercised flow."
+    }
+  ],
+  "styles": [
+    {
+      "width": 1440,
+      "height": 900,
+      "projectRouteStylesUnaffected": true,
+      "before": [
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24.8px",
+          "color": "rgb(31, 41, 55)",
+          "backgroundColor": "rgb(30, 10, 60)",
+          "backgroundImage": "radial-gradient(1100px 700px at 78% -8%, rgba(103, 1, 239, 0.42), rgba(0, 0, 0, 0) 62%), radial-gradient(900px 620px at 8% 108%, rgba(120, 60, 220, 0.28), rgba(0, 0, 0, 0) 60%)",
+          "margin": "0px",
+          "padding": "0px",
+          "borderRadius": "0px",
+          "width": "1440px"
+        },
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24.8px",
+          "color": "rgb(31, 41, 55)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "margin": "0px 130px",
+          "padding": "64px 32px",
+          "borderRadius": "0px",
+          "width": "1180px"
+        },
+        {
+          "fontFamily": "\"Bricolage Grotesque\", \"Bricolage Grotesque Fallback\", \"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "40px",
+          "fontWeight": "800",
+          "lineHeight": "46px",
+          "color": "rgb(30, 10, 60)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "0px",
+          "borderRadius": "0px",
+          "width": "518.734px"
+        },
+        {
+          "fontFamily": "\"Bricolage Grotesque\", \"Bricolage Grotesque Fallback\", sans-serif",
+          "fontSize": "19px",
+          "fontWeight": "800",
+          "lineHeight": "29.45px",
+          "color": "rgba(255, 255, 255, 0.92)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "margin": "0px 0px 28px",
+          "padding": "0px",
+          "borderRadius": "0px",
+          "width": "1116px"
+        },
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24.8px",
+          "color": "rgb(31, 41, 55)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "48px",
+          "borderRadius": "32px",
+          "width": "1116px"
+        },
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "700",
+          "lineHeight": "24.8px",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(103, 1, 239)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "13px 26px",
+          "borderRadius": "999px",
+          "width": "283.594px"
+        }
+      ],
+      "withDashboardStyles": [
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24.8px",
+          "color": "rgb(31, 41, 55)",
+          "backgroundColor": "rgb(30, 10, 60)",
+          "backgroundImage": "radial-gradient(1100px 700px at 78% -8%, rgba(103, 1, 239, 0.42), rgba(0, 0, 0, 0) 62%), radial-gradient(900px 620px at 8% 108%, rgba(120, 60, 220, 0.28), rgba(0, 0, 0, 0) 60%)",
+          "margin": "0px",
+          "padding": "0px",
+          "borderRadius": "0px",
+          "width": "1440px"
+        },
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24.8px",
+          "color": "rgb(31, 41, 55)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "margin": "0px 130px",
+          "padding": "64px 32px",
+          "borderRadius": "0px",
+          "width": "1180px"
+        },
+        {
+          "fontFamily": "\"Bricolage Grotesque\", \"Bricolage Grotesque Fallback\", \"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "40px",
+          "fontWeight": "800",
+          "lineHeight": "46px",
+          "color": "rgb(30, 10, 60)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "0px",
+          "borderRadius": "0px",
+          "width": "518.734px"
+        },
+        {
+          "fontFamily": "\"Bricolage Grotesque\", \"Bricolage Grotesque Fallback\", sans-serif",
+          "fontSize": "19px",
+          "fontWeight": "800",
+          "lineHeight": "29.45px",
+          "color": "rgba(255, 255, 255, 0.92)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "margin": "0px 0px 28px",
+          "padding": "0px",
+          "borderRadius": "0px",
+          "width": "1116px"
+        },
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24.8px",
+          "color": "rgb(31, 41, 55)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "48px",
+          "borderRadius": "32px",
+          "width": "1116px"
+        },
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "700",
+          "lineHeight": "24.8px",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(103, 1, 239)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "13px 26px",
+          "borderRadius": "999px",
+          "width": "283.594px"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "projectRouteStylesUnaffected": true,
+      "before": [
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24.8px",
+          "color": "rgb(31, 41, 55)",
+          "backgroundColor": "rgb(30, 10, 60)",
+          "backgroundImage": "radial-gradient(1100px 700px at 78% -8%, rgba(103, 1, 239, 0.42), rgba(0, 0, 0, 0) 62%), radial-gradient(900px 620px at 8% 108%, rgba(120, 60, 220, 0.28), rgba(0, 0, 0, 0) 60%)",
+          "margin": "0px",
+          "padding": "0px",
+          "borderRadius": "0px",
+          "width": "390px"
+        },
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24.8px",
+          "color": "rgb(31, 41, 55)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "24px 16px 64px",
+          "borderRadius": "0px",
+          "width": "390px"
+        },
+        {
+          "fontFamily": "\"Bricolage Grotesque\", \"Bricolage Grotesque Fallback\", \"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "28px",
+          "fontWeight": "800",
+          "lineHeight": "32.2px",
+          "color": "rgb(30, 10, 60)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "0px",
+          "borderRadius": "0px",
+          "width": "310px"
+        },
+        {
+          "fontFamily": "\"Bricolage Grotesque\", \"Bricolage Grotesque Fallback\", sans-serif",
+          "fontSize": "19px",
+          "fontWeight": "800",
+          "lineHeight": "29.45px",
+          "color": "rgba(255, 255, 255, 0.92)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "margin": "0px 0px 16px",
+          "padding": "0px",
+          "borderRadius": "0px",
+          "width": "358px"
+        },
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24.8px",
+          "color": "rgb(31, 41, 55)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "24px",
+          "borderRadius": "32px",
+          "width": "358px"
+        },
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "700",
+          "lineHeight": "24.8px",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(103, 1, 239)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "13px 26px",
+          "borderRadius": "999px",
+          "width": "283.594px"
+        }
+      ],
+      "withDashboardStyles": [
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24.8px",
+          "color": "rgb(31, 41, 55)",
+          "backgroundColor": "rgb(30, 10, 60)",
+          "backgroundImage": "radial-gradient(1100px 700px at 78% -8%, rgba(103, 1, 239, 0.42), rgba(0, 0, 0, 0) 62%), radial-gradient(900px 620px at 8% 108%, rgba(120, 60, 220, 0.28), rgba(0, 0, 0, 0) 60%)",
+          "margin": "0px",
+          "padding": "0px",
+          "borderRadius": "0px",
+          "width": "390px"
+        },
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24.8px",
+          "color": "rgb(31, 41, 55)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "24px 16px 64px",
+          "borderRadius": "0px",
+          "width": "390px"
+        },
+        {
+          "fontFamily": "\"Bricolage Grotesque\", \"Bricolage Grotesque Fallback\", \"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "28px",
+          "fontWeight": "800",
+          "lineHeight": "32.2px",
+          "color": "rgb(30, 10, 60)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "0px",
+          "borderRadius": "0px",
+          "width": "310px"
+        },
+        {
+          "fontFamily": "\"Bricolage Grotesque\", \"Bricolage Grotesque Fallback\", sans-serif",
+          "fontSize": "19px",
+          "fontWeight": "800",
+          "lineHeight": "29.45px",
+          "color": "rgba(255, 255, 255, 0.92)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "margin": "0px 0px 16px",
+          "padding": "0px",
+          "borderRadius": "0px",
+          "width": "358px"
+        },
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24.8px",
+          "color": "rgb(31, 41, 55)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "24px",
+          "borderRadius": "32px",
+          "width": "358px"
+        },
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "700",
+          "lineHeight": "24.8px",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(103, 1, 239)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "13px 26px",
+          "borderRadius": "999px",
+          "width": "283.594px"
+        }
+      ]
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "projectRouteStylesUnaffected": true,
+      "before": [
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24.8px",
+          "color": "rgb(31, 41, 55)",
+          "backgroundColor": "rgb(30, 10, 60)",
+          "backgroundImage": "radial-gradient(1100px 700px at 78% -8%, rgba(103, 1, 239, 0.42), rgba(0, 0, 0, 0) 62%), radial-gradient(900px 620px at 8% 108%, rgba(120, 60, 220, 0.28), rgba(0, 0, 0, 0) 60%)",
+          "margin": "0px",
+          "padding": "0px",
+          "borderRadius": "0px",
+          "width": "360px"
+        },
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24.8px",
+          "color": "rgb(31, 41, 55)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "24px 16px 64px",
+          "borderRadius": "0px",
+          "width": "360px"
+        },
+        {
+          "fontFamily": "\"Bricolage Grotesque\", \"Bricolage Grotesque Fallback\", \"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "28px",
+          "fontWeight": "800",
+          "lineHeight": "32.2px",
+          "color": "rgb(30, 10, 60)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "0px",
+          "borderRadius": "0px",
+          "width": "280px"
+        },
+        {
+          "fontFamily": "\"Bricolage Grotesque\", \"Bricolage Grotesque Fallback\", sans-serif",
+          "fontSize": "19px",
+          "fontWeight": "800",
+          "lineHeight": "29.45px",
+          "color": "rgba(255, 255, 255, 0.92)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "margin": "0px 0px 16px",
+          "padding": "0px",
+          "borderRadius": "0px",
+          "width": "328px"
+        },
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24.8px",
+          "color": "rgb(31, 41, 55)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "24px",
+          "borderRadius": "32px",
+          "width": "328px"
+        },
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "700",
+          "lineHeight": "24.8px",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(103, 1, 239)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "13px 26px",
+          "borderRadius": "999px",
+          "width": "280px"
+        }
+      ],
+      "withDashboardStyles": [
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24.8px",
+          "color": "rgb(31, 41, 55)",
+          "backgroundColor": "rgb(30, 10, 60)",
+          "backgroundImage": "radial-gradient(1100px 700px at 78% -8%, rgba(103, 1, 239, 0.42), rgba(0, 0, 0, 0) 62%), radial-gradient(900px 620px at 8% 108%, rgba(120, 60, 220, 0.28), rgba(0, 0, 0, 0) 60%)",
+          "margin": "0px",
+          "padding": "0px",
+          "borderRadius": "0px",
+          "width": "360px"
+        },
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24.8px",
+          "color": "rgb(31, 41, 55)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "24px 16px 64px",
+          "borderRadius": "0px",
+          "width": "360px"
+        },
+        {
+          "fontFamily": "\"Bricolage Grotesque\", \"Bricolage Grotesque Fallback\", \"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "28px",
+          "fontWeight": "800",
+          "lineHeight": "32.2px",
+          "color": "rgb(30, 10, 60)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "0px",
+          "borderRadius": "0px",
+          "width": "280px"
+        },
+        {
+          "fontFamily": "\"Bricolage Grotesque\", \"Bricolage Grotesque Fallback\", sans-serif",
+          "fontSize": "19px",
+          "fontWeight": "800",
+          "lineHeight": "29.45px",
+          "color": "rgba(255, 255, 255, 0.92)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "margin": "0px 0px 16px",
+          "padding": "0px",
+          "borderRadius": "0px",
+          "width": "328px"
+        },
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24.8px",
+          "color": "rgb(31, 41, 55)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "24px",
+          "borderRadius": "32px",
+          "width": "328px"
+        },
+        {
+          "fontFamily": "\"DM Sans\", \"DM Sans Fallback\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "700",
+          "lineHeight": "24.8px",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(103, 1, 239)",
+          "backgroundImage": "none",
+          "margin": "0px",
+          "padding": "13px 26px",
+          "borderRadius": "999px",
+          "width": "280px"
+        }
+      ]
+    }
+  ],
+  "cleanup": true
+}

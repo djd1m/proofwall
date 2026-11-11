@@ -1,0 +1,30 @@
+[Unit]
+Description=Proofwall isolated UI review preview
+After=docker.service network-online.target
+Requires=docker.service
+
+[Service]
+Type=simple
+User=proofwall-preview
+Group=proofwall-preview
+WorkingDirectory=/opt/proofwall-ui-preview/artifacts/u0skKIAfRIAw4AJWplbBw/apps/web
+EnvironmentFile=/home/proofwall/.secrets/ui-preview/app.env
+Environment=TMPDIR=/run/proofwall-ui-preview
+ExecStart=/opt/proofwall-ui-preview/artifacts/u0skKIAfRIAw4AJWplbBw/node_modules/node/bin/node /opt/proofwall-ui-preview/artifacts/u0skKIAfRIAw4AJWplbBw/node_modules/next/dist/bin/next start -H 172.21.0.1 -p 33183
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=false
+PrivateDevices=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/opt/proofwall-ui-preview/artifacts/u0skKIAfRIAw4AJWplbBw/apps/web/.next/cache
+RuntimeDirectory=proofwall-ui-preview
+RuntimeDirectoryMode=0700
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictSUIDSGID=true
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

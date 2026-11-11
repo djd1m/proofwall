@@ -1,0 +1,97 @@
+{
+  "reviewer": "qcsd-testability",
+  "family": "codex",
+  "independent": true,
+  "verdict": "clean",
+  "conditions": [
+    {
+      "id": "TEST-1",
+      "owner": "qcsd-testability",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "Дополнить локальную isolated-PG проверку независимым доказательством RLS: под реальным withAccount(A) и ролью app_authenticated сделать негативные запросы без дополнительного фильтра владельца к projects, testimonials, analytics_events и widget_installs при наличии собственных и чужих строк; подтвердить, что собственные видны, чужие нет, и роль/tenant-контекст действительно установлены. Отдельно сохранить проверку dashboard aggregate и deactivated scope.",
+      "scope": [
+        "features/proofo-ui/05_architecture.md",
+        "features/proofo-ui/03_adr/001-read-owned-dashboard-summary.md"
+      ],
+      "evidence": "05_architecture.md предусматривает A/B карточки и aggregates, но алгоритм также ограничивает запрос owned active project; один такой тест может пройти с отключённой RLS благодаря явному фильтру. packages/db/src/tenant.ts использует SET LOCAL ROLE app_authenticated и GUC; существующий packages/db/tests/rls.test.ts отдельно покрывает projects, testimonials и widget_installs, но не analytics_events. Это чтение исходников, а не выполненный тест."
+    },
+    {
+      "id": "TEST-2",
+      "owner": "qcsd-testability",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "Развести проверки отказа: после подтверждённой валидной сессии управляемо вызвать ошибку именно чтения dashboard summary, убедиться в error state без пустого успешного DTO/нулей, затем восстановить зависимость и проверить реальный retry; отдельно проверить отказ session store. Механизм инъекции ограничить изолированной тестовой инфраструктурой без HTTP backdoor.",
+      "scope": [
+        "features/proofo-ui/05_architecture.md",
+        "features/proofo-ui/01_requirements.md"
+      ],
+      "evidence": "FR-004 и 05_architecture.md требуют DB error → retry, но apps/web/src/lib/current-session.ts сначала читает sessions через withService. Выключение всей PG способно завершить запрос на проверке session до вызова summary, поэтому само по себе не доказывает, что ошибка aggregate не превращается в [] или 0. Ошибка Next boundary и возвращение данных после восстановления должны проверяться фактически."
+    },
+    {
+      "id": "TEST-3",
+      "owner": "qcsd-testability",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "Установить проверяемый контракт между fixture и живым Next shell: воспроизвести в live окружении фон и типографику, влияющие на main.cab-shell, и отдельно сравнить фактический SSR wrapper/стили с wrapper fixture или иным доказательством без подмены auth. Зафиксировать, какие проверки включают body за границей crop и как они согласуются со scoped CSS; baseline не менять.",
+      "scope": [
+        "features/proofo-ui/03_adr/002-share-pure-view-with-isolated-fixture.md",
+        "features/proofo-ui/05_architecture.md"
+      ],
+      "evidence": "scripts/check-proofo-visual.mjs проверяет не только raster/DOM внутри shell, но и точное совпадение body background/font. Frozen dashboard body = rgb(242, 237, 227), body, Arial, sans-serif; существующий apps/web/src/app/globals.css задаёт body другой фон и next/font. ADR требует scoped wrapper и static fixture: отдельно оформленный body fixture способен пройти visual check, не доказав тот же фон/окружение в настоящем SSR. Код приложения ещё не написан, поэтому это риск дизайна и границы доказательства, не зафиксированный сбой."
+    },
+    {
+      "id": "TEST-4",
+      "owner": "qcsd-testability",
+      "severity": "WARNING",
+      "classification": "structural",
+      "requirement": "Зафиксировать live browser cases с длинным непрерывным и многострочным именем проекта на 360/390 и desktop: проверять отсутствие горизонтального overflow, видимость доступного имени и достижимость/видимость focus карточки клавиатурой; сохранить XSS и slug fallback отдельно.",
+      "scope": [
+        "features/proofo-ui/01_requirements.md",
+        "features/proofo-ui/05_architecture.md"
+      ],
+      "evidence": "FR-006 разрешает произвольный непустой branding.name, FR-010 требует keyboard/focus и no overflow. Изолированная visual fixture содержит только статичный demo name, а в таблице тестируемости 05_architecture.md указан script-like title, но нет длинного реального названия и критериев его проверки. Успех pixel fixture не докажет устойчивость живых данных."
+    }
+  ],
+  "verifications": [
+    {
+      "id": "TEST-1",
+      "revision": "7a3b55bd332adf0e872df2470f9b090d497f9532ab451c2b01ed8d74a3647aef",
+      "classification": "structural",
+      "evidence": "01_requirements.md и 05_architecture.md: isolated PG проверяет current_user=app_authenticated, GUC=A, отсутствие BYPASSRLS и владения таблицами; unscoped SELECT всех четырёх таблиц видит A и скрывает B. ADR-001 требует отдельные dashboard aggregate и inactive children checks; AM-7/AM-8 назначают конкретный DB test. Проверен дизайн; тест приложения ещё не выполнен.",
+      "implementationVerified": true
+    },
+    {
+      "id": "TEST-2",
+      "revision": "7a3b55bd332adf0e872df2470f9b090d497f9532ab451c2b01ed8d74a3647aef",
+      "classification": "structural",
+      "evidence": "01_requirements.md и 05_architecture.md: после действительного login isolated REVOKE SELECT analytics_events для app_authenticated сохраняет session read через withService; требуются error boundary без пустого успеха, GRANT в finally и реальный retry. Session-store failure проверяется отдельно; AM-9 указывает browser test. Проверен дизайн; тест приложения ещё не выполнен.",
+      "implementationVerified": true
+    },
+    {
+      "id": "TEST-3",
+      "revision": "7a3b55bd332adf0e872df2470f9b090d497f9532ab451c2b01ed8d74a3647aef",
+      "classification": "structural",
+      "evidence": "ADR-002 и 05_architecture.md требуют одинаковые global/dashboard CSS, wrapper и dashboard-only body:has без synthetic body/iframe/spacer. Реальный authenticated HTTP E2E сравнивает computed body font/background и shell origin/width/padding с fixture/reference; immutable baseline, без требования совпадения полной высоты разных данных. AM-10 назначает проверку. Проверен дизайн; тест приложения ещё не выполнен.",
+      "implementationVerified": true
+    },
+    {
+      "id": "TEST-4",
+      "revision": "7a3b55bd332adf0e872df2470f9b090d497f9532ab451c2b01ed8d74a3647aef",
+      "classification": "structural",
+      "evidence": "01_requirements.md, 05_architecture.md и OpenSpec закрепляют long Unicode, multiline и HTML-like названия при 360x800, 390x844 и 1440x900: scrollWidth не превышает viewport, имя видимо и доступно, Tab/focus/Enter открывают реальный project URL; XSS и slug fallback отдельно. AM-11 назначает browser test. Проверен дизайн; тест приложения ещё не выполнен.",
+      "implementationVerified": true
+    }
+  ],
+  "newRisks": {
+    "assessment": "Новых самостоятельных условий по focused review не выявлено; подтверждён исправленный дизайн, выполнение остаётся будущей задачей.",
+    "evidence": "Прочитаны author delta, исправленные FR/ADR/модель/архитектура, OpenSpec SHA 57e33113157e014fd741f04be2e8d0594d3d64fcf010d5915e51b8c07484c7ce и AM-4…AM-11. Все семь SHA совпадают с текущим host manifest. Runtime проверок и реализации нет; true в этом ideation receipt относится к проверенной структуре дизайна.",
+    "conditions": []
+  },
+  "authorAssessmentChecked": true,
+  "deltaVerification": {
+    "classification": "structural",
+    "evidence": "Независимо сопоставлены author delta и исправленные FR, ADR-001/002, доменная модель, архитектура, OpenSpec и AM-4…AM-11; мои TEST-1…TEST-4 отражены в конкретных проверках. Автор не заявляет новых условий и не считает тесты выполненными. Подтверждена исправленная структура дизайна, не выполнение приложения.",
+    "implementationVerified": true
+  }
+}

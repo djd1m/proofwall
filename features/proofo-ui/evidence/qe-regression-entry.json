@@ -1,0 +1,19 @@
+{
+  "reviewer": "qe-regression",
+  "family": "codex",
+  "independent": true,
+  "verdict": "clean",
+  "conditions": [],
+  "verifications": [],
+  "newRisks": {
+    "assessment": "Новых подтверждённых регрессионных рисков структурной дельты трёх тестов и плана на snapshot 06f4dce82d3e419861bced5377c6c71ae2fc9a42d87f12c219fee9d2dc1c1840 не выявлено. Production bytes неизменны; assertions/fixture/18 targets сохранены, pg identity единая. Реальное scoped coverage теперь независимо воспроизведено; differential coverage/trend не измерены, две summary branches остаются непокрытыми. Initial S3 skips и запрет permission mutations сохранены; full-web повторно не объявлялся пройденным этой ролью.",
+    "evidence": "features/proofo-ui/evidence/qe-regression.md, focused section: manifest 30/30; обратная реконструкция трёх тестов/плана совпадает с initial SHA; четыре font twins идентичны runtime. Собственные focused 29/29, typecheck exit 0, K2 exit 0 без failures/warnings/skips. Независимый V8 run 15/15 воспроизвёл raw coverage-final/summary/lcov побайтно: 91/91 lines/statements, 6/6 functions, 40/42 branches; summary 24/26 branches. Семь input hashes стабильны и совпадают с current snapshot; 10 author artifact hashes и command/config binding проверены. Nonce 690f6976-08de-4023-9747-5782b9c1c20f.",
+    "conditions": []
+  },
+  "authorAssessmentChecked": true,
+  "deltaVerification": {
+    "classification": "structural",
+    "evidence": "Самостоятельно проверены фактическая дельта и author handoff features/proofo-ui/evidence/dashboard-final/qe-author-delta.json на revision 06f4dce82d3e419861bced5377c6c71ae2fc9a42d87f12c219fee9d2dc1c1840, nonce 690f6976-08de-4023-9747-5782b9c1c20f. Новый actual-summary observer исполняет native query на том же client и before/after transaction, role/GUC/BYPASS/owners assertions проходят; отдельные unscoped RLS/one statement checks сохранены. Exact dynamic imports не ослабили прежние assertions; font exclusions сохраняют эталон и 18 targets. Независимые focused tests 29/29, typecheck и K2 exit 0; отдельный V8 coverage run 15/15, raw артефакты побайтно равны bound author raw. Подробные команды, ограничения и hashes: features/proofo-ui/evidence/qe-regression.md. Собственные conditions остаются []; чужие originating findings этим entry не закрываются.",
+    "implementationVerified": true
+  }
+}

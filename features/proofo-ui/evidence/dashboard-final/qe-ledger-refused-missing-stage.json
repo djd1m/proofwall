@@ -1,0 +1,1 @@
+{"ok":false,"kind":"ledger","stage":"qe","verdict":"refused","exit":2,"reason":"a ledger record is missing the required field `stage`","blocking":false}

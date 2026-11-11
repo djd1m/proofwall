@@ -1,0 +1,315 @@
+{
+  "metadata": "run-metadata.json",
+  "total": {
+    "lines": {
+      "total": 91,
+      "covered": 91,
+      "skipped": 0,
+      "pct": 100
+    },
+    "statements": {
+      "total": 91,
+      "covered": 91,
+      "skipped": 0,
+      "pct": 100
+    },
+    "functions": {
+      "total": 6,
+      "covered": 6,
+      "skipped": 0,
+      "pct": 100
+    },
+    "branches": {
+      "total": 42,
+      "covered": 40,
+      "skipped": 0,
+      "pct": 95.23
+    },
+    "branchesTrue": {
+      "total": 0,
+      "covered": 0,
+      "skipped": 0,
+      "pct": 100
+    }
+  },
+  "gaps": [
+    {
+      "file": "apps/web/src/app/dashboard/dashboard-overview.tsx",
+      "critical": false,
+      "metrics": {
+        "lines": {
+          "total": 32,
+          "covered": 32,
+          "skipped": 0,
+          "pct": 100
+        },
+        "functions": {
+          "total": 1,
+          "covered": 1,
+          "skipped": 0,
+          "pct": 100
+        },
+        "statements": {
+          "total": 32,
+          "covered": 32,
+          "skipped": 0,
+          "pct": 100
+        },
+        "branches": {
+          "total": 9,
+          "covered": 9,
+          "skipped": 0,
+          "pct": 100
+        }
+      },
+      "uncoveredLines": [],
+      "uncoveredBranches": [],
+      "uncoveredFunctions": []
+    },
+    {
+      "file": "apps/web/src/app/dashboard/error.tsx",
+      "critical": true,
+      "metrics": {
+        "lines": {
+          "total": 12,
+          "covered": 12,
+          "skipped": 0,
+          "pct": 100
+        },
+        "functions": {
+          "total": 2,
+          "covered": 2,
+          "skipped": 0,
+          "pct": 100
+        },
+        "statements": {
+          "total": 12,
+          "covered": 12,
+          "skipped": 0,
+          "pct": 100
+        },
+        "branches": {
+          "total": 3,
+          "covered": 3,
+          "skipped": 0,
+          "pct": 100
+        }
+      },
+      "uncoveredLines": [],
+      "uncoveredBranches": [],
+      "uncoveredFunctions": []
+    },
+    {
+      "file": "apps/web/src/app/dashboard/page.tsx",
+      "critical": true,
+      "metrics": {
+        "lines": {
+          "total": 8,
+          "covered": 8,
+          "skipped": 0,
+          "pct": 100
+        },
+        "functions": {
+          "total": 1,
+          "covered": 1,
+          "skipped": 0,
+          "pct": 100
+        },
+        "statements": {
+          "total": 8,
+          "covered": 8,
+          "skipped": 0,
+          "pct": 100
+        },
+        "branches": {
+          "total": 4,
+          "covered": 4,
+          "skipped": 0,
+          "pct": 100
+        }
+      },
+      "uncoveredLines": [],
+      "uncoveredBranches": [],
+      "uncoveredFunctions": []
+    },
+    {
+      "file": "apps/web/src/lib/dashboard-summary.ts",
+      "critical": true,
+      "metrics": {
+        "lines": {
+          "total": 39,
+          "covered": 39,
+          "skipped": 0,
+          "pct": 100
+        },
+        "functions": {
+          "total": 2,
+          "covered": 2,
+          "skipped": 0,
+          "pct": 100
+        },
+        "statements": {
+          "total": 39,
+          "covered": 39,
+          "skipped": 0,
+          "pct": 100
+        },
+        "branches": {
+          "total": 26,
+          "covered": 24,
+          "skipped": 0,
+          "pct": 92.3
+        }
+      },
+      "uncoveredLines": [],
+      "uncoveredBranches": [
+        {
+          "id": "1",
+          "index": 0,
+          "type": "branch",
+          "location": {
+            "start": {
+              "line": 12,
+              "column": 51
+            },
+            "end": {
+              "line": 12,
+              "column": 101
+            }
+          }
+        },
+        {
+          "id": "10",
+          "index": 0,
+          "type": "branch",
+          "location": {
+            "start": {
+              "line": 53,
+              "column": 96
+            },
+            "end": {
+              "line": 53,
+              "column": 112
+            }
+          }
+        }
+      ],
+      "uncoveredFunctions": []
+    }
+  ],
+  "gates": [
+    {
+      "scope": "four-file total",
+      "metric": "lines",
+      "actual": 100,
+      "threshold": 80,
+      "passed": true
+    },
+    {
+      "scope": "four-file total",
+      "metric": "branches",
+      "actual": 95.23,
+      "threshold": 80,
+      "passed": true
+    },
+    {
+      "scope": "four-file total",
+      "metric": "functions",
+      "actual": 100,
+      "threshold": 80,
+      "passed": true
+    },
+    {
+      "scope": "four-file total",
+      "metric": "statements",
+      "actual": 100,
+      "threshold": 80,
+      "passed": true
+    },
+    {
+      "scope": "apps/web/src/app/dashboard/error.tsx",
+      "metric": "lines",
+      "actual": 100,
+      "threshold": 90,
+      "passed": true
+    },
+    {
+      "scope": "apps/web/src/app/dashboard/error.tsx",
+      "metric": "branches",
+      "actual": 100,
+      "threshold": 90,
+      "passed": true
+    },
+    {
+      "scope": "apps/web/src/app/dashboard/error.tsx",
+      "metric": "functions",
+      "actual": 100,
+      "threshold": 90,
+      "passed": true
+    },
+    {
+      "scope": "apps/web/src/app/dashboard/error.tsx",
+      "metric": "statements",
+      "actual": 100,
+      "threshold": 90,
+      "passed": true
+    },
+    {
+      "scope": "apps/web/src/app/dashboard/page.tsx",
+      "metric": "lines",
+      "actual": 100,
+      "threshold": 90,
+      "passed": true
+    },
+    {
+      "scope": "apps/web/src/app/dashboard/page.tsx",
+      "metric": "branches",
+      "actual": 100,
+      "threshold": 90,
+      "passed": true
+    },
+    {
+      "scope": "apps/web/src/app/dashboard/page.tsx",
+      "metric": "functions",
+      "actual": 100,
+      "threshold": 90,
+      "passed": true
+    },
+    {
+      "scope": "apps/web/src/app/dashboard/page.tsx",
+      "metric": "statements",
+      "actual": 100,
+      "threshold": 90,
+      "passed": true
+    },
+    {
+      "scope": "apps/web/src/lib/dashboard-summary.ts",
+      "metric": "lines",
+      "actual": 100,
+      "threshold": 90,
+      "passed": true
+    },
+    {
+      "scope": "apps/web/src/lib/dashboard-summary.ts",
+      "metric": "branches",
+      "actual": 92.3,
+      "threshold": 90,
+      "passed": true
+    },
+    {
+      "scope": "apps/web/src/lib/dashboard-summary.ts",
+      "metric": "functions",
+      "actual": 100,
+      "threshold": 90,
+      "passed": true
+    },
+    {
+      "scope": "apps/web/src/lib/dashboard-summary.ts",
+      "metric": "statements",
+      "actual": 100,
+      "threshold": 90,
+      "passed": true
+    }
+  ],
+  "coverageGatesPassed": true
+}

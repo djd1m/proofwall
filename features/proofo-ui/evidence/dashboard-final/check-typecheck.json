@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "exitCode": 0,
+  "command": "node_modules/node/bin/node scripts/run-dashboard-preview.mjs typecheck",
+  "artifacts": [
+    "features/proofo-ui/evidence/dashboard-final/author-repair-handoff.json"
+  ],
+  "detail": {
+    "actor": "native gpt-6.1-sol high",
+    "rawLog": "features/proofo-ui/evidence/dashboard-final/typecheck-repair.log",
+    "rawLogSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "emptySuccessLogAllowed": true
+  }
+}
