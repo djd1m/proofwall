@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-export function EmailVerificationForm() {
+export function EmailVerificationForm({ accountEmail }: { accountEmail: string | null }) {
   const [token, setToken] = useState<string | null>(null);
   const [loaded, setLoaded] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -54,6 +54,8 @@ export function EmailVerificationForm() {
   }
 
   return <div>
+    {accountEmail ? <p style={{ marginBottom: 16 }}>Текущий аккаунт и получатель нового письма: <strong>{accountEmail}</strong></p> :
+      <p style={{ marginBottom: 16 }}>Вы не вошли в аккаунт. Для нового письма сначала войдите.</p>}
     {loaded && token && !verified ? <button type="button" className="btn" disabled={busy}
       onClick={() => act(false)} style={{ background: '#c8492f', color: '#fff' }}>
       {busy ? 'Проверяем…' : 'Подтвердить email'}
@@ -62,9 +64,10 @@ export function EmailVerificationForm() {
     {message ? <p role="status" style={{ marginTop: 16 }}>{message}</p> : null}
     {loaded && !verified ? <div style={{ marginTop: 24 }}>
       <p className="small muted" style={{ marginBottom: 12 }}>Новое письмо придёт на email аккаунта, в который вы сейчас вошли. Если ссылка относится к другому аккаунту, сначала войдите в нужный.</p>
-      {loginRequired ? <a href="/login?next=%2Fverify-email">Войти в аккаунт</a> :
+      {loginRequired ? <p>Сначала войдите в аккаунт.</p> :
         <button type="button" className="btn" disabled={busy} onClick={() => act(true)}>Новое письмо для текущего аккаунта</button>}
     </div> : null}
+    <p style={{ marginTop: 16 }}><a href="/login?next=%2Fverify-email">{accountEmail ? 'Войти в другой аккаунт' : 'Войти в аккаунт'}</a></p>
     <p style={{ marginTop: 24 }}><a href="/dashboard">Открыть кабинет</a></p>
   </div>;
 }

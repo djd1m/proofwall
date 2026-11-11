@@ -13,6 +13,7 @@ process.env.BASE_URL = 'https://proofwall.example.test';
 const { withService, closePool } = await import('@proofwall/db');
 const { registerAccountAndProject } = await import('../src/lib/register');
 const { default: DashboardPage } = await import('../src/app/dashboard/[slug]/page');
+const { default: VerifyEmailPage } = await import('../src/app/verify-email/page');
 afterAll(async () => { vi.unstubAllGlobals(); await closePool(); });
 
 it('кабинет показывает отсутствие письма и постоянный recovery link', async () => {
@@ -28,4 +29,21 @@ it('кабинет показывает отсутствие письма и п�
   const revisit = renderToStaticMarkup(await DashboardPage({ params: Promise.resolve({ slug }) }));
   expect(revisit).toContain('href="/verify-email"'); // Не зависит от первого письма/redirect query.
   expect(revisit).not.toContain('Отправка писем пока не настроена');
+});
+
+it('страница подтверждения показывает email сессии и постоянный вход', async () => {
+  const slug = `recipient-${randomUUID().slice(0, 8)}`;
+  const o = await withService(c => registerAccountAndProject(c, { email: `${slug}@example.test`,
+    password: 'synthetic-dashboard-password', desired_slug: slug }));
+  if (!o.ok) throw new Error('signup failed'); state.token = o.token;
+  // Fragment token аккаунта A сервер не получает; получатель повторного письма — B.
+  const markup = renderToStaticMarkup(await VerifyEmailPage());
+  // Hydration показывает recipient внутри client form, initial loaded=false не должен
+  // скрывать авторитетную identity или постоянный switch link.
+  expect(markup).toContain('Войти в другой аккаунт');
+  expect(markup).toContain('href="/login?next=%2Fverify-email"');
+  expect(markup).toContain(o.email);
+  state.token = '';
+  const anonymous = renderToStaticMarkup(await VerifyEmailPage());
+  expect(anonymous).toContain('Войти в аккаунт'); expect(anonymous).not.toContain(o.email);
 });

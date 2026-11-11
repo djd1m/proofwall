@@ -101,7 +101,7 @@ mail delivery или проверенные credentials/DNS. Существую�
 
 ## Amendments
 
-AM-1 (Terra P2 review a346567): Явно назвать current-account recipient и verified no-op в landing, чтобы ссылка A при session B не выдавала подтверждение A. Confirmation: current-account copy и resend verified result → test `synthetic browser smoke` in `scripts/check-email-preview.cjs` (fails if reverted).
+AM-1 (Terra P2 review a346567/e65fe5d): Verify server page показывает email из действующей сессии, landing всегда предоставляет вход в другой аккаунт, включая already-verified. Recipient не выбирается из body. Confirmation: session B отображается как B и no-session ведёт на login → test `страница подтверждения показывает email сессии и постоянный вход` in `apps/web/tests/dashboard-onboarding.test.ts` (fails if reverted).
 
 AM-2 (Terra P2 review a346567): Signup передаёт email_delivery в dashboard handoff, кабинет показывает honest state и постоянную ссылку verify/resend. Confirmation: человек видит статус/восстановление без первого письма → test `кабинет показывает отсутствие письма и постоянный recovery link` in `apps/web/tests/dashboard-onboarding.test.ts` (fails if reverted).
 
