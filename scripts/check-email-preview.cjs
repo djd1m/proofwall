@@ -51,6 +51,13 @@ async function main() {
       assert.match(await page.$eval('[role=status]', e => e.textContent), /подтверждён/);
       results.push({ width, explicitPost: true, fragmentRemoved: true, noGetMutation: true });
     }
+    writes.length = 0; responseMode = 'success';
+    await page.goto(`${origin}/verify-email`, { waitUntil: 'networkidle0' });
+    await page.waitForSelector('[role=alert]');
+    assert.match(await page.$eval('body', e => e.innerText), /email аккаунта, в который вы сейчас вошли/);
+    await page.click('button'); await page.waitForSelector('[role=status]');
+    assert.match(await page.$eval('[role=status]', e => e.textContent), /текущего аккаунта уже подтверждён/);
+    assert.deepEqual(writes[0].body, {});
     writes.length = 0; responseMode = 'unauthorized';
     await page.goto(`${origin}/verify-email`, { waitUntil: 'networkidle0' });
     await page.waitForSelector('[role=alert]'); assert.equal(writes.length, 0);

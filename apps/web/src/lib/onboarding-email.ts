@@ -27,7 +27,8 @@ export function transactionalMailOrigin(): string | null {
 }
 
 export function normalizeProjectDisplayName(value: unknown, slug: string): string {
-  return typeof value === 'string' && value.trim() ? value.trim().slice(0, 120) : slug;
+  const normalized = typeof value === 'string' ? value.replace(/\u0000/g, ' ').trim().slice(0, 120) : '';
+  return normalized || slug;
 }
 
 export function emailVerificationUrl(origin: string, token: string): string {

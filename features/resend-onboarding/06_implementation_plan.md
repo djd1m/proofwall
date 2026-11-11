@@ -101,8 +101,11 @@ mail delivery или проверенные credentials/DNS. Существую�
 
 ## Amendments
 
-После первоначального checkpoint поправок пока нет. Единое welcome, resend,
-палитра и Puppeteer smoke включены в начальный план; дальнейшие изменения trace+test.
+AM-1 (Terra P2 review a346567): Явно назвать current-account recipient и verified no-op в landing, чтобы ссылка A при session B не выдавала подтверждение A. Confirmation: current-account copy и resend verified result → test `synthetic browser smoke` in `scripts/check-email-preview.cjs` (fails if reverted).
+
+AM-2 (Terra P2 review a346567): Signup передаёт email_delivery в dashboard handoff, кабинет показывает honest state и постоянную ссылку verify/resend. Confirmation: человек видит статус/восстановление без первого письма → test `кабинет показывает отсутствие письма и постоянный recovery link` in `apps/web/tests/dashboard-onboarding.test.ts` (fails if reverted).
+
+AM-3 (Terra P2 review a346567): Нормализовать NUL в project name до PostgreSQL text/JSONB boundary, сохранив HTML escape на рендере. Confirmation: signup с NUL не падает → test `название с NUL нормализуется до SQL и не откатывает регистрацию` in `apps/web/tests/register.test.ts` (fails if reverted).
 
 ## Проверки и фактическое состояние
 
@@ -138,3 +141,6 @@ EXPECTED_CODE_TARGETS:
 - scripts/check-email-preview.cjs
 - docs/preview/resend-onboarding.html
 - docs/operations/transactional-email.md
+- apps/web/src/app/page.tsx
+- apps/web/src/app/dashboard/[slug]/page.tsx
+- apps/web/tests/dashboard-onboarding.test.ts

@@ -83,10 +83,12 @@ export default function SignupPage() {
             ...(desiredSlug.trim() ? { desired_slug: desiredSlug } : {}),
           }),
         });
-        const data = (await res.json()) as { project_slug?: string; errors?: string[]; error?: string };
+        const data = (await res.json()) as { project_slug?: string; email_delivery?: string; errors?: string[]; error?: string };
         if (res.status === 201 && data.project_slug) {
           // Сессионная cookie уже установлена ответом — уходим на дашборд.
-          window.location.href = `/dashboard/${data.project_slug}`;
+          const delivery = ['scheduled', 'not_configured', 'invalid_origin', 'schedule_failed'].includes(data.email_delivery ?? '')
+            ? `?email_delivery=${encodeURIComponent(data.email_delivery!)}` : '';
+          window.location.href = `/dashboard/${data.project_slug}${delivery}`;
           return;
         }
         setErrors(data.errors ?? [data.error ?? `Ошибка ${res.status}`]);

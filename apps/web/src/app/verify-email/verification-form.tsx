@@ -42,10 +42,12 @@ export function EmailVerificationForm() {
         if (response.status === 401) setLoginRequired(true);
         setError(body?.error ?? 'Не удалось подтвердить адрес. Попробуйте позже.');
       } else if (body?.verified) {
-        setVerified(true); setToken(null); setMessage('Email подтверждён. Можно вернуться к вашей стене.');
+        setVerified(true); setToken(null);
+        setMessage(resend ? 'Email текущего аккаунта уже подтверждён. Для другой стены войдите в нужный аккаунт.' :
+          'Адрес из письма подтверждён. Можно вернуться к вашей стене.');
       } else {
         setToken(null);
-        setMessage('Новое письмо запланировано. Проверьте почту. Предыдущая ссылка больше не действует; доставка может занять время.');
+        setMessage('Новое письмо запланировано на email текущего аккаунта. Проверьте почту. Предыдущая ссылка этого аккаунта больше не действует; доставка может занять время.');
       }
     } catch { setError('Сеть недоступна. Попробуйте ещё раз.'); }
     finally { setBusy(false); }
@@ -59,9 +61,9 @@ export function EmailVerificationForm() {
     {error ? <p role="alert" style={{ marginTop: 16 }}>{error}</p> : null}
     {message ? <p role="status" style={{ marginTop: 16 }}>{message}</p> : null}
     {loaded && !verified ? <div style={{ marginTop: 24 }}>
-      <p className="small muted" style={{ marginBottom: 12 }}>Ссылка устарела или письмо не пришло? Новую ссылку можно запросить после входа.</p>
+      <p className="small muted" style={{ marginBottom: 12 }}>Новое письмо придёт на email аккаунта, в который вы сейчас вошли. Если ссылка относится к другому аккаунту, сначала войдите в нужный.</p>
       {loginRequired ? <a href="/login?next=%2Fverify-email">Войти в аккаунт</a> :
-        <button type="button" className="btn" disabled={busy} onClick={() => act(true)}>Запросить новое письмо</button>}
+        <button type="button" className="btn" disabled={busy} onClick={() => act(true)}>Новое письмо для текущего аккаунта</button>}
     </div> : null}
     <p style={{ marginTop: 24 }}><a href="/dashboard">Открыть кабинет</a></p>
   </div>;

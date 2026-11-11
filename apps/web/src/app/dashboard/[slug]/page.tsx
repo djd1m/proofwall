@@ -29,10 +29,17 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-type Params = { params: Promise<{ slug: string }> };
+type Params = { params: Promise<{ slug: string }>; searchParams?: Promise<{ email_delivery?: string }> };
 
-export default async function DashboardPage({ params }: Params) {
+export default async function DashboardPage({ params, searchParams }: Params) {
   const { slug } = await params;
+  const delivery = (await searchParams)?.email_delivery;
+  const deliveryNotice: Record<string, string> = {
+    scheduled: 'Письмо со ссылками запланировано. Если оно не пришло, запросите новое подтверждение.',
+    not_configured: 'Отправка писем пока не настроена. Ваша стена создана, ссылки доступны ниже.',
+    invalid_origin: 'Письмо сейчас не удалось подготовить. Ваша стена создана, ссылки доступны ниже.',
+    schedule_failed: 'Не удалось запланировать письмо. Ваша стена создана; подтверждение можно запросить повторно.',
+  };
   const accountId = await currentAccountId();
   // FR-009.3: без сессии — на вход, а не на витрину продукта. До FR-009 здесь стоял
   // redirect('/'), и владелец с истёкшей сессией просто попадал на лендинг без всякого
@@ -100,6 +107,10 @@ export default async function DashboardPage({ params }: Params) {
           </span>
         </div>
         <p className="small muted" style={{ marginTop: 8 }}>{tier.badge}</p>
+        {delivery && Object.hasOwn(deliveryNotice, delivery) ? <p role="status" style={{ marginTop: 16 }}>{deliveryNotice[delivery]}</p> : null}
+        <p className="small" style={{ marginTop: 16 }}>
+          <a href="/verify-email">Подтвердить email или запросить новое письмо</a> для текущего аккаунта.
+        </p>
 
         <hr className="divider" />
 
