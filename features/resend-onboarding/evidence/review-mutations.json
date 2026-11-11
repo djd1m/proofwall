@@ -1,0 +1,16 @@
+[
+  {
+    "mutation": "identity-precondition",
+    "test": "resend отказывает при смене",
+    "exitCode": 1,
+    "killed": true,
+    "scope": "separate archived d633b7b tree"
+  },
+  {
+    "mutation": "nul-sql-boundary",
+    "test": "название с NUL",
+    "exitCode": 1,
+    "killed": true,
+    "scope": "separate archived d633b7b tree"
+  }
+]
