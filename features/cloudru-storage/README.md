@@ -37,3 +37,12 @@ HTTPS адресу, TLS verify0. Полный медиа-CJM не прошёл �
 S3 credentials. Transcribe/почта/Yandex/платежи не настроены. Реальный Cloud.ru upload/read
 и запуск worker ожидают заполнения S3_ACCESS_KEY и S3_SECRET_KEY владельцем.
 Приёмка интеграции до этого НЕ завершена, production/DNS не переключены.
+
+## Проверка после ввода ключей
+
+11.11.2026: web/worker пересозданы с пользовательскими credentials.
+Cloud.ru отвечает403 AccessDenied на HeadBucket/ListBuckets/PUT. Тестовое фото
+не записано. Virtual-hosted запрос давал404; runtime выбрана path-style=true
+для базового имени bucket. Код обоих вариантов покрыт существующими тестами.
+Нужно проверить tenant_id и разрешения субъекта ключа на proofwall.
+Source checks остаются пройденными, live storage acceptance остаётся FAILED/ожидает исправления доступа.

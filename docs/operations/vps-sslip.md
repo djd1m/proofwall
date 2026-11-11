@@ -31,7 +31,7 @@ S3_ENDPOINT=https://s3.cloud.ru
 S3_REGION=ru-central-1
 S3_BUCKET=proofwall
 S3_PHOTO_BUCKET=proofwall
-S3_FORCE_PATH_STYLE=false
+S3_FORCE_PATH_STYLE=true
 ```
 
 Это API-ключ Object Storage; ключ Foundation Models не подходит. Ключи Clipmkr не
@@ -91,3 +91,17 @@ CJM создаёт отдельный технический аккаунт/пр
 
 Менять бакет/ключи S3 при смене домена не требуется. Caddy хранит сертификаты в своём
 постоянном томе. `down -v` удалит данные стенда — при обслуживании его не использовать.
+
+## Проверка пользовательских ключей, 11.11.2026
+
+Ключи прочитаны только контейнерами, значения не выводились. В текущем окружении
+используется базовое имя бакета и path-style=true: virtual-hosted обращение
+к proofwall.s3.cloud.ru возвращало404. HeadBucket по базовому имени, ListBuckets
+и PUT отдельного случайного тестового фото получили403 AccessDenied. PUT не прошёл,
+объект не был записан. Реальная загрузка фото пока не работает.
+
+Нужно проверить tenant_id, проект/бакет и доступ субъекта ключа к proofwall.
+Cloud.ru описывает роли s3e.viewer (чтение) и s3e.editor (запись/удаление);
+Bucket Policy/ACL также могут запрещать операцию. Публиковать бакет не требуется.
+Worker запущен с настоящими credentials, но его запуск не доказывает доступ S3.
+Источник ролей: https://cloud.ru/docs/s3e/ug/topics/security__role.
