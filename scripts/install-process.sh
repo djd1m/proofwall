@@ -10,3 +10,5 @@ for process_patch in patches/feature-adr-next-paths.patch patches/dz-name-check-
   fi
 done
 node node_modules/@dzhechkov/harness-cli/dist/bin.js init --target codex --force --preset feature-adr --project . --skills-dir node_modules/@dzhechkov/skills-feature-adr/templates/.claude/skills --no-integrations --no-hooks
+node scripts/install-qe-skills.mjs
+node scripts/process-guard.mjs check-config

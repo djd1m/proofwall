@@ -1,0 +1,8 @@
+{
+  "description": "Proofwall feature-adr --full-qe guardrails; project trust and runtime verification required.",
+  "hooks": {
+    "SessionStart": [{"hooks": [{"type": "command", "command": "node \"$(git rev-parse --show-toplevel)/scripts/process-guard.mjs\" hook", "timeout": 30, "statusMessage": "Проверка локального full-QE процесса"}]}],
+    "PreToolUse": [{"hooks": [{"type": "command", "command": "node \"$(git rev-parse --show-toplevel)/scripts/process-guard.mjs\" hook", "timeout": 30, "statusMessage": "Проверка baseline и допуска к поставке"}]}],
+    "Stop": [{"hooks": [{"type": "command", "command": "node \"$(git rev-parse --show-toplevel)/scripts/process-guard.mjs\" hook", "timeout": 30, "statusMessage": "Проверка завершения активного продуктового изменения"}]}]
+  }
+}

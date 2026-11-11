@@ -21,7 +21,10 @@ npm run openspec -- --version
 Установлены: harness-cli 0.8.58, skills-feature-adr 1.5.25, OpenSpec 1.15.0.
 `process:install` применяет два patch из Clipmkr: Next.js `[slug]`/`[...key]` в target
 путях плана и name-check исходников обычного приложения. Затем `dz init --target codex`
-устанавливает 9 навыков в `.agents/skills/`, без глобальных hooks и MCP-интеграций.
+устанавливает 9 базовых навыков в `.agents/skills/`. Флаги `--no-hooks --no-integrations`
+относятся только к генератору harness: затем `install-qe-skills.mjs` подключает полные
+QE-протоколы из закреплённого upstream HEAD. Native Codex hooks и локальный MCP заданы
+в `.codex/`; глобальные настройки не меняются. Режим продуктовых работ — `--full-qe`.
 Повторный запуск допускается; после npm ci patches применяются заново.
 Старые `/next`, `/plan`, `/go`, `/feature` родительского монорепозитория не установлены.
 
@@ -68,8 +71,34 @@ npm run build
 Не запускать production-миграции ради проверки переноса. Для нового кода выполнять
 обязательные проверки по риску; ошибки и skips не превращать в успешную приёмку.
 
-В этом переносе выполнены только установка процесса и проверки репозитория/инструментов.
-Приложение не развёрнуто; `.env`, БД, медиа, секреты и DNS не перенесены.
+На первом этапе переноса выполнялись только проверки репозитория/инструментов.
+Позже поднят HTTPS-тестовый стенд sslip.io и подключён Cloud.ru S3; старые утверждения
+документов о неразвёрнутом приложении относятся к первому этапу, не к текущему runtime.
+
+## Полный QE и строгая приёмка UI
+
+Источники/маршрутизация — `.agents/agentic-qe/PROOFWALL-INTEGRATION.md`, полный план —
+`features/proofo-ui/06_team_execution_plan.md`. Базовые команды:
+
+```bash
+npm run process:install
+npm run process:check
+npm run process:test
+npm run qe:smoke
+bash scripts/codex-project.sh
+```
+
+Launcher сначала проверяет локальную конфигурацию и целостность установленного
+feature-adr/Direct routing; использует документированный
+per-invocation automation режим hook trust для проверенных локальных definitions,
+без изменения глобального trust store. Обычный CLI допускает review/trust через `/hooks`.
+Старый root-сеанс не получает проектные hooks/MCP задним числом. Подготовленная
+конфигурация, проверка handler напрямую и наблюдённый native event — разные факты.
+
+`process:delivery` по умолчанию отказывает: UI stage=planned, receipt отсутствует.
+CI проверяет процесс/негативные тесты; фактические visual/E2E jobs добавляются до
+реализации UI. Protected branch и отдельный deploy runner пока не установлены:
+локальные JSON/hook scripts не являются защитой от администратора root.
 
 ## Что адаптировано, а что осталось историей
 
