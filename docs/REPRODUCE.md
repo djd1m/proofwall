@@ -1,5 +1,15 @@
 # Как повторить Proofwall (N1) с нуля
 
+> Хранилище обновлено 11.11.2026: на новом VPS используется существующий PRIVATE
+> Cloud.ru S3 bucket `proofwall`, endpoint `https://s3.cloud.ru`, region `ru-central-1`,
+> `S3_FORCE_PATH_STYLE=false`. `S3_BUCKET` и `S3_PHOTO_BUCKET` равны `proofwall`.
+> Ключи владелец вводит только в `/home/proofwall/.env` (600, ignored):
+> `S3_ACCESS_KEY=<tenant_id>:<key_id>` и `S3_SECRET_KEY=<Key Secret>`.
+> Инструкция текущего стенда: [vps-sslip](operations/vps-sslip.md).
+> Старые команды MinIO ниже относятся к локальному профилю `--profile local-storage`,
+> для Cloud.ru бакет не создаётся и ACL/политики не меняются.
+
+
 > Обновление 11.11.2026: проект выделен в `djd1m/proofwall`, каталог `/home/proofwall`.
 > Актуальный процесс — [workflow](development/workflow.md), обязательные инструкции — [AGENTS.md](../AGENTS.md).
 > Старые отчёты и адреса стендов ниже описывают исходный проект; на этом VPS сервисы не запускались.

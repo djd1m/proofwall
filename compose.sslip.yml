@@ -1,0 +1,34 @@
+# Самостоятельный стенд: порт 80 занят VPN, TLS challenge работает через 443.
+name: proofwall
+services:
+  web:
+    networks: !override [default, database, storage]
+    depends_on: !override
+      postgres:
+        condition: service_healthy
+    environment:
+      NEXT_TELEMETRY_DISABLED: "1"
+    mem_limit: 1g
+  worker:
+    depends_on: !override
+      postgres:
+        condition: service_healthy
+    mem_limit: 256m
+  transcribe:
+    profiles: [video-transcription]
+  caddy:
+    ports: !override
+      - "${HTTPS_PORT:-443}:443"
+    environment:
+      APP_DOMAIN: ${APP_DOMAIN:?Set APP_DOMAIN in .env}
+    volumes: !override
+      - ./deploy/sslip/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+    mem_limit: 256m
+  postgres:
+    mem_limit: 512m
+  minio:
+    profiles: [local-storage]
+    mem_limit: 512m
+networks:
+  talk-ai-public: !reset null

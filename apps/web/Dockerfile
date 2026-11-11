@@ -5,7 +5,7 @@
 # Контекст сборки — КОРЕНЬ монорепо (docker-compose.yml: context: .), потому что
 # package-lock.json в npm workspaces один и лежит только там.
 
-FROM node:22-alpine AS deps
+FROM node:22-bookworm-slim AS deps
 WORKDIR /app
 # Манифесты ВСЕХ рабочих пространств, а не только корневой: npm ci сверяет весь
 # lock-tree целиком и без них падает («Exit handler never called!» — см. D-008).
@@ -19,7 +19,7 @@ COPY packages/agent-payments/package.json ./packages/agent-payments/
 COPY services/agent-api/package.json ./services/agent-api/
 RUN npm ci --omit=dev
 
-FROM node:22-alpine AS build
+FROM node:22-bookworm-slim AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
 COPY apps/web/package.json        apps/web/package.json
@@ -34,11 +34,11 @@ COPY . .
 # Бандл виджета собирается здесь и кладётся в public/ с content-hash в имени (ADR-007).
 RUN npm run build:widget && npm run build --workspace apps/web
 
-FROM node:22-alpine AS runtime
+FROM node:22-bookworm-slim AS runtime
 WORKDIR /app
 ENV NODE_ENV=production
 # Не root: контейнер смотрит наружу через Caddy.
-RUN addgroup -S app && adduser -S app -G app
+RUN groupadd --system app && useradd --system --gid app --create-home app
 COPY --from=deps  /app/node_modules          ./node_modules
 # Next собирает в apps/web/.next, а не в корень контекста — путь копирования обязан
 # совпадать с рабочим пространством, иначе рантайм стартует на пустоте.

@@ -12,7 +12,7 @@
 # без lockfile падает. Соответствующий build.context задан в docker-compose.yml.
 
 # --- сборка TypeScript -> dist/ ---
-FROM node:22-alpine AS build
+FROM node:22-bookworm-slim AS build
 WORKDIR /app
 COPY package.json package-lock.json tsconfig.base.json ./
 # npm ci сверяет ВЕСЬ lock-tree, а не только целевой workspace: без манифестов
@@ -30,7 +30,7 @@ COPY services/worker ./services/worker
 RUN npm run build --workspace @proofwall/worker
 
 # --- prod-зависимости отдельным слоем ---
-FROM node:22-alpine AS deps
+FROM node:22-bookworm-slim AS deps
 WORKDIR /app
 COPY package.json package-lock.json ./
 COPY apps/widget/package.json       ./apps/widget/
@@ -42,10 +42,10 @@ COPY packages/agent-payments/package.json ./packages/agent-payments/
 COPY services/agent-api/package.json ./services/agent-api/
 RUN npm ci --omit=dev --workspace @proofwall/worker --include-workspace-root
 
-FROM node:22-alpine AS runtime
+FROM node:22-bookworm-slim AS runtime
 WORKDIR /app
 ENV NODE_ENV=production
-RUN addgroup -S app && adduser -S app -G app
+RUN groupadd --system app && useradd --system --gid app --create-home app
 COPY --from=deps  /app/node_modules             ./node_modules
 COPY --from=build /app/services/worker/dist     ./dist
 COPY services/worker/package.json               ./package.json

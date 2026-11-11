@@ -28,3 +28,9 @@ apps/web/public/widget-manifest.json
 .agents/skills/
 .dz/
 .reference/
+
+# Editor swap/backup files may contain local secrets
+*.swp
+*.swo
+*~
+features/**/.fa-state/*.lock

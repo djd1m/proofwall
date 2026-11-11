@@ -19,7 +19,9 @@ export function createS3Client(config: WorkerConfig): S3Client {
   return new S3Client({
     endpoint: config.s3Endpoint,
     region: config.s3Region,
-    forcePathStyle: true, // обязательно для MinIO — виртуальный hosted-style не работает
+    forcePathStyle: config.s3ForcePathStyle ?? true,
+    requestChecksumCalculation: "WHEN_REQUIRED",
+    responseChecksumValidation: "WHEN_REQUIRED",
     credentials: {
       accessKeyId: config.s3AccessKey,
       secretAccessKey: config.s3SecretKey,

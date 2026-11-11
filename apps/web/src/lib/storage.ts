@@ -1,7 +1,7 @@
 // Загрузка видео в объектное хранилище (Architecture §5, Pseudocode §1.1
 // `uploadToStorage(bucket = "testimonial-videos", file = request.video)`).
 //
-// MinIO — S3-совместимое API, поэтому AWS SDK v3 с forcePathStyle. Тот же приём, что уже
+// Cloud.ru и MinIO используют S3 API; адресация выбирается окружением. Тот же SDK, что уже
 // применён в services/worker/src/storage.ts; клиент здесь отдельный, потому что apps/web
 // ПИШЕТ объекты, а воркер только подписывает GET-ссылки.
 
@@ -11,10 +11,9 @@ import { GetObjectCommand, PutObjectCommand, S3Client } from '@aws-sdk/client-s3
 export const VIDEO_BUCKET = process.env.S3_BUCKET ?? 'testimonial-videos';
 
 /**
- * Фото лежат в ОТДЕЛЬНОМ бакете, а не рядом с видео. Причина не в аккуратности:
- * у них разный режим доступа. Видео отдаётся только по presigned-ссылке в момент
- * обработки, фото — публично, через наш роут, каждому посетителю витрины. Смешав их
- * в одном бакете, однажды получишь общую политику на оба.
+ * Бакет фото может совпадать с VIDEO_BUCKET, если весь бакет остаётся приватным.
+ * Фото отдаёт только наш проверяющий маршрут, видео — подписанные GET-ссылки.
+ * Разрешения public-read и изменение bucket policy приложению не требуются.
  */
 export const PHOTO_BUCKET = process.env.S3_PHOTO_BUCKET ?? 'testimonial-photos';
 
@@ -35,7 +34,9 @@ export function s3Client(): S3Client {
   cached = new S3Client({
     endpoint,
     region: process.env.S3_REGION ?? 'us-east-1',
-    forcePathStyle: true, // обязательно для MinIO — hosted-style адресация не работает
+    forcePathStyle: process.env.S3_FORCE_PATH_STYLE !== 'false', // legacy MinIO: true; Cloud.ru: false
+    requestChecksumCalculation: 'WHEN_REQUIRED',
+    responseChecksumValidation: 'WHEN_REQUIRED',
     credentials: {
       accessKeyId: process.env.S3_ACCESS_KEY ?? '',
       secretAccessKey: process.env.S3_SECRET_KEY ?? '',

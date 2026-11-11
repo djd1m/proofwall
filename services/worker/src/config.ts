@@ -25,6 +25,8 @@ export interface WorkerConfig {
   s3SecretKey: string;
   /** MinIO игнорирует регион, но AWS SDK v3 требует непустое значение. */
   s3Region: string;
+  /** Отсутствие поля сохраняет path-style для существующих callers. */
+  s3ForcePathStyle?: boolean;
 
   /** Architecture §7: канон http://transcribe:7331 внутри docker-сети. */
   transcribeServiceUrl: string;
@@ -52,6 +54,7 @@ export function loadConfig(env: NodeJS.ProcessEnv = process.env): WorkerConfig {
     s3AccessKey: requireEnv(env, "S3_ACCESS_KEY"),
     s3SecretKey: requireEnv(env, "S3_SECRET_KEY"),
     s3Region: env.S3_REGION ?? "us-east-1",
+    s3ForcePathStyle: env.S3_FORCE_PATH_STYLE !== "false",
 
     transcribeServiceUrl: requireEnv(env, "TRANSCRIBE_SERVICE_URL"),
 

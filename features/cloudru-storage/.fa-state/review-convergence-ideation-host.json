@@ -1,0 +1,44 @@
+{
+  "schema": "fa-review-convergence-1",
+  "phase": "ideation",
+  "reviewers": [
+    {
+      "id": "qcsd-quality",
+      "family": "codex"
+    },
+    {
+      "id": "qcsd-risk",
+      "family": "codex"
+    },
+    {
+      "id": "qcsd-testability",
+      "family": "codex"
+    }
+  ],
+  "snapshot": {
+    "nonce": "427cc982-68c2-4e34-b668-92bdd2838e7a",
+    "revision": "b518eb1fa5691df4de798c5a8a1cc140aa69572871ef260d62dae4ef052aba77",
+    "manifest": [
+      {
+        "path": "features/cloudru-storage/00_complexity_assessment.md",
+        "digest": "84d513b312495cf4b89110a722f862675e3de61d783753642a73b5f071d3b3f6"
+      },
+      {
+        "path": "features/cloudru-storage/01_requirements.md",
+        "digest": "7aa98ac8d4f8d3fd3462a7812494ff02ce7fbd648395381a61af2f3a57b4af87"
+      },
+      {
+        "path": "features/cloudru-storage/03_adr/001-use-cloudru-private-bucket.md",
+        "digest": "119b8edf828b12693353aa43ad5e2cdd013cabc569f78328de7570a7f5d7d233"
+      },
+      {
+        "path": "features/cloudru-storage/05_architecture.md",
+        "digest": "da38d785c1de3715aa181812064d643ae5682cf621a9f87a3d4f07be895daf72"
+      }
+    ]
+  },
+  "conditions": [],
+  "reviewSeen": true,
+  "rework": false,
+  "changedPaths": []
+}

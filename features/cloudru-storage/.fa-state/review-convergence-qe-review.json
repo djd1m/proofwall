@@ -1,0 +1,43 @@
+{
+  "schema": "fa-review-convergence-1",
+  "phase": "qe",
+  "nonce": "9d8de685-6ef4-4628-abae-fb55fbea7ad3",
+  "revision": "9d4fc7829ca6d43d0856f3ec8a557e385c20978d8d572c965f8e8e39f1e7b797",
+  "author": {
+    "addressed": [],
+    "changedScope": [
+      ".gitignore",
+      ".dockerignore",
+      "..env.swp"
+    ],
+    "classification": "structural",
+    "delta": "Исключены файлы редактора *.swp/*.swo/*~ из Git и Docker context; .fa-state/*.lock исключены из Git. Причина — появившийся Vim swap при редактировании пользователем .env. Содержимое swap не читалось и не удалялось. Прикладной код с момента первого QE не менялся.",
+    "evidence": "git check-ignore ..env.swp подтвердил исключение; .dockerignore содержит те же маски. Повторный host prepare измерил финальные safeguards; .env имеет mode600. Код/байты storage и тестов не менялись.",
+    "newRisks": {
+      "assessment": "Новых рисков реализации не выявлено; live Cloud.ru остаётся NOT VERIFIED без ключей владельца.",
+      "evidence": "Менялись только ignore safeguards. Новый scope не добавляет сетевых вызовов или прав.",
+      "conditions": []
+    }
+  },
+  "reviews": [
+    {
+      "reviewer": "qe-primary",
+      "family": "codex",
+      "independent": true,
+      "verdict": "clean",
+      "conditions": [],
+      "verifications": [],
+      "newRisks": {
+        "assessment": "После исходного узкого Cloud.ru review и focused проверки защитных ignore-правил новых рисков, требующих исправлений, не выявлено. Реальный Cloud.ru и медиа-CJM остаются NOT VERIFIED.",
+        "evidence": "Независимо прочитаны требования/OpenSpec, ADR, архитектура, план, git diff, три storage/config файла, два новых теста и неизменённый photo route. Проверенные файлы сверены с digest snapshot. Targeted web 5/5 и worker 3/3 PASS с env -i и фиктивными ключами; Compose --env-file /dev/null подтвердил region/style обоих сервисов и optional MinIO. Полный объём и ограничения: features/cloudru-storage/08_qe_report.md. Focused review: git diff .gitignore/.dockerignore содержит только защитные исключения *.swp, *.swo, *~ и Git lock mask. git check-ignore -v подтвердил ..env.swp, synthetic review.swo/review~ и feature .fa-state lock. Настоящий Docker legacy build из отдельного synthetic context с копией .dockerignore: scratch image содержит keep.txt и не содержит synthetic swap/swo/backup; контейнер не запускался, временные image/container удалены. Семь digest (оба ignore, три storage/config, два теста) совпали с текущим host manifest; storage/test digest также неизменны от исходного QE. Содержимое реального .env/swap не читалось. Author delta и newRisks независимо проверены; новых рисков не выявлено.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": true,
+      "deltaVerification": {
+        "classification": "structural",
+        "evidence": "Focused review: git diff .gitignore/.dockerignore содержит только защитные исключения *.swp, *.swo, *~ и Git lock mask. git check-ignore -v подтвердил ..env.swp, synthetic review.swo/review~ и feature .fa-state lock. Настоящий Docker legacy build из отдельного synthetic context с копией .dockerignore: scratch image содержит keep.txt и не содержит synthetic swap/swo/backup; контейнер не запускался, временные image/container удалены. Семь digest (оба ignore, три storage/config, два теста) совпали с текущим host manifest; storage/test digest также неизменны от исходного QE. Содержимое реального .env/swap не читалось. Author delta и newRisks независимо проверены; новых рисков не выявлено.",
+        "implementationVerified": true
+      }
+    }
+  ]
+}

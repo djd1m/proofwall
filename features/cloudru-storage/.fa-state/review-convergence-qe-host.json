@@ -1,0 +1,128 @@
+{
+  "schema": "fa-review-convergence-1",
+  "phase": "qe",
+  "reviewers": [
+    {
+      "id": "qe-primary",
+      "family": "codex"
+    }
+  ],
+  "snapshot": {
+    "nonce": "9d8de685-6ef4-4628-abae-fb55fbea7ad3",
+    "revision": "9d4fc7829ca6d43d0856f3ec8a557e385c20978d8d572c965f8e8e39f1e7b797",
+    "manifest": [
+      {
+        "path": ".dockerignore",
+        "digest": "b09e856c7f79118ca2283489bde4fc5a7d3aa98675d2da00ffe31595707601a1"
+      },
+      {
+        "path": ".env.example",
+        "digest": "53f4c82d6fe6210aa683617b7040801349947709568261c8012eb5cfdeba2a6e"
+      },
+      {
+        "path": ".gitignore",
+        "digest": "d5c39dd950a40eb7e7dcef86a258f10806ffc951505676e4d8455d3d4ed6373f"
+      },
+      {
+        "path": "apps/web/Dockerfile",
+        "digest": "a7a5cce93f086d45f2f1a3c1d976f53f1f33817aaf601eced2fc5f91bed7b81e"
+      },
+      {
+        "path": "apps/web/src/lib/storage.ts",
+        "digest": "e28891a5578383e33b3c0594eabdc6305daf5c6dd1a7bc1dcbc9143e17e8c20c"
+      },
+      {
+        "path": "apps/web/tests/storage-cloudru.test.ts",
+        "digest": "456eae5bfb25e4add2b7aeef8151963d3f64bbda3b2ceb14ae1abe41e9a23fe9"
+      },
+      {
+        "path": "compose.sslip.yml",
+        "digest": "fd7f37f613bfa62ac8eebf9f5fdee8df4e260cc4081960b8b16c20961d5954f9"
+      },
+      {
+        "path": "deploy/minio/Dockerfile",
+        "digest": null
+      },
+      {
+        "path": "deploy/sslip/Caddyfile",
+        "digest": "642f4531f31973e74ff27b66660511e8279afc47d8155418832a9a25949be9c5"
+      },
+      {
+        "path": "docker-compose.yml",
+        "digest": "eec332b5bccc5c68b5ec79181a414262264d7b20af43a1909a8c1ef4c3efd575"
+      },
+      {
+        "path": "docs/REPRODUCE.md",
+        "digest": "284d9a128d8c02adf3d78994054a95ef8d8b15c6d816e255afcb33e73719bb55"
+      },
+      {
+        "path": "docs/operations/vps-sslip.md",
+        "digest": "a9dd53cb007a5dbf814ea208e153a356181fc7f6f8f35b41ef9fc7cd500a9ce6"
+      },
+      {
+        "path": "features/cloudru-storage/00_complexity_assessment.md",
+        "digest": "84d513b312495cf4b89110a722f862675e3de61d783753642a73b5f071d3b3f6"
+      },
+      {
+        "path": "features/cloudru-storage/01_requirements.md",
+        "digest": "7aa98ac8d4f8d3fd3462a7812494ff02ce7fbd648395381a61af2f3a57b4af87"
+      },
+      {
+        "path": "features/cloudru-storage/03.5_ideation_report.md",
+        "digest": "8563c657a4ffd4f84bf598ae76c55c4d093f2e7e628fc0057cc683c4c364f7df"
+      },
+      {
+        "path": "features/cloudru-storage/03_adr/001-use-cloudru-private-bucket.md",
+        "digest": "119b8edf828b12693353aa43ad5e2cdd013cabc569f78328de7570a7f5d7d233"
+      },
+      {
+        "path": "features/cloudru-storage/05_architecture.md",
+        "digest": "da38d785c1de3715aa181812064d643ae5682cf621a9f87a3d4f07be895daf72"
+      },
+      {
+        "path": "features/cloudru-storage/06_implementation_plan.md",
+        "digest": "216637ea407c4b46bc3f64e1cb5eef3842fae444a004e3a247f088240e0e46b4"
+      },
+      {
+        "path": "openspec/changes/cloudru-storage/proposal.md",
+        "digest": "8255cbc281a861d5c0e18da0076a35506a672a354c91310c03e1a4f9180c2724"
+      },
+      {
+        "path": "openspec/changes/cloudru-storage/specs/object-storage/spec.md",
+        "digest": "58c63abcd10612d158c884ea8d13922b7289f7fad25ecc11fe95afb4f9f876a9"
+      },
+      {
+        "path": "openspec/changes/cloudru-storage/tasks.md",
+        "digest": "36907326494890a86fe2dbfb02079e4ec48d03e9a3fa1d2592fcd9030a1cb8fa"
+      },
+      {
+        "path": "scripts/migrate-local.py",
+        "digest": "ddb92b08d98ad2c66144b99bd8315030f13cd3526915d082d48ad53ef51c64ad"
+      },
+      {
+        "path": "scripts/stand.sh",
+        "digest": "8f38d255fad8eb95ad3cdf6274eac3c3deae1a52c05bc30fd8bf3a1657b316fa"
+      },
+      {
+        "path": "services/worker/Dockerfile",
+        "digest": "752818413283a46cd825dac5ea1653e61a0c98098cdd98c3e977bb1a5b7864ae"
+      },
+      {
+        "path": "services/worker/src/config.ts",
+        "digest": "f7ac315888f7c4b7416360b4084c43231d90f66ef0c2e10c81b8a8838075ed75"
+      },
+      {
+        "path": "services/worker/src/storage.ts",
+        "digest": "807fc051c495b7a8e873850fd18dd7c7054d267cc1a47a6fcf41d47545342ebd"
+      },
+      {
+        "path": "services/worker/tests/storage-cloudru.test.ts",
+        "digest": "335ea27995fe323ae01423effb4e6d0e1f59ca230819d69cd7b41907db5fc10c"
+      }
+    ]
+  },
+  "conditions": [],
+  "reviewSeen": true,
+  "rework": true,
+  "changedPaths": []
+}

@@ -34,3 +34,8 @@ harness-forge
 features
 openspec
 patches
+
+# Editor backups may contain .env credentials
+*.swp
+*.swo
+*~
