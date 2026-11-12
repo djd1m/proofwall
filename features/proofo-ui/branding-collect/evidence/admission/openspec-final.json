@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "exitCode": 0,
+  "command": "npm run openspec -- validate proofo-branding-collect --strict",
+  "stdout": "\n> proofwall@0.1.0 openspec\n> openspec validate proofo-branding-collect --strict\n\nChange 'proofo-branding-collect' is valid\n"
+}

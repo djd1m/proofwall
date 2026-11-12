@@ -1,0 +1,85 @@
+/* Production form geometry reuses the approved cabinet design. */
+@font-face{font-family:display;src:url(/proofo/display.woff2);font-weight:600 800;font-display:swap}
+@font-face{font-family:body;src:url(/proofo/body.woff2);font-weight:400 700;font-display:swap}
+body:has(.proofo-forms){margin:0;padding:0;min-height:0;background:#f2ede3;background-image:radial-gradient(circle at 1px 1px,rgba(23,20,15,.045) 1px,transparent 0),radial-gradient(circle at 1px 1px,rgba(23,20,15,.03) 1px,transparent 0);background-size:22px 22px;background-position:0 0,11px 11px;background-attachment:scroll;color:#17140f;font:16px/1.55 body,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.proofo-forms{--ink:#17140f;--muted:#5c554a;--line:#ddd3c2;font:16px/1.55 body,Arial,sans-serif;color:var(--ink);display:flow-root}
+.proofo-forms *{box-sizing:border-box}
+.proofo-forms h1,.proofo-forms h2,.proofo-forms h3,.proofo-forms .brand{font-family:display,Arial,sans-serif;font-weight:800;letter-spacing:-.015em;line-height:1.15;margin:0;color:var(--ink)}
+.proofo-forms p{margin:0}
+.proofo-forms a{color:inherit;text-decoration:none}
+.proofo-forms a:hover{text-decoration:underline}
+.proofo-forms button,.proofo-forms input{font:inherit}
+.proofo-forms button,.proofo-forms a,.proofo-forms input{touch-action:manipulation}
+.proofo-forms button{cursor:pointer}
+.proofo-forms input{width:100%;padding:12px 14px;border:1px solid var(--field-border);border-radius:10px;background:#fff;font-size:15px;color:var(--ink)}
+.proofo-forms fieldset{display:contents;border:0;padding:0;margin:0;min-width:0}
+.proofo-forms .brand{display:inline-flex;align-items:center;gap:10px;font-size:21px;white-space:nowrap;margin-bottom:0}
+.proofo-forms .mark{display:grid;place-items:center;background:var(--accent);width:26px;height:26px;border-radius:7px;color:var(--on-accent);font:14px body;transform:rotate(-6deg)}
+.proofo-forms .cab-shell{max-width:1184px;margin:56px auto 160px;padding:0 32px}
+.proofo-forms .cab-top{display:flex;align-items:center;gap:20px;margin:0 0 32px}
+.proofo-forms .cab-top .brand{font-size:23px}
+.proofo-forms .cab-top .mark{box-shadow:0 7px 14px #b34cc44d}
+.proofo-forms .cab-back{display:inline-block;border:1px solid var(--field-border);border-radius:999px;padding:6px 14px;background:var(--card);font-size:14px;font-weight:700}
+.proofo-forms .cab-paper{background:var(--card);border-radius:32px;padding:48px;box-shadow:0 28px 34px #17140f33}
+.proofo-forms .cab-title{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;border-bottom:1px solid var(--line);padding-bottom:26px;margin-bottom:28px}
+.proofo-forms .cab-title h1{font-size:44px;overflow-wrap:anywhere}
+.proofo-forms .cab-eyebrow{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent-text);margin:0 0 3px}
+.proofo-forms .cab-paper p{font-size:14px;color:var(--muted);margin-bottom:12px}
+.proofo-forms .cab-paper .cab-eyebrow{font-size:12px;color:var(--accent-text);margin-bottom:6px}
+.proofo-forms .cab-paper a.cab-accent,.proofo-forms .cab-accent{color:var(--accent-text)}
+.proofo-forms .cab-button{border:1px solid var(--field-border);background:var(--card);border-radius:999px;padding:12px 24px;font-size:14px;font-weight:700;color:var(--ink);box-shadow:0 2px 2px #17140f12;line-height:1.4}
+.proofo-forms .cab-button:disabled,.proofo-forms fieldset:disabled .cab-button{cursor:default;opacity:.35;box-shadow:none}
+.proofo-forms .cab-primary{background:var(--accent);color:var(--on-accent);border-color:var(--accent-text);box-shadow:0 7px 15px #a23b9d4a}
+.proofo-forms .cab-wide{display:block;width:100%}
+.proofo-forms .cab-paper p.cab-small,.proofo-forms .cab-small{font-size:13px;line-height:1.55;color:var(--muted);margin:12px 0}
+.proofo-forms .cab-field{display:grid;gap:8px;margin:24px 0 18px;font-size:14px;font-weight:700;min-width:0}
+.proofo-forms .cab-field input,.proofo-forms .cab-field textarea,.proofo-forms .cab-field select{font:16px/1.45 body,sans-serif;width:100%;min-width:0;color:var(--ink);border:1px solid var(--field-border);border-radius:16px;padding:13px 16px;background:var(--field-fill)}
+.proofo-forms .cab-field textarea{resize:vertical;min-height:110px}
+.proofo-forms .cab-field input[type=file]{border:0;background:transparent;border-radius:0;padding:0;font-size:13px}
+.proofo-forms .cab-field small{font-size:13px;line-height:1.5}
+.proofo-forms .cab-check{display:flex;align-items:flex-start;gap:12px;font-size:14px;font-weight:700;margin:24px 0}
+.proofo-forms .cab-check input{width:16px;flex-shrink:0;margin-top:4px}
+.proofo-forms .cab-color{display:flex;gap:12px}
+.proofo-forms .cab-color input[type=color]{width:40px;height:42px;padding:4px;border-radius:8px;align-self:center;flex-shrink:0}
+.proofo-forms .cab-color input[type=text]{flex:1}
+.proofo-forms .cab-narrow{max-width:760px}
+.proofo-forms .cab-narrow .cab-paper{padding:48px}
+.proofo-forms .cab-narrow .cab-title{border:0;margin-bottom:8px;padding-bottom:0}
+.proofo-forms .cab-narrow h1{font-size:44px}
+.proofo-forms .cab-narrow fieldset>.cab-small{margin-top:-8px}
+.proofo-forms .cab-collection{max-width:560px;margin-top:48px}
+.proofo-forms .cab-collection .cab-paper{padding:48px}
+.proofo-forms .cab-collection h1{font-size:44px;color:var(--accent-text);line-height:1.05;margin-bottom:16px;overflow-wrap:anywhere}
+.proofo-forms .cab-paper p.cab-collect-intro{font-size:16px;white-space:normal}
+.proofo-forms .cab-collect-tabs{display:flex;border-radius:999px;background:#ece6da;padding:5px;margin:24px 0}
+.proofo-forms .cab-collect-tabs a{flex:1;text-align:center;font-size:13px;font-weight:700;padding:10px 7px;color:var(--muted);border-radius:999px}
+.proofo-forms .cab-collect-tabs a[aria-current]{background:var(--card);color:var(--ink);box-shadow:0 2px 3px #17140f18}
+.proofo-forms .cab-collection .cab-field{margin-top:20px}
+.proofo-forms .cab-consent{font-size:11px!important}
+.proofo-forms .cab-counter{text-align:right;font-weight:400;color:var(--muted)}
+.proofo-forms .cab-attribution{text-align:center;margin-top:30px;font-size:14px;color:var(--muted)}
+.proofo-forms .cab-shell [hidden]{display:none!important}
+.proofo-forms .cab-paper .status{margin:14px 0 0;color:#42614b;font-size:13px}
+.proofo-forms .cab-shell form{min-width:0}
+.proofo-forms :focus-visible{outline:3px solid #17140f;outline-offset:4px;box-shadow:0 0 0 4px #fffdf8}
+.proofo-forms .cab-paper .cab-error,.proofo-forms .cab-error-summary{color:#a32920}
+.proofo-forms .cab-error-summary{border:1px solid #a32920;padding:12px;border-radius:12px}
+.proofo-forms .cab-error-summary ul:empty{display:none}
+.proofo-forms .cab-thanks{color:#42614b}
+.proofo-forms .cab-photo-preview{display:flex;flex-wrap:wrap;align-items:center;gap:12px;min-width:0}
+.proofo-forms .cab-photo-preview img,.proofo-forms .cab-logo{max-width:100%;max-height:100px;object-fit:contain}
+.proofo-forms .cab-photo-preview span{min-width:0;overflow-wrap:anywhere}
+.proofo-forms .cab-paper,.proofo-forms .status,.proofo-forms .cab-thanks{overflow-wrap:anywhere}
+@media(max-width:700px){
+ .proofo-forms .cab-shell{padding:0 16px;margin-top:28px;margin-bottom:80px}
+ .proofo-forms .cab-top{margin-bottom:24px;gap:14px}
+ .proofo-forms .cab-paper,.proofo-forms .cab-narrow .cab-paper{padding:26px 22px;border-radius:25px}
+ .proofo-forms .cab-title{gap:12px;padding-bottom:22px;margin-bottom:22px}
+ .proofo-forms .cab-title h1,.proofo-forms .cab-narrow h1{font-size:30px}
+ .proofo-forms .cab-collection{max-width:496px;margin-top:28px}
+ .proofo-forms .cab-collection .cab-paper{padding:30px 24px}
+ .proofo-forms .cab-collection h1{font-size:38px}
+ .proofo-forms .cab-collect-tabs a{font-size:11px;padding:10px 4px}
+ .proofo-forms .cab-paper p.cab-collect-intro{font-size:14px}
+ .proofo-forms .cab-color input[type=text]{width:0}
+}

@@ -116,6 +116,7 @@ export default async function DashboardPage({ params, searchParams }: Params) {
 
         <h2>Ссылки</h2>
         <div className="links">
+          <p><a href={`/dashboard/${encodeURIComponent(project.slug)}/branding`}>Оформление стены →</a></p>
           <LinkRow label="Форма сбора" hint="дайте её клиенту" href={urls.submission_form} />
           <LinkRow label="Стена любви" hint="публичная страница" href={urls.wall_of_love} />
         </div>

@@ -1,0 +1,28 @@
+{
+  "status": "staged-not-published",
+  "artifact": "/opt/proofwall-ui-preview/artifacts/PW39fxUksRgbTdL8t4TeO",
+  "buildId": "PW39fxUksRgbTdL8t4TeO",
+  "sourceHashesMatched": 30,
+  "symlinksContained": true,
+  "symlinkCount": 47,
+  "nftPathsContainedAndPresent": true,
+  "nftPathCount": 5507,
+  "nftDirectoryAliasReferences": 98,
+  "nftFileBytesMatched": 5409,
+  "packageLocalAliasesRecreated": [
+    "apps/web/.next/server/app/partner/dashboard/../../../../../node_modules/@node-rs/argon2",
+    "apps/web/.next/server/app/api/testimonials/../../../../../node_modules/@aws-sdk/client-s3"
+  ],
+  "externalPackageBytesMatchedToRoot": [
+    "@node-rs/argon2",
+    "@aws-sdk/client-s3"
+  ],
+  "excludedExternalDevelopmentLink": "node_modules/@vitest/coverage-v8",
+  "candidateCacheOwner": [
+    20001,
+    988
+  ],
+  "envOrPrivateFilesCopied": false,
+  "publicServiceUnchanged": true,
+  "scope": "Initial code candidate; independent findings require source repair and rebuild before publication"
+}

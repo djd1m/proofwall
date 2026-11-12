@@ -1,0 +1,586 @@
+{
+  "kind": "application-visual-comparison",
+  "baseline": "/tmp/proofwall-branding-collect/features/proofo-ui/reference/dashboard-v3",
+  "environment": {
+    "node": "v22.23.4",
+    "platform": "linux",
+    "arch": "x64",
+    "kernel": "6.8.0-138-generic",
+    "osRelease": "PRETTY_NAME=\"Ubuntu 24.04 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+    "chromiumExecutable": "/root/.cache/puppeteer/chrome/linux-148.0.7778.97/chrome-linux64/chrome",
+    "chromiumSha256": "7f5c687c69c06c2b49f80755087b0575fa67633f359b0cdbe2ee40c33235fc98",
+    "tooling": {
+      "playwright": "1.65.0",
+      "pixelmatch": "8.0.0",
+      "pngjs": "7.0.0"
+    }
+  },
+  "url": "http://127.0.0.1:33189/branding.html",
+  "cases": [
+    {
+      "id": "branding/1440x900",
+      "mutation": "none",
+      "expected": "identical",
+      "passed": true,
+      "checks": {
+        "raster": true,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": true,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 340,
+          "y": 56,
+          "width": 760,
+          "height": 1040.171875
+        },
+        "actual": {
+          "x": 340,
+          "y": 56,
+          "width": 760,
+          "height": 1040.171875
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 760,
+          "height": 1041
+        },
+        "actual": {
+          "width": 760,
+          "height": 1041
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 0,
+        "pixelmatchPixels": 0,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-branding-collect/.secrets/branding-ui-visual-final-branding-visual/branding-1440x900-none"
+    },
+    {
+      "id": "branding/1440x900",
+      "mutation": "font",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 340,
+          "y": 56,
+          "width": 760,
+          "height": 1040.171875
+        },
+        "actual": {
+          "x": 340,
+          "y": 56,
+          "width": 760,
+          "height": 1040.171875
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 760,
+          "height": 1041
+        },
+        "actual": {
+          "width": 760,
+          "height": 1041
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 8025,
+        "pixelmatchPixels": 8025,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-branding-collect/.secrets/branding-ui-visual-final-branding-visual/branding-1440x900-font"
+    },
+    {
+      "id": "branding/1440x900",
+      "mutation": "margin",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 340,
+          "y": 56,
+          "width": 760,
+          "height": 1040.171875
+        },
+        "actual": {
+          "x": 340,
+          "y": 56,
+          "width": 760,
+          "height": 1040.171875
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 760,
+          "height": 1041
+        },
+        "actual": {
+          "width": 760,
+          "height": 1041
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 4963,
+        "pixelmatchPixels": 4963,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-branding-collect/.secrets/branding-ui-visual-final-branding-visual/branding-1440x900-margin"
+    },
+    {
+      "id": "branding/1440x900",
+      "mutation": "color",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 340,
+          "y": 56,
+          "width": 760,
+          "height": 1040.171875
+        },
+        "actual": {
+          "x": 340,
+          "y": 56,
+          "width": 760,
+          "height": 1040.171875
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 760,
+          "height": 1041
+        },
+        "actual": {
+          "width": 760,
+          "height": 1041
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 8380,
+        "pixelmatchPixels": 8380,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-branding-collect/.secrets/branding-ui-visual-final-branding-visual/branding-1440x900-color"
+    },
+    {
+      "id": "branding/390x844",
+      "mutation": "none",
+      "expected": "identical",
+      "passed": true,
+      "checks": {
+        "raster": true,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": true,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1117.96875
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1117.96875
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 390,
+          "height": 1118
+        },
+        "actual": {
+          "width": 390,
+          "height": 1118
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 0,
+        "pixelmatchPixels": 0,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-branding-collect/.secrets/branding-ui-visual-final-branding-visual/branding-390x844-none"
+    },
+    {
+      "id": "branding/390x844",
+      "mutation": "font",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1117.96875
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1117.96875
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 390,
+          "height": 1118
+        },
+        "actual": {
+          "width": 390,
+          "height": 1118
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 4193,
+        "pixelmatchPixels": 4193,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-branding-collect/.secrets/branding-ui-visual-final-branding-visual/branding-390x844-font"
+    },
+    {
+      "id": "branding/390x844",
+      "mutation": "margin",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1117.96875
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1117.96875
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 390,
+          "height": 1118
+        },
+        "actual": {
+          "width": 390,
+          "height": 1118
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 3251,
+        "pixelmatchPixels": 3251,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-branding-collect/.secrets/branding-ui-visual-final-branding-visual/branding-390x844-margin"
+    },
+    {
+      "id": "branding/390x844",
+      "mutation": "color",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1117.96875
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1117.96875
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 390,
+          "height": 1118
+        },
+        "actual": {
+          "width": 390,
+          "height": 1118
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 4154,
+        "pixelmatchPixels": 4154,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-branding-collect/.secrets/branding-ui-visual-final-branding-visual/branding-390x844-color"
+    },
+    {
+      "id": "branding/360x800",
+      "mutation": "none",
+      "expected": "identical",
+      "passed": true,
+      "checks": {
+        "raster": true,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": true,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1139.65625
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1139.65625
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 360,
+          "height": 1140
+        },
+        "actual": {
+          "width": 360,
+          "height": 1140
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 0,
+        "pixelmatchPixels": 0,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-branding-collect/.secrets/branding-ui-visual-final-branding-visual/branding-360x800-none"
+    },
+    {
+      "id": "branding/360x800",
+      "mutation": "font",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1139.65625
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1139.65625
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 360,
+          "height": 1140
+        },
+        "actual": {
+          "width": 360,
+          "height": 1140
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 4193,
+        "pixelmatchPixels": 4193,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-branding-collect/.secrets/branding-ui-visual-final-branding-visual/branding-360x800-font"
+    },
+    {
+      "id": "branding/360x800",
+      "mutation": "margin",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1139.65625
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1139.65625
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 360,
+          "height": 1140
+        },
+        "actual": {
+          "width": 360,
+          "height": 1140
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 3251,
+        "pixelmatchPixels": 3251,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-branding-collect/.secrets/branding-ui-visual-final-branding-visual/branding-360x800-margin"
+    },
+    {
+      "id": "branding/360x800",
+      "mutation": "color",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1139.65625
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1139.65625
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 360,
+          "height": 1140
+        },
+        "actual": {
+          "width": 360,
+          "height": 1140
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 4154,
+        "pixelmatchPixels": 4154,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "/tmp/proofwall-branding-collect/.secrets/branding-ui-visual-final-branding-visual/branding-360x800-color"
+    }
+  ],
+  "passed": true
+}

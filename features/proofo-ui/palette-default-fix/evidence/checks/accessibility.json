@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "exitCode": 0,
+  "command": "flock .secrets/branding-qe-runtime.lock python3 .secrets/palette-fix-checks.py",
+  "sourceHashes": {
+    "apps/web/src/lib/branding.ts": "a511ed93097f653b3fb0b040038a0d9f54413684ed898e435a72acf6cbefce6c",
+    "apps/web/tests/branding.test.ts": "515d67e04bd7788f24490846f5b6b9bbf106df2af9a24483af8d66cbff94cb66",
+    "apps/widget/src/render.ts": "9988c5a94d4de6d21fd9b4de7e6aeb64081c68552c181de6b0660cf57544433a",
+    "apps/widget/src/styles.ts": "2fb32090853851370fe88435d6c0e2235071a5aa01219fa06b82fa105835325e",
+    "apps/widget/tests/widget-branding.test.ts": "ffec65fa7112314cd1bdc6e1dee37cf8bcdd12e63b28cb7b6e7fe56e67b7853c",
+    "tools/visual/branding-collect.e2e.test.mjs": "9f7e799f89a5b339b12c30c964e66d5ae37d3b50c44b08e522262139be0f0fc8"
+  },
+  "scope": "Computed contrast, approved borders, focus/errors/status/reflow; manual AT pending",
+  "evidence": "features/proofo-ui/palette-default-fix/evidence/coordinator-checks.json",
+  "artifacts": [
+    "features/proofo-ui/palette-default-fix/evidence/coordinator-checks.json",
+    "features/proofo-ui/palette-default-fix/08_author_report.md",
+    "features/proofo-ui/palette-default-fix/evidence/operations/published-preview.json"
+  ],
+  "commandScope": "Фактический авторский driver; конкретные наблюдённые child commands/exits/log hashes указаны отдельно.",
+  "childChecks": [
+    {
+      "name": "e2e",
+      "command": "/tmp/proofwall-branding-collect/node_modules/.bin/node scripts/run-branding-collect-preview.mjs e2e",
+      "exitCode": 0,
+      "startedAt": 1794508844.163699,
+      "seconds": 76.857,
+      "log": ".secrets/palette-fix-e2e.log",
+      "logSha256": "d37f2b4ea1488ffe9af7501970fae0fdd876824ceeee952abd9aee2b9cf55036"
+    }
+  ],
+  "publicationEvidence": "Новое отдельное наблюдение public HTTPS green, не часть авторского или независимого local-run counts"
+}

@@ -1,0 +1,35 @@
+sequenceDiagram
+    actor Owner as Владелец
+    participant Project as Existing project page
+    participant UI as Branding page/editor
+    participant API as GET/PATCH branding
+    participant Auth as currentAccountId
+    participant DB as PostgreSQL
+    participant Public as Form / Wall / Widget
+    Owner->>Project: Обычный login и owned project
+    Project-->>Owner: Ссылка Оформление стены
+    Owner->>UI: Открыть /dashboard/slug/branding
+    UI->>Auth: Проверить session
+    Auth-->>UI: accountId
+    UI->>DB: withAccount; SELECT owned active branding
+    Note over UI,DB: app_authenticated + owner GUC на фактическом SELECT
+    DB-->>UI: canonical settings + owned page metadata
+    Owner->>UI: Изменить dirty keys и Save
+    Note over UI: Validate; capture draft/payload; disable все settings + Save
+    UI-->>Owner: Pending status вне fieldset; focus; aria-busy
+    UI->>API: PATCH JSON + browser Origin
+    API->>Auth: Проверить session до чтения body
+    Auth-->>API: accountId
+    Note over API: Origin / type / actual bytes / whitelist validation
+    API->>DB: BEGIN; withAccount; SELECT FOR UPDATE
+    Note over API,DB: app_authenticated + owner GUC на SELECT и UPDATE
+    API->>DB: UPDATE branding = branding || validated patch
+    DB-->>API: RETURNING branding; COMMIT
+    API-->>UI: 200 canonical settings
+    UI-->>Owner: Canonical; dirty очищены; unlock; focus saved status
+    Owner->>Public: Reload public surfaces
+    Public->>DB: Server-resolved active project; approved/project filters
+    DB-->>Public: Settings и разрешённые данные
+    Public-->>Owner: Реальный theme/order/label/accent/logo/heading effect
+    Owner->>UI: Назад в проект
+    UI-->>Owner: Тот же owned project URL

@@ -1,0 +1,141 @@
+{
+  "schema": "fa-review-convergence-1",
+  "phase": "qe",
+  "verdict": "prepared",
+  "revision": "a1a064b3c3781106fb52a7d7359bab22b70055e02627ef3a445b9f49881b58d1",
+  "unresolved": [],
+  "reasons": [],
+  "nonce": "31d69ebf-1478-45fa-91cb-a5bfb9f9f3d8",
+  "manifest": [
+    {
+      "path": "apps/web/src/lib/branding.ts",
+      "digest": "a511ed93097f653b3fb0b040038a0d9f54413684ed898e435a72acf6cbefce6c"
+    },
+    {
+      "path": "apps/web/tests/branding.test.ts",
+      "digest": "515d67e04bd7788f24490846f5b6b9bbf106df2af9a24483af8d66cbff94cb66"
+    },
+    {
+      "path": "apps/widget/src/render.ts",
+      "digest": "9988c5a94d4de6d21fd9b4de7e6aeb64081c68552c181de6b0660cf57544433a"
+    },
+    {
+      "path": "apps/widget/src/styles.ts",
+      "digest": "2fb32090853851370fe88435d6c0e2235071a5aa01219fa06b82fa105835325e"
+    },
+    {
+      "path": "apps/widget/tests/widget-branding.test.ts",
+      "digest": "ffec65fa7112314cd1bdc6e1dee37cf8bcdd12e63b28cb7b6e7fe56e67b7853c"
+    },
+    {
+      "path": "features/proofo-ui/palette-default-fix/00_complexity_assessment.md",
+      "digest": "64301d3b3dbc7e84da8f54128beaa30f2c9e78e62bc9a2ce677c1b4f8dbc2a30"
+    },
+    {
+      "path": "features/proofo-ui/palette-default-fix/01_requirements.md",
+      "digest": "0c54acf3659cae06d5b33da2aec2436b488a61079dad64926cf70a3edf7549db"
+    },
+    {
+      "path": "features/proofo-ui/palette-default-fix/06_implementation_plan.md",
+      "digest": "21a0dd99fe7d222ff141727ee2e5b3ebeb695f15b1d9163a39a86a1dae2023b9"
+    },
+    {
+      "path": "openspec/changes/proofo-palette-default-fix/specs/palette-default/spec.md",
+      "digest": "5b5df5dbb74be895e39119f7dfc76ff28a0dd6b10857bea2d03771d1f84f6ac7"
+    },
+    {
+      "path": "tools/visual/branding-collect.e2e.test.mjs",
+      "digest": "9f7e799f89a5b339b12c30c964e66d5ae37d3b50c44b08e522262139be0f0fc8"
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "qe-primary",
+      "family": "codex"
+    }
+  ],
+  "conditions": [],
+  "checkpointDigest": null,
+  "source": "native",
+  "history": "complete",
+  "status": "under-ceiling",
+  "ceiling": 3,
+  "rounds": 0,
+  "failedAttempts": [],
+  "journalId": "f98d3857-887a-4b41-bb06-70a7c0f7f806",
+  "cycleId": "79b706c2-eabc-4720-b5ba-5494cc5328ab",
+  "sequence": 1,
+  "eventDigest": "258be64b83bf11ea4b43ce273062b0b49e11e29985374bb75163069ad5efc101",
+  "snapshot": {
+    "nonce": "31d69ebf-1478-45fa-91cb-a5bfb9f9f3d8",
+    "revision": "a1a064b3c3781106fb52a7d7359bab22b70055e02627ef3a445b9f49881b58d1",
+    "manifest": [
+      {
+        "path": "apps/web/src/lib/branding.ts",
+        "digest": "a511ed93097f653b3fb0b040038a0d9f54413684ed898e435a72acf6cbefce6c"
+      },
+      {
+        "path": "apps/web/tests/branding.test.ts",
+        "digest": "515d67e04bd7788f24490846f5b6b9bbf106df2af9a24483af8d66cbff94cb66"
+      },
+      {
+        "path": "apps/widget/src/render.ts",
+        "digest": "9988c5a94d4de6d21fd9b4de7e6aeb64081c68552c181de6b0660cf57544433a"
+      },
+      {
+        "path": "apps/widget/src/styles.ts",
+        "digest": "2fb32090853851370fe88435d6c0e2235071a5aa01219fa06b82fa105835325e"
+      },
+      {
+        "path": "apps/widget/tests/widget-branding.test.ts",
+        "digest": "ffec65fa7112314cd1bdc6e1dee37cf8bcdd12e63b28cb7b6e7fe56e67b7853c"
+      },
+      {
+        "path": "features/proofo-ui/palette-default-fix/00_complexity_assessment.md",
+        "digest": "64301d3b3dbc7e84da8f54128beaa30f2c9e78e62bc9a2ce677c1b4f8dbc2a30"
+      },
+      {
+        "path": "features/proofo-ui/palette-default-fix/01_requirements.md",
+        "digest": "0c54acf3659cae06d5b33da2aec2436b488a61079dad64926cf70a3edf7549db"
+      },
+      {
+        "path": "features/proofo-ui/palette-default-fix/06_implementation_plan.md",
+        "digest": "21a0dd99fe7d222ff141727ee2e5b3ebeb695f15b1d9163a39a86a1dae2023b9"
+      },
+      {
+        "path": "openspec/changes/proofo-palette-default-fix/specs/palette-default/spec.md",
+        "digest": "5b5df5dbb74be895e39119f7dfc76ff28a0dd6b10857bea2d03771d1f84f6ac7"
+      },
+      {
+        "path": "tools/visual/branding-collect.e2e.test.mjs",
+        "digest": "9f7e799f89a5b339b12c30c964e66d5ae37d3b50c44b08e522262139be0f0fc8"
+      }
+    ]
+  },
+  "postCiCorrection": {
+    "capacity": 1,
+    "used": false,
+    "targetRevision": null,
+    "evidence": null,
+    "anchorSequence": null,
+    "anchorEventDigest": null
+  },
+  "finalContinuation": {
+    "capacity": 1,
+    "used": false,
+    "targetRevision": null
+  },
+  "continuation": {
+    "capacity": 0,
+    "used": false,
+    "targetRevision": null
+  },
+  "stopReason": null,
+  "locations": {
+    "journal": "/tmp/proofwall-branding-collect/features/proofo-ui/palette-default-fix/.fa-state/native-qe-history.jsonl",
+    "head": "/tmp/proofwall-branding-collect/features/proofo-ui/palette-default-fix/.fa-state/native-qe-head.json",
+    "host": "/tmp/proofwall-branding-collect/features/proofo-ui/palette-default-fix/.fa-state/review-convergence-qe-host.json",
+    "bridge": "/tmp/proofwall-branding-collect/features/proofo-ui/palette-default-fix/.fa-state/qe-bridge"
+  },
+  "replayed": false
+}

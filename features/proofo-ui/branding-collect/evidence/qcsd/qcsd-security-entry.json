@@ -1,0 +1,40 @@
+{
+  "reviewer": "qcsd-security",
+  "family": "codex",
+  "independent": true,
+  "verdict": "clean",
+  "conditions": [
+    {
+      "id": "SECURITY-01",
+      "owner": "qcsd-security",
+      "severity": "WARNING",
+      "classification": "wording",
+      "requirement": "Согласовать область NFR-202 для запрета photo key в логах: явно ограничить его новыми PATCH/runner логами, если это намеренная граница, либо расширить план и покрытие существующего photo GET, включая оба error path; синхронизировать нормативную дельту и её SHA mapping.",
+      "scope": [
+        "features/proofo-ui/branding-collect/01_requirements.md",
+        "features/proofo-ui/branding-collect/05_architecture.md"
+      ],
+      "evidence": "STATIC: openspec/changes/proofo-branding-collect/specs/branding-collect/spec.md:183-193 запрещает photo key в логах без ограничения компонента; 05_architecture.md:119-123 описывает только PATCH. apps/web/src/app/api/photo/[...key]/route.ts:32-38,44-50 при StorageError или invalid sniff логирует objectKey; 06_implementation_plan.md не включает этот route в targets. Это несогласованность границы требований и плана, не утверждение новой уязвимости key-based photo contract."
+    }
+  ],
+  "verifications": [
+    {
+      "id": "SECURITY-01",
+      "revision": "7530e37d99132e7af128a3ac107971d97c63fbcaef35ef4f5c2c6ad9cf923374",
+      "classification": "structural",
+      "evidence": "STATIC: NFR-202 spec.md:235-250, 01_requirements.md:150-157, 05_architecture.md:198-213 и ADR-004:64-67 сохраняют ограничение новых PATCH/UI и собственных QA logs и явно исключают существующие photo GET error logs/inherited synthetic child output; 06_implementation_plan.md:20,104-106,121 сохраняет planned sentinel logger oracle. SHA-256 spec 2e9966d6e9eb55e24b992ede14761eb086ce64ecf181ca208bf5d969c359cc75 совпадает с 01_requirements.md:17. Nonce b29efe0f-6017-41c6-a442-464f3ed3263d. Подтверждён дизайн; реализация и tests не проверялись.",
+      "implementationVerified": true
+    }
+  ],
+  "newRisks": {
+    "assessment": "SECURITY-01 по текущему snapshot подтверждено на стадии design; собственных новых security conditions в узкой owner-approved дельте не выявлено. Чужие условия этой ролью не проверяются и не закрываются.",
+    "evidence": "Сопоставлены author-delta, owner-decision, затронутые документы, logging contract и SHA mapping; измерены 9 manifest hashes и закреплённое определение роли. Runtime/product проверки не выполнялись.",
+    "conditions": []
+  },
+  "authorAssessmentChecked": true,
+  "deltaVerification": {
+    "classification": "structural",
+    "evidence": "На ревизии 7530e37d99132e7af128a3ac107971d97c63fbcaef35ef4f5c2c6ad9cf923374, nonce b29efe0f-6017-41c6-a442-464f3ed3263d, сопоставлены author-delta и owner decision с FR-208, ADR-003 и архитектурой: approved live palette и original offline palette — внутренние presentation props без fixture/auth/seed override, доказательства разделены; SECURITY-01 и spec SHA mapping сохранены. Это узкая проверка design, а не реализации, продуктовых тестов либо закрытие чужих условий.",
+    "implementationVerified": true
+  }
+}

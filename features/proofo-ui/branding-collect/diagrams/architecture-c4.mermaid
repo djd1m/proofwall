@@ -1,0 +1,35 @@
+flowchart TB
+    subgraph Context[Context: Proofwall]
+        Owner[Владелец] --> Product[Proofwall UI и API]
+        Visitor[Автор отзыва] --> Product
+        Reader[Читатель] --> Host[Внешний сайт с widget]
+        Host --> Product
+    end
+    subgraph Containers[Containers: существующие границы]
+        Web[Next web] --> PG[(PostgreSQL)]
+        Web --> S3[Private S3 photo storage]
+        Widget[Vanilla widget Shadow DOM] --> Web
+    end
+    Product -.-> Web
+    Host -.-> Widget
+    subgraph Components[Components: изменяемая область]
+        Project[Existing project page nav] --> Page[Branding server page]
+        Page --> Editor[BrandingEditor + BrandingView]
+        Editor --> Route[GET/PATCH branding route]
+        Route --> Session[currentAccountId]
+        Route --> Repo[readOwnedBranding / patchOwnedBranding]
+        Repo --> Tenant[withAccount: RLS + tenant GUC]
+        Route --> Validation[Canonical reader / patch validator]
+        Collect[CollectView + existing SubmitForm] --> Intake[Existing testimonials API]
+        Public[Wall + widget config] --> Defaults[Canonical Branding defaults]
+    end
+    Tenant --> PG
+    Intake --> PG
+    Intake --> S3
+    Public --> PG
+    subgraph QA[Отдельная QA граница]
+        Runner[Dedicated allowlist runner] --> QaWeb[Worktree Next process]
+        QaWeb --> QaPG[(Выделенный loopback proofwall_ui_test)]
+        QaWeb --> QaS3[Synthetic local S3-compatible service]
+        Fixture[Offline production view renderer] --> Frozen[Read-only dashboard-v3 PNG/JSON]
+    end

@@ -1,0 +1,330 @@
+{
+  "schema": "fa-review-convergence-1",
+  "phase": "qe",
+  "reviewers": [
+    {
+      "id": "qe-primary",
+      "family": "codex"
+    },
+    {
+      "id": "qe-risk",
+      "family": "codex"
+    },
+    {
+      "id": "qe-integration",
+      "family": "codex"
+    },
+    {
+      "id": "qe-regression",
+      "family": "codex"
+    }
+  ],
+  "snapshot": {
+    "nonce": "893f82d3-e2ae-48df-b357-f3031a194fdf",
+    "revision": "5a55e200c7807177bb7d1e8e39b5eb2b7db0d4d68b3d69d07d182b3403122657",
+    "manifest": [
+      {
+        "path": "apps/web/src/app/api/projects/[slug]/branding/route.ts",
+        "digest": "123fbdb9e96fc56f1e40a51d8bf19d01ddfdc9bb48a0bfe701d76f723e7dd6cd"
+      },
+      {
+        "path": "apps/web/src/app/dashboard/[slug]/branding/branding-editor.tsx",
+        "digest": "eb8016ec477eec0235bc25050ca2db838a00176dec92d86d9e18d74a2f69378a"
+      },
+      {
+        "path": "apps/web/src/app/dashboard/[slug]/branding/branding-view.tsx",
+        "digest": "804c422499a742ff1ae2252f534f947bab87160ade83cf9141a33c09650b3a09"
+      },
+      {
+        "path": "apps/web/src/app/dashboard/[slug]/branding/page.tsx",
+        "digest": "7bc86d8136e421481df39a9129245850ef2c719a013ec2f5268598411131f015"
+      },
+      {
+        "path": "apps/web/src/app/dashboard/[slug]/page.tsx",
+        "digest": "86be10119cd89198d0709fcc90870b1a97a662d0804ef3603e3500841a587ac6"
+      },
+      {
+        "path": "apps/web/src/app/f/[slug]/collect-view.tsx",
+        "digest": "54de88c7bf37d2df5fd08a6fc4e677fe2a415c8f80c5a410e80afee4f81dbd68"
+      },
+      {
+        "path": "apps/web/src/app/f/[slug]/intake-tabs.tsx",
+        "digest": "40adddecacf33cb4ee65093bf266f48427ec2253002c217195ff8fa42d7b77c1"
+      },
+      {
+        "path": "apps/web/src/app/f/[slug]/page.tsx",
+        "digest": "6aabf7ec3baa6c3271b8a673bb90fcbfe9ce6d38e6bbfcda67483fb855722e9b"
+      },
+      {
+        "path": "apps/web/src/app/f/[slug]/submit-form.tsx",
+        "digest": "636c4ea5bc95bc0addd921eece80d139dad78eb9c7c26c5e60507c10b1dbdd75"
+      },
+      {
+        "path": "apps/web/src/app/proofo-forms.css",
+        "digest": "7c9938a03217abb10ca6e6179bebe60e4753de5c93ad501cc3ff43a040cfaffc"
+      },
+      {
+        "path": "apps/web/src/app/w/[slug]/page.tsx",
+        "digest": "0cd8e7b183c0c354e564f387f28ea60c0fac1ae367c1c884c951534d9dc88914"
+      },
+      {
+        "path": "apps/web/src/lib/branding.ts",
+        "digest": "d606b700b6f8313a44968b41422741d8b0739dddab37c68e7f5dc54c23eeea03"
+      },
+      {
+        "path": "apps/web/src/lib/project-branding.ts",
+        "digest": "79fb1ee859b2403ae79c16b982709b5265b070bed4e4062df47cfd7b8cd5bb3c"
+      },
+      {
+        "path": "apps/web/src/lib/wall.ts",
+        "digest": "7846ccbea03fd14dcddc19950c58c83fec2f85ba84c1c61c65c2270391f0c264"
+      },
+      {
+        "path": "apps/web/src/lib/widget-config.ts",
+        "digest": "3c4d95a743a3d63f334de52f8c7720286495e3b3fc83160df2c01081472c4d9b"
+      },
+      {
+        "path": "apps/web/tests/branding-collect-mutation.mjs",
+        "digest": "a47b068054a61c3d754f54f4df622b3810ab541cd7989501f8e1bc22bdad6a13"
+      },
+      {
+        "path": "apps/web/tests/branding-collect-schema.test.ts",
+        "digest": "d7b11d446faf020e13687f47b7f10ae4702b41889f8f06cb7f275afed839a3fa"
+      },
+      {
+        "path": "apps/web/tests/branding-collect-visual-fixture.test.ts",
+        "digest": "0f2c47a83bccd24dff2adc79dd4cb6db0dffb09c2556c3af8253e52c1913dfa5"
+      },
+      {
+        "path": "apps/web/tests/branding.test.ts",
+        "digest": "68a97d5345d0afd22e4f09a599ea595e08f7dae2c4a5e97b49d3e884efa10f53"
+      },
+      {
+        "path": "apps/web/tests/project-branding.test.ts",
+        "digest": "224c8a5fbcc928a094bf5660a678d6678738261eeea4f59498560316d6c8ea62"
+      },
+      {
+        "path": "apps/web/tests/wall.test.ts",
+        "digest": "5d024ffebb3cdbde6e82e85d84f661e256f11e4dbe93bb6f71f9e88b1470c104"
+      },
+      {
+        "path": "apps/web/tests/widget-config.test.ts",
+        "digest": "a1fee01dfacd3c3a4dfd128868a048342dd3b090a7da233a0807ddf6e3a0ea81"
+      },
+      {
+        "path": "apps/widget/src/index.ts",
+        "digest": "97df62963e6e53f9aa60686da35cd60c677a4fdbffd6cb8e2e1c4d21dc0ce673"
+      },
+      {
+        "path": "apps/widget/src/render.ts",
+        "digest": "71a23babbe22fc1c13a191a8b650bed36cd62f638d4aa9b2b0fb0f722a870884"
+      },
+      {
+        "path": "apps/widget/src/styles.ts",
+        "digest": "38635295280a53662f8725950b92585e31d30b0c6e441a69b69726cc9f18982a"
+      },
+      {
+        "path": "apps/widget/src/types.ts",
+        "digest": "ff68a2dd40f689f51a3da45ca5942cdeb2da2c38e3ca4e14960d6ab070822ac1"
+      },
+      {
+        "path": "apps/widget/tests/widget-branding.test.ts",
+        "digest": "15777d6153e95ed8dfa1de996fb5f183ddb3541789c64b8623e7cc46db27a1b4"
+      },
+      {
+        "path": "docs/embed-contract.md",
+        "digest": "43d6c4e32b7c05991c46de3cf92b5a7335765b2249700b7828aca5118dae0b6e"
+      },
+      {
+        "path": "features/proofo-ui/branding-collect/00_complexity_assessment.md",
+        "digest": "786302083da193c0912c3c90f915b85915ffe9b741975b744eee8b346d2be8de"
+      },
+      {
+        "path": "features/proofo-ui/branding-collect/01_requirements.md",
+        "digest": "3f1ed924758aa3173608a7a8bc95eb3c99323b2ea9e61c52243f94a6ca672e77"
+      },
+      {
+        "path": "features/proofo-ui/branding-collect/02_research.md",
+        "digest": "f3906ec1dc3e46ce6111a332f41d84ac0f3d915b1f7e2a7e2f8eeb24cffa8732"
+      },
+      {
+        "path": "features/proofo-ui/branding-collect/03.5_ideation_report.md",
+        "digest": "4797469d8b30059b4c2c0513e808497c13e26e871978c85f1cacbd0178256ccf"
+      },
+      {
+        "path": "features/proofo-ui/branding-collect/03_adr/001-patch-existing-branding.md",
+        "digest": "60f162e5c3985dffadf224761c1000efc44c050f483da0427c88a6d8d818f076"
+      },
+      {
+        "path": "features/proofo-ui/branding-collect/03_adr/002-preserve-provenance-when-hiding-labels.md",
+        "digest": "fb3c42b2bf74c1edb24271cba453a33b097e49be234e7bf218758bb91ecba5eb"
+      },
+      {
+        "path": "features/proofo-ui/branding-collect/03_adr/003-render-production-views-offline.md",
+        "digest": "afbc61f3da6c0938216d2a0f06e9dc9dd64f6a687718990c4ac2d97193442616"
+      },
+      {
+        "path": "features/proofo-ui/branding-collect/03_adr/004-isolate-photo-qa-runtime.md",
+        "digest": "55c722ac1fe6bffbb021399df4a99fa0ebff1a2bc35f628dd9db01e220d150c9"
+      },
+      {
+        "path": "features/proofo-ui/branding-collect/04_domain_model.md",
+        "digest": "4bb092e88bb0a014182f389d6149e661332f6acd6768268259ff4e0e6313b772"
+      },
+      {
+        "path": "features/proofo-ui/branding-collect/05_architecture.md",
+        "digest": "2b1e38822aa8057848aae42cbc65f44c3fe9d196ebd80a54c310073a68115d28"
+      },
+      {
+        "path": "features/proofo-ui/branding-collect/06_implementation_plan.md",
+        "digest": "9375188bbaf43d77c39edd6d4ba0b0c8a1f9d564df359678cfcf695ed84e188c"
+      },
+      {
+        "path": "openspec/changes/proofo-branding-collect/design.md",
+        "digest": "4b4e18e7162a3121373916a8244fa57e073b2abd132a039f2e89303eae890d95"
+      },
+      {
+        "path": "openspec/changes/proofo-branding-collect/proposal.md",
+        "digest": "13e102c9f12dec25e763af2d736a0fae0c290cac13e36fefdd64b005512ca737"
+      },
+      {
+        "path": "openspec/changes/proofo-branding-collect/specs/branding-collect/spec.md",
+        "digest": "2e9966d6e9eb55e24b992ede14761eb086ce64ecf181ca208bf5d969c359cc75"
+      },
+      {
+        "path": "openspec/changes/proofo-branding-collect/tasks.md",
+        "digest": "1958360381a0975c89ac47b871e8fc79280715f54ccc4ee78ec31741e6823dc3"
+      },
+      {
+        "path": "scripts/render-branding-collect-fixture.mjs",
+        "digest": "577ca959393f8685aa9f8065155c1a36bff9fa78ce521565ffbac43251be74ee"
+      },
+      {
+        "path": "scripts/run-branding-collect-preview.mjs",
+        "digest": "d2f3fe6bc480c444de0aadfc1701b42c6b2d2b5bea7ac80f04a981cd4fafdd37"
+      },
+      {
+        "path": "tools/visual/branding-collect.e2e.test.mjs",
+        "digest": "61273ec786f3e1675e158b91ee1a2d8c5a58dc1779bd558c9d9f5f2321b661c6"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "PRIMARY-01",
+      "owner": "qe-primary",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "FR-202: новый logo URL должен быть absolute HTTPS без credentials. Общий validator обязан отвергать непустые URL username/password; browser dirty-patch и HTTP bypass не должны сохранять такой URL, включая mixed patch. Добавить именованный отрицательный тест и доказать отсутствие записи.",
+      "scope": [
+        "apps/web/src/lib/branding.ts",
+        "apps/web/tests/branding.test.ts",
+        "apps/web/tests/project-branding.test.ts"
+      ],
+      "evidence": "spec.md:43 требует HTTPS без credentials. apps/web/src/lib/branding.ts:86-93 проверяет только длину и protocol; username/password не проверяются. Независимый no-network probe .secrets/bc-qe-primary-logo-probe.mjs импортировал transpiled фактический source SHA256 20f5080ca2f8b5ebe6936323ab28a486fcdc2693b22b3163ff68c1d96ca19432: оба synthetic HTTPS cases (user+password и user-only) получили actualAccept=true, readerRetainsCredentials=true при expectedAccept=false; credential-free control прошёл; exit1, raw .secrets/bc-qe-primary-logo-probe.log. Corpus branding.test.ts:40-56 таких случаев не содержит."
+    },
+    {
+      "id": "PRIMARY-02",
+      "owner": "qe-primary",
+      "severity": "WARNING",
+      "classification": "structural",
+      "requirement": "FR-206, сценарий «Публикация после модерации»: доказать text/photo pending → owner approval через обычный moderation API с действующей owner session → публикацию только соответствующего проекта в wall/widget. Прямой SQL UPDATE status не заменяет этот HTTP сценарий.",
+      "scope": [
+        "tools/visual/branding-collect.e2e.test.mjs"
+      ],
+      "evidence": "spec.md:127-130 явно называет ordinary moderation API. E2E «branding collect real flows» строка157 и «collect uploads and reads local photo» строка253 делают pool.query UPDATE testimonials SET status=approved. Свой E2E exit0, 13/13 (.secrets/bc-qe-primary-e2e.log) поэтому подтверждает публичный reader после SQL approval, но не заявленный owner HTTP transition. wall.test.ts вызывает applyTransition напрямую; это полезный нижний слой, не missing HTTP path. Дефект самой moderation реализации этим review не установлен."
+    },
+    {
+      "id": "PRIMARY-03",
+      "owner": "qe-primary",
+      "severity": "WARNING",
+      "classification": "structural",
+      "requirement": "NFR-201 и ADR-003: дополнить живой reflow oracle branding editor при 320/360/390 CSS px и обеих project themes, с heading120/HTTPS logo URL2048/длинной ошибкой; проверить полный URL value и Home/End/selection/internal scroll, доступность focused controls. Это дополнение к уже проверенным collect/wall/widget.",
+      "scope": [
+        "tools/visual/branding-collect.e2e.test.mjs"
+      ],
+      "evidence": "05_architecture.md:162-166 требует live branding/collect/wall/widget, spec.md:228-232 требует URL Home/End/selection. «live forms and widget reflow without truncation», E2E:387-421, открывает collect, wall и widget, но не editor; Home/End/Shift+End проверены только у #cab-name (399-402). Свой passing E2E имеет 6 reflow records для этих поверхностей, а не доказательство пропущенного editor/URL. Это coverage gap, не доказанный визуальный overflow."
+    },
+    {
+      "id": "PRIMARY-04",
+      "owner": "qe-primary",
+      "severity": "WARNING",
+      "classification": "structural",
+      "requirement": "NFR-202, сценарий «Схема и rollback»: проверить реальный новый writer на legacy/unknown-key JSON и чтение обновлённой записи фактическим старым reader из baseline после rollback версии приложения, без data rewrite; сохранить доказательство existing migrations/grants. SQL ROLLBACK фикстуры сам по себе не проверяет совместимость старого reader.",
+      "scope": [
+        "apps/web/tests/branding-collect-schema.test.ts",
+        "apps/web/tests/branding.test.ts"
+      ],
+      "evidence": "spec.md:241-245 требует new writer → old reader. «branding schema supports legacy and rollback», schema.test.ts:78-99, выполняет handwritten JSONB UPDATE, проверяет сырые поля, затем ROLLBACK и отсутствие созданного project; не вызывает новый writer или старый reader. branding.test.ts:34-38 проверяет старый трёхпольный input новым readBranding, то есть обратное направление. Свой 76/76 pass в .secrets/bc-qe-primary-unit.log не покрывает это отсутствующее направление. Несовместимость runtime не доказана; отсутствует обязательный oracle."
+    },
+    {
+      "id": "RISK-01",
+      "owner": "qe-risk",
+      "severity": "WARNING",
+      "classification": "structural",
+      "requirement": "Выполнить Observability contract 05_architecture.md:199–206 для нового PATCH: фактические ограниченные технические outcome/status/error-code/correlation для committed success, validation/origin rejection и DB/permission failure, без payload/URL/session/photo keys. Указать sink/format; тест должен требовать соответствующее событие на реальном исходе, отсутствие sentinels и падать при удалении события. Success событие только после успешного commit.",
+      "scope": [
+        "apps/web/src/app/api/projects/[slug]/branding/route.ts",
+        "apps/web/tests/project-branding.test.ts",
+        "features/proofo-ui/branding-collect/05_architecture.md"
+      ],
+      "evidence": "STATIC route.ts:22–37 не вызывает logger; catch503 молчит. Architecture:199–206 обещает INFO/WARN/ERROR outcome и подсчёт failed writes. EXECUTED project-branding.test.ts:130–136 проходит при пустом console spy: проверяет только отсутствие sentinel, не наличие event. Самостоятельный69/69 suite .secrets/bc-qe-risk-critical.log; детали evidence/qe/qe-risk.md. Это недостающая новая наблюдаемость, не finding по historical photo GET logging."
+    },
+    {
+      "id": "RISK-02",
+      "owner": "qe-risk",
+      "severity": "WARNING",
+      "classification": "structural",
+      "requirement": "Доказать NFR-201 reflow для branding editor: browser suite на320/360/390 CSS px при обеих project themes с heading120, logo URL2048 и длинной error; полный input value, Home/End/selection URL, document overflow≤1px, доступные controls/focus после vertical scroll. Для widget отдельно измерить shadow host и root. Сохранить non-vacuous nowrap/clipping negative control; source tests должны проваливаться при соответствующем нарушении без усечения данных/смены goldens.",
+      "scope": [
+        "tools/visual/branding-collect.e2e.test.mjs",
+        "features/proofo-ui/branding-collect/01_requirements.md",
+        "features/proofo-ui/branding-collect/05_architecture.md",
+        "openspec/changes/proofo-branding-collect/specs/branding-collect/spec.md"
+      ],
+      "evidence": "STATIC E2E:387–421 в цикле320/360/390 открывает collect/wall/widget, но не editor; :399–404 Home/End/selection проверяет name, не URL. reflow():367–385 возвращает document и scope .pw-widget, не отдельную host geometry. Architecture:161–168 и OpenSpec:228–233 требуют эти проверки. EXECUTED полныйE2E13/13 .secrets/bc-qe-risk-e2e.log проходит без них; measured reflow6rows .secrets/bc-qe-risk-e2e-measurements.json. Это тестовый пробел WARNING, product overflow не установлен; чужой ACCESSIBILITY-03 не закрывается."
+    },
+    {
+      "id": "INTEGRATION-01",
+      "owner": "qe-integration",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "FR-202: новый logo_url должен быть absolute HTTPS без username/password; любой credential-bearing URL отклоняется клиентом и PATCH целиком с 400, без изменения JSONB; обычный credential-free HTTPS и unchanged legacy HTTP остаются совместимыми. Нужны отрицательные validator/route проверки этого контракта.",
+      "scope": [
+        "apps/web/src/lib/branding.ts",
+        "apps/web/tests/branding.test.ts",
+        "apps/web/tests/project-branding.test.ts",
+        "openspec/changes/proofo-branding-collect/specs/branding-collect/spec.md"
+      ],
+      "evidence": "OpenSpec spec.md:43 требует HTTPS без credentials. branding.ts:86-91 проверяет только protocol === https:, поэтому синтетический https://synthetic:synthetic@example.test/logo.png проходит; username/password нигде не проверяются. branding.ts:29-34 сохраняет userinfo через URL.toString, project-branding.ts:29-35 сохраняет принятый patch. branding.test.ts:40-56 не содержит credential-bearing отрицательного случая. Статический вывод из фактического source; existing targeted suite 154/154 не проверяет этот вход. Own pure-function probe импортировал фактический branding.ts через local Node22 --experimental-strip-types (env-i, flock): username-password и percent-encoded userinfo оба accepted=true/canonicalHasUserinfo=true; credential-free HTTPS accepted, edited HTTP rejected. .secrets/bc-qe-integration-logo-probe.json SHA256 b4bab4d72aa19d97c0ca888da3106f52699eb8b5585d34d2547f7a95685613e9."
+    },
+    {
+      "id": "INTEGRATION-02",
+      "owner": "qe-integration",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "FR-206 scenario «Публикация после модерации»: текущий browser/HTTP integration test должен провести созданный обычной collect формой pending text/photo через POST /api/testimonials/<id>/moderate с обычной owner session, проверить успешный переход и появление только в wall/widget этого проекта. Прямой privileged SQL UPDATE не заменяет этот этап. Нужен отказ чужой/анонимной сессии без публикации, соответствующий existing moderation contract.",
+      "scope": [
+        "tools/visual/branding-collect.e2e.test.mjs",
+        "openspec/changes/proofo-branding-collect/specs/branding-collect/spec.md"
+      ],
+      "evidence": "OpenSpec spec.md:127-130 требует ordinary moderation API. E2E branding collect real flows:157 и collect uploads and reads local photo:253 делают pool.query UPDATE testimonials SET status=approved вместо API; следующие wall/widget assertions проходят после обхода HTTP auth/ownership/transition/content-threshold boundary. Поиск по apps/web/tests показывает moderation.test.ts вызывает applyTransition helper; ordinary moderate route не импортируется/не запрашивается. Собственный E2E 13/13 и moderation helper tests 12/12 подтверждены, но не доказывают названный сквозной сценарий."
+    },
+    {
+      "id": "INTEGRATION-03",
+      "owner": "qe-integration",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "Применимое .claude/rules/embeddable-widget.md: real widget должен сохранять свои стили и branding на внешнем origin при restrictive CSP без требования unsafe-inline. Исправить способ установки scoped styles и подтвердить на реальном rebuilt bundle в hostile CSS host со style-src без unsafe-inline; зафиксировать точный host CSP/cross-origin contract. Отрицательная замена на inline style должна ломать проверку.",
+      "scope": [
+        "apps/widget/src/styles.ts",
+        "tools/visual/branding-collect.e2e.test.mjs",
+        "features/proofo-ui/branding-collect/05_architecture.md"
+      ],
+      "evidence": "styles.ts:108-111 создаёт inline <style>; E2E:104 разрешает style-src unsafe-inline и поэтому не ловит отказ. Own private probe .secrets/bc-qe-integration-csp-probe.json SHA256 1565361d91c42e92c1732a79c8c1d8c95d31850381e5808427bb28ae51e0bfe0: Chrome148.0.7778.97, real widget.c7ab0e9a.js SHA c7ab0e9a4e237181f30b670fae1b7b7b647737fd5aa7709a9cf9c1bc25fe7180; external hostname widget.synthetic.test:33189, script/config 127.0.0.1:33189, style-src разрешает только этот origin. CSP блокирует inline stylesheet: dark data-theme сохраняется, но computed widget background transparent, color magenta, monospace13px, card padding0. In-memory CSSStyleSheet/adoptedStyleSheets с теми же actual CSS восстанавливает dark rgb24, white14px и padding16; это feasibility probe, не implemented fix. Source frozen, external requests0. Механизм унаследован от baseline, но текущий изменённый widget не выполняет применимый integration contract."
+    }
+  ],
+  "reviewSeen": true,
+  "rework": true,
+  "changedPaths": []
+}

@@ -1,0 +1,9 @@
+{
+  "privateRunner": ".secrets/palette-fix-published-probe.mjs",
+  "sha256": "b9d627b7139b6085c8d021d709a07330a48708f2210f1955d3d662ec629a861c",
+  "exitCode": 0,
+  "referenceColors": "Observed actual approved preview via browser",
+  "liveColors": "Ordinary real HTTPS pages, no palette injection",
+  "bodyResponseHandling": "Observe HTTP201/UI success and scoped own-row read; no stalled browser Response.json inspection",
+  "syntheticDataCleaned": true
+}

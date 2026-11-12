@@ -1,0 +1,465 @@
+{
+  "schema": "proofwall-author-repair-2",
+  "role": "PRIMARY author; author checks only",
+  "assignedModel": "gpt-6.1-sol/high",
+  "threadId": "01a1cc8d-9a7a-79a0-98ae-8bf830ab3d6f",
+  "originRevision": "b3b7f4779c855441ae482ff5f7d813527058aa6bb9e80536eeb2a4cfa20fb71c",
+  "addressed": [
+    "PRIMARY-01",
+    "PRIMARY-02",
+    "PRIMARY-03",
+    "PRIMARY-04",
+    "RISK-01",
+    "RISK-02",
+    "INTEGRATION-01",
+    "INTEGRATION-02",
+    "INTEGRATION-03"
+  ],
+  "independentClosure": false,
+  "receiptIssued": false,
+  "changes": [
+    "apps/web/src/app/api/projects/[slug]/branding/route.ts",
+    "apps/web/src/lib/branding.ts",
+    "apps/web/tests/branding-collect-mutation.mjs",
+    "apps/web/tests/branding-collect-schema.test.ts",
+    "apps/web/tests/branding.test.ts",
+    "apps/web/tests/project-branding.test.ts",
+    "apps/widget/src/index.ts",
+    "apps/widget/src/styles.ts",
+    "apps/widget/tests/widget-branding.test.ts",
+    "scripts/run-branding-collect-preview.mjs",
+    "tools/visual/branding-collect.e2e.test.mjs"
+  ],
+  "additionalDocument": {
+    "path": "docs/embed-contract.md",
+    "sha256": "43d6c4e32b7c05991c46de3cf92b5a7335765b2249700b7828aca5118dae0b6e",
+    "author": "UI/CSP author",
+    "declarationCheck": {
+      "exitCode": 0,
+      "command": "node_modules/node/bin/node .secrets/upstream-check-embed-contract.cjs /tmp/proofwall-branding-collect",
+      "checkerSha256": "9e963a07c12350b760264133021e75fb699439b1f060332e1ccdd962b645b4a0",
+      "provenance": {
+        "repo": "djd1m/2026-AUG-PU-Projects",
+        "path": ".claude/hooks/check-embed-contract.cjs",
+        "ref": "3b84e9ef5ce68fdbdcf34e0d1671bace8006aff4",
+        "blobSha": "7161b4134915e227f9221586e9ef6bd9b6214a44",
+        "sourceUrl": "https://github.com/djd1m/2026-AUG-PU-Projects/blob/3b84e9ef5ce68fdbdcf34e0d1671bace8006aff4/.claude/hooks/check-embed-contract.cjs"
+      },
+      "log": ".secrets/branding-csp-embed-check-final.log",
+      "logSha256": "c0559f8e83f28def5cf2510cbd98bffe1c5238f55bae565a717ab9b4011a4f67",
+      "scope": "declaration checker only; browser proof separately recorded"
+    }
+  },
+  "mapping": [
+    {
+      "ids": [
+        "PRIMARY-01",
+        "INTEGRATION-01"
+      ],
+      "change": "Shared dirty PATCH validator rejects nonempty URL username/password, including username-only and encoded userinfo; reader compatibility unchanged.",
+      "evidence": [
+        "branding rejects credential-bearing HTTPS logos without changing draft",
+        "credential-bearing logo mixed PATCH is rejected before repository write",
+        "branding controller retains draft through pending failures and retry"
+      ],
+      "negative": "logo-userinfo source mutant killed"
+    },
+    {
+      "ids": [
+        "RISK-01"
+      ],
+      "change": "PATCH emits branding_patch to console.info/warn/error with exactly outcome/status/code/correlation. Server-generated correlation also returned as x-request-id. INFO only after withAccount COMMIT; permission and failed COMMIT signal ERROR.",
+      "evidence": [
+        "new branding logs omit payloads",
+        "PATCH commit failure emits failed signal without committed success"
+      ],
+      "negative": "outcome-sink-removed source mutant killed"
+    },
+    {
+      "ids": [
+        "PRIMARY-02",
+        "INTEGRATION-02"
+      ],
+      "change": "Both actual text/photo submissions use ordinary owner moderation POST, inspect exact transition response and committed status; foreign/anonymous/expired denied while pending. Own public config contains ID; foreign project does not.",
+      "evidence": [
+        "branding collect real flows",
+        "collect uploads and reads local photo"
+      ],
+      "negative": "Foreign403, anonymous401, expired401 before successful owner200; privileged status UPDATE removed"
+    },
+    {
+      "ids": [
+        "PRIMARY-03",
+        "RISK-02"
+      ],
+      "change": "Actual editor heading120/logo2048/error2056 at320/360/390 in both project themes; Home/End/selection/full value/internal scroll/focus. Widget document, independent host and actual ShadowRoot measured separately. Host inline width defect fixed in existing index.ts.",
+      "evidence": [
+        "live forms and widget reflow without truncation"
+      ],
+      "negative": "nowrap/clipping negative control rejected; first run caught host.clientWidth=0 before fix"
+    },
+    {
+      "ids": [
+        "PRIMARY-04"
+      ],
+      "change": "Current owner writer commits all six settings on legacy/unknown/name JSON; git-show reader from pinned old commit is compiled privately and executed against exact persisted record, without data rewrite.",
+      "evidence": [
+        "branding schema supports legacy and rollback"
+      ],
+      "provenance": {
+        "commit": "4da1c64b6dcc537a412646183344dcb53645ea02",
+        "sourcePath": "apps/web/src/lib/branding.ts",
+        "sourceSha256": "4447bd65d7be631a9f98701145fad09c946dfc2b3eb93296daf9e878445730d8",
+        "executed": true,
+        "currentWriterStatus": 200,
+        "oldReaderFields": 3,
+        "persistedNewSettings": true
+      }
+    },
+    {
+      "ids": [
+        "INTEGRATION-03"
+      ],
+      "change": "Other author implements constructed adopted stylesheets with unchanged API; PRIMARY tests rebuilt real bundle on hostile external hostname, self-hosted CSS/JS, strict style-src self, no unsafe-inline. CORS, no cookie/Authorization, branding layout and badge verified.",
+      "evidence": [
+        "strict CSP accepts constructed scoped CSS and detects an inline injector",
+        "public proof preserves source screenshot transcript demo and server badge"
+      ],
+      "negative": "External host.js restores inline style injector in memory; actual CSP violation and computed layout regression detected",
+      "contract": {
+        "policy": "default-src 'none'; script-src 'self' http://127.0.0.1:33187; connect-src http://127.0.0.1:33187; img-src http://127.0.0.1:33187 data:; style-src 'self'; base-uri 'none'; object-src 'none'",
+        "bundleFile": "widget.0837c760.js",
+        "bundleSha256": "0837c76006f9782264ca52f036c643ca1d9d04eada3ebfe92a1f5361967d132e",
+        "browser": "Chromium 148.0.7778.97",
+        "hostOrigin": "http://widget.synthetic.test:33189",
+        "widgetOrigin": "http://127.0.0.1:33187",
+        "credentials": "omit",
+        "cors": "*"
+      }
+    }
+  ],
+  "checks": [
+    {
+      "id": "validator-repository-logging",
+      "exitCode": 0,
+      "passed": 37,
+      "failed": 0,
+      "log": ".secrets/branding-repair-validation-logging.log"
+    },
+    {
+      "id": "final-schema-old-reader",
+      "exitCode": 0,
+      "passed": 2,
+      "failed": 0,
+      "log": ".secrets/branding-repair-schema-final.log"
+    },
+    {
+      "id": "full-web-v8",
+      "exitCode": 0,
+      "filesPassed": 55,
+      "filesSkipped": 1,
+      "passed": 960,
+      "skipped": 3,
+      "failed": 0,
+      "log": ".secrets/branding-repair-web-coverage.log"
+    },
+    {
+      "id": "widget-typecheck-full-v8",
+      "exitCode": 0,
+      "filesPassed": 6,
+      "passed": 43,
+      "failed": 0,
+      "log": ".secrets/branding-repair-widget-coverage.log"
+    },
+    {
+      "id": "web-typecheck",
+      "exitCode": 0,
+      "log": ".secrets/branding-repair-web-typecheck.log"
+    },
+    {
+      "id": "production-build-including-widget",
+      "exitCode": 0,
+      "log": ".secrets/branding-repair-build-final.log"
+    },
+    {
+      "id": "verified-ordinary-routes-e2e",
+      "exitCode": 0,
+      "passed": 14,
+      "failed": 0,
+      "skipped": 0,
+      "log": ".secrets/branding-repair-e2e-verified.log"
+    },
+    {
+      "id": "source-mutations",
+      "exitCode": 0,
+      "killed": 14,
+      "total": 14,
+      "restored": 14,
+      "log": ".secrets/branding-repair-source-mutations.json"
+    },
+    {
+      "id": "process-tests",
+      "exitCode": 0,
+      "passed": 63,
+      "failed": 0,
+      "log": ".secrets/branding-repair-process-tests.log"
+    },
+    {
+      "id": "process-config-vendor",
+      "exitCode": 0,
+      "log": ".secrets/branding-repair-process-config.log"
+    }
+  ],
+  "coverage": {
+    "provider": "@vitest/coverage-v8@2.1.9",
+    "scope": "All18 complete TS/TSX production targets; types.ts has zero executable lines",
+    "files": 18,
+    "total": 971,
+    "covered": 967,
+    "pct": 99.58805355303811,
+    "criticalMinimum90": true,
+    "details": ".secrets/branding-repair-production-coverage.json"
+  },
+  "browserCounts": {
+    "editorCases": 6,
+    "widgetThreeLevelCases": 6,
+    "ordinaryModerationJourneys": 2,
+    "puts": 1,
+    "gets": 42,
+    "failures": 3,
+    "remoteBlockedRequests": 12
+  },
+  "widget": {
+    "policy": "default-src 'none'; script-src 'self' http://127.0.0.1:33187; connect-src http://127.0.0.1:33187; img-src http://127.0.0.1:33187 data:; style-src 'self'; base-uri 'none'; object-src 'none'",
+    "bundleFile": "widget.0837c760.js",
+    "bundleSha256": "0837c76006f9782264ca52f036c643ca1d9d04eada3ebfe92a1f5361967d132e",
+    "browser": "Chromium 148.0.7778.97",
+    "hostOrigin": "http://widget.synthetic.test:33189",
+    "widgetOrigin": "http://127.0.0.1:33187",
+    "credentials": "omit",
+    "cors": "*",
+    "gzipBytes": 3646,
+    "budgetBytes": 30720
+  },
+  "sources": [
+    {
+      "path": "apps/web/src/lib/branding.ts",
+      "sha256": "d606b700b6f8313a44968b41422741d8b0739dddab37c68e7f5dc54c23eeea03"
+    },
+    {
+      "path": "apps/web/src/lib/project-branding.ts",
+      "sha256": "79fb1ee859b2403ae79c16b982709b5265b070bed4e4062df47cfd7b8cd5bb3c"
+    },
+    {
+      "path": "apps/web/src/app/api/projects/[slug]/branding/route.ts",
+      "sha256": "123fbdb9e96fc56f1e40a51d8bf19d01ddfdc9bb48a0bfe701d76f723e7dd6cd"
+    },
+    {
+      "path": "apps/web/src/app/dashboard/[slug]/branding/page.tsx",
+      "sha256": "7bc86d8136e421481df39a9129245850ef2c719a013ec2f5268598411131f015"
+    },
+    {
+      "path": "apps/web/src/app/dashboard/[slug]/branding/branding-editor.tsx",
+      "sha256": "eb8016ec477eec0235bc25050ca2db838a00176dec92d86d9e18d74a2f69378a"
+    },
+    {
+      "path": "apps/web/src/app/dashboard/[slug]/branding/branding-view.tsx",
+      "sha256": "804c422499a742ff1ae2252f534f947bab87160ade83cf9141a33c09650b3a09"
+    },
+    {
+      "path": "apps/web/src/app/f/[slug]/page.tsx",
+      "sha256": "6aabf7ec3baa6c3271b8a673bb90fcbfe9ce6d38e6bbfcda67483fb855722e9b"
+    },
+    {
+      "path": "apps/web/src/app/f/[slug]/submit-form.tsx",
+      "sha256": "636c4ea5bc95bc0addd921eece80d139dad78eb9c7c26c5e60507c10b1dbdd75"
+    },
+    {
+      "path": "apps/web/src/app/f/[slug]/intake-tabs.tsx",
+      "sha256": "40adddecacf33cb4ee65093bf266f48427ec2253002c217195ff8fa42d7b77c1"
+    },
+    {
+      "path": "apps/web/src/app/f/[slug]/collect-view.tsx",
+      "sha256": "54de88c7bf37d2df5fd08a6fc4e677fe2a415c8f80c5a410e80afee4f81dbd68"
+    },
+    {
+      "path": "apps/web/src/app/proofo-forms.css",
+      "sha256": "7c9938a03217abb10ca6e6179bebe60e4753de5c93ad501cc3ff43a040cfaffc"
+    },
+    {
+      "path": "apps/web/src/lib/wall.ts",
+      "sha256": "7846ccbea03fd14dcddc19950c58c83fec2f85ba84c1c61c65c2270391f0c264"
+    },
+    {
+      "path": "apps/web/src/app/w/[slug]/page.tsx",
+      "sha256": "0cd8e7b183c0c354e564f387f28ea60c0fac1ae367c1c884c951534d9dc88914"
+    },
+    {
+      "path": "apps/web/src/lib/widget-config.ts",
+      "sha256": "3c4d95a743a3d63f334de52f8c7720286495e3b3fc83160df2c01081472c4d9b"
+    },
+    {
+      "path": "apps/widget/src/types.ts",
+      "sha256": "ff68a2dd40f689f51a3da45ca5942cdeb2da2c38e3ca4e14960d6ab070822ac1"
+    },
+    {
+      "path": "apps/widget/src/index.ts",
+      "sha256": "97df62963e6e53f9aa60686da35cd60c677a4fdbffd6cb8e2e1c4d21dc0ce673"
+    },
+    {
+      "path": "apps/widget/src/render.ts",
+      "sha256": "71a23babbe22fc1c13a191a8b650bed36cd62f638d4aa9b2b0fb0f722a870884"
+    },
+    {
+      "path": "apps/widget/src/styles.ts",
+      "sha256": "38635295280a53662f8725950b92585e31d30b0c6e441a69b69726cc9f18982a"
+    },
+    {
+      "path": "apps/web/tests/branding.test.ts",
+      "sha256": "68a97d5345d0afd22e4f09a599ea595e08f7dae2c4a5e97b49d3e884efa10f53"
+    },
+    {
+      "path": "apps/web/tests/project-branding.test.ts",
+      "sha256": "224c8a5fbcc928a094bf5660a678d6678738261eeea4f59498560316d6c8ea62"
+    },
+    {
+      "path": "apps/web/tests/branding-collect-visual-fixture.test.ts",
+      "sha256": "0f2c47a83bccd24dff2adc79dd4cb6db0dffb09c2556c3af8253e52c1913dfa5"
+    },
+    {
+      "path": "apps/web/tests/wall.test.ts",
+      "sha256": "5d024ffebb3cdbde6e82e85d84f661e256f11e4dbe93bb6f71f9e88b1470c104"
+    },
+    {
+      "path": "apps/web/tests/widget-config.test.ts",
+      "sha256": "a1fee01dfacd3c3a4dfd128868a048342dd3b090a7da233a0807ddf6e3a0ea81"
+    },
+    {
+      "path": "apps/widget/tests/widget-branding.test.ts",
+      "sha256": "15777d6153e95ed8dfa1de996fb5f183ddb3541789c64b8623e7cc46db27a1b4"
+    },
+    {
+      "path": "tools/visual/branding-collect.e2e.test.mjs",
+      "sha256": "61273ec786f3e1675e158b91ee1a2d8c5a58dc1779bd558c9d9f5f2321b661c6"
+    },
+    {
+      "path": "scripts/render-branding-collect-fixture.mjs",
+      "sha256": "577ca959393f8685aa9f8065155c1a36bff9fa78ce521565ffbac43251be74ee"
+    },
+    {
+      "path": "apps/web/tests/branding-collect-schema.test.ts",
+      "sha256": "d7b11d446faf020e13687f47b7f10ae4702b41889f8f06cb7f275afed839a3fa"
+    },
+    {
+      "path": "apps/web/tests/branding-collect-mutation.mjs",
+      "sha256": "a47b068054a61c3d754f54f4df622b3810ab541cd7989501f8e1bc22bdad6a13"
+    },
+    {
+      "path": "apps/web/src/app/dashboard/[slug]/page.tsx",
+      "sha256": "86be10119cd89198d0709fcc90870b1a97a662d0804ef3603e3500841a587ac6"
+    },
+    {
+      "path": "scripts/run-branding-collect-preview.mjs",
+      "sha256": "d2f3fe6bc480c444de0aadfc1701b42c6b2d2b5bea7ac80f04a981cd4fafdd37"
+    }
+  ],
+  "logs": [
+    {
+      "path": ".secrets/branding-repair-validation-logging.log",
+      "sha256": "62e25702312f115fca1b44ac5e4709c9577b6e9821e5ddc1330cc3eb0c8ae661",
+      "bytes": 3763
+    },
+    {
+      "path": ".secrets/branding-repair-schema-final.log",
+      "sha256": "eb063f31513210350998f07546d28579b2f53ec2ee3c04fae787971c0cd08bb0",
+      "bytes": 675
+    },
+    {
+      "path": ".secrets/branding-repair-web-coverage.log",
+      "sha256": "9a765b4086d2bf5387029910cf0868b072f6797805bb3c799b9b91b0b6aed646",
+      "bytes": 38595
+    },
+    {
+      "path": ".secrets/branding-repair-widget-coverage.log",
+      "sha256": "89dbe554429a066d5f58ef93b3bb4622e122df1eb7e06289e8b7d2148c4983c2",
+      "bytes": 1379
+    },
+    {
+      "path": ".secrets/branding-repair-build-final.log",
+      "sha256": "5a94528e9c6064015f46e06d6649638c5670e1d78ca5f5dcbd069a1ba178c17c",
+      "bytes": 4272
+    },
+    {
+      "path": ".secrets/branding-repair-web-typecheck.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": ".secrets/branding-repair-e2e-verified.log",
+      "sha256": "dbbd120b9c08b167ba28c6fe23fe627d1d748bfefb4f776d94d220a3773a2fde",
+      "bytes": 2576
+    },
+    {
+      "path": ".secrets/branding-repair-e2e-measurements.json",
+      "sha256": "a16a714eea60319dc163f9a374899cbc2766c1b446c448cc42ad0bda090a786f",
+      "bytes": 13401
+    },
+    {
+      "path": ".secrets/branding-repair-source-mutations.json",
+      "sha256": "cbc84c0c5417991ee5d93b83dbf06980c39c6b0e086361b5c6b140465a30bbe9",
+      "bytes": 8419
+    },
+    {
+      "path": ".secrets/branding-repair-process-tests.log",
+      "sha256": "974e98a085fc276e12fa994d8e6c0cede25d6596960d4dd37bb09300f0497800",
+      "bytes": 11549
+    },
+    {
+      "path": ".secrets/branding-repair-process-config.log",
+      "sha256": "17d2d9a61cb46f7f659f62fd140d5180135e7917b7fe1f4abb43a3779ab14c9e",
+      "bytes": 46
+    },
+    {
+      "path": ".secrets/branding-repair-old-reader-provenance.json",
+      "sha256": "7d58b36f710447913c2557693a309739cb1a2ab5f8c839de2df430ff59837377",
+      "bytes": 298
+    },
+    {
+      "path": ".secrets/branding-repair-production-coverage.json",
+      "sha256": "ffb70b4de24405b571187b17f97d55fae69a748052ebef837f0c0d8ae0a6bfaa",
+      "bytes": 7178
+    }
+  ],
+  "history": {
+    "initialRepairedRun": {
+      "passed": 13,
+      "failed": 1,
+      "reason": "New host oracle detected clientWidth0; fixed explicit block/min/max width in owned index.ts"
+    },
+    "repeatedAfterFix": {
+      "passed": 14,
+      "failed": 0
+    },
+    "verifiedWithExactHeaders": {
+      "passed": 14,
+      "failed": 0
+    }
+  },
+  "offlineForms": {
+    "rerun": false,
+    "reason": "Forms CSS/views/renderer/test unchanged in this repair. Prior frozen evidence preserved; no new raster pass claimed."
+  },
+  "limitations": [
+    "Три прежних live-provider теста пропущены: test mode исключает S3_ENDPOINT; настоящий SDK PUT/GET/failure/retry проверен в local synthetic E2E.",
+    "12 remote browser requests blocked by QA route allowlist (long synthetic logo fixture); outbound provider operation not performed.",
+    "Manual real screen-reader owner acceptance остаётся отдельной непроведённой проверкой.",
+    "Независимая verification всех9 origins, native cycle2 prepare/evaluate и receipt принадлежат root; этот отчёт их не заменяет.",
+    "CSP проверен в pinned Chromium148; legacy inline fallback не выполняет strict CSP contract.",
+    "docs/embed-contract.md финализирован UI/CSP автором по actual rebuilt evidence; declaration checker exit0 проверяет комплектность объявления, а не независимую browser acceptance. Это документ, не31-й code target."
+  ],
+  "cleanup": {
+    "ownedEndpointsChecked": 3,
+    "ownedEndpointsFree": true,
+    "foreignProcessesStopped": 0
+  }
+}

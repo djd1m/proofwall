@@ -1,0 +1,133 @@
+{
+  "status": "passed",
+  "exitCode": 0,
+  "scope": "Exact pre-creation path/ancestor checks and full nonignored filename inventory; no invented global-free claim for framework ABI names",
+  "newPaths": [
+    {
+      "path": "apps/web/src/lib/project-branding.ts",
+      "absent": true,
+      "existingSameBasenames": []
+    },
+    {
+      "path": "apps/web/src/app/api/projects/[slug]/branding/route.ts",
+      "absent": true,
+      "existingSameBasenames": [
+        "apps/web/src/app/api/agent-payments/commands/route.ts",
+        "apps/web/src/app/api/agent-payments/human/route.ts",
+        "apps/web/src/app/api/agent-payments/reconcile/route.ts",
+        "apps/web/src/app/api/agent-payments/webhook/route.ts",
+        "apps/web/src/app/api/auth/forgot/route.ts",
+        "apps/web/src/app/api/auth/login/route.ts",
+        "apps/web/src/app/api/auth/password/route.ts",
+        "apps/web/src/app/api/auth/register/route.ts",
+        "apps/web/src/app/api/auth/resend-verification/route.ts",
+        "apps/web/src/app/api/auth/reset/route.ts",
+        "apps/web/src/app/api/auth/verify-email/route.ts",
+        "apps/web/src/app/api/auth/yandex/callback/route.ts",
+        "apps/web/src/app/api/auth/yandex/start/route.ts",
+        "apps/web/src/app/api/checkout/route.ts",
+        "apps/web/src/app/api/import/route.ts",
+        "apps/web/src/app/api/n3/program/route.ts",
+        "apps/web/src/app/api/n3/proof/route.ts",
+        "apps/web/src/app/api/n3/status/route.ts",
+        "apps/web/src/app/api/partner/session/route.ts",
+        "apps/web/src/app/api/photo/[...key]/route.ts",
+        "apps/web/src/app/api/projects/slug-available/route.ts",
+        "apps/web/src/app/api/share/route.ts",
+        "apps/web/src/app/api/testimonials/[id]/moderate/route.ts",
+        "apps/web/src/app/api/testimonials/platform/route.ts",
+        "apps/web/src/app/api/testimonials/route.ts",
+        "apps/web/src/app/api/testimonials/video/route.ts",
+        "apps/web/src/app/api/webhooks/payment/route.ts",
+        "apps/web/src/app/api/widget/badge-click/route.ts",
+        "apps/web/src/app/api/widget/config/route.ts",
+        "apps/web/src/app/n3/start/route.ts"
+      ]
+    },
+    {
+      "path": "apps/web/src/app/dashboard/[slug]/branding/page.tsx",
+      "absent": true,
+      "existingSameBasenames": [
+        "apps/web/src/app/agent-payments/page.tsx",
+        "apps/web/src/app/dashboard/[slug]/page.tsx",
+        "apps/web/src/app/dashboard/page.tsx",
+        "apps/web/src/app/f/[slug]/page.tsx",
+        "apps/web/src/app/forgot/page.tsx",
+        "apps/web/src/app/login/page.tsx",
+        "apps/web/src/app/n3/verify/page.tsx",
+        "apps/web/src/app/page.tsx",
+        "apps/web/src/app/partner/dashboard/page.tsx",
+        "apps/web/src/app/partner/page.tsx",
+        "apps/web/src/app/reset/page.tsx",
+        "apps/web/src/app/verify-email/page.tsx",
+        "apps/web/src/app/w/[slug]/page.tsx"
+      ]
+    },
+    {
+      "path": "apps/web/src/app/dashboard/[slug]/branding/branding-editor.tsx",
+      "absent": true,
+      "existingSameBasenames": []
+    },
+    {
+      "path": "apps/web/src/app/dashboard/[slug]/branding/branding-view.tsx",
+      "absent": true,
+      "existingSameBasenames": []
+    },
+    {
+      "path": "apps/web/src/app/f/[slug]/collect-view.tsx",
+      "absent": true,
+      "existingSameBasenames": []
+    },
+    {
+      "path": "apps/web/src/app/proofo-forms.css",
+      "absent": true,
+      "existingSameBasenames": []
+    },
+    {
+      "path": "apps/web/tests/project-branding.test.ts",
+      "absent": true,
+      "existingSameBasenames": []
+    },
+    {
+      "path": "apps/web/tests/branding-collect-visual-fixture.test.ts",
+      "absent": true,
+      "existingSameBasenames": []
+    },
+    {
+      "path": "apps/widget/tests/widget-branding.test.ts",
+      "absent": true,
+      "existingSameBasenames": []
+    },
+    {
+      "path": "tools/visual/branding-collect.e2e.test.mjs",
+      "absent": true,
+      "existingSameBasenames": []
+    },
+    {
+      "path": "scripts/render-branding-collect-fixture.mjs",
+      "absent": true,
+      "existingSameBasenames": []
+    },
+    {
+      "path": "apps/web/tests/branding-collect-schema.test.ts",
+      "absent": true,
+      "existingSameBasenames": []
+    },
+    {
+      "path": "apps/web/tests/branding-collect-mutation.mjs",
+      "absent": true,
+      "existingSameBasenames": []
+    },
+    {
+      "path": "scripts/run-branding-collect-preview.mjs",
+      "absent": true,
+      "existingSameBasenames": []
+    }
+  ],
+  "reusedFrameworkNames": {
+    "GET": "Existing canonical Next HTTP method export in independent route modules; global canonical probe correctly returned taken, reused by framework ABI.",
+    "default": "Existing canonical Next page export; module namespace is new route filepath."
+  },
+  "nonJavaScriptModule": "proofo-forms.css checked by exact path/ancestor and whole-tree filename inventory; JS declaration sweep is not claimed to parse CSS",
+  "toolScope": "tools/visual new E2E pathname independently checked; default dz source roots do not include tools."
+}

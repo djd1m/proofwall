@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "exitCode": 0,
+  "command": "node_modules/.bin/node .secrets/palette-fix-k1.mjs",
+  "designDigest": "0d2ccf6f882b1163ba233ef483e58d2ad74bde1ba530115c72736c99b29823e7",
+  "capturedAt": "2026-11-12T18:36:26.397613+00:00",
+  "stdout": "{\n  \"status\": \"passed\",\n  \"scope\": \"existing exact paths and exports reused; no new production names\",\n  \"reused\": [\n    {\n      \"path\": \"apps/web/src/lib/branding.ts\",\n      \"reused\": true,\n      \"sha256\": \"d606b700b6f8313a44968b41422741d8b0739dddab37c68e7f5dc54c23eeea03\",\n      \"sameBasenames\": [\n        \"apps/web/src/lib/branding.ts\"\n      ]\n    },\n    {\n      \"path\": \"apps/widget/src/render.ts\",\n      \"reused\": true,\n      \"sha256\": \"71a23babbe22fc1c13a191a8b650bed36cd62f638d4aa9b2b0fb0f722a870884\",\n      \"sameBasenames\": [\n        \"apps/widget/src/render.ts\"\n      ]\n    },\n    {\n      \"path\": \"apps/widget/src/styles.ts\",\n      \"reused\": true,\n      \"sha256\": \"38635295280a53662f8725950b92585e31d30b0c6e441a69b69726cc9f18982a\",\n      \"sameBasenames\": [\n        \"apps/widget/src/styles.ts\"\n      ]\n    },\n    {\n      \"path\": \"apps/web/tests/branding.test.ts\",\n      \"reused\": true,\n      \"sha256\": \"68a97d5345d0afd22e4f09a599ea595e08f7dae2c4a5e97b49d3e884efa10f53\",\n      \"sameBasenames\": [\n        \"apps/web/tests/branding.test.ts\"\n      ]\n    },\n    {\n      \"path\": \"apps/widget/tests/widget-branding.test.ts\",\n      \"reused\": true,\n      \"sha256\": \"15777d6153e95ed8dfa1de996fb5f183ddb3541789c64b8623e7cc46db27a1b4\",\n      \"sameBasenames\": [\n        \"apps/widget/tests/widget-branding.test.ts\"\n      ]\n    },\n    {\n      \"path\": \"tools/visual/branding-collect.e2e.test.mjs\",\n      \"reused\": true,\n      \"sha256\": \"61273ec786f3e1675e158b91ee1a2d8c5a58dc1779bd558c9d9f5f2321b661c6\",\n      \"sameBasenames\": [\n        \"tools/visual/branding-collect.e2e.test.mjs\"\n      ]\n    }\n  ],\n  \"newProductionNames\": []\n}\n",
+  "stderr": "",
+  "logSha256": "54e5894ca7347a79e888e39d9f366022d66ba58fccab6efac5227b97ccbef8f5",
+  "result": {
+    "status": "passed",
+    "scope": "existing exact paths and exports reused; no new production names",
+    "reused": [
+      {
+        "path": "apps/web/src/lib/branding.ts",
+        "reused": true,
+        "sha256": "d606b700b6f8313a44968b41422741d8b0739dddab37c68e7f5dc54c23eeea03",
+        "sameBasenames": [
+          "apps/web/src/lib/branding.ts"
+        ]
+      },
+      {
+        "path": "apps/widget/src/render.ts",
+        "reused": true,
+        "sha256": "71a23babbe22fc1c13a191a8b650bed36cd62f638d4aa9b2b0fb0f722a870884",
+        "sameBasenames": [
+          "apps/widget/src/render.ts"
+        ]
+      },
+      {
+        "path": "apps/widget/src/styles.ts",
+        "reused": true,
+        "sha256": "38635295280a53662f8725950b92585e31d30b0c6e441a69b69726cc9f18982a",
+        "sameBasenames": [
+          "apps/widget/src/styles.ts"
+        ]
+      },
+      {
+        "path": "apps/web/tests/branding.test.ts",
+        "reused": true,
+        "sha256": "68a97d5345d0afd22e4f09a599ea595e08f7dae2c4a5e97b49d3e884efa10f53",
+        "sameBasenames": [
+          "apps/web/tests/branding.test.ts"
+        ]
+      },
+      {
+        "path": "apps/widget/tests/widget-branding.test.ts",
+        "reused": true,
+        "sha256": "15777d6153e95ed8dfa1de996fb5f183ddb3541789c64b8623e7cc46db27a1b4",
+        "sameBasenames": [
+          "apps/widget/tests/widget-branding.test.ts"
+        ]
+      },
+      {
+        "path": "tools/visual/branding-collect.e2e.test.mjs",
+        "reused": true,
+        "sha256": "61273ec786f3e1675e158b91ee1a2d8c5a58dc1779bd558c9d9f5f2321b661c6",
+        "sameBasenames": [
+          "tools/visual/branding-collect.e2e.test.mjs"
+        ]
+      }
+    ],
+    "newProductionNames": []
+  }
+}

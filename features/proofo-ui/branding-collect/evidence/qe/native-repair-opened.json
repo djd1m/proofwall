@@ -1,0 +1,22 @@
+{
+  "exitCode": 2,
+  "command": "node_modules/node/bin/node node_modules/@dzhechkov/harness-cli/dist/bin.js qe-rounds --source native --action begin-repair --project /tmp/proofwall-branding-collect --feature-dir /tmp/proofwall-branding-collect/features/proofo-ui/branding-collect --reviewers [{\"id\": \"qe-primary\", \"family\": \"codex\"}, {\"id\": \"qe-risk\", \"family\": \"codex\"}, {\"id\": \"qe-integration\", \"family\": \"codex\"}, {\"id\": \"qe-regression\", \"family\": \"codex\"}] --json",
+  "result": {
+    "source": "native",
+    "history": "incomplete",
+    "status": "not-established",
+    "verdict": "not-established",
+    "ceiling": 3,
+    "reasons": [
+      "native-repair-delta-missing"
+    ],
+    "notEstablishedReason": "native-repair-delta-missing",
+    "partialCommit": false,
+    "locations": {
+      "journal": "/tmp/proofwall-branding-collect/features/proofo-ui/branding-collect/.fa-state/native-qe-history.jsonl",
+      "head": "/tmp/proofwall-branding-collect/features/proofo-ui/branding-collect/.fa-state/native-qe-head.json",
+      "host": "/tmp/proofwall-branding-collect/features/proofo-ui/branding-collect/.fa-state/review-convergence-qe-host.json",
+      "bridge": "/tmp/proofwall-branding-collect/features/proofo-ui/branding-collect/.fa-state/qe-bridge"
+    }
+  }
+}

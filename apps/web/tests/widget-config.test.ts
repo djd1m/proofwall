@@ -51,6 +51,25 @@ afterAll(async () => {
   await closePool();
 });
 
+it('widget sorts the same newest fifty', async () => {
+  await inRollback(async c => {
+    const { slug, projectId } = await makeProject(c);
+    for (let i = 0; i < 53; i++) await c.query(
+      `INSERT INTO testimonials(project_id,author_name,text,status,created_at)
+       VALUES($1,'Synthetic',$2,'approved','2026-01-01')`, [projectId, 'row-' + i],
+    );
+    const selected = (await c.query("SELECT id FROM testimonials WHERE project_id=$1 AND status='approved' ORDER BY created_at DESC,id DESC LIMIT 50", [projectId])).rows.map(r => r.id);
+    const newest = await buildWidgetConfig(c, slug);
+    expect(newest.testimonials.map(r => r.id)).toEqual(selected);
+    await c.query('UPDATE projects SET branding=$2 WHERE id=$1', [projectId, { review_order: 'oldest', theme: 'dark', accent_color: '#FFFFFF', show_platform_labels: false }]);
+    const oldest = await buildWidgetConfig(c, slug);
+    expect(oldest.testimonials.map(r => r.id)).toEqual([...selected].reverse());
+    expect(oldest.branding).toEqual({ theme: 'dark', accent_color: '#FFFFFF', show_platform_labels: false });
+    expect(oldest.badge_required).toBe(true);
+    expect(oldest).not.toHaveProperty('tier');
+  });
+});
+
 describe('ADR-002 — badge решает сервер', () => {
 
   it('ПРОСРОЧЕННАЯ оплата возвращает badge — срок кончился, канал роста снова работает', async () => {
@@ -99,12 +118,12 @@ describe('ADR-002 — badge решает сервер', () => {
       const { slug, projectId } = await makeProject(c);
       // free: плюс badge_url (FR-GROWTH-003) — куда ведёт badge.
       expect(Object.keys(await buildWidgetConfig(c, slug)).sort()).toEqual([
-        'badge_required', 'badge_url', 'project_slug', 'testimonials',
+        'badge_required', 'badge_url', 'branding', 'project_slug', 'testimonials',
       ]);
       // paid: badge не рисуется, значит и ссылка не нужна и не отдаётся.
       await c.query("update projects set tier = 'paid', paid_until = now() + interval '30 days' where id = $1", [projectId]);
       expect(Object.keys(await buildWidgetConfig(c, slug)).sort()).toEqual([
-        'badge_required', 'project_slug', 'testimonials',
+        'badge_required', 'branding', 'project_slug', 'testimonials',
       ]);
     });
   });

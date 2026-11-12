@@ -1,0 +1,11 @@
+{
+  "journalId": "f98d3857-887a-4b41-bb06-70a7c0f7f806",
+  "projectRoot": "/tmp/proofwall-branding-collect",
+  "featurePath": "/tmp/proofwall-branding-collect/features/proofo-ui/palette-default-fix",
+  "ceiling": 3,
+  "schema": "native-qe-head-1",
+  "sequence": 2,
+  "eventDigest": "1c7da9535508c150869e7e3fea009e6cc02875d90873c4c7ecdb9ef4bd40f856",
+  "activeCycle": "79b706c2-eabc-4720-b5ba-5494cc5328ab",
+  "hostProjectionDigest": "afdd0edb69b6b7c51b64c07524692fb1016ebaadf447748587e8c222ec85cd58"
+}

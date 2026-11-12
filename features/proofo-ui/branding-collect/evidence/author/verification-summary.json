@@ -1,0 +1,480 @@
+{
+  "schema": "proofwall-author-verification-1",
+  "capturedAt": "2026-11-12 09:37:17 UTC",
+  "role": "PRIMARY автор; не независимый reviewer",
+  "model": "gpt-6.1-sol/high",
+  "threadId": "01a1cc8d-9a7a-79a0-98ae-8bf830ab3d6f",
+  "baseSha": "4da1c64b6dcc537a412646183344dcb53645ea02",
+  "status": "author-checks-complete",
+  "productionAcceptance": false,
+  "scope": {
+    "expectedCodeTargets": 30,
+    "primary": 25,
+    "UI": 5,
+    "outsideTargets": 0
+  },
+  "checks": [
+    {
+      "id": "web-regression-and-v8",
+      "command": "validated QA env; local vitest run --maxWorkers=1 --minWorkers=1 --coverage.enabled --coverage.provider=v8 --coverage.include=src/**",
+      "exitCode": 0,
+      "log": ".secrets/branding-web-coverage.log",
+      "logSha256": "365300077d1ccaba63eb6b78c627436a71574d3c62a119e5de466053bd79ae73",
+      "cwd": "apps/web",
+      "passed": 957,
+      "failed": 0,
+      "skipped": 3,
+      "classification": "synthetic legacy fixture output; preexisting synthetic storage/photo logs"
+    },
+    {
+      "id": "widget-typecheck-regression-v8",
+      "command": "validated QA env; local tsc --noEmit -p tsconfig.json; local vitest run --coverage.enabled --coverage.provider=v8 --coverage.include=src/**",
+      "exitCode": 0,
+      "log": ".secrets/branding-widget-checks.log",
+      "logSha256": "99d39dfe87a1cb7db7476f58a1e7f356113a68bde2e24d05ee6682396d364a42",
+      "cwd": "apps/widget",
+      "passed": 39,
+      "failed": 0
+    },
+    {
+      "id": "web-typecheck",
+      "command": "node_modules/node/bin/node scripts/run-branding-collect-preview.mjs typecheck",
+      "exitCode": 0,
+      "log": ".secrets/branding-typecheck-final.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "web-widget-build",
+      "command": "node_modules/node/bin/node scripts/run-branding-collect-preview.mjs build",
+      "exitCode": 0,
+      "log": ".secrets/branding-build-final.log",
+      "logSha256": "244eb4f4b0b024fdb192bc56da9c6afc729853d846220f27e0e81a6b5b026989"
+    },
+    {
+      "id": "live-browser",
+      "command": "node_modules/node/bin/node scripts/run-branding-collect-preview.mjs e2e",
+      "exitCode": 0,
+      "log": ".secrets/branding-e2e-final.log",
+      "logSha256": "7e4f7711869999f75ca44dedbb12a0017d862c5e782740dfe3e4e65c4a055e65",
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0,
+      "measurements": ".secrets/branding-e2e-measurements.json",
+      "endpointClass": "loopback; browser-only widget.synthetic.test →127.0.0.1"
+    },
+    {
+      "id": "source-mutations",
+      "command": "node_modules/node/bin/node apps/web/tests/branding-collect-mutation.mjs",
+      "exitCode": 0,
+      "log": ".secrets/branding-mutations-final.log",
+      "logSha256": "5a3309e2e8b2e1e5154c2242af1d10d3d31533af991f96af15e56863b67ff384",
+      "killed": 12,
+      "total": 12,
+      "details": ".secrets/branding-source-mutations.json"
+    },
+    {
+      "id": "process-unit",
+      "command": "node_modules/node/bin/node --test scripts/test-process-guard.mjs",
+      "exitCode": 0,
+      "log": ".secrets/branding-process-test.log",
+      "logSha256": "6c550555e38943d6b35ff9ff4f5bf6a1de66a86cf890a542711e5bb795160d1f",
+      "passed": 63,
+      "failed": 0
+    },
+    {
+      "id": "process-config",
+      "command": "node_modules/node/bin/node scripts/process-guard.mjs check-config",
+      "exitCode": 0
+    },
+    {
+      "id": "diff-whitespace",
+      "command": "git diff --check",
+      "exitCode": 0
+    },
+    {
+      "id": "frozen-integrity",
+      "command": "capture-proofo-reference.mjs verifyIntegrity()",
+      "exitCode": 0,
+      "files": 29,
+      "cases": 9
+    }
+  ],
+  "coverage": {
+    "provider": "@vitest/coverage-v8@2.1.9",
+    "scope": "Все18 TS/TSX production targets плана; полные файлы, включая прежние строки. CSS и QA tools не входят в V8 production denominator. types.ts стирается TypeScript и имеет0 executable lines.",
+    "files": 18,
+    "lines": {
+      "total": 944,
+      "covered": 940
+    },
+    "pct": 99.57627118644068,
+    "thresholds": {
+      "productionLine80": true,
+      "eachExecutableProductionFileLine90": true
+    },
+    "details": ".secrets/branding-production-coverage.json"
+  },
+  "photo": {
+    "byteCount": 68,
+    "sha256": "6b1048f8a6d40bac0b2954c18fefa40c4ea7a96120fc2e54b7317c0e43c2bbec",
+    "counts": {
+      "puts": 1,
+      "gets": 39,
+      "failures": 3,
+      "remoteBlockedRequests": 12
+    }
+  },
+  "sourceMutations": [
+    {
+      "id": "actual-owner-role",
+      "path": "apps/web/src/lib/project-branding.ts",
+      "test": "branding owner statements retain role and tenant context",
+      "testPath": "apps/web/tests/project-branding.test.ts",
+      "testSha256": "4c83013fa5016e79cdb268dabe13f57798eb3299e61c7e623b95e519f1aed9b4",
+      "sourceSha256": "79fb1ee859b2403ae79c16b982709b5265b070bed4e4062df47cfd7b8cd5bb3c",
+      "mutantSourceSha256": "64e674e9e7e19718a1cd9407828c04218f2e085f62d48eea41ddbb18f1f5a4d1",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "killed": true,
+      "restored": true
+    },
+    {
+      "id": "atomic-json-merge",
+      "path": "apps/web/src/lib/project-branding.ts",
+      "test": "branding patch preserves unrelated keys",
+      "testPath": "apps/web/tests/project-branding.test.ts",
+      "testSha256": "4c83013fa5016e79cdb268dabe13f57798eb3299e61c7e623b95e519f1aed9b4",
+      "sourceSha256": "79fb1ee859b2403ae79c16b982709b5265b070bed4e4062df47cfd7b8cd5bb3c",
+      "mutantSourceSha256": "39a76757a0438e353aa7c4f7ead9a70f65c8502faa84968f946dec994f1b543f",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "killed": true,
+      "restored": true
+    },
+    {
+      "id": "origin",
+      "path": "apps/web/src/app/api/projects/[slug]/branding/route.ts",
+      "test": "branding rejects cross origin and oversized stream",
+      "testPath": "apps/web/tests/project-branding.test.ts",
+      "testSha256": "4c83013fa5016e79cdb268dabe13f57798eb3299e61c7e623b95e519f1aed9b4",
+      "sourceSha256": "ef41e3ae3641a199456a9a176d3073bc1b00bc18de92e8c2b291c4622c28eb9f",
+      "mutantSourceSha256": "f2a73130cd7f95b3a595635827ed3e9e1f70fe2b69b704dad5e7e9a0804917ed",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "killed": true,
+      "restored": true
+    },
+    {
+      "id": "actual-body-bound",
+      "path": "apps/web/src/app/api/projects/[slug]/branding/route.ts",
+      "test": "branding rejects cross origin and oversized stream",
+      "testPath": "apps/web/tests/project-branding.test.ts",
+      "testSha256": "4c83013fa5016e79cdb268dabe13f57798eb3299e61c7e623b95e519f1aed9b4",
+      "sourceSha256": "ef41e3ae3641a199456a9a176d3073bc1b00bc18de92e8c2b291c4622c28eb9f",
+      "mutantSourceSha256": "917a461cb4b1e16bff0b873925f61c978892c2a990a1b8e1417a69959515fc2c",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "killed": true,
+      "restored": true
+    },
+    {
+      "id": "unknown-keys",
+      "path": "apps/web/src/lib/branding.ts",
+      "test": "branding patch rejects forbidden and malformed values",
+      "testPath": "apps/web/tests/branding.test.ts",
+      "testSha256": "2089a4248767b941311eb2d1c58370ce84ad7c5e708602b4d3613c3d49431954",
+      "sourceSha256": "20f5080ca2f8b5ebe6936323ab28a486fcdc2693b22b3163ff68c1d96ca19432",
+      "mutantSourceSha256": "c3c0f7cbdcb11e4d1c3b5f2a58e67967c5281b7aa3117121dded9ba3dae52ab7",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "killed": true,
+      "restored": true
+    },
+    {
+      "id": "sql-unicode",
+      "path": "apps/web/src/lib/branding.ts",
+      "test": "branding patch rejects forbidden and malformed values",
+      "testPath": "apps/web/tests/branding.test.ts",
+      "testSha256": "2089a4248767b941311eb2d1c58370ce84ad7c5e708602b4d3613c3d49431954",
+      "sourceSha256": "20f5080ca2f8b5ebe6936323ab28a486fcdc2693b22b3163ff68c1d96ca19432",
+      "mutantSourceSha256": "33695a3d95e13552ac3cc630fd1dfd3b8b097b2b79a3310024f8539e524c3301",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "killed": true,
+      "restored": true
+    },
+    {
+      "id": "raw-accent-text",
+      "path": "apps/web/src/lib/branding.ts",
+      "test": "branding contrast covers accent text and accent fill",
+      "testPath": "apps/web/tests/branding.test.ts",
+      "testSha256": "2089a4248767b941311eb2d1c58370ce84ad7c5e708602b4d3613c3d49431954",
+      "sourceSha256": "20f5080ca2f8b5ebe6936323ab28a486fcdc2693b22b3163ff68c1d96ca19432",
+      "mutantSourceSha256": "30278ec103e0f5ffe8c3ac4f83962eafb1962d5ba036c515445f86d93bfc771d",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "killed": true,
+      "restored": true
+    },
+    {
+      "id": "selected-fifty",
+      "path": "apps/web/src/lib/widget-config.ts",
+      "test": "widget sorts the same newest fifty",
+      "testPath": "apps/web/tests/widget-config.test.ts",
+      "testSha256": "a1fee01dfacd3c3a4dfd128868a048342dd3b090a7da233a0807ddf6e3a0ea81",
+      "sourceSha256": "3c4d95a743a3d63f334de52f8c7720286495e3b3fc83160df2c01081472c4d9b",
+      "mutantSourceSha256": "210e9805a02d62a2f39ac8531ac068f6cd9de66a327285c9f90347ddee05f23b",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "killed": true,
+      "restored": true
+    },
+    {
+      "id": "pending-unlocked",
+      "path": "apps/web/src/app/dashboard/[slug]/branding/branding-editor.tsx",
+      "test": "branding controller retains draft through pending failures and retry",
+      "testPath": "apps/web/tests/branding.test.ts",
+      "testSha256": "2089a4248767b941311eb2d1c58370ce84ad7c5e708602b4d3613c3d49431954",
+      "sourceSha256": "eb8016ec477eec0235bc25050ca2db838a00176dec92d86d9e18d74a2f69378a",
+      "mutantSourceSha256": "64dfc6085eacec67492c3c7e535ca71388cf1a68742f39dc777a97941d3be4e0",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "killed": true,
+      "restored": true
+    },
+    {
+      "id": "padded-name",
+      "path": "apps/web/src/app/f/[slug]/submit-form.tsx",
+      "test": "collect controller validates raw boundaries and announces only 201 success",
+      "testPath": "apps/web/tests/branding.test.ts",
+      "testSha256": "2089a4248767b941311eb2d1c58370ce84ad7c5e708602b4d3613c3d49431954",
+      "sourceSha256": "636c4ea5bc95bc0addd921eece80d139dad78eb9c7c26c5e60507c10b1dbdd75",
+      "mutantSourceSha256": "99084e281b7b9aeb8dd75cf78baf668363ed5baf53d87b88b8c2533937b5a8d0",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "killed": true,
+      "restored": true
+    },
+    {
+      "id": "old-live-border",
+      "path": "apps/web/src/app/dashboard/[slug]/branding/branding-editor.tsx",
+      "test": "branding controller retains draft through pending failures and retry",
+      "testPath": "apps/web/tests/branding.test.ts",
+      "testSha256": "2089a4248767b941311eb2d1c58370ce84ad7c5e708602b4d3613c3d49431954",
+      "sourceSha256": "eb8016ec477eec0235bc25050ca2db838a00176dec92d86d9e18d74a2f69378a",
+      "mutantSourceSha256": "ef1ef5874e39d669304e9babce37c43dfc5ef98a738bcfd398f9772310b67ee6",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "killed": true,
+      "restored": true
+    },
+    {
+      "id": "platform-label-toggle",
+      "path": "apps/widget/src/render.ts",
+      "test": "platform labels hide names but preserve provenance",
+      "testPath": "apps/widget/tests/widget-branding.test.ts",
+      "testSha256": "1d676d4708e45ab4d8810598e5765abc211bccefab70dd601633f87423bc7a79",
+      "sourceSha256": "71a23babbe22fc1c13a191a8b650bed36cd62f638d4aa9b2b0fb0f722a870884",
+      "mutantSourceSha256": "fd9935107d8464b745dbeccff70d7f45ec31ed252d5679288c32e54f84c579f2",
+      "baselineExit": 0,
+      "mutantExit": 1,
+      "killed": true,
+      "restored": true
+    }
+  ],
+  "browserOracles": [
+    {
+      "check": "field-message-relation-mutants",
+      "status": "killed",
+      "count": 4
+    },
+    {
+      "check": "raw-white-accent-text-mutant",
+      "status": "killed"
+    },
+    {
+      "check": "live-border-original-mutant",
+      "status": "killed"
+    },
+    {
+      "check": "nowrap-clip-mutant",
+      "status": "killed"
+    }
+  ],
+  "offlineVisual": {
+    "owner": "Другой UI автор",
+    "sourceBound": true,
+    "idle": 6,
+    "zeroDiff": 6,
+    "killedMutations": 18,
+    "evidence": "features/proofo-ui/branding-collect/evidence/visual/same-component-summary.json",
+    "primaryDidNotEditUIFiles": true
+  },
+  "widgetGzipBytes": 3513,
+  "sources": [
+    {
+      "path": "apps/web/src/lib/branding.ts",
+      "owner": "primary",
+      "sha256": "20f5080ca2f8b5ebe6936323ab28a486fcdc2693b22b3163ff68c1d96ca19432"
+    },
+    {
+      "path": "apps/web/src/lib/project-branding.ts",
+      "owner": "primary",
+      "sha256": "79fb1ee859b2403ae79c16b982709b5265b070bed4e4062df47cfd7b8cd5bb3c"
+    },
+    {
+      "path": "apps/web/src/app/api/projects/[slug]/branding/route.ts",
+      "owner": "primary",
+      "sha256": "ef41e3ae3641a199456a9a176d3073bc1b00bc18de92e8c2b291c4622c28eb9f"
+    },
+    {
+      "path": "apps/web/src/app/dashboard/[slug]/branding/page.tsx",
+      "owner": "primary",
+      "sha256": "7bc86d8136e421481df39a9129245850ef2c719a013ec2f5268598411131f015"
+    },
+    {
+      "path": "apps/web/src/app/dashboard/[slug]/branding/branding-editor.tsx",
+      "owner": "primary",
+      "sha256": "eb8016ec477eec0235bc25050ca2db838a00176dec92d86d9e18d74a2f69378a"
+    },
+    {
+      "path": "apps/web/src/app/dashboard/[slug]/branding/branding-view.tsx",
+      "owner": "UI-author",
+      "sha256": "804c422499a742ff1ae2252f534f947bab87160ade83cf9141a33c09650b3a09"
+    },
+    {
+      "path": "apps/web/src/app/f/[slug]/page.tsx",
+      "owner": "primary",
+      "sha256": "6aabf7ec3baa6c3271b8a673bb90fcbfe9ce6d38e6bbfcda67483fb855722e9b"
+    },
+    {
+      "path": "apps/web/src/app/f/[slug]/submit-form.tsx",
+      "owner": "primary",
+      "sha256": "636c4ea5bc95bc0addd921eece80d139dad78eb9c7c26c5e60507c10b1dbdd75"
+    },
+    {
+      "path": "apps/web/src/app/f/[slug]/intake-tabs.tsx",
+      "owner": "primary",
+      "sha256": "40adddecacf33cb4ee65093bf266f48427ec2253002c217195ff8fa42d7b77c1"
+    },
+    {
+      "path": "apps/web/src/app/f/[slug]/collect-view.tsx",
+      "owner": "UI-author",
+      "sha256": "54de88c7bf37d2df5fd08a6fc4e677fe2a415c8f80c5a410e80afee4f81dbd68"
+    },
+    {
+      "path": "apps/web/src/app/proofo-forms.css",
+      "owner": "UI-author",
+      "sha256": "7c9938a03217abb10ca6e6179bebe60e4753de5c93ad501cc3ff43a040cfaffc"
+    },
+    {
+      "path": "apps/web/src/lib/wall.ts",
+      "owner": "primary",
+      "sha256": "7846ccbea03fd14dcddc19950c58c83fec2f85ba84c1c61c65c2270391f0c264"
+    },
+    {
+      "path": "apps/web/src/app/w/[slug]/page.tsx",
+      "owner": "primary",
+      "sha256": "0cd8e7b183c0c354e564f387f28ea60c0fac1ae367c1c884c951534d9dc88914"
+    },
+    {
+      "path": "apps/web/src/lib/widget-config.ts",
+      "owner": "primary",
+      "sha256": "3c4d95a743a3d63f334de52f8c7720286495e3b3fc83160df2c01081472c4d9b"
+    },
+    {
+      "path": "apps/widget/src/types.ts",
+      "owner": "primary",
+      "sha256": "ff68a2dd40f689f51a3da45ca5942cdeb2da2c38e3ca4e14960d6ab070822ac1"
+    },
+    {
+      "path": "apps/widget/src/index.ts",
+      "owner": "primary",
+      "sha256": "94a9a28ce0465947e636ec1e5bb1380c34f981354647840caa748df993c35400"
+    },
+    {
+      "path": "apps/widget/src/render.ts",
+      "owner": "primary",
+      "sha256": "71a23babbe22fc1c13a191a8b650bed36cd62f638d4aa9b2b0fb0f722a870884"
+    },
+    {
+      "path": "apps/widget/src/styles.ts",
+      "owner": "primary",
+      "sha256": "fd88474eeba14866eab4e58f1a636121b56f75efa86ad85baa9c959800ea67f8"
+    },
+    {
+      "path": "apps/web/tests/branding.test.ts",
+      "owner": "primary",
+      "sha256": "2089a4248767b941311eb2d1c58370ce84ad7c5e708602b4d3613c3d49431954"
+    },
+    {
+      "path": "apps/web/tests/project-branding.test.ts",
+      "owner": "primary",
+      "sha256": "4c83013fa5016e79cdb268dabe13f57798eb3299e61c7e623b95e519f1aed9b4"
+    },
+    {
+      "path": "apps/web/tests/branding-collect-visual-fixture.test.ts",
+      "owner": "UI-author",
+      "sha256": "0f2c47a83bccd24dff2adc79dd4cb6db0dffb09c2556c3af8253e52c1913dfa5"
+    },
+    {
+      "path": "apps/web/tests/wall.test.ts",
+      "owner": "primary",
+      "sha256": "5d024ffebb3cdbde6e82e85d84f661e256f11e4dbe93bb6f71f9e88b1470c104"
+    },
+    {
+      "path": "apps/web/tests/widget-config.test.ts",
+      "owner": "primary",
+      "sha256": "a1fee01dfacd3c3a4dfd128868a048342dd3b090a7da233a0807ddf6e3a0ea81"
+    },
+    {
+      "path": "apps/widget/tests/widget-branding.test.ts",
+      "owner": "primary",
+      "sha256": "1d676d4708e45ab4d8810598e5765abc211bccefab70dd601633f87423bc7a79"
+    },
+    {
+      "path": "tools/visual/branding-collect.e2e.test.mjs",
+      "owner": "primary",
+      "sha256": "ec08bd5399be3e16b1720566f63a4963dd29d5cb8092d82b29d2706faf756e66"
+    },
+    {
+      "path": "scripts/render-branding-collect-fixture.mjs",
+      "owner": "UI-author",
+      "sha256": "577ca959393f8685aa9f8065155c1a36bff9fa78ce521565ffbac43251be74ee"
+    },
+    {
+      "path": "apps/web/tests/branding-collect-schema.test.ts",
+      "owner": "primary",
+      "sha256": "6fbe194e39a59d82040a783f7938002f17637949b5f908a9cacc068c366332c8"
+    },
+    {
+      "path": "apps/web/tests/branding-collect-mutation.mjs",
+      "owner": "primary",
+      "sha256": "cc3803449b83d2b19e9c77d947bcb87b581459a346b9fbe4d5ee5a5cdf4401de"
+    },
+    {
+      "path": "apps/web/src/app/dashboard/[slug]/page.tsx",
+      "owner": "primary",
+      "sha256": "86be10119cd89198d0709fcc90870b1a97a662d0804ef3603e3500841a587ac6"
+    },
+    {
+      "path": "scripts/run-branding-collect-preview.mjs",
+      "owner": "primary",
+      "sha256": "0ab904b64cf298b176fcb94d843b9f8f85e3ce3a0995005a7ec49fa4217ecbf3"
+    }
+  ],
+  "limitations": [
+    "Три прежних Cloud.ru/live-provider tests skipped: test mode исключает S3_ENDPOINT. Local SDK E2E выполнен отдельно.",
+    "Manual real screen-reader и owner acceptance опубликованной test copy не выполнены автором.",
+    "Формальные independent QE/Step8/9, anti-drift closure и receipt выполняет root. State/host/journals/admission/vendor/baselines автором не менялись.",
+    "V8 scope: полные18 изменённых production TS/TSX files, включая прежние строки. CSS/QA tools не объявлены покрытыми V8. types.ts имеет0 executable lines, проверен tsc.",
+    "Workspace lint scripts отсутствуют; lint не объявлен PASS.",
+    "Native guard отклонил compound npm command из-за рекурсивного раскрытия scripts. Process checks выполнены точными локальными командами.",
+    "Guard отклонил shell-запись E2E из-за слова release и shell-запись отчёта из-за текста baseline. Использованы явные файловые patches; guard/trust не менялись.",
+    "В UX E2E ошибки400/429/503/network дополнительно инъецируются Playwright; Photo503/retry отдельно проходит настоящий SDK/local S3.",
+    "12 browser remote attempts заблокированы allowlist при длинном external logo URL. Реальных outbound provider вызовов нет.",
+    "PG provision/migrations — работа координатора. Автор не создавал/удалял БД и использовал только выделенную PG33186.",
+    "Пять UI targets принадлежали другому автору; PRIMARY проверил их source binding и использовал контракт.",
+    "State implementing, receipt null; авторский отчёт не разрешает поставку."
+  ]
+}

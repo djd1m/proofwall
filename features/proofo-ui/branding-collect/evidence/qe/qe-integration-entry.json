@@ -1,0 +1,81 @@
+{
+  "reviewer": "qe-integration",
+  "family": "codex",
+  "independent": true,
+  "verdict": "clean",
+  "conditions": [
+    {
+      "id": "INTEGRATION-01",
+      "owner": "qe-integration",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "FR-202: новый logo_url должен быть absolute HTTPS без username/password; любой credential-bearing URL отклоняется клиентом и PATCH целиком с 400, без изменения JSONB; обычный credential-free HTTPS и unchanged legacy HTTP остаются совместимыми. Нужны отрицательные validator/route проверки этого контракта.",
+      "scope": [
+        "apps/web/src/lib/branding.ts",
+        "apps/web/tests/branding.test.ts",
+        "apps/web/tests/project-branding.test.ts",
+        "openspec/changes/proofo-branding-collect/specs/branding-collect/spec.md"
+      ],
+      "evidence": "OpenSpec spec.md:43 требует HTTPS без credentials. branding.ts:86-91 проверяет только protocol === https:, поэтому синтетический https://synthetic:synthetic@example.test/logo.png проходит; username/password нигде не проверяются. branding.ts:29-34 сохраняет userinfo через URL.toString, project-branding.ts:29-35 сохраняет принятый patch. branding.test.ts:40-56 не содержит credential-bearing отрицательного случая. Статический вывод из фактического source; existing targeted suite 154/154 не проверяет этот вход. Own pure-function probe импортировал фактический branding.ts через local Node22 --experimental-strip-types (env-i, flock): username-password и percent-encoded userinfo оба accepted=true/canonicalHasUserinfo=true; credential-free HTTPS accepted, edited HTTP rejected. .secrets/bc-qe-integration-logo-probe.json SHA256 b4bab4d72aa19d97c0ca888da3106f52699eb8b5585d34d2547f7a95685613e9."
+    },
+    {
+      "id": "INTEGRATION-02",
+      "owner": "qe-integration",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "FR-206 scenario «Публикация после модерации»: текущий browser/HTTP integration test должен провести созданный обычной collect формой pending text/photo через POST /api/testimonials/<id>/moderate с обычной owner session, проверить успешный переход и появление только в wall/widget этого проекта. Прямой privileged SQL UPDATE не заменяет этот этап. Нужен отказ чужой/анонимной сессии без публикации, соответствующий existing moderation contract.",
+      "scope": [
+        "tools/visual/branding-collect.e2e.test.mjs",
+        "openspec/changes/proofo-branding-collect/specs/branding-collect/spec.md"
+      ],
+      "evidence": "OpenSpec spec.md:127-130 требует ordinary moderation API. E2E branding collect real flows:157 и collect uploads and reads local photo:253 делают pool.query UPDATE testimonials SET status=approved вместо API; следующие wall/widget assertions проходят после обхода HTTP auth/ownership/transition/content-threshold boundary. Поиск по apps/web/tests показывает moderation.test.ts вызывает applyTransition helper; ordinary moderate route не импортируется/не запрашивается. Собственный E2E 13/13 и moderation helper tests 12/12 подтверждены, но не доказывают названный сквозной сценарий."
+    },
+    {
+      "id": "INTEGRATION-03",
+      "owner": "qe-integration",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "Применимое .claude/rules/embeddable-widget.md: real widget должен сохранять свои стили и branding на внешнем origin при restrictive CSP без требования unsafe-inline. Исправить способ установки scoped styles и подтвердить на реальном rebuilt bundle в hostile CSS host со style-src без unsafe-inline; зафиксировать точный host CSP/cross-origin contract. Отрицательная замена на inline style должна ломать проверку.",
+      "scope": [
+        "apps/widget/src/styles.ts",
+        "tools/visual/branding-collect.e2e.test.mjs",
+        "features/proofo-ui/branding-collect/05_architecture.md"
+      ],
+      "evidence": "styles.ts:108-111 создаёт inline <style>; E2E:104 разрешает style-src unsafe-inline и поэтому не ловит отказ. Own private probe .secrets/bc-qe-integration-csp-probe.json SHA256 1565361d91c42e92c1732a79c8c1d8c95d31850381e5808427bb28ae51e0bfe0: Chrome148.0.7778.97, real widget.c7ab0e9a.js SHA c7ab0e9a4e237181f30b670fae1b7b7b647737fd5aa7709a9cf9c1bc25fe7180; external hostname widget.synthetic.test:33189, script/config 127.0.0.1:33189, style-src разрешает только этот origin. CSP блокирует inline stylesheet: dark data-theme сохраняется, но computed widget background transparent, color magenta, monospace13px, card padding0. In-memory CSSStyleSheet/adoptedStyleSheets с теми же actual CSS восстанавливает dark rgb24, white14px и padding16; это feasibility probe, не implemented fix. Source frozen, external requests0. Механизм унаследован от baseline, но текущий изменённый widget не выполняет применимый integration contract."
+    }
+  ],
+  "verifications": [
+    {
+      "id": "INTEGRATION-01",
+      "revision": "5a55e200c7807177bb7d1e8e39b5eb2b7db0d4d68b3d69d07d182b3403122657",
+      "classification": "structural",
+      "evidence": "qe-integration.md cycle2: actual branding.ts:86-98 parsed HTTPS username/password guard; own 72/72 web tests execute four raw/encoded userinfo negatives, actual React editor no-fetch retained draft/error, actual route/repository mixed PATCH400 with unchanged real PG JSONB (project-branding.test.ts:170-178); credential-free HTTPS and legacy unrelated dirty save remain accepted. Own targeted log SHA256 deea12d7b2b6f9f4c582faa1d27f1a8730c8f96397fba42cd8c3c1b33b848c7d; own browser14/14.",
+      "implementationVerified": true
+    },
+    {
+      "id": "INTEGRATION-02",
+      "revision": "5a55e200c7807177bb7d1e8e39b5eb2b7db0d4d68b3d69d07d182b3403122657",
+      "classification": "structural",
+      "evidence": "qe-integration.md cycle2: own E2E14/14 executed actual collect text and photo -> pending -> ordinary owner POST /api/testimonials/<id>/moderate200 -> approved -> real own wall/external widget. E2E:113-139 denies foreign403/anonymous401/expired401 while pending persists; foreign config/wall excludes the result. Two ordinary-owner-moderation records in own .secrets/bc-qe-integration-cycle2-e2e-measurements.json SHA256 a16a714eea60319dc163f9a374899cbc2766c1b446c448cc42ad0bda090a786f; own E2E log SHA256 c042a533ce11fbada18f1e3392f04fb15180b3494324b546d311ab125ea88889. No SQL approval in these checked transitions.",
+      "implementationVerified": true
+    },
+    {
+      "id": "INTEGRATION-03",
+      "revision": "5a55e200c7807177bb7d1e8e39b5eb2b7db0d4d68b3d69d07d182b3403122657",
+      "classification": "structural",
+      "evidence": "qe-integration.md cycle2: actual styles.ts:108-123 ownerDocument constructed CSSStyleSheet/adoptedStyleSheets; own widget43/43 includes iframe realm/adoption/fallback assertions. Own E2E14/14 runs actual bundle widget.0837c760.js SHA256 0837c76006f9782264ca52f036c643ca1d9d04eada3ebfe92a1f5361967d132e, Chromium148.0.7778.97, external hostname33189/app33187, real host stylesheet/script, CSP style-src self without unsafe-inline, actual rendered theme/font/card metrics and no CSP violations. Actual config ACAO* and request Origin foreign with no Cookie/Authorization. Inline DOM mutation yields violation/broken padding and is rejected by same oracle, fresh real bundle passes. New docs/embed-contract.md plus own upstream declaration checker exit0 (source blob7161b4134915e227f9221586e9ef6bd9b6214a44); declaration proof distinguished from browser proof.",
+      "implementationVerified": true
+    }
+  ],
+  "newRisks": {
+    "assessment": "В текущем structural delta и проверенных affected dependencies дополнительных серьёзных integration risks не установлено. Собственные три исходных conditions сохранены и implementation-verified на cycle2 revision; чужие условия не оцениваются как закрытые этой ролью. Legacy strict-CSP capability/browser limits, external provider, full coverage, public delivery и manual AT остаются явно описанными границами доказательства.",
+    "evidence": "features/proofo-ui/branding-collect/evidence/qe/qe-integration.md, cycle2: independently matched46/46 manifest paths, exact preserved own condition objects, 12actual changed paths all covered by author delta; own locked E2E14/14, web5files72/72, widget6files43/43, pinned declaration checker exit0; no source mutation or external provider use.",
+    "conditions": []
+  },
+  "authorAssessmentChecked": true,
+  "deltaVerification": {
+    "classification": "structural",
+    "evidence": "Сопоставлены actual native initial/cycle2 manifests:12 changed/added paths, все12 указаны в author-repair-delta.changedScope. Самостоятельно исследованы changed source/tests/docs и affected writer/editor/readers/tenant/provenance/intake dependencies. Own current runtime: E2E14/14, web72/72, widget43/43, declaration checker0; host block-width fix проверен six three-level reflow cases, redacted post-commit logs и failed-commit rollback исполнены actual route/PG tests, baseline git reader реально выполнен после committed new writer (own provenance SHA256 7d58b36f710447913c2557693a309739cb1a2ab5f8c839de2df430ff59837377). Source manifest46/46 remained frozen. Детали, hashes и limits в qe-integration.md cycle2; author grades/full-suite/mutation counts не выданы за own execution.",
+    "implementationVerified": true
+  }
+}

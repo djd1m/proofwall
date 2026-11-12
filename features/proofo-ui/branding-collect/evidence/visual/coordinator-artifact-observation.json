@@ -1,0 +1,79 @@
+{
+  "status": "observed-author-artifacts",
+  "independentReview": false,
+  "sourceHashesVerified": [
+    {
+      "path": "apps/web/src/app/dashboard/[slug]/branding/branding-view.tsx",
+      "sha256": "804c422499a742ff1ae2252f534f947bab87160ade83cf9141a33c09650b3a09"
+    },
+    {
+      "path": "apps/web/src/app/f/[slug]/collect-view.tsx",
+      "sha256": "54de88c7bf37d2df5fd08a6fc4e677fe2a415c8f80c5a410e80afee4f81dbd68"
+    },
+    {
+      "path": "apps/web/src/app/proofo-forms.css",
+      "sha256": "7c9938a03217abb10ca6e6179bebe60e4753de5c93ad501cc3ff43a040cfaffc"
+    },
+    {
+      "path": "scripts/render-branding-collect-fixture.mjs",
+      "sha256": "577ca959393f8685aa9f8065155c1a36bff9fa78ce521565ffbac43251be74ee"
+    },
+    {
+      "path": "apps/web/tests/branding-collect-visual-fixture.test.ts",
+      "sha256": "6b9c4bea6079e72a58060eb289e75eb19beb290ead5987db3d8d7c0696c7be0e"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "features/proofo-ui/branding-collect/evidence/visual/branding-1440x900.actual.png",
+      "sha256": "769c1994ca5ffc701b7097f25c19de424e5077642c8517c2b27e7eb20515cb8a"
+    },
+    {
+      "path": "features/proofo-ui/branding-collect/evidence/visual/branding-1440x900.actual.json",
+      "sha256": "269009357dc36c49288cf8b09b17b93c35cc9f8bbf21f7434ccce87c0ec26e50"
+    },
+    {
+      "path": "features/proofo-ui/branding-collect/evidence/visual/branding-390x844.actual.png",
+      "sha256": "fa9d177be53f24c23a08b7aca9ce0e2fc104c26344f52ff2c11b3e1e771359d3"
+    },
+    {
+      "path": "features/proofo-ui/branding-collect/evidence/visual/branding-390x844.actual.json",
+      "sha256": "028dc57be045331695771b5fd3299ef92963fac4316aaa0c507406e3821d7bf7"
+    },
+    {
+      "path": "features/proofo-ui/branding-collect/evidence/visual/branding-360x800.actual.png",
+      "sha256": "0f51f25f22ba54978a5bdf2af260f65b781417b3c21ba383b36ebe19e3271d35"
+    },
+    {
+      "path": "features/proofo-ui/branding-collect/evidence/visual/branding-360x800.actual.json",
+      "sha256": "ac34febeeb2e31351aef58a1e2cd870b0af740a0e35d54050913973aa26000fe"
+    },
+    {
+      "path": "features/proofo-ui/branding-collect/evidence/visual/collect-1440x900.actual.png",
+      "sha256": "175636160f339a9a8d667c442f2c65f8f9038084685dd8373a0b995f85d144e2"
+    },
+    {
+      "path": "features/proofo-ui/branding-collect/evidence/visual/collect-1440x900.actual.json",
+      "sha256": "81f999f215250bcdc5bee5be47fcb240f528bfcb72a31a7e6675c954a8e8fb4e"
+    },
+    {
+      "path": "features/proofo-ui/branding-collect/evidence/visual/collect-390x844.actual.png",
+      "sha256": "3aa12ec210f1077fe07d26fcf85265949300e1ba47da8c04d7e23750f5e1fffd"
+    },
+    {
+      "path": "features/proofo-ui/branding-collect/evidence/visual/collect-390x844.actual.json",
+      "sha256": "44ecfd5ff66a7baf64c04f5a02228a14487deca2d3ba444de702450d48156b6a"
+    },
+    {
+      "path": "features/proofo-ui/branding-collect/evidence/visual/collect-360x800.actual.png",
+      "sha256": "45cae2ae5000f33dc99e9eea8945aa0b53b672d5f1c0c50db73ec33872578e55"
+    },
+    {
+      "path": "features/proofo-ui/branding-collect/evidence/visual/collect-360x800.actual.json",
+      "sha256": "adabe6e8063534ce247212fc5440a3cc20267f73cab2c76698316404762746e9"
+    }
+  ],
+  "frozenReferenceModified": false,
+  "rasterNoneCases": 6,
+  "limitations": "Offline original palette only; live approved contrast and interactions still require tests"
+}

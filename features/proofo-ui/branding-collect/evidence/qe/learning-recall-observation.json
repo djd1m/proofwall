@@ -1,0 +1,25 @@
+{
+  "stage": "Focused Step 8/9 closure",
+  "timing": "Coordinator lexical recall executed during focused verification, not claimed as a pre-assembly call. Native authors separately observed empty learning queries earlier.",
+  "queryResults": {
+    "qe": {
+      "chunk_id": "c0a84a",
+      "wall_time_seconds": 2.455447181,
+      "exit_code": 0,
+      "original_token_count": 31,
+      "output": "{\n  \"success\": true,\n  \"data\": {\n    \"entries\": [],\n    \"total\": 0,\n    \"hasMore\": false,\n    \"searchType\": \"pattern\"\n  }\n}\n"
+    },
+    "fleet": {
+      "chunk_id": "d20461",
+      "wall_time_seconds": 2.466226202,
+      "exit_code": 0,
+      "original_token_count": 31,
+      "output": "{\n  \"success\": true,\n  \"data\": {\n    \"entries\": [],\n    \"total\": 0,\n    \"hasMore\": false,\n    \"searchType\": \"pattern\"\n  }\n}\n"
+    }
+  },
+  "foundKeys": 0,
+  "retrieves": 0,
+  "appliedAqeLessons": 0,
+  "semanticSearch": "not claimed; vector backend unavailable",
+  "durableLessonApplied": "Actual SQL statement role/GUC on same transaction; see runtime/admission evidence"
+}

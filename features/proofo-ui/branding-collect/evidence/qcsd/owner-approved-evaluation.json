@@ -1,0 +1,12 @@
+{
+  "exitCode": 0,
+  "command": "node .agents/skills/feature-adr/scripts/check-review-convergence.mjs evaluate --repo /tmp/proofwall-branding-collect --feature features/proofo-ui/branding-collect --phase ideation",
+  "result": {
+    "schema": "fa-review-convergence-1",
+    "phase": "ideation",
+    "verdict": "closed",
+    "revision": "7530e37d99132e7af128a3ac107971d97c63fbcaef35ef4f5c2c6ad9cf923374",
+    "unresolved": [],
+    "reasons": []
+  }
+}

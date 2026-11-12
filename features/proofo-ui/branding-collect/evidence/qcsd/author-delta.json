@@ -1,0 +1,40 @@
+{
+  "addressed": [
+    "TESTABILITY-01",
+    "ACCESSIBILITY-01",
+    "ACCESSIBILITY-02",
+    "ACCESSIBILITY-03",
+    "UX-01",
+    "SECURITY-01"
+  ],
+  "changedScope": [
+    "features/proofo-ui/branding-collect/00_complexity_assessment.md",
+    "features/proofo-ui/branding-collect/01_requirements.md",
+    "features/proofo-ui/branding-collect/02_research.md",
+    "features/proofo-ui/branding-collect/03.5_ideation_report.md",
+    "features/proofo-ui/branding-collect/03_adr/001-patch-existing-branding.md",
+    "features/proofo-ui/branding-collect/03_adr/002-preserve-provenance-when-hiding-labels.md",
+    "features/proofo-ui/branding-collect/03_adr/003-render-production-views-offline.md",
+    "features/proofo-ui/branding-collect/03_adr/004-isolate-photo-qa-runtime.md",
+    "features/proofo-ui/branding-collect/04_domain_model.md",
+    "features/proofo-ui/branding-collect/05_architecture.md",
+    "features/proofo-ui/branding-collect/06_implementation_plan.md",
+    "features/proofo-ui/branding-collect/README.md",
+    "features/proofo-ui/branding-collect/evidence/design/comparison-check.json",
+    "features/proofo-ui/branding-collect/evidence/design/contrast-proposal.json",
+    "features/proofo-ui/branding-collect/evidence/design/owner-decision-pending.json",
+    "features/proofo-ui/branding-collect/evidence/design/owner-decision.json",
+    "features/proofo-ui/branding-collect/evidence/qcsd/author-delta.json",
+    "openspec/changes/proofo-branding-collect/design.md",
+    "openspec/changes/proofo-branding-collect/specs/branding-collect/spec.md",
+    "openspec/changes/proofo-branding-collect/tasks.md"
+  ],
+  "classification": "structural",
+  "delta": "2026-11-12 владелец явно ответил «выбери контрастнее». Новый evidence/design/owner-decision.json фиксирует chosenBorder #8e806b, originalBorder #ddd3c2 и referenceUnchanged=true; исторический pending artifact сохранён с исходным статусом в history и resolution link. Live branding/collect containers всегда передают approved fieldBorder #8e806b, fieldFill #f7f4eb/cardSurface #fffdf8 через generic explicit palette props существующих view-model. Offline literal model передаёт original palette тем же production components без isFixture/Next fixture/seed/auth override. Шесть zero-diff кадров доказывают component/layout на reference data; live runtime имеет одобренное отличие рамок. Все необходимые live boundaries/focus >=3 к фактическому соседнему фону, text>=4.5/large>=3, wall/widget обе темы. Отдельный computed border/fill/card oracle и mutation возврата runtime border к #ddd3c2 обязаны обнаружить отказ. Нормативная дельта, SHA mapping, ADR-003, architecture, plan, complexity scope и narrative синхронизированы. A17/AM-13 используют существующие30 targets, новые app files/exports не создавались. Все шесть исходных IDs сохранены; предыдущие решения trim/raw, state/focus/reflow, Save lock/two tabs и logging scope не отменены. changedScope включает четыре фактических host changes, все измеренные author changes и явно указанные dependencies.",
+  "evidence": "Actual commands: npm run openspec -- validate proofo-branding-collect --type change --strict --no-interactive -> exit0, valid; node .agents/skills/feature-adr/scripts/check-plan-completeness.mjs features/proofo-ui/branding-collect --tier=L --require-requirements -> exit0 PASS, 30 targets/13 IDs/4 ADR, 0 failures/warnings/skips; git diff --check -> exit0. Spec SHA-256 2e9966d6e9eb55e24b992ede14761eb086ce64ecf181ca208bf5d969c359cc75; plan SHA-256 9375188bbaf43d77c39edd6d4ba0b0c8a1f9d564df359678cfcf695ed84e188c. SHA mapping и ровно30 уникальных terminal literal targets проверены. Pre-edit digest comparison: 355 protected files unchanged, включая app/packages/scripts, frozen reference, host/reviews/admission evidence и implementation-state; новых app/code files не создано. Recall выполнен: no matching patterns, память не выдана за применённое знание. Ratios3.5035 к #f7f4eb и3.7903 к #fffdf8 — существующий расчёт выбранного цвета, comparison-check.json — прежняя проверка макета, не новый product browser test. Никаких product/AT/E2E tests этим автором не запускалось. По текущему сообщению координатора QA PG33186 доступен, порты33187/33188/33189 свободны; это resource availability, не product evidence.",
+  "newRisks": {
+    "assessment": "Новых самостоятельных conditions автор не вводит. Owner-approved live palette устраняет ранее предложенное исключение neutral border из >=3 contract на уровне дизайна, но ACCESSIBILITY-01 остаётся открытым в неизменённом host до нового focused origin verification/evaluate. Прежние пять проверок относятся к предыдущему snapshot; текущая delta не устанавливает admission, product pass, AT pass либо production acceptance. Главный риск двух palette inputs — перепутать offline layout proof с live runtime evidence; это явно запрещено и покрыто отдельным live oracle/negative mutation.",
+    "evidence": "FR-208/NFR-201, ADR-003, architecture и TASK-7/8/A17/AM-13 требуют один production component, generic explicit props, original palette только offline, approved palette всегда на обычных branding/collect routes. Runtime mutation -> #ddd3c2 обязана провалить live computed boundary oracle даже при passing frozen screenshots. Требования сохраняют computed compositing actual adjacent colors, обе темы wall/widget, text/focus and manual screen-reader acceptance. Owner approval сохранён отдельно от gate authority; независимые entries/condition history/.fa-state не изменены.",
+    "conditions": []
+  }
+}

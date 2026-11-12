@@ -1,0 +1,32 @@
+{
+  "status": "resolved-owner-decision",
+  "condition": "ACCESSIBILITY-01",
+  "comparisonUrl": "https://proofwall.78.17.53.233.sslip.io/__design/proofo/contrast-fields.html",
+  "comparisonEvidence": "features/proofo-ui/branding-collect/evidence/design/comparison-check.json",
+  "currentDesignRevision": "f0f514a4b49206f9acb1f94eeaf385715b76cbd6148128496009c0a05b6c1693",
+  "currentEvaluation": "features/proofo-ui/branding-collect/evidence/qcsd/focused-evaluation.json",
+  "originalBorder": "#ddd3c2",
+  "proposedBorder": "#8e806b",
+  "inputBackground": "#f7f4eb",
+  "originalContrast": 1.347,
+  "proposedContrast": 3.5035,
+  "proposal": "Изменить только цвет границ необходимых полей в обычном интерфейсе; сохранить толщину, геометрию, фон и шрифты. Исходный frozen reference не изменять.",
+  "questionSent": true,
+  "answerReceived": true,
+  "approval": {
+    "date": "2026-11-12",
+    "quote": "выбери контрастнее",
+    "chosenBorder": "#8e806b"
+  },
+  "implementationAdmission": false,
+  "nextStep": "Решение получено; historical currentDesignRevision/currentEvaluation относятся к моменту вопроса. Новый design требует prepare и focused origin verification; implementationAdmission остаётся false.",
+  "history": [
+    {
+      "status": "pending-owner-decision",
+      "answerReceived": false,
+      "approval": null
+    }
+  ],
+  "resolvedBy": "features/proofo-ui/branding-collect/evidence/design/owner-decision.json",
+  "historicalArtifact": true
+}

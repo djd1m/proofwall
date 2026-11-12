@@ -1,0 +1,8 @@
+{
+  "scriptSha256": "94072529fc93dc525ed1f00d2f1ade30cc8635dd6ab13f7af4790fc60f059be8",
+  "privateScriptPath": ".secrets/published-branding-probe.mjs",
+  "reason": "Private coordinator operational runner; no credential values copied to repository",
+  "browserResponseBodyInspection": "Playwright Response.json stalled after UI had already parsed response and displayed success; final probe uses observed HTTP201/UI success plus scoped database row read. Ordinary HTTP moderation unchanged.",
+  "finalRun": "exit0, cleanup completed",
+  "report": "published-preview.json"
+}

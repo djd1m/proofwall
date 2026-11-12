@@ -1,0 +1,13 @@
+{
+  "status": "staged-not-published",
+  "buildId": "xl_3mKgt4IwcnieD7U4fy",
+  "artifact": "/opt/proofwall-ui-preview/artifacts/xl_3mKgt4IwcnieD7U4fy",
+  "nftPathsPresentAndContained": 5507,
+  "directoryAliases": 98,
+  "uniqueTracedFiles": 812,
+  "allTracedBytesEqualSource": true,
+  "symlinksContained": 47,
+  "dependenciesReusedFromVerifiedArtifact": "e19RhYitYH_pbxzgNnPaA",
+  "envCopied": false,
+  "uniqueTraceReferencePaths": 5244
+}

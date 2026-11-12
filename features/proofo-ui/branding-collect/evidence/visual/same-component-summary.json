@@ -1,0 +1,295 @@
+{
+  "kind": "author-offline-production-view-evidence",
+  "capturedAt": "2026-11-12T08:49:59.266Z",
+  "baseSha": "4da1c64b6dcc537a412646183344dcb53645ea02",
+  "dirtySources": true,
+  "sourceHashes": [
+    {
+      "path": "apps/web/src/app/dashboard/[slug]/branding/branding-view.tsx",
+      "sha256": "804c422499a742ff1ae2252f534f947bab87160ade83cf9141a33c09650b3a09"
+    },
+    {
+      "path": "apps/web/src/app/f/[slug]/collect-view.tsx",
+      "sha256": "54de88c7bf37d2df5fd08a6fc4e677fe2a415c8f80c5a410e80afee4f81dbd68"
+    },
+    {
+      "path": "apps/web/src/app/proofo-forms.css",
+      "sha256": "7c9938a03217abb10ca6e6179bebe60e4753de5c93ad501cc3ff43a040cfaffc"
+    },
+    {
+      "path": "scripts/render-branding-collect-fixture.mjs",
+      "sha256": "577ca959393f8685aa9f8065155c1a36bff9fa78ce521565ffbac43251be74ee"
+    },
+    {
+      "path": "apps/web/tests/branding-collect-visual-fixture.test.ts",
+      "sha256": "6b9c4bea6079e72a58060eb289e75eb19beb290ead5987db3d8d7c0696c7be0e"
+    }
+  ],
+  "identity": {
+    "kind": "offline-production-view-inputs",
+    "inputs": [
+      {
+        "path": "apps/web/src/app/dashboard/[slug]/branding/branding-view.tsx",
+        "sha256": "804c422499a742ff1ae2252f534f947bab87160ade83cf9141a33c09650b3a09"
+      },
+      {
+        "path": "apps/web/src/app/f/[slug]/collect-view.tsx",
+        "sha256": "54de88c7bf37d2df5fd08a6fc4e677fe2a415c8f80c5a410e80afee4f81dbd68"
+      }
+    ],
+    "hydrated": false
+  },
+  "reports": [
+    {
+      "screen": "branding",
+      "path": "features/proofo-ui/branding-collect/evidence/visual/branding-same-component.json",
+      "sha256": "ef0c4a627c973e661b5c9b2d929e3562c8b9c7dcbcdd772fdfb66f7a4262cc22",
+      "exitCode": 0,
+      "idlePassed": 3,
+      "mutationsDetected": 9,
+      "cases": [
+        {
+          "id": "branding/1440x900",
+          "mutation": "none",
+          "passed": true,
+          "rawDiffPixels": 0
+        },
+        {
+          "id": "branding/1440x900",
+          "mutation": "font",
+          "passed": true,
+          "rawDiffPixels": 8025
+        },
+        {
+          "id": "branding/1440x900",
+          "mutation": "margin",
+          "passed": true,
+          "rawDiffPixels": 4963
+        },
+        {
+          "id": "branding/1440x900",
+          "mutation": "color",
+          "passed": true,
+          "rawDiffPixels": 8380
+        },
+        {
+          "id": "branding/390x844",
+          "mutation": "none",
+          "passed": true,
+          "rawDiffPixels": 0
+        },
+        {
+          "id": "branding/390x844",
+          "mutation": "font",
+          "passed": true,
+          "rawDiffPixels": 4193
+        },
+        {
+          "id": "branding/390x844",
+          "mutation": "margin",
+          "passed": true,
+          "rawDiffPixels": 3251
+        },
+        {
+          "id": "branding/390x844",
+          "mutation": "color",
+          "passed": true,
+          "rawDiffPixels": 4154
+        },
+        {
+          "id": "branding/360x800",
+          "mutation": "none",
+          "passed": true,
+          "rawDiffPixels": 0
+        },
+        {
+          "id": "branding/360x800",
+          "mutation": "font",
+          "passed": true,
+          "rawDiffPixels": 4193
+        },
+        {
+          "id": "branding/360x800",
+          "mutation": "margin",
+          "passed": true,
+          "rawDiffPixels": 3251
+        },
+        {
+          "id": "branding/360x800",
+          "mutation": "color",
+          "passed": true,
+          "rawDiffPixels": 4154
+        }
+      ],
+      "environment": {
+        "node": "v22.23.4",
+        "platform": "linux",
+        "arch": "x64",
+        "kernel": "6.8.0-138-generic",
+        "osRelease": "PRETTY_NAME=\"Ubuntu 24.04 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+        "chromiumExecutable": "/root/.cache/puppeteer/chrome/linux-148.0.7778.97/chrome-linux64/chrome",
+        "chromiumSha256": "7f5c687c69c06c2b49f80755087b0575fa67633f359b0cdbe2ee40c33235fc98",
+        "tooling": {
+          "playwright": "1.65.0",
+          "pixelmatch": "8.0.0",
+          "pngjs": "7.0.0"
+        }
+      }
+    },
+    {
+      "screen": "collect",
+      "path": "features/proofo-ui/branding-collect/evidence/visual/collect-same-component.json",
+      "sha256": "1fc40e6caec2c51fb4bbccbf177905763c0dc0c13734a45e452d8e980e2b91c3",
+      "exitCode": 0,
+      "idlePassed": 3,
+      "mutationsDetected": 9,
+      "cases": [
+        {
+          "id": "collect/1440x900",
+          "mutation": "none",
+          "passed": true,
+          "rawDiffPixels": 0
+        },
+        {
+          "id": "collect/1440x900",
+          "mutation": "font",
+          "passed": true,
+          "rawDiffPixels": 8200
+        },
+        {
+          "id": "collect/1440x900",
+          "mutation": "margin",
+          "passed": true,
+          "rawDiffPixels": 4785
+        },
+        {
+          "id": "collect/1440x900",
+          "mutation": "color",
+          "passed": true,
+          "rawDiffPixels": 8745
+        },
+        {
+          "id": "collect/390x844",
+          "mutation": "none",
+          "passed": true,
+          "rawDiffPixels": 0
+        },
+        {
+          "id": "collect/390x844",
+          "mutation": "font",
+          "passed": true,
+          "rawDiffPixels": 6578
+        },
+        {
+          "id": "collect/390x844",
+          "mutation": "margin",
+          "passed": true,
+          "rawDiffPixels": 4109
+        },
+        {
+          "id": "collect/390x844",
+          "mutation": "color",
+          "passed": true,
+          "rawDiffPixels": 6773
+        },
+        {
+          "id": "collect/360x800",
+          "mutation": "none",
+          "passed": true,
+          "rawDiffPixels": 0
+        },
+        {
+          "id": "collect/360x800",
+          "mutation": "font",
+          "passed": true,
+          "rawDiffPixels": 6578
+        },
+        {
+          "id": "collect/360x800",
+          "mutation": "margin",
+          "passed": true,
+          "rawDiffPixels": 4109
+        },
+        {
+          "id": "collect/360x800",
+          "mutation": "color",
+          "passed": true,
+          "rawDiffPixels": 6773
+        }
+      ],
+      "environment": {
+        "node": "v22.23.4",
+        "platform": "linux",
+        "arch": "x64",
+        "kernel": "6.8.0-138-generic",
+        "osRelease": "PRETTY_NAME=\"Ubuntu 24.04 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+        "chromiumExecutable": "/root/.cache/puppeteer/chrome/linux-148.0.7778.97/chrome-linux64/chrome",
+        "chromiumSha256": "7f5c687c69c06c2b49f80755087b0575fa67633f359b0cdbe2ee40c33235fc98",
+        "tooling": {
+          "playwright": "1.65.0",
+          "pixelmatch": "8.0.0",
+          "pngjs": "7.0.0"
+        }
+      }
+    }
+  ],
+  "counts": {
+    "idlePassed": 6,
+    "mutationsDetected": 18,
+    "totalComparisons": 24,
+    "checkerProcesses": 2,
+    "checkerExits": [
+      0,
+      0
+    ]
+  },
+  "commands": {
+    "visual": "node_modules/node/bin/node scripts/render-branding-collect-fixture.mjs --output .secrets/branding-ui-visual-final --verify",
+    "test": "node_modules/node/bin/node scripts/run-branding-collect-preview.mjs test tests/branding-collect-visual-fixture.test.ts --maxWorkers=1 --minWorkers=1"
+  },
+  "fixtureTests": {
+    "observedExitCode": 0,
+    "passed": 2,
+    "failed": 0
+  },
+  "traceability": [
+    {
+      "requirements": [
+        "FR-208",
+        "NFR-202"
+      ],
+      "spec": "openspec/changes/proofo-branding-collect/specs/branding-collect/spec.md",
+      "code": [
+        "apps/web/src/app/dashboard/[slug]/branding/branding-view.tsx",
+        "apps/web/src/app/f/[slug]/collect-view.tsx",
+        "apps/web/src/app/proofo-forms.css",
+        "scripts/render-branding-collect-fixture.mjs",
+        "apps/web/tests/branding-collect-visual-fixture.test.ts"
+      ],
+      "evidence": "six frozen idle frames and 18 refusal mutations; test imports and esbuild inputs identity"
+    },
+    {
+      "requirements": [
+        "FR-201",
+        "FR-205",
+        "FR-206",
+        "FR-207",
+        "NFR-201"
+      ],
+      "code": [
+        "apps/web/src/app/dashboard/[slug]/branding/branding-view.tsx",
+        "apps/web/src/app/f/[slug]/collect-view.tsx",
+        "apps/web/src/app/proofo-forms.css"
+      ],
+      "evidence": "pure props/disabled/status/field relations and raw values SSR contracts; live interaction and a11y oracles remain with primary"
+    }
+  ],
+  "limitations": [
+    "Это авторская проверка, не независимое ревью и не receipt.",
+    "Frozen original palette #ddd3c2. Live #8e806b проверяется отдельно.",
+    "Live browser E2E/accessibility, manual screen reader, app build и общий QE не выполнены этой UI ролью.",
+    "Общий typecheck exit2: @course/agent-payments отсутствуют построенные declarations; ошибок в пяти UI targets после NODE_ENV fix не выведено.",
+    "Raw screenshots, DOM measurements and logs retained privately under .secrets/branding-ui-visual-final-*; reports retain paths to actual outputs; commands reproduce them."
+  ],
+  "evidencePathsAdded": 3
+}

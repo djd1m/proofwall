@@ -1,0 +1,36 @@
+{
+  "capturedAt": "2026-11-12T08:45:16.567591+00:00",
+  "authors": [
+    {
+      "role": "primary",
+      "model": "gpt-6.1-sol",
+      "reasoning": "high",
+      "threadId": "01a1cc8d-9a7a-79a0-98ae-8bf830ab3d6f",
+      "sourceOwnershipCount": 25,
+      "source": "Observed CLI invocation parameters and thread.started, not provider attestation",
+      "nativeLauncher": "bash scripts/codex-project.sh exec --json -s danger-full-access -c approval_policy=never -m gpt-6.1-sol -c model_reasoning_effort=high",
+      "literalContextSha256": "70083411414139cef5a9fc44d8ec5e432e7609010687bdb764fd133cc2ea75b1",
+      "authorChecksNotIndependentReview": true
+    },
+    {
+      "role": "ui",
+      "model": "gpt-6.1-sol",
+      "reasoning": "high",
+      "threadId": "01a1cee9-03d1-7991-8b02-6e5c5bc02640",
+      "sourceOwnershipCount": 5,
+      "source": "Observed CLI invocation parameters and thread.started, not provider attestation",
+      "nativeLauncher": "bash scripts/codex-project.sh exec --json -s danger-full-access -c approval_policy=never -m gpt-6.1-sol -c model_reasoning_effort=high",
+      "literalContextSha256": "70083411414139cef5a9fc44d8ec5e432e7609010687bdb764fd133cc2ea75b1",
+      "authorChecksNotIndependentReview": true
+    }
+  ],
+  "nativeHooksObserved": [
+    "PreToolUse",
+    "SessionStart"
+  ],
+  "recentEventCount": 138,
+  "hookLogCaveat": "Shared local sanitized hook audit contains no per-thread identity; invocation/thread logs provide separate corroboration, not authenticated attestation",
+  "physicalConcurrency": "root plus two native authors; no other active collaboration agents",
+  "sourceAdmission": "features/proofo-ui/implementation-state.json",
+  "independentReviewStatus": "not started"
+}

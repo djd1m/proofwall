@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "time": "2026-11-11T22:29:36.871Z",
+  "checks": [
+    "branding original border 221/211/194",
+    "branding proposed border 142/128/107",
+    "toggle restores original border",
+    "collect screen selectable",
+    "collect proposed textarea border 142/128/107 verified in separate browser run"
+  ],
+  "originalFilesUnchanged": true
+}

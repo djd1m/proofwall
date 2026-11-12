@@ -1,0 +1,25 @@
+{
+  "dzTeachExitCode": 0,
+  "dzRecallExitCode": 0,
+  "durableStore": "/home/proofwall/.dz",
+  "newLessonId": "teach:ec57d6a094e7ccef",
+  "aqe": {
+    "success": true,
+    "data": {
+      "stored": true,
+      "key": "patterns/feature-adr/qe/proofwall-runtime-palette-default",
+      "namespace": "learning",
+      "timestamp": "2026-11-12T18:44:03.386Z",
+      "persisted": true,
+      "vectorIndex": {
+        "status": "failed",
+        "error": {
+          "code": "VECTOR_INDEX_UNAVAILABLE",
+          "message": "Semantic vector indexing is unavailable for this entry. Configure AQE_EMBEDDER_ENDPOINT for the recommended remote backend. The compatible local @huggingface/transformers@4.2.0 dependency chain currently has unresolved HIGH advisories GHSA-xcpc-8h2w-3j85 and GHSA-f88m-g3jw-g9cj."
+        }
+      }
+    }
+  },
+  "semanticAvailable": false,
+  "note": "Наблюдение public red и авторской regression; независимое закрытие не приписывается этому memory store. Автор отдельно сохранил свой урок."
+}

@@ -1,0 +1,19 @@
+{
+  "HAS_UI": true,
+  "HAS_SECURITY": true,
+  "HAS_UX": true,
+  "HAS_VIDEO": true,
+  "HAS_MIDDLEWARE": false,
+  "HAS_SAP_INTEGRATION": false,
+  "HAS_AUTHORIZATION": false,
+  "expectedActualRoles": 6,
+  "explanation": "UI/forms, owner security and responsive journeys require three separate conditional specialists. Video flag concerns existing disabled video intake and transcript compatibility; no new video capability. No enterprise middleware, SAP or SoD/RBAC/permission-matrix subsystem in this increment; owner/tenant checks covered by security specialist.",
+  "actualRoles": [
+    "qcsd-quality",
+    "qcsd-risk",
+    "qcsd-testability",
+    "qcsd-accessibility",
+    "qcsd-security",
+    "qcsd-ux"
+  ]
+}

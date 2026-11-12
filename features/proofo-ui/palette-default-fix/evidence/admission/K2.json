@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "exitCode": 0,
+  "command": "node_modules/.bin/node .agents/skills/feature-adr/scripts/check-plan-completeness.mjs features/proofo-ui/palette-default-fix --tier=S --require-requirements",
+  "designDigest": "0d2ccf6f882b1163ba233ef483e58d2ad74bde1ba530115c72736c99b29823e7",
+  "capturedAt": "2026-11-12T18:36:26.486756+00:00",
+  "stdout": "NOTE  C9: twin scan over 6 target(s), 6 on disk, 0 unlisted twins (byte-identical only; drifted copies need identity tests)\nNOTE  C8: all 3 requirement ids referenced\nSKIP  C1: no 03_adr/ and the plan claims no ADR work — ADR-coverage check SKIPPED (--tier=S, the legitimate S-tier shape)\nSKIP  C2: no 03_adr/ — Confirmation-test coverage check SKIPPED\nSKIP  C4: no acid corpus declared (no --acid, no `| A<n> |` table in 00_complexity_assessment.md) — acid-naming check SKIPPED\nWARN  C5: Inputs read line missing 03_adr\nWARN  C5: Inputs read line missing 05_architecture\nK2 plan-completeness: PASS (0 failure(s), 2 warning(s), 3 skip(s)) over 0 ADRs, tier S, in /tmp/proofwall-branding-collect/features/proofo-ui/palette-default-fix\n",
+  "stderr": "",
+  "logSha256": "ca13825cbeb5982b6f54bc8807e6e9801789eb2448a29a026992c746be8cf726"
+}

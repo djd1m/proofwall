@@ -1,0 +1,62 @@
+{
+  "reviewer": "qe-risk",
+  "family": "codex",
+  "independent": true,
+  "verdict": "clean",
+  "conditions": [
+    {
+      "id": "RISK-01",
+      "owner": "qe-risk",
+      "severity": "WARNING",
+      "classification": "structural",
+      "requirement": "Выполнить Observability contract 05_architecture.md:199–206 для нового PATCH: фактические ограниченные технические outcome/status/error-code/correlation для committed success, validation/origin rejection и DB/permission failure, без payload/URL/session/photo keys. Указать sink/format; тест должен требовать соответствующее событие на реальном исходе, отсутствие sentinels и падать при удалении события. Success событие только после успешного commit.",
+      "scope": [
+        "apps/web/src/app/api/projects/[slug]/branding/route.ts",
+        "apps/web/tests/project-branding.test.ts",
+        "features/proofo-ui/branding-collect/05_architecture.md"
+      ],
+      "evidence": "STATIC route.ts:22–37 не вызывает logger; catch503 молчит. Architecture:199–206 обещает INFO/WARN/ERROR outcome и подсчёт failed writes. EXECUTED project-branding.test.ts:130–136 проходит при пустом console spy: проверяет только отсутствие sentinel, не наличие event. Самостоятельный69/69 suite .secrets/bc-qe-risk-critical.log; детали evidence/qe/qe-risk.md. Это недостающая новая наблюдаемость, не finding по historical photo GET logging."
+    },
+    {
+      "id": "RISK-02",
+      "owner": "qe-risk",
+      "severity": "WARNING",
+      "classification": "structural",
+      "requirement": "Доказать NFR-201 reflow для branding editor: browser suite на320/360/390 CSS px при обеих project themes с heading120, logo URL2048 и длинной error; полный input value, Home/End/selection URL, document overflow≤1px, доступные controls/focus после vertical scroll. Для widget отдельно измерить shadow host и root. Сохранить non-vacuous nowrap/clipping negative control; source tests должны проваливаться при соответствующем нарушении без усечения данных/смены goldens.",
+      "scope": [
+        "tools/visual/branding-collect.e2e.test.mjs",
+        "features/proofo-ui/branding-collect/01_requirements.md",
+        "features/proofo-ui/branding-collect/05_architecture.md",
+        "openspec/changes/proofo-branding-collect/specs/branding-collect/spec.md"
+      ],
+      "evidence": "STATIC E2E:387–421 в цикле320/360/390 открывает collect/wall/widget, но не editor; :399–404 Home/End/selection проверяет name, не URL. reflow():367–385 возвращает document и scope .pw-widget, не отдельную host geometry. Architecture:161–168 и OpenSpec:228–233 требуют эти проверки. EXECUTED полныйE2E13/13 .secrets/bc-qe-risk-e2e.log проходит без них; measured reflow6rows .secrets/bc-qe-risk-e2e-measurements.json. Это тестовый пробел WARNING, product overflow не установлен; чужой ACCESSIBILITY-03 не закрывается."
+    }
+  ],
+  "verifications": [
+    {
+      "id": "RISK-01",
+      "revision": "5a55e200c7807177bb7d1e8e39b5eb2b7db0d4d68b3d69d07d182b3403122657",
+      "classification": "structural",
+      "evidence": "Независимо проверены actual route.ts:23–55 и project-branding.test.ts:130–197. Самостоятельный runner:39/39, включая реальные committed200, invalid400, foreign-Origin403, REVOKE UPDATE→503 DB_PERMISSION; точные INFO/WARN/ERROR event keys outcome/status/code/server-generated correlation, без payload sentinel; INFO только после real COMMIT. Инъекция отказа COMMIT→503 WRITE_FAILED, нет INFO, строка откатилась. Actual console sink stdout/stderr наблюдён в .secrets/bc-qe-risk-cycle2-critical.log. Собственный mutant в изолированной копии удаляет все три console sinks: baseline0/mutant1 AssertionError verifyEvent:142/153, killed=true; .secrets/bc-qe-risk-cycle2-sink-proof.json и соответствующие baseline/mutant raw logs. Это проверка фактической реализации, не документации/авторского verdict.",
+      "implementationVerified": true
+    },
+    {
+      "id": "RISK-02",
+      "revision": "5a55e200c7807177bb7d1e8e39b5eb2b7db0d4d68b3d69d07d182b3403122657",
+      "classification": "structural",
+      "evidence": "Независимо прочитан E2E:435–537 и выполнен полный runner e2e14/14 (56.6795s), .secrets/bc-qe-risk-cycle2-e2e.log. Actual branding editor6 комбинаций320/360/390×light/dark: heading120, logo2048, error2056; полный value, Home/End/Shift+End, внутренний input scroll, focus/controls в viewport и document overflow≤1px. Separate document/host/actual ShadowRoot oracle: doc client=scroll320/360/390, host client=scroll304/344/374; rendered ShadowRoot content внутри host bounds. Non-vacuous nowrap+clip negative control killed. Own measurements .secrets/bc-qe-risk-cycle2-e2e-measurements.json SHA a16a714eea60319dc163f9a374899cbc2766c1b446c448cc42ad0bda090a786f. Ручной screen-reader остаётся owner acceptance phase pending, чужие условия не закрываются.",
+      "implementationVerified": true
+    }
+  ],
+  "newRisks": {
+    "assessment": "Focused cycle2: оба собственных структурных условия подтверждены фактической реализацией/самостоятельными тестами; исходные condition objects сохранены буквально. Проверены фактические12 changed/added manifest paths и affected dependencies; новых серьёзных рисков и новых условий данной роли не выявлено. Качественная SFDIPOT оценка обновлена в отчёте; manual AT, live-provider, legacy-browser и whole-app coverage пределы раскрыты.",
+    "evidence": "features/proofo-ui/branding-collect/evidence/qe/qe-risk.md: cycle2 source46/46 SHA match, own39 tests+14E2E, isolated3-dead-sinks baseline0/mutant1. Независимо проверены actual persisted-row old reader, userinfo mixed-PATCH atomic rejection, ordinary owner API moderation/foreign-anon-expired denials, strict CSP constructed CSS и inline negative control, host geometry. Runner sole HOME-token removal подтверждён восстановлением exact initial SHA; unsafe-config negatives пройдены. Full18 author coverage hashes/counters сверены отдельно, не выданы за собственный instrumented run. Revision 5a55e200c7807177bb7d1e8e39b5eb2b7db0d4d68b3d69d07d182b3403122657; nonce 893f82d3-e2ae-48df-b357-f3031a194fdf.",
+    "conditions": []
+  },
+  "authorAssessmentChecked": true,
+  "deltaVerification": {
+    "classification": "structural",
+    "evidence": "Прочитан фактический author-repair-delta.json и source-bound handoff; независимо сверены46 manifest hashes,12 changed/added paths и текущие зависимости. Свои RISK-01/02 проверены исходниками,39 critical tests,14E2E и отдельным dead-sink mutant в копии; новые host display/constructed CSS, URL-userinfo rejection, API approval и old reader подтверждены исполнением описанных проверок. Runner guard delta отсутствует: точная реконструкция прежнего SHA добавлением единственного HOME token, unsafe-config tests passed. Source snapshot frozen, условия сохранены byte-exact, foreign conditions/native host не изменялись. Новых подтверждённых серьёзных рисков нет. ImplementationVerified=true относится к фактической реализации этой structural delta на revision 5a55e200c7807177bb7d1e8e39b5eb2b7db0d4d68b3d69d07d182b3403122657, а не к авторскому verdict или automated AT.",
+    "implementationVerified": true
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "reviewer": "qcsd-ux",
+  "family": "codex",
+  "independent": true,
+  "verdict": "clean",
+  "conditions": [
+    {
+      "id": "UX-01",
+      "owner": "qcsd-ux",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "Определить поведение branding editor при изменении формы во время незавершённого Save: либо блокировать редактирование до ответа, либо сохранять последующие изменения как несохранённый dirty draft; ответ для прежнего PATCH не должен стирать или объявлять сохранёнными более поздние изменения. Запланировать browser-проверку с задержанным ответом. Отдельно проверить две вкладки: разные dirty keys сохраняются, при одном key последнее зафиксированное изменение побеждает; после reload показано актуальное значение. Версионирование и optimistic locking не требуются.",
+      "scope": [
+        "features/proofo-ui/branding-collect/01_requirements.md",
+        "features/proofo-ui/branding-collect/04_domain_model.md",
+        "features/proofo-ui/branding-collect/03_adr/001-patch-existing-branding.md"
+      ],
+      "evidence": "04_domain_model.md задаёт editable draft → PATCH → canonical response → saved и сохранение draft при ошибке, но не описывает изменения после отправки и до успешного ответа; 01_requirements.md требует dirty keys и честный Save; ADR-001 задаёт last committed write wins для одинаковых ключей и сохранение независимых ключей. Без правила для in-flight состояния допустим дизайн, в котором более поздний ввод затирается canonical response или ошибочно получает статус saved. Это пробел спецификации, не утверждение о найденном дефекте реализованного editor; browser проверка ещё не выполнялась."
+    }
+  ],
+  "verifications": [
+    {
+      "id": "UX-01",
+      "revision": "7530e37d99132e7af128a3ac107971d97c63fbcaef35ef4f5c2c6ad9cf923374",
+      "classification": "structural",
+      "evidence": "STATIC: на текущей revision FR-201 OpenSpec, 04_domain_model.md, ADR-001 и 05_architecture.md сохраняют captured draft/payload и disabled все шесть settings, оба color controls и Save до ответа, один PATCH, success только для снимка и draft/unlock при ошибке. TASK-5 и ADR-001 сохраняют delayed-response test, разные dirty keys обеих вкладок, last-committed для одного key и reload обеих. Проверен дизайн ideation; product/browser tests не выполнялись.",
+      "implementationVerified": true
+    }
+  ],
+  "newRisks": {
+    "assessment": "Новых самостоятельных UX conditions в этой узкой delta не выявлено. UX-01 подтверждён для текущего ideation snapshot; решение ACCESSIBILITY-01 принадлежит origin accessibility reviewer.",
+    "evidence": "STATIC: сохранённость Save lock/two-tabs и owner-approved palette split сверены с OpenSpec, ADR и планом. Ratio в owner evidence — расчёт, не результат браузера; product/visual/AT тесты не выполнялись.",
+    "conditions": []
+  },
+  "authorAssessmentChecked": true,
+  "deltaVerification": {
+    "classification": "structural",
+    "evidence": "STATIC: прочитаны author-delta.json, owner-decision.json и затронутые requirements, ADR-003, architecture, plan и OpenSpec. Owner-approved live #8e806b задаётся generic palette props, offline reference сохраняет оригинальную палитру; запланированы отдельный live computed border oracle и negative mutation #ddd3c2, без выдачи offline zero-diff за pixel identity live UI. Все девять host SHA совпадают, spec 2e9966d6e9eb55e24b992ede14761eb086ce64ecf181ca208bf5d969c359cc75 и plan 9375188bbaf43d77c39edd6d4ba0b0c8a1f9d564df359678cfcf695ed84e188c совпадают с author delta. True означает структурную проверку design delta ideation, не реализацию или product pass.",
+    "implementationVerified": true
+  }
+}
