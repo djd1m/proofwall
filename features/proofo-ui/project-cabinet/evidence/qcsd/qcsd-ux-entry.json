@@ -1,0 +1,87 @@
+{
+  "schema": "fa-review-convergence-1",
+  "phase": "ideation",
+  "nonce": "733ac1ec-9eb4-45bb-bbbc-e8391ed7f4ca",
+  "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+  "author": null,
+  "reviews": [
+    {
+      "reviewer": "qcsd-ux",
+      "family": "codex",
+      "independent": true,
+      "verdict": "clean",
+      "conditions": [
+        {
+          "id": "UX-01",
+          "owner": "qcsd-ux",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Зафиксировать связь CSV preview с точными csv и mapping: изменение любого из них делает предыдущий preview недействительным и блокирует commit до нового успешного preview, без потери черновика; при сетевой ошибке не показывать успех. Дополнить план именованным ordinary UI oracle: preview → смена mapping → commit недоступен → повторный preview → commit именно показанных данных; проверять также смену CSV и отказ. Уточнить разрешённое изменение client state machine при неизменном API.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/01_requirements.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: существующий import-form.tsx:22–35 отправляет текущие csv/mapping для каждого mode; :43–47 сбрасывает preview при выборе файла, но :58–65 меняет mapping без сброса, а :101–104 разрешает commit по старому preview. PC-03 требует осмысленного preview/commit; 05_architecture.md:15 предписывает сохранять state machines, план 06:13 не задаёт oracle изменения mapping. См. UX-01."
+        },
+        {
+          "id": "UX-02",
+          "owner": "qcsd-ux",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Определить наблюдаемый контракт сохранения каждого незавершённого черновика при переключениях и recoverable error/retry: pasted или выбранный screenshot/File, URL, text, дополнительные поля, CSV и mapping, валидность preview; успешная отправка может очищать только соответствующий успешно отправленный черновик. Привязать named ordinary UI oracle к round-trip обоих методов, paste и file, 400/429/503/network и проверке фактического retry payload; без обещания сохранения после reload.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/01_requirements.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: 05_architecture.md:13–15 обещает mounted drafts; PC-03 — recoverable input; 06_implementation_plan.md:13 перечисляет переключение, screenshot и ошибки, но не конкретизирует paste/File identity, CSV/mapping/preview и payload retry. Existing platform-form.tsx:48–55,67–75 хранит File и вставляет изображение из clipboard; import-form.tsx:15–18,43–47 — CSV/mapping/preview. См. UX-02."
+        },
+        {
+          "id": "UX-03",
+          "owner": "qcsd-ux",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "До product writes связать решение владельца с точными bytes/hash proposal и явными утверждёнными областями адаптации, включая previously unobserved filled/controls. Планом назначить проверяемые selectors/координаты, viewport и критерий сравнения с этими областями, named oracle и честную фиксацию несопоставимых состояний; приложить отдельные полные ordinary live empty/filled/error/mobile screenshots. Не выдавать original-only offline fixture за доказательство согласованной адаптации и не вводить незапрошенное полное pixel identity.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/03_adr/003-separate-original-reference-from-live-adaptation.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: ADR-003:17–18 и 05_architecture.md:21–23 фиксируют строгие регионы лишь для original; 06_implementation_plan.md:10,15–16 требует approval proposal bytes и original-region oracle, но не определяет comparator/observable oracle для approved adaptation regions. Preview README и publication report обозначают предложение как pending и filled Proofo как ненаблюдавшийся. См. UX-03."
+        }
+      ],
+      "verifications": [
+        {
+          "id": "UX-01",
+          "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+          "classification": "structural",
+          "evidence": "STATIC: PC-03 scenario CSV commit bound to successful preview; 05_architecture.md client lifecycle фиксирует exact csv/mapping snapshot, invalidation, generation, pending и captured payload; 01_requirements.md FR-303 и 06_implementation_plan.md AM-11 назначают named live oracle с изменением CSV/mapping и отрицательными stale mutations. Только corrected design, не исполненный продукт.",
+          "implementationVerified": true
+        },
+        {
+          "id": "UX-02",
+          "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+          "classification": "structural",
+          "evidence": "STATIC: PC-03 scenario Mounted drafts и 05_architecture.md Manual draft требуют File bytes/paste/picker, URL/platform/author/text и CSV/mapping/preview через переключения и 400/429/prewrite503/network; определяют multipart hash/retry payload, only-own-success clear и неизвестный network outcome. 01_requirements.md FR-303, 06 AM-12 содержат named ordinary UI oracles. Только corrected design, не исполненный продукт.",
+          "implementationVerified": true
+        },
+        {
+          "id": "UX-03",
+          "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+          "classification": "structural",
+          "evidence": "STATIC: ADR-003 proposed approval contract содержит точные URL и SHA четырёх proposal файлов, решение по O0–O2/A0–A7 и viewports, selectors, измеряемые токены/geometry/action order, исключения, named live oracle и full persisted screenshots; PC-09, FR-309, plan AM-13/TASK-1 связывают его с precode gate. Owner decision PENDING: проверен контракт обязательного будущего решения, не факт согласования, не допуск к коду и не результат visual test.",
+          "implementationVerified": true
+        }
+      ],
+      "newRisks": {
+        "assessment": "Новых существенных UX-условий по фокусной проверке не выявлено. Согласование владельца ещё pending и остаётся обязательным отдельным gate до product source writes; никакое structural verification его не заменяет.",
+        "evidence": "Статические PC-03/PC-09, 05_architecture.md, ADR-003, 01 FR-303/FR-309 и plan AM-11–13; отсутствие owner decision явно указано в ADR-003 и author delta.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": true,
+      "deltaVerification": {
+        "classification": "structural",
+        "evidence": "Прочитаны author-rework-delta.json и rework handoff; независимо изучены 8 measured paths, текущие PC-03/PC-09 и mapping FR-303/FR-309, задачи/AM-11–13 и proposal hashes на revision 963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009. Addressed автора означает предложенную коррекцию; независимая структурная оценка трёх UX-условий представлена отдельно. Owner approval, код и тесты не выполнялись.",
+        "implementationVerified": true
+      }
+    }
+  ]
+}

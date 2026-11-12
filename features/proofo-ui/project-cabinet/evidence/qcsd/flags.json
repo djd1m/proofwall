@@ -1,0 +1,47 @@
+{
+  "capturedAt": "2026-11-12T19:00:04.275319+00:00",
+  "mode": "Epic and frozen local reference, no fresh login to source site",
+  "flags": {
+    "HAS_UI": {
+      "value": true,
+      "evidence": "Cabinet shell, CSS, forms, review cards and controls"
+    },
+    "HAS_SECURITY": {
+      "value": true,
+      "evidence": "Existing owner/session/RLS isolation, deactivated denial and password rotation must be preserved"
+    },
+    "HAS_UX": {
+      "value": true,
+      "evidence": "Onboarding, navigation anchors, import/moderation journeys and responsive layout"
+    },
+    "HAS_MIDDLEWARE": {
+      "value": false,
+      "evidence": "No ESB/MQ/broker/gateway integration is added or changed"
+    },
+    "HAS_SAP_INTEGRATION": {
+      "value": false,
+      "evidence": "No SAP/RFC/BAPI/Fiori or related system"
+    },
+    "HAS_AUTHORIZATION": {
+      "value": false,
+      "evidence": "No new RBAC/permission matrix, SoD, role conflict or authorization objects. Existing single-owner/session isolation belongs to security audit."
+    },
+    "HAS_VIDEO": {
+      "value": true,
+      "evidence": "Existing moderation items retain video/transcript indicators; no new recording/player/transcription behavior"
+    }
+  },
+  "expectedCoreAgents": [
+    "qe-quality-criteria-recommender",
+    "qe-risk-assessor",
+    "qe-requirements-validator"
+  ],
+  "expectedConditionalAgents": [
+    "qe-accessibility-auditor",
+    "qe-security-auditor",
+    "qe-qx-partner"
+  ],
+  "expectedAgentCount": 6,
+  "execution": "Pending actual full snapshot prepare; 3 core roles, wait, then 3 conditional roles under concurrency limit4 including coordinator",
+  "videoFollowup": "Recommend accessibility/caption audit for future media UI; not claimed executed or a prerequisite for unchanged video indicators"
+}

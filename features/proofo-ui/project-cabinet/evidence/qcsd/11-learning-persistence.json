@@ -1,0 +1,55 @@
+{
+  "aqeStore": {
+    "success": true,
+    "data": {
+      "stored": true,
+      "key": "qcsd-ideation-project-cabinet-20261112",
+      "namespace": "qcsd-ideation",
+      "timestamp": "2026-11-12T19:20:31.427Z",
+      "persisted": true,
+      "vectorIndex": {
+        "status": "failed",
+        "error": {
+          "code": "VECTOR_INDEX_UNAVAILABLE",
+          "message": "Semantic vector indexing is unavailable for this entry. Configure AQE_EMBEDDER_ENDPOINT for the recommended remote backend. The compatible local @huggingface/transformers@4.2.0 dependency chain currently has unresolved HIGH advisories GHSA-xcpc-8h2w-3j85 and GHSA-f88m-g3jw-g9cj."
+        }
+      }
+    }
+  },
+  "durableTeach": {
+    "exitCode": 0,
+    "store": "/home/proofwall/.dz",
+    "privateLogSha256": "574cb8d520db2e089a9ed7ad34b5a7c7141bf7c36d2f307183971d875e875a54"
+  },
+  "recallAfterTeach": {
+    "exitCode": 0,
+    "valuesRead": [
+      {
+        "pattern": "Proofwall: при добавлении email onboarding API-статус scheduled/not_configured нужно показывать в кабинете и оставлять постоянный путь повторной выдачи без первого письма; повтор должен явно показывать email текущей сессии и вход в другой аккаунт. При сохранении project_name в PostgreSQL text/JSONB NUL необходимо нормализовать до SQL и закреплять реальной DB проверкой.",
+        "type": "lesson-learned",
+        "reward": 0.8,
+        "rewardSource": "default",
+        "domain": "general",
+        "ts": "2026-11-11T18:50:16.546Z",
+        "source": "dz-teach",
+        "dzId": "teach:acc2c111a6ffaf26",
+        "relevance": 0.016129032258064516,
+        "similarity": null
+      },
+      {
+        "pattern": "Proofwall project cabinet: reuse существующих компонентов не доказывает сохранение черновика/File при tab switching/retry и не связывает CSV preview с текущими csv/mapping. При переносе кабинета нужны именованные ordinary UI oracles и явная refresh стратегия server props/counts. Generic loopback env validation не доказывает whole-process outbound quarantine; suite/ports/lock и наблюдаемые границы задаются отдельно. Это вывод static design review, не продуктовый test pass.",
+        "type": "lesson-learned",
+        "reward": 0.8,
+        "rewardSource": "default",
+        "domain": "general",
+        "ts": "2026-11-12T19:21:05.287Z",
+        "source": "dz-teach",
+        "dzId": "teach:c99ad178f072a002",
+        "relevance": 0.01639344262295082,
+        "similarity": null
+      }
+    ]
+  },
+  "semanticIndexAvailable": false,
+  "scope": "Observed initial design-only review, not product code or closed independent gates"
+}

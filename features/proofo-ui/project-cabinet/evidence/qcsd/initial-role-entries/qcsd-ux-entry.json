@@ -1,0 +1,61 @@
+{
+  "schema": "fa-review-convergence-1",
+  "phase": "ideation",
+  "nonce": "0fef60e0-1ec5-4cd4-b693-c9991c49a4cc",
+  "revision": "a02e007567b6e585aee8f6a15b2d563d21c6bd0e54207cd6ebfb1e43ee0cfa62",
+  "author": null,
+  "reviews": [
+    {
+      "reviewer": "qcsd-ux",
+      "family": "codex",
+      "independent": true,
+      "verdict": "conditional",
+      "conditions": [
+        {
+          "id": "UX-01",
+          "owner": "qcsd-ux",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Зафиксировать связь CSV preview с точными csv и mapping: изменение любого из них делает предыдущий preview недействительным и блокирует commit до нового успешного preview, без потери черновика; при сетевой ошибке не показывать успех. Дополнить план именованным ordinary UI oracle: preview → смена mapping → commit недоступен → повторный preview → commit именно показанных данных; проверять также смену CSV и отказ. Уточнить разрешённое изменение client state machine при неизменном API.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/01_requirements.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: существующий import-form.tsx:22–35 отправляет текущие csv/mapping для каждого mode; :43–47 сбрасывает preview при выборе файла, но :58–65 меняет mapping без сброса, а :101–104 разрешает commit по старому preview. PC-03 требует осмысленного preview/commit; 05_architecture.md:15 предписывает сохранять state machines, план 06:13 не задаёт oracle изменения mapping. См. UX-01."
+        },
+        {
+          "id": "UX-02",
+          "owner": "qcsd-ux",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Определить наблюдаемый контракт сохранения каждого незавершённого черновика при переключениях и recoverable error/retry: pasted или выбранный screenshot/File, URL, text, дополнительные поля, CSV и mapping, валидность preview; успешная отправка может очищать только соответствующий успешно отправленный черновик. Привязать named ordinary UI oracle к round-trip обоих методов, paste и file, 400/429/503/network и проверке фактического retry payload; без обещания сохранения после reload.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/01_requirements.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: 05_architecture.md:13–15 обещает mounted drafts; PC-03 — recoverable input; 06_implementation_plan.md:13 перечисляет переключение, screenshot и ошибки, но не конкретизирует paste/File identity, CSV/mapping/preview и payload retry. Existing platform-form.tsx:48–55,67–75 хранит File и вставляет изображение из clipboard; import-form.tsx:15–18,43–47 — CSV/mapping/preview. См. UX-02."
+        },
+        {
+          "id": "UX-03",
+          "owner": "qcsd-ux",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "До product writes связать решение владельца с точными bytes/hash proposal и явными утверждёнными областями адаптации, включая previously unobserved filled/controls. Планом назначить проверяемые selectors/координаты, viewport и критерий сравнения с этими областями, named oracle и честную фиксацию несопоставимых состояний; приложить отдельные полные ordinary live empty/filled/error/mobile screenshots. Не выдавать original-only offline fixture за доказательство согласованной адаптации и не вводить незапрошенное полное pixel identity.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/03_adr/003-separate-original-reference-from-live-adaptation.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: ADR-003:17–18 и 05_architecture.md:21–23 фиксируют строгие регионы лишь для original; 06_implementation_plan.md:10,15–16 требует approval proposal bytes и original-region oracle, но не определяет comparator/observable oracle для approved adaptation regions. Preview README и publication report обозначают предложение как pending и filled Proofo как ненаблюдавшийся. См. UX-03."
+        }
+      ],
+      "verifications": [],
+      "newRisks": {
+        "assessment": "Три конкретных структурных UX-риска представлены условиями UX-01–UX-03; отдельных подтверждённых условий нет. Состояние согласования владельца является существующим предкодовым gate, не дефектом продукта.",
+        "evidence": "Независимое статическое чтение связанного snapshot, normative spec, плана, proposal и существующих client components; продукт, браузер и тесты не запускались.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": false,
+      "deltaVerification": null
+    }
+  ]
+}

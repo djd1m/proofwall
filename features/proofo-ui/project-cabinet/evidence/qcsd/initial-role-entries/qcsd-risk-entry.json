@@ -1,0 +1,49 @@
+{
+  "schema": "fa-review-convergence-1",
+  "phase": "ideation",
+  "nonce": "0fef60e0-1ec5-4cd4-b693-c9991c49a4cc",
+  "revision": "a02e007567b6e585aee8f6a15b2d563d21c6bd0e54207cd6ebfb1e43ee0cfa62",
+  "author": null,
+  "reviews": [
+    {
+      "reviewer": "qcsd-risk",
+      "family": "codex",
+      "independent": true,
+      "verdict": "conditional",
+      "conditions": [
+        {
+          "id": "QCRISK-01-egress-boundary",
+          "owner": "qcsd-risk",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "До допуска QA определить принудительную deny-by-default сетевую границу для browser, app и дочерних процессов с разрешением только названных синтетических loopback endpoints, безопасный локальный отрицательный probe, проверяемый журнал отказа и fail-closed при недоступности границы; связать механизм и тестовые оракулы с NFR-303 и задачами плана. Не считать один browser fixture или урезанное окружение доказательством блокировки server egress.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/00_complexity_assessment.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: 00_complexity_assessment.md:32 требует outbound quarantine; 05_architecture.md:28-29 ссылается на runner и synthetic services. scripts/run-branding-collect-preview.mjs:19-25,47-66,88-90 проверяет настроенные endpoints и строит урезенное окружение, но в показанном коде нет принудительной блокировки всех сетевых соединений запускаемых процессов. SHA runner d2f3fe6bc480c444de0aadfc1701b42c6b2d2b5bea7ac80f04a981cd4fafdd37; он не входит в host manifest. Подробности и границы в evidence/qcsd/qcsd-risk.md."
+        },
+        {
+          "id": "QCRISK-02-project-runner",
+          "owner": "qcsd-risk",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "До source admission определить безопасную orchestration, которая до spawn проверяет именно PG33186/app33187/S3synthetic33188/foreignhost33189, удерживает общий flock весь lifecycle и фактически запускает project-cabinet.e2e.test.mjs и project-cabinet-mutation.mjs с фиксацией target и exit status; зафиксировать fail-closed проверки неверного порта, занятого lock и неверного target, затем согласованно отразить в плане/target inventory.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/01_requirements.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: 01_requirements.md:20 и 05_architecture.md:28-29 определяют конкретные порты и общий lock; TASK-8 в не измеренном host файле 06_implementation_plan.md:17 заявляет project E2E/mutation через существующий runner/lock. scripts/run-branding-collect-preview.mjs:19-24,32-43 допускает иные различные loopback порты, :102-106,122-129 жёстко выбирает branding-collect.e2e.test.mjs для e2e и не содержит flock. Дополнительный orchestrator не описан. SHA runner d2f3fe6bc480c444de0aadfc1701b42c6b2d2b5bea7ac80f04a981cd4fafdd37, SHA 06 f6a4eb1601e4683a1478ce05130a71ee3d8b54eac926ef97cee843fdc9b87efd; оба вне host manifest."
+        }
+      ],
+      "verifications": [],
+      "newRisks": {
+        "assessment": "Девять будущих риск-сценариев оценены экспертной шкалой L×I: 0 CRITICAL, 8 HIGH, 1 MEDIUM, 0 LOW; максимальный риск 16/25 HIGH, это не измеренная вероятность. Новые обнаруженные структурные пробелы включены в conditions; иных новых структурных условий не заявлено. Отдельный owner approval уже предусмотрен и остаётся pending.",
+        "evidence": "Независимое статическое сопоставление подготовленных восьми hash-matched design paths, spec PC-01–PC-10, 06 plan, текущего page/components и QA runner; точные дополнительные hashes, 9 сценариев и ограничения приведены в evidence/qcsd/qcsd-risk.md. Runtime, product tests, providers и advisor не запускались.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": false,
+      "deltaVerification": null
+    }
+  ]
+}

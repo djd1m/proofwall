@@ -1,0 +1,73 @@
+{
+  "durableRecall": "3 full values read before architecture, .secrets/project-cabinet-recall.json",
+  "aqePatternSearch": {
+    "success": true,
+    "count": 3
+  },
+  "aqeValuesRetrieved": 3,
+  "values": [
+    {
+      "success": true,
+      "data": {
+        "found": true,
+        "key": "patterns/feature-adr/qe/1794481583",
+        "value": {
+          "pattern": "Количество зелёных тестов не доказывает пользовательскую цепочку: SQL approval и unsafe-inline в host CSP скрывают integration gaps. Нужны ordinary owner moderation HTTP, реальный strict-CSP bundle на другом hostname и отрицательные controls.",
+          "confidence": 0.85,
+          "type": "qe-outcome",
+          "metadata": {
+            "tier": "L",
+            "verdict": "closed-for-test-copy",
+            "nativeCycles": 2,
+            "verifiedConditions": 9,
+            "reviewers": 4,
+            "manualAT": "owner acceptance pending"
+          }
+        },
+        "timestamp": "2026-11-12T19:13:22.329Z"
+      }
+    },
+    {
+      "success": true,
+      "data": {
+        "found": true,
+        "key": "patterns/feature-adr/fleet/1794481585",
+        "value": {
+          "pattern": "Redaction-тест невакуозен, только когда сначала доказан фактический INFO/WARN/ERROR sink при успехе и отказе после commit, затем отсутствие payload/secrets; отключение sink обязано провалить тест.",
+          "confidence": 0.85,
+          "type": "fleet-qe-finding",
+          "metadata": {
+            "tier": "L",
+            "verdict": "closed-for-test-copy",
+            "nativeCycles": 2,
+            "verifiedConditions": 9,
+            "reviewers": 4,
+            "manualAT": "owner acceptance pending"
+          }
+        },
+        "timestamp": "2026-11-12T19:13:23.262Z"
+      }
+    },
+    {
+      "success": true,
+      "data": {
+        "found": true,
+        "key": "patterns/feature-adr/qe/proofo-palette-default-fix",
+        "value": {
+          "pattern": "Literal palette in same-component visual fixture cannot establish runtime default. Ordinary new registration with absent saved accent must exercise branding/collect computed CSS and wall/widget config before customization; intentional saved purple must survive save/reload. Red old default and green corrected default observed.",
+          "type": "qe-outcome",
+          "confidence": 0.85,
+          "metadata": {
+            "tier": "S",
+            "scope": "author-regression-only",
+            "independentReview": "pending-coordinator",
+            "receipt": null
+          }
+        },
+        "timestamp": "2026-11-12T19:13:24.158Z"
+      }
+    }
+  ],
+  "timing": "AQE lexical KV retrieval observed during QCSD, not retrospectively claimed as Step0; used to focus remaining review and upcoming design rework",
+  "semanticAvailabilityClaimed": false
+}

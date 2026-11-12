@@ -1,0 +1,104 @@
+{
+  "schema": "fa-review-convergence-1",
+  "phase": "ideation",
+  "nonce": "733ac1ec-9eb4-45bb-bbbc-e8391ed7f4ca",
+  "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+  "author": {
+    "addressed": [
+      "QCSQ-01",
+      "QCRISK-01-egress-boundary",
+      "QCRISK-02-project-runner",
+      "TST-01",
+      "TST-02",
+      "TST-03",
+      "A11Y-01",
+      "A11Y-02",
+      "UX-01",
+      "UX-02",
+      "UX-03",
+      "QCSEC-01-http-denial",
+      "QCSEC-02-password-cancel-inflight"
+    ],
+    "changedScope": [
+      "features/proofo-ui/project-cabinet/00_complexity_assessment.md",
+      "features/proofo-ui/project-cabinet/01_requirements.md",
+      "features/proofo-ui/project-cabinet/02_research.md",
+      "features/proofo-ui/project-cabinet/03_adr/001-reuse-owned-project-capabilities.md",
+      "features/proofo-ui/project-cabinet/03_adr/002-scope-cabinet-palette-and-interaction.md",
+      "features/proofo-ui/project-cabinet/03_adr/003-separate-original-reference-from-live-adaptation.md",
+      "features/proofo-ui/project-cabinet/04_domain_model.md",
+      "features/proofo-ui/project-cabinet/05_architecture.md",
+      "features/proofo-ui/project-cabinet/06_implementation_plan.md",
+      "openspec/changes/proofo-project-cabinet/specs/project-cabinet/spec.md"
+    ],
+    "classification": "structural",
+    "delta": "Bounded design-only rework: explicit full-reload synchronization and snapshot props; distinct SQL-failure error boundary/HTTP denial; mounted paste/File/raw draft retention; exact CSV preview binding/invalidation; tabs/errors/busy/focus and in-flight password cancel semantics; dedicated24target project runner with exact ports/suite identity/single flock; observed scoped Node/browser deny probes; exact pending proposal manifest and named O0–O2/A0–A7 comparison contract.13 AM rows map actual retained origins to named future tests. Addressed means author-proposed design correction, not independent verification or closure.",
+    "evidence": "Current bytes: 00 complexity/A13,01 FR+new spec SHA,02 corrected runner inventory,03 ADR001/002/003,04 domain lifecycle,05 concrete contracts,06 TASK-QA/AM1–13/24targets and normative spec. Exact old/new SHA in .secrets/project-cabinet-plan-rework-handoff.json. Actual13 IDs read from retained host; role entries, flags, metrics and original reports untouched.",
+    "newRisks": {
+      "assessment": "Авторская оценка design corrections: state/HTTP/CSV/focus/password and scoped QA transport contracts made explicit without new backend APIs or domains. Four test/tool targets increase inventory20→24 within L. Expected risks: client state reconciliation may regress; guard coverage is limited to controlled Node/browser application transports and cannot prove native/OS-wide isolation; exact proposal owner decision remains pending. All planned tests, guard probes and independent origin verification remain unexecuted by this author. No closure or code admission asserted.",
+      "evidence": "05_architecture.md explicitly limits Node/browser guarantee, forbids double flock, specifies refusal probes; ADR003 keeps owner decision pending;06 tasks/tests are planned. Documentation hash consistency only was checked.",
+      "conditions": []
+    }
+  },
+  "reviews": [
+    {
+      "reviewer": "qcsd-risk",
+      "family": "codex",
+      "independent": true,
+      "verdict": "clean",
+      "conditions": [
+        {
+          "id": "QCRISK-01-egress-boundary",
+          "owner": "qcsd-risk",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "До допуска QA определить принудительную deny-by-default сетевую границу для browser, app и дочерних процессов с разрешением только названных синтетических loopback endpoints, безопасный локальный отрицательный probe, проверяемый журнал отказа и fail-closed при недоступности границы; связать механизм и тестовые оракулы с NFR-303 и задачами плана. Не считать один browser fixture или урезанное окружение доказательством блокировки server egress.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/00_complexity_assessment.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: 00_complexity_assessment.md:32 требует outbound quarantine; 05_architecture.md:28-29 ссылается на runner и synthetic services. scripts/run-branding-collect-preview.mjs:19-25,47-66,88-90 проверяет настроенные endpoints и строит урезенное окружение, но в показанном коде нет принудительной блокировки всех сетевых соединений запускаемых процессов. SHA runner d2f3fe6bc480c444de0aadfc1701b42c6b2d2b5bea7ac80f04a981cd4fafdd37; он не входит в host manifest. Подробности и границы в evidence/qcsd/qcsd-risk.md."
+        },
+        {
+          "id": "QCRISK-02-project-runner",
+          "owner": "qcsd-risk",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "До source admission определить безопасную orchestration, которая до spawn проверяет именно PG33186/app33187/S3synthetic33188/foreignhost33189, удерживает общий flock весь lifecycle и фактически запускает project-cabinet.e2e.test.mjs и project-cabinet-mutation.mjs с фиксацией target и exit status; зафиксировать fail-closed проверки неверного порта, занятого lock и неверного target, затем согласованно отразить в плане/target inventory.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/01_requirements.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: 01_requirements.md:20 и 05_architecture.md:28-29 определяют конкретные порты и общий lock; TASK-8 в не измеренном host файле 06_implementation_plan.md:17 заявляет project E2E/mutation через существующий runner/lock. scripts/run-branding-collect-preview.mjs:19-24,32-43 допускает иные различные loopback порты, :102-106,122-129 жёстко выбирает branding-collect.e2e.test.mjs для e2e и не содержит flock. Дополнительный orchestrator не описан. SHA runner d2f3fe6bc480c444de0aadfc1701b42c6b2d2b5bea7ac80f04a981cd4fafdd37, SHA 06 f6a4eb1601e4683a1478ce05130a71ee3d8b54eac926ef97cee843fdc9b87efd; оба вне host manifest."
+        }
+      ],
+      "verifications": [
+        {
+          "id": "QCRISK-01-egress-boundary",
+          "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+          "classification": "structural",
+          "evidence": "STATIC design verification: 05_architecture.md Runtime/rollback specifies preloaded deny-by-default Node guards and guarded children, separate browser-context guard, loopback allowlist, synthetic sentinel probes before network effect, attributable deny audit, nonzero ordinary-suite exit and fail-closed ack/unsupported transport handling. 01 NFR-303 and PC-10 bind the same controlled scope; 06 TASK-QA/AM-2 name the planned test. This does not verify implementation or native/OS-wide isolation.",
+          "implementationVerified": true
+        },
+        {
+          "id": "QCRISK-02-project-runner",
+          "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+          "classification": "structural",
+          "evidence": "STATIC design verification: 05_architecture.md Runtime/rollback defines exact four 127.0.0.1 ports, one flock owner from preflight through child teardown, closed e2e/mutation modes and suite realpath/SHA/exit receipts. 06 TASK-QA/TASK-8 and AM-3 specify planned wrong-port/occupied-lock/wrong-target/missing-guard refusals and include the four new runner/guard/test targets within 24 targets. No runner or suite executed.",
+          "implementationVerified": true
+        }
+      ],
+      "newRisks": {
+        "assessment": "На focused design pass новых условий не выявлено. Ограничение scoped Node/browser transport guard остаётся явным остаточным риском: native/OS/browser-internal traffic не доказан; незакрытый или ненаблюдаемый transport блокирует соответствующий сценарий. Owner approval остаётся pending; отсутствие реализации и выполнения guard/tests не является их успехом.",
+        "evidence": "Прочитаны actual author-rework-delta и handoff, все восемь изменённых host paths, 06 plan и нормативная spec. Собственные два условия сопоставлены с 05 Runtime/rollback и 06 TASK-QA/AM-2/AM-3; хэши и границы в focused разделе qcsd-risk.md. Runtime и providers не запускались.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": true,
+      "deltaVerification": {
+        "classification": "structural",
+        "evidence": "На revision 963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009 независимо прочитаны восемь изменённых measured design paths и изменённые dependencies spec/06; авторский delta оценён, scoped guard и exact runner контракты сопоставлены с AM-2/AM-3 и PC-10. Это проверка design correction, не продукта; границы Node/browser и pending owner approval сохранены.",
+        "implementationVerified": true
+      }
+    }
+  ]
+}

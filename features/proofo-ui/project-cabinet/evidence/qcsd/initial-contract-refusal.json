@@ -1,0 +1,10 @@
+{
+  "schema": "fa-review-convergence-1",
+  "phase": "ideation",
+  "verdict": "not-established",
+  "revision": "a02e007567b6e585aee8f6a15b2d563d21c6bd0e54207cd6ebfb1e43ee0cfa62",
+  "unresolved": [],
+  "reasons": [
+    "reviewer-contract-invalid"
+  ]
+}

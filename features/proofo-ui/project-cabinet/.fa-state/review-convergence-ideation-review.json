@@ -1,0 +1,420 @@
+{
+  "schema": "fa-review-convergence-1",
+  "phase": "ideation",
+  "nonce": "733ac1ec-9eb4-45bb-bbbc-e8391ed7f4ca",
+  "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+  "author": {
+    "addressed": [
+      "QCSQ-01",
+      "QCRISK-01-egress-boundary",
+      "QCRISK-02-project-runner",
+      "TST-01",
+      "TST-02",
+      "TST-03",
+      "A11Y-01",
+      "A11Y-02",
+      "UX-01",
+      "UX-02",
+      "UX-03",
+      "QCSEC-01-http-denial",
+      "QCSEC-02-password-cancel-inflight"
+    ],
+    "changedScope": [
+      "features/proofo-ui/project-cabinet/00_complexity_assessment.md",
+      "features/proofo-ui/project-cabinet/01_requirements.md",
+      "features/proofo-ui/project-cabinet/02_research.md",
+      "features/proofo-ui/project-cabinet/03_adr/001-reuse-owned-project-capabilities.md",
+      "features/proofo-ui/project-cabinet/03_adr/002-scope-cabinet-palette-and-interaction.md",
+      "features/proofo-ui/project-cabinet/03_adr/003-separate-original-reference-from-live-adaptation.md",
+      "features/proofo-ui/project-cabinet/04_domain_model.md",
+      "features/proofo-ui/project-cabinet/05_architecture.md",
+      "features/proofo-ui/project-cabinet/06_implementation_plan.md",
+      "openspec/changes/proofo-project-cabinet/specs/project-cabinet/spec.md"
+    ],
+    "classification": "structural",
+    "delta": "Bounded design-only rework: explicit full-reload synchronization and snapshot props; distinct SQL-failure error boundary/HTTP denial; mounted paste/File/raw draft retention; exact CSV preview binding/invalidation; tabs/errors/busy/focus and in-flight password cancel semantics; dedicated24target project runner with exact ports/suite identity/single flock; observed scoped Node/browser deny probes; exact pending proposal manifest and named O0–O2/A0–A7 comparison contract.13 AM rows map actual retained origins to named future tests. Addressed means author-proposed design correction, not independent verification or closure.",
+    "evidence": "Current bytes: 00 complexity/A13,01 FR+new spec SHA,02 corrected runner inventory,03 ADR001/002/003,04 domain lifecycle,05 concrete contracts,06 TASK-QA/AM1–13/24targets and normative spec. Exact old/new SHA in .secrets/project-cabinet-plan-rework-handoff.json. Actual13 IDs read from retained host; role entries, flags, metrics and original reports untouched.",
+    "newRisks": {
+      "assessment": "Авторская оценка design corrections: state/HTTP/CSV/focus/password and scoped QA transport contracts made explicit without new backend APIs or domains. Four test/tool targets increase inventory20→24 within L. Expected risks: client state reconciliation may regress; guard coverage is limited to controlled Node/browser application transports and cannot prove native/OS-wide isolation; exact proposal owner decision remains pending. All planned tests, guard probes and independent origin verification remain unexecuted by this author. No closure or code admission asserted.",
+      "evidence": "05_architecture.md explicitly limits Node/browser guarantee, forbids double flock, specifies refusal probes; ADR003 keeps owner decision pending;06 tasks/tests are planned. Documentation hash consistency only was checked.",
+      "conditions": []
+    }
+  },
+  "reviews": [
+    {
+      "reviewer": "qcsd-quality",
+      "family": "codex",
+      "independent": true,
+      "verdict": "clean",
+      "conditions": [
+        {
+          "id": "QCSQ-01",
+          "owner": "qcsd-quality",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Привязать к FR-303 сохранение существующего screenshot paste и задать в плане отдельный ordinary UI oracle: synthetic clipboard image -> видимое вложение -> переключение intake с сохранением файла -> существующий endpoint -> pending с provenance после reload; screenshot-only без обязательных имени/текста; при 503 до записи нет insert; при сетевой ошибке нет ложного success, исход может быть неизвестен, снимок доступен для retry. Сохранить отдельные сценарии выбора файла и URL+text.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/01_requirements.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: apps/web/src/app/dashboard/[slug]/platform-form.tsx:64-75,77-96,108-119,133-136 реализует paste изображения и screenshot-only, а 05_architecture.md:14,16 обещает reuse и state machine при новом переключателе. Независимая плановая зависимость 06_implementation_plan.md:13,29-33 проверяет screenshot-only и ошибки, но не задаёт clipboard paste или его сохранность при switching. File selection отдельно не проверяет paste. Отчёт evidence/qcsd/qcsd-quality.md содержит hashes и границы проверки."
+        }
+      ],
+      "verifications": [
+        {
+          "id": "QCSQ-01",
+          "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+          "classification": "structural",
+          "evidence": "STATIC: 01_requirements.md:32,05_architecture.md:14,36-39, 06_implementation_plan.md:13,43-45 и spec.md:40-58 связывают FR-303 с пастой/пикером, сохранением File bytes при переключении и ошибках, screenshot-only, multipart hash, pending/provenance и reload, prewrite503 с нулевой записью и неопределённый исход сети. Только design; тесты не выполнены.",
+          "implementationVerified": true
+        }
+      ],
+      "newRisks": {
+        "assessment": "В пределах focused quality-review новых материальных условий не выявлено; author оценил сохраняющийся риск state reconciliation и явно ограничил QA transport guard; owner approval остаётся pending и отдельным precode gate.",
+        "evidence": "author-rework-delta.json newRisks; 05_architecture.md:28-40,54-55; spec.md:40-58; 06_implementation_plan.md:13,20,31,43-45.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": true,
+      "deltaVerification": {
+        "classification": "structural",
+        "evidence": "Независимо прочитаны author-rework-delta.json и затронутые design artifacts и зависимости; QCSQ-01 проверен по 01:32,05:14,36-39,06:13,43-45 и PC-03:40-58. Остальные условия проверяются их originating reviewers. Product implementation не проверялась.",
+        "implementationVerified": true
+      }
+    },
+    {
+      "reviewer": "qcsd-risk",
+      "family": "codex",
+      "independent": true,
+      "verdict": "clean",
+      "conditions": [
+        {
+          "id": "QCRISK-01-egress-boundary",
+          "owner": "qcsd-risk",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "До допуска QA определить принудительную deny-by-default сетевую границу для browser, app и дочерних процессов с разрешением только названных синтетических loopback endpoints, безопасный локальный отрицательный probe, проверяемый журнал отказа и fail-closed при недоступности границы; связать механизм и тестовые оракулы с NFR-303 и задачами плана. Не считать один browser fixture или урезанное окружение доказательством блокировки server egress.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/00_complexity_assessment.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: 00_complexity_assessment.md:32 требует outbound quarantine; 05_architecture.md:28-29 ссылается на runner и synthetic services. scripts/run-branding-collect-preview.mjs:19-25,47-66,88-90 проверяет настроенные endpoints и строит урезенное окружение, но в показанном коде нет принудительной блокировки всех сетевых соединений запускаемых процессов. SHA runner d2f3fe6bc480c444de0aadfc1701b42c6b2d2b5bea7ac80f04a981cd4fafdd37; он не входит в host manifest. Подробности и границы в evidence/qcsd/qcsd-risk.md."
+        },
+        {
+          "id": "QCRISK-02-project-runner",
+          "owner": "qcsd-risk",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "До source admission определить безопасную orchestration, которая до spawn проверяет именно PG33186/app33187/S3synthetic33188/foreignhost33189, удерживает общий flock весь lifecycle и фактически запускает project-cabinet.e2e.test.mjs и project-cabinet-mutation.mjs с фиксацией target и exit status; зафиксировать fail-closed проверки неверного порта, занятого lock и неверного target, затем согласованно отразить в плане/target inventory.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/01_requirements.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: 01_requirements.md:20 и 05_architecture.md:28-29 определяют конкретные порты и общий lock; TASK-8 в не измеренном host файле 06_implementation_plan.md:17 заявляет project E2E/mutation через существующий runner/lock. scripts/run-branding-collect-preview.mjs:19-24,32-43 допускает иные различные loopback порты, :102-106,122-129 жёстко выбирает branding-collect.e2e.test.mjs для e2e и не содержит flock. Дополнительный orchestrator не описан. SHA runner d2f3fe6bc480c444de0aadfc1701b42c6b2d2b5bea7ac80f04a981cd4fafdd37, SHA 06 f6a4eb1601e4683a1478ce05130a71ee3d8b54eac926ef97cee843fdc9b87efd; оба вне host manifest."
+        }
+      ],
+      "verifications": [
+        {
+          "id": "QCRISK-01-egress-boundary",
+          "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+          "classification": "structural",
+          "evidence": "STATIC design verification: 05_architecture.md Runtime/rollback specifies preloaded deny-by-default Node guards and guarded children, separate browser-context guard, loopback allowlist, synthetic sentinel probes before network effect, attributable deny audit, nonzero ordinary-suite exit and fail-closed ack/unsupported transport handling. 01 NFR-303 and PC-10 bind the same controlled scope; 06 TASK-QA/AM-2 name the planned test. This does not verify implementation or native/OS-wide isolation.",
+          "implementationVerified": true
+        },
+        {
+          "id": "QCRISK-02-project-runner",
+          "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+          "classification": "structural",
+          "evidence": "STATIC design verification: 05_architecture.md Runtime/rollback defines exact four 127.0.0.1 ports, one flock owner from preflight through child teardown, closed e2e/mutation modes and suite realpath/SHA/exit receipts. 06 TASK-QA/TASK-8 and AM-3 specify planned wrong-port/occupied-lock/wrong-target/missing-guard refusals and include the four new runner/guard/test targets within 24 targets. No runner or suite executed.",
+          "implementationVerified": true
+        }
+      ],
+      "newRisks": {
+        "assessment": "На focused design pass новых условий не выявлено. Ограничение scoped Node/browser transport guard остаётся явным остаточным риском: native/OS/browser-internal traffic не доказан; незакрытый или ненаблюдаемый transport блокирует соответствующий сценарий. Owner approval остаётся pending; отсутствие реализации и выполнения guard/tests не является их успехом.",
+        "evidence": "Прочитаны actual author-rework-delta и handoff, все восемь изменённых host paths, 06 plan и нормативная spec. Собственные два условия сопоставлены с 05 Runtime/rollback и 06 TASK-QA/AM-2/AM-3; хэши и границы в focused разделе qcsd-risk.md. Runtime и providers не запускались.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": true,
+      "deltaVerification": {
+        "classification": "structural",
+        "evidence": "На revision 963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009 независимо прочитаны восемь изменённых measured design paths и изменённые dependencies spec/06; авторский delta оценён, scoped guard и exact runner контракты сопоставлены с AM-2/AM-3 и PC-10. Это проверка design correction, не продукта; границы Node/browser и pending owner approval сохранены.",
+        "implementationVerified": true
+      }
+    },
+    {
+      "reviewer": "qcsd-testability",
+      "family": "codex",
+      "independent": true,
+      "verdict": "clean",
+      "conditions": [
+        {
+          "id": "TST-01",
+          "owner": "qcsd-testability",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Определить наблюдаемую границу синхронизации persisted testimonial/install данных, локального initial/items, badge и onboarding после успешных intake/moderation/install и изменения props; определить сохранение drafts, реакцию на failed/conflicting mutations и named live oracle для проверки до и после выбранной границы. Допустим честно описанный ручной reload, если он выбран.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/04_domain_model.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: 04_domain_model.md и 05_architecture.md:7-16 описывают persisted projection и сохранение client state без границы синхронизации; existing moderation-list.tsx:53-69 инициализирует items из initial один раз; platform-form.tsx:91-100 и import-form.tsx:26-35 после успеха меняют только собственный state. 06_implementation_plan.md:13 проверяет reload, не уточняя изменившиеся props и draft reconciliation. См. qcsd-testability.md TST-01."
+        },
+        {
+          "id": "TST-02",
+          "owner": "qcsd-testability",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Для каждого сбоя чтения project/testimonials/widget_installs определить тестируемый SSR error outcome и named loader/ordinary HTTP oracle: ошибка не превращается в 404, пустой или частично успешный кабинет; настоящий пустой проект успешно отображается. Указать повторный запрос и отрицательную мутацию catch-to-null/empty без раскрытия секретов.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/04_domain_model.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: 05_architecture.md:6-9 различает null для absent/foreign/inactive и ошибки, 04_domain_model.md различает empty и query failure. План 06:11 называет loader test для role/GUC и доступа, но не задаёт инъекции ошибок запросов и различимый HTTP error outcome. См. qcsd-testability.md TST-02."
+        },
+        {
+          "id": "TST-03",
+          "owner": "qcsd-testability",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Привязать A13 к именованному oracle с явным охватом изоляции browser/server процессов для email/payment/STT/storage и synthetic отрицательной проверкой обнаружения запрещённого исходящего вызова без обращения к реальному провайдеру; ненаблюдаемые области явно ограничить или обеспечить другую проверяемую гарантию. Сохранить отдельный config guard.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/00_complexity_assessment.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: A13 в 00_complexity_assessment.md обещает обнаружение outbound escape, 05_architecture.md:28 требует synthetic-only; 06_implementation_plan.md:10,17 ссылается на branding QA runner refuses unsafe configuration. Содержимое apps/web/tests/branding-collect-schema.test.ts проверяет allowlist, env/file и отказ до spawn, но не наблюдение фактического provider outbound. См. qcsd-testability.md TST-03."
+        }
+      ],
+      "verifications": [
+        {
+          "id": "TST-01",
+          "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+          "classification": "structural",
+          "evidence": "STATIC design verification: 04_domain_model.md and 05_architecture.md:36-40 specify explicit warned full reload after intake/install, no fabricated pre-reload item, server-confirmed moderation item+badge, no update on failure/409, same/new serverSnapshotRevision behavior and mounted drafts. Plan AM-4 names project cabinet refresh reconciles items counts and installs in tools/visual/project-cabinet.e2e.test.mjs; spec PC-04 binds the behavior. No runtime test executed.",
+          "implementationVerified": true
+        },
+        {
+          "id": "TST-02",
+          "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+          "classification": "structural",
+          "evidence": "STATIC design verification: 05_architecture.md:50-52 and PC-01 Read failure scenario define each of the three failed SQL reads, rollback/no partial model, generic inherited boundary, HTTP500 or streamed200 boundary rather than 404/empty success, true-empty200, restored DB retry and catch-to-null/empty mutant. Plan AM-5 names project cabinet read failures do not become empty or not found in apps/web/tests/project-cabinet.test.ts and ordinary live E2E. No database faults or HTTP tests executed.",
+          "implementationVerified": true
+        },
+        {
+          "id": "TST-03",
+          "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+          "classification": "structural",
+          "evidence": "STATIC design verification: 00 A13 and 05_architecture.md:28-34 define the guarded Node child/transport and browser-context scope, separately retained config guard, named project QA boundary records and refuses synthetic egress in apps/web/tests/project-cabinet-qa-runtime.test.mjs, synthetic sentinel attempts with deny/audit and fail-closed missing acknowledgement; unsupported/native/OS traffic is explicitly unproven and cannot pass. Plan TASK-QA/AM-6 and PC-10 agree. No probes, provider calls or isolation test executed.",
+          "implementationVerified": true
+        }
+      ],
+      "newRisks": {
+        "assessment": "Авторские остаточные риски по reconciliation, ограниченным Node/browser observations и pending owner approval проверены в документах; новых material условий своей роли по рассмотренной дельте не обнаружено. Ограничения transport и будущая независимая product verification сохраняются.",
+        "evidence": "STATIC: 05_architecture.md:28-40, ADR-003 и 06 TASK-QA/AM-4–6; author-rework-delta.json прочитан, заявленное addressed не принято как самостоятельное доказательство.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": true,
+      "deltaVerification": {
+        "classification": "structural",
+        "evidence": "Независимо прочитаны все 8 изменённых measured design paths, спецификация, plan 06, 13 AM и author delta; хеши host/спецификации совпадают для revision 963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009. Для собственной роли подтверждены TST-01–03 как design-only; review других originating ролей и owner decision не подменяются.",
+        "implementationVerified": true
+      }
+    },
+    {
+      "reviewer": "qcsd-accessibility",
+      "family": "codex",
+      "independent": true,
+      "verdict": "clean",
+      "conditions": [
+        {
+          "id": "A11Y-01",
+          "owner": "qcsd-accessibility",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Привязать к FR-303/304 и NFR-301 конкретный keyboard/focus oracle в именованных live tests tools/visual/project-cabinet.e2e.test.mjs: для выбранных tabs — Tab в выбранную вкладку, Left/Right с wrap, Home/End, aria-selected/tabindex и aria-controls/aria-labelledby согласованы, только активная панель доступна, черновики обоих методов сохраняются; если выбраны disclosures, проверить их фактическую button/expanded/controls-семантику без ложных tab roles. Для успешной и неуспешной модерации существующего item, а также cancel смены пароля определить и проверить видимое разумное место фокуса после исчезновения/перерисовки элемента, доступность дальнейших действий и отсутствие сброса фокуса на body; проверить с клавиатуры без programmatic focus как замены навигации.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/01_requirements.md",
+            "features/proofo-ui/project-cabinet/03_adr/002-scope-cabinet-palette-and-interaction.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: 05_architecture.md:14–16 обещает roving/tab semantics и reuse компонентов; 01_requirements.md:11–12,18 требует keyboard/focus. В дополнительном, не измеренном prepare 06_implementation_plan.md:13,17 названы tab/focus, но нет точной последовательности и oracle после исчезновения action. Existing moderation-list.tsx:32–36,67–68,145–155 меняет набор кнопок после успешного действия; статический preview proposal.js:23 восстанавливает focus на replacement, что само по себе не доказывает будущий production. Пределы и хеши — qcsd-accessibility.md."
+        },
+        {
+          "id": "A11Y-02",
+          "owner": "qcsd-accessibility",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Привязать к FR-303/304/307 и NFR-301 наблюдаемый oracle для полей и асинхронных состояний в tools/visual/project-cabinet.e2e.test.mjs: у screenshot/URL/text, CSV и password есть доступные имена и условия обязательности; проверяемая field-specific ошибка связана с соответствующим полем и объявляется без потери исправляемого ввода, общая сетевая/409 — доступный явный статус без ложного успеха; при pending, ответе успех/ошибка и retry статус/занятость доступны без опоры только на цвет и не требуют просмотра экрана. Определить способ проверки accessibility tree/DOM-связей и отдельный ручной keyboard + реальный screen reader сценарий для доступного будущего test-copy; отсутствие AT отметить как непроверенное, не pass. Проверить на manual, CSV preview/commit, moderation и password mismatch; не требовать вставки настоящих секретов.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/01_requirements.md",
+            "features/proofo-ui/project-cabinet/03_adr/002-scope-cabinet-palette-and-interaction.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: 01_requirements.md:18, 05_architecture.md:25–26 и ADR-002:15 задают общие labels/status/error/focus; дополнительный 06_implementation_plan.md:13,17 перечисляет их без конкретной связки поле → ошибка, busy → результат и оркестрации AT. Existing platform-form.tsx:176–180 выводит error/done без role/live, moderation-list.tsx:55–76,90 выводит error обычным p; import-form.tsx:70,91–94 и change-password.tsx:99–109 имеют alert/status — reuse даёт неодинаковые исходные гарантии. Это наблюдение исходного кода, не установленная runtime-ошибка будущего продукта."
+        }
+      ],
+      "verifications": [
+        {
+          "id": "A11Y-01",
+          "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+          "classification": "structural",
+          "evidence": "STATIC: 01_requirements.md FR-303/304/NFR-301 и spec.md PC-08 scenario связывают требование с 05_architecture.md:14,42–47; selected tab/roving Left/Right wrap/Home/End, linked ARIA, hidden/inert, сохранение mounted drafts и последовательный Tab заданы. Реальные keyboard events, фокус на action той же карточки после success, исходной action после failure/409 и возврат к opener после cancel, activeElement не body, названы как planned tests в 06_implementation_plan.md AM-7 и строка 71. Product тесты не выполнялись.",
+          "implementationVerified": true
+        },
+        {
+          "id": "A11Y-02",
+          "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+          "classification": "structural",
+          "evidence": "STATIC: 05_architecture.md:44–47 перечисляет имена и условия обязательности manual/CSV/password, invalid/describedby к видимой ошибке и focused alert summary, сохранение ввода, общий alert для network/409, aria-busy/disabled и живой status, реальный keyboard плюс screen reader с версией и unverified при отсутствии; 01_requirements.md NFR-301, PC-08 и 06_implementation_plan.md AM-8 связывают это с named DOM/ARIA-tree oracle manual/CSV/moderation/password. Это design, не исполнение тестов/AT.",
+          "implementationVerified": true
+        }
+      ],
+      "newRisks": {
+        "assessment": "В пределах focused accessibility review новых материальных условий не выявлено. Контракты busy/focus и AT требуют реализации и фактических испытаний; решение владельца по точному proposal и filled/control states остаётся pending, отдельный precode gate. Другие originating conditions не оценивались на закрытие.",
+        "evidence": "STATIC: author-rework-delta.json newRisks; 05_architecture.md:42–47; ADR-002:25; ADR-003 owner approval pending; 06_implementation_plan.md AM-7/8 и 71.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": true,
+      "deltaVerification": {
+        "classification": "structural",
+        "evidence": "STATIC: прочитан author-rework-delta.json, полный изменённый design scope и отдельные plan/spec; проверены только исправления A11Y-01/02 в ревизии 963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009. Восемь host SHA совпали; spec SHA совпал с FR binding; 24 уникальных targets. Остальные origin conditions принадлежат другим reviewer. Дизайн/план, без исполнения product или AT.",
+        "implementationVerified": true
+      }
+    },
+    {
+      "reviewer": "qcsd-security",
+      "family": "codex",
+      "independent": true,
+      "verdict": "clean",
+      "conditions": [
+        {
+          "id": "QCSEC-01-http-denial",
+          "owner": "qcsd-security",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "До допуска исходного кода связать FR-301/PC-01 с именованной ordinary HTTP проверкой: анонимный запрос получает login redirect с encoded next; owner A к foreign, отсутствующему и собственному deactivated проекту получает 404 без project name, отзывов, ссылок и сниппета; active owner получает только свои данные. Указать persisted синтетические accounts, маршрут, assertions и файл в плане; сохранить отдельный SQL current_user/GUC oracle и mutation проверки. Не подменять проверку ответа страницы одним unit-тестом loader.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/01_requirements.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: 01_requirements.md:11 и 05_architecture.md:6–7 задают отказы; 05:26 требует SQL role/GUC, но не называет HTTP denial oracle. Вне host manifest 06_implementation_plan.md:11 проверяет owner/foreign/missing/inactive на loader, а :12 называет ordinary persisted owner journey и links без конкретной проверки denied HTTP body/status. spec PC-01:11–15 требует redirect/404 без контента. Нет исполнения HTTP."
+        },
+        {
+          "id": "QCSEC-02-password-cancel-inflight",
+          "owner": "qcsd-security",
+          "severity": "WARNING",
+          "classification": "structural",
+          "requirement": "До source admission определить наблюдаемый lifecycle нового cancel на PC-07: до отправки очистить значения и ошибки без POST; после начала отправки не обещать отмену серверной операции (например, блокировать cancel до разрешения запроса и сообщать busy), отобразить фактические success/error и не терять reissued session. Связать с именованной synthetic UI проверкой: cancel до submit, задержанный POST при попытке cancel, success/error и старые/новая session; фактический rollback при abort не предполагать.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/01_requirements.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: 05_architecture.md:15 вводит show/cancel с очисткой и без API при cancel, но не описывает взаимодействие с уже отправленным POST; 01_requirements.md:16 требует mismatch/error/cancel и revoke/reissue. Текущий ChangePassword по :17–55 асинхронно отправляет запрос и блокирует только submit (:112), cancel в нём пока отсутствует; план 06:14 требует cancel no side effect без in-flight oracle. Это пробел будущего UI-контракта, а не доказанная текущая уязвимость."
+        }
+      ],
+      "verifications": [
+        {
+          "id": "QCSEC-01-http-denial",
+          "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+          "classification": "structural",
+          "evidence": "STATIC: 01_requirements.md:31, 05_architecture.md:49–52, 06_implementation_plan.md:11,61 и spec PC-01:11–24: GET с persisted synthetic A/B, anonymous login redirect и безопасный encoded next, foreign/missing/Ainactive 404 без данных в raw body/DOM, active A 200 только свои данные; named live oracle в tools/visual/project-cabinet.e2e.test.mjs и отдельный SQL role/GUC и mutants. Только дизайн, HTTP и SQL не выполнялись.",
+          "implementationVerified": true
+        },
+        {
+          "id": "QCSEC-02-password-cancel-inflight",
+          "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+          "classification": "structural",
+          "evidence": "STATIC: 01_requirements.md:34, 05_architecture.md:42–46, 06_implementation_plan.md:14,63 и spec PC-07:121–135 задают очистку и POST0 до submit, блокировку cancel/Escape и busy во время задержанного запроса, actual success/error/unknown и сессию; named local synthetic UI oracle в tools/visual/project-cabinet.e2e.test.mjs проверяет old-cookie rejection/current-cookie access. Только дизайн, тест и password endpoint не запускались.",
+          "implementationVerified": true
+        }
+      ],
+      "newRisks": {
+        "assessment": "В focused security review новых материальных условий не обнаружено. Авторская оценка ограничений Node/browser guard согласуется с оговоркой о непокрытых native/OS транспортах; условия и оценка других владельцев остаются за ними. Owner approval pending — отдельный gate.",
+        "evidence": "STATIC: author-rework-delta.json newRisks, 05_architecture.md:28–34,46,49–55, 01_requirements.md:30–36 и spec PC-01/07/10; оценены как дизайн, реализации нет.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": true,
+      "deltaVerification": {
+        "classification": "structural",
+        "evidence": "Прочитаны author-rework-delta.json и изменённые design paths, plan и spec; revision 963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009. Независимо проверены QCSEC-01/02 по 01:31,34, 05:46,49–52, 06:11,14,61,63 и spec PC-01/07; прочие origins остаются за своими reviewers. Подтверждение относится только к design, не к исполнению product tests.",
+        "implementationVerified": true
+      }
+    },
+    {
+      "reviewer": "qcsd-ux",
+      "family": "codex",
+      "independent": true,
+      "verdict": "clean",
+      "conditions": [
+        {
+          "id": "UX-01",
+          "owner": "qcsd-ux",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Зафиксировать связь CSV preview с точными csv и mapping: изменение любого из них делает предыдущий preview недействительным и блокирует commit до нового успешного preview, без потери черновика; при сетевой ошибке не показывать успех. Дополнить план именованным ordinary UI oracle: preview → смена mapping → commit недоступен → повторный preview → commit именно показанных данных; проверять также смену CSV и отказ. Уточнить разрешённое изменение client state machine при неизменном API.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/01_requirements.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: существующий import-form.tsx:22–35 отправляет текущие csv/mapping для каждого mode; :43–47 сбрасывает preview при выборе файла, но :58–65 меняет mapping без сброса, а :101–104 разрешает commit по старому preview. PC-03 требует осмысленного preview/commit; 05_architecture.md:15 предписывает сохранять state machines, план 06:13 не задаёт oracle изменения mapping. См. UX-01."
+        },
+        {
+          "id": "UX-02",
+          "owner": "qcsd-ux",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Определить наблюдаемый контракт сохранения каждого незавершённого черновика при переключениях и recoverable error/retry: pasted или выбранный screenshot/File, URL, text, дополнительные поля, CSV и mapping, валидность preview; успешная отправка может очищать только соответствующий успешно отправленный черновик. Привязать named ordinary UI oracle к round-trip обоих методов, paste и file, 400/429/503/network и проверке фактического retry payload; без обещания сохранения после reload.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/01_requirements.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: 05_architecture.md:13–15 обещает mounted drafts; PC-03 — recoverable input; 06_implementation_plan.md:13 перечисляет переключение, screenshot и ошибки, но не конкретизирует paste/File identity, CSV/mapping/preview и payload retry. Existing platform-form.tsx:48–55,67–75 хранит File и вставляет изображение из clipboard; import-form.tsx:15–18,43–47 — CSV/mapping/preview. См. UX-02."
+        },
+        {
+          "id": "UX-03",
+          "owner": "qcsd-ux",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "До product writes связать решение владельца с точными bytes/hash proposal и явными утверждёнными областями адаптации, включая previously unobserved filled/controls. Планом назначить проверяемые selectors/координаты, viewport и критерий сравнения с этими областями, named oracle и честную фиксацию несопоставимых состояний; приложить отдельные полные ordinary live empty/filled/error/mobile screenshots. Не выдавать original-only offline fixture за доказательство согласованной адаптации и не вводить незапрошенное полное pixel identity.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/03_adr/003-separate-original-reference-from-live-adaptation.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: ADR-003:17–18 и 05_architecture.md:21–23 фиксируют строгие регионы лишь для original; 06_implementation_plan.md:10,15–16 требует approval proposal bytes и original-region oracle, но не определяет comparator/observable oracle для approved adaptation regions. Preview README и publication report обозначают предложение как pending и filled Proofo как ненаблюдавшийся. См. UX-03."
+        }
+      ],
+      "verifications": [
+        {
+          "id": "UX-01",
+          "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+          "classification": "structural",
+          "evidence": "STATIC: PC-03 scenario CSV commit bound to successful preview; 05_architecture.md client lifecycle фиксирует exact csv/mapping snapshot, invalidation, generation, pending и captured payload; 01_requirements.md FR-303 и 06_implementation_plan.md AM-11 назначают named live oracle с изменением CSV/mapping и отрицательными stale mutations. Только corrected design, не исполненный продукт.",
+          "implementationVerified": true
+        },
+        {
+          "id": "UX-02",
+          "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+          "classification": "structural",
+          "evidence": "STATIC: PC-03 scenario Mounted drafts и 05_architecture.md Manual draft требуют File bytes/paste/picker, URL/platform/author/text и CSV/mapping/preview через переключения и 400/429/prewrite503/network; определяют multipart hash/retry payload, only-own-success clear и неизвестный network outcome. 01_requirements.md FR-303, 06 AM-12 содержат named ordinary UI oracles. Только corrected design, не исполненный продукт.",
+          "implementationVerified": true
+        },
+        {
+          "id": "UX-03",
+          "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+          "classification": "structural",
+          "evidence": "STATIC: ADR-003 proposed approval contract содержит точные URL и SHA четырёх proposal файлов, решение по O0–O2/A0–A7 и viewports, selectors, измеряемые токены/geometry/action order, исключения, named live oracle и full persisted screenshots; PC-09, FR-309, plan AM-13/TASK-1 связывают его с precode gate. Owner decision PENDING: проверен контракт обязательного будущего решения, не факт согласования, не допуск к коду и не результат visual test.",
+          "implementationVerified": true
+        }
+      ],
+      "newRisks": {
+        "assessment": "Новых существенных UX-условий по фокусной проверке не выявлено. Согласование владельца ещё pending и остаётся обязательным отдельным gate до product source writes; никакое structural verification его не заменяет.",
+        "evidence": "Статические PC-03/PC-09, 05_architecture.md, ADR-003, 01 FR-303/FR-309 и plan AM-11–13; отсутствие owner decision явно указано в ADR-003 и author delta.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": true,
+      "deltaVerification": {
+        "classification": "structural",
+        "evidence": "Прочитаны author-rework-delta.json и rework handoff; независимо изучены 8 measured paths, текущие PC-03/PC-09 и mapping FR-303/FR-309, задачи/AM-11–13 и proposal hashes на revision 963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009. Addressed автора означает предложенную коррекцию; независимая структурная оценка трёх UX-условий представлена отдельно. Owner approval, код и тесты не выполнялись.",
+        "implementationVerified": true
+      }
+    }
+  ]
+}

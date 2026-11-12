@@ -1,0 +1,60 @@
+{
+  "observedAt": "2026-11-12T19:18:28.860Z",
+  "reviewSeen": true,
+  "rework": false,
+  "retainedConditions": [
+    {
+      "id": "QCSQ-01",
+      "owner": "qcsd-quality"
+    },
+    {
+      "id": "QCRISK-01-egress-boundary",
+      "owner": "qcsd-risk"
+    },
+    {
+      "id": "QCRISK-02-project-runner",
+      "owner": "qcsd-risk"
+    },
+    {
+      "id": "TST-01",
+      "owner": "qcsd-testability"
+    },
+    {
+      "id": "TST-02",
+      "owner": "qcsd-testability"
+    },
+    {
+      "id": "TST-03",
+      "owner": "qcsd-testability"
+    },
+    {
+      "id": "A11Y-01",
+      "owner": "qcsd-accessibility"
+    },
+    {
+      "id": "A11Y-02",
+      "owner": "qcsd-accessibility"
+    },
+    {
+      "id": "UX-01",
+      "owner": "qcsd-ux"
+    },
+    {
+      "id": "UX-02",
+      "owner": "qcsd-ux"
+    },
+    {
+      "id": "UX-03",
+      "owner": "qcsd-ux"
+    },
+    {
+      "id": "QCSEC-01-http-denial",
+      "owner": "qcsd-security"
+    },
+    {
+      "id": "QCSEC-02-password-cancel-inflight",
+      "owner": "qcsd-security"
+    }
+  ],
+  "note": "Second evaluate returned author-delta-missing with prior11 but updated valid-origin lineage to13, including corrected security entry. Response unresolved set is not full post-operation persisted lineage."
+}
