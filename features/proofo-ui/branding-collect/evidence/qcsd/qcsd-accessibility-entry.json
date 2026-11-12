@@ -1,0 +1,79 @@
+{
+  "reviewer": "qcsd-accessibility",
+  "family": "codex",
+  "independent": true,
+  "verdict": "clean",
+  "conditions": [
+    {
+      "id": "ACCESSIBILITY-01",
+      "owner": "qcsd-accessibility",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "Уточнить в измеряемой архитектуре и требованиях безопасное применение любого допустимого HEX к каждой фактической паре текста/фона и индикатору контроля/фокуса в form, wall и widget: отдельно текст поверх accent и accent как цвет текста на светлом/тёмном фоне. Спланировать проверку computed colors реального рендера после compositing в обеих темах, включая #FFFFFF, #000000 и промежуточные близкие к фону цвета; обычный текст ≥4.5:1, крупный ≥3:1, необходимые границы и focus различимы ≥3:1 относительно соседнего цвета. Проверка должна обнаруживать невидимый accent h1 и отличаться от одного лишь выбора чёрного/белого текста на accent.",
+      "scope": [
+        "features/proofo-ui/branding-collect/01_requirements.md",
+        "features/proofo-ui/branding-collect/05_architecture.md"
+      ],
+      "evidence": "NFR-201 active OpenSpec требует доступный текст и крайние HEX, но 01_requirements.md:48 и 05_architecture.md:52 определяют только accessible foreground для accent; 05_architecture.md:82–88 перечисляет E2E без contrast oracle. Frozen cabinet.css .cab-collection h1 имеет color:var(--accent) на .cab-paper background:var(--card), и текущий f/[slug]/page.tsx также задаёт h1 цветом accent; выбор foreground на accent не исправляет accent-текст на фоне карточки. Например #FFFFFF на белом фоне имеет 1:1. Это риск будущей реализации, не результат измерения новой CSS."
+    },
+    {
+      "id": "ACCESSIBILITY-02",
+      "owner": "qcsd-accessibility",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "Зафиксировать проверяемую семантику для обоих редакторов в idle/saving/error/success: доступные имена и связи всех полей, включая file и оба color input; объявление актуального pending и результата; при ошибке связь полевого объяснения с полем и управляемый фокус на ошибку/сводку, при успехе фокус на видимый результат и его доступное объявление в соответствии с NFR-201. Указать поведение сохранённого ввода/повтора, отсутствие keyboard trap и проверку Tab/Shift+Tab/Enter/Space на обычных маршрутах, включая неизменённый legacy HTTP logo и ошибку отредактированного HTTP. Запланировать проверку дерева доступности и ручную проверку реальным screen reader; проверить, что устранение сообщения или связи ошибки делает тест отрицательным.",
+      "scope": [
+        "features/proofo-ui/branding-collect/01_requirements.md",
+        "features/proofo-ui/branding-collect/05_architecture.md",
+        "features/proofo-ui/branding-collect/03_adr/001-patch-existing-branding.md"
+      ],
+      "evidence": "NFR-201 active OpenSpec требует label, accessible errors/status и focus при success/error; 05_architecture.md:82–88 перечисляет focus/keyboard без state-by-state oracle, ADR-001 требует noValidate и отдельную dirty validation, но не описывает доступное сообщение или фокус. Текущий submit-form.tsx имеет визуальный span рядом с file input без label, динамический errors ul без явной связи и success-замену формы без управления фокусом/объявления; это статическое наблюдение baseline, не утверждение о будущей реализации. Frozen markup label file содержит, но статичный offline render не проверяет живые переходы."
+    },
+    {
+      "id": "ACCESSIBILITY-03",
+      "owner": "qcsd-accessibility",
+      "severity": "WARNING",
+      "classification": "structural",
+      "requirement": "Уточнить проверяемый предел адаптации и oracle длинных значений для обычных production routes: на мобильных 360/390 CSS px и при reflow до 320 CSS px проверить длинный неразрывный heading до 120, имя/роль и имя выбранного фото, текст ошибки и длинный logo URL; элементы и сообщения полностью доступны и читаемы, основной документ не требует горизонтальной прокрутки, клавиатурный фокус не уходит за видимую область. Для widget отдельно проверить узкий host с длинным отзывом и provenance. Сохранение содержимого проверять без его усечения как способа пройти reflow.",
+      "scope": [
+        "features/proofo-ui/branding-collect/01_requirements.md",
+        "features/proofo-ui/branding-collect/05_architecture.md"
+      ],
+      "evidence": "05_architecture.md:82–88 предусматривает frozen static baseline 360/390 и лишь слова long strings для live E2E; образец не задаёт длинные данные или условие отсутствия обрезки/горизонтального переполнения и не доказывает responsive reflow. FR-202 допускает heading до 120 и URL до 2048, FR-205 сохраняет пользовательский текст; frozen cabinet.css отдельно назначает overflow-wrap заголовкам cabinet title, но не явно collect h1, а placeholder photo filename baseline не доказывает его перенос. Никакого runtime overflow не заявляется."
+    }
+  ],
+  "verifications": [
+    {
+      "id": "ACCESSIBILITY-01",
+      "revision": "7530e37d99132e7af128a3ac107971d97c63fbcaef35ef4f5c2c6ad9cf923374",
+      "classification": "structural",
+      "evidence": "STATIC: owner-decision.json фиксирует выбор владельца 2026-11-12 «выбери контрастнее». 01_requirements.md:58–62,117–130, ADR-003:27–55, 05_architecture.md и NFR-201 задают live #8e806b, отдельные onAccent/accentText, все необходимые control/focus границы ≥3:1 к фактическим соседним поверхностям и вычисленный browser oracle после compositing для пяти HEX и обеих тем; old-border и white-heading mutants должны падать. Frozen literal palette неизменна в том же компоненте, не доказывает pixel identity live. EXECUTED ранее: расчёт #8e806b даёт 3.5035 к #f7f4eb и 3.7903 к #fffdf8; это не browser test. Проверено исправление текущих design artifacts, не реализация.",
+      "implementationVerified": true
+    },
+    {
+      "id": "ACCESSIBILITY-02",
+      "revision": "7530e37d99132e7af128a3ac107971d97c63fbcaef35ef4f5c2c6ad9cf923374",
+      "classification": "structural",
+      "evidence": "STATIC: 01_requirements.md:132–141, 05_architecture.md, ADR-001 и NFR-201 сохраняют labels/id и отдельные имена color inputs, pending status и focus вне disabled fieldset, error summary/success focus, field error relations, сохранение draft, keyboard и оба legacy HTTP случая; AX/keyboard oracle, mutation и manual real screen-reader evidence на owner acceptance test copy остаются запланированы. Это проверка design artifacts текущей ревизии, не browser/AT pass.",
+      "implementationVerified": true
+    },
+    {
+      "id": "ACCESSIBILITY-03",
+      "revision": "7530e37d99132e7af128a3ac107971d97c63fbcaef35ef4f5c2c6ad9cf923374",
+      "classification": "structural",
+      "evidence": "STATIC: 01_requirements.md:143–148, 05_architecture.md, ADR-003 и NFR-201 сохраняют production reflow при 320/360/390 с длинными heading/name/role/text/filename/error/URL, видимый focus, отсутствие обрезки, полный input value, отдельный widget host/root и отрицательную clipping mutation. Это проверка design artifacts текущей ревизии, не browser test.",
+      "implementationVerified": true
+    }
+  ],
+  "newRisks": {
+    "assessment": "После focused проверки изменённых design inputs и затронутых зависимостей новых собственных серьёзных условий не выявлено. Риск смешения frozen layout proof и live palette явно оговорён и покрыт отдельным запланированным runtime oracle.",
+    "evidence": "STATIC: ADR-003, 01_requirements.md и NFR-201 различают original offline palette и owner-approved live palette; old-border mutation должна провалить computed live boundary oracle даже при passing frozen proof. Реальная отрисовка, browser/AT tests и полный WCAG audit не выполнялись.",
+    "conditions": []
+  },
+  "authorAssessmentChecked": true,
+  "deltaVerification": {
+    "classification": "structural",
+    "evidence": "STATIC: рассмотрены author-delta.json, owner-decision.json и изменённые требования, архитектура, ADR-003, OpenSpec и зависимый план. Все 9 manifest SHA совпадают, spec SHA-256 2e9966d6e9eb55e24b992ede14761eb086ce64ecf181ca208bf5d969c359cc75 соответствует mapping; сохранение условий ACCESSIBILITY-02/03 перепроверено. Согласованное различие offline/runtime и независимый live oracle указаны явно. Проверено исправление design artifacts на текущем snapshot; продуктовую реализацию и тесты не проверял.",
+    "implementationVerified": true
+  }
+}

@@ -13,7 +13,7 @@
 // как текста — поэтому здесь нет `strip_tags`/regex-санитизации, которая исказила бы легитимный
 // отзыв с символами `<`/`&`.
 
-import type { WidgetTestimonial } from './types';
+import type { WidgetTestimonial, WidgetBranding } from './types';
 
 const CARD_CLASS = 'pw-card';
 
@@ -38,19 +38,20 @@ export function renderTestimonials(
   root: ShadowRoot,
   testimonials: WidgetTestimonial[],
   apiBase = '',
+  branding?: WidgetBranding,
 ): void {
   const list = root.querySelector<HTMLElement>('.pw-list');
   if (!list) return;
   list.replaceChildren(); // идемпотентно на повторный вызов (напр. будущий ре-фетч конфига)
   for (const testimonial of testimonials) {
-    list.appendChild(renderCard(apiBase, testimonial));
+    list.appendChild(renderCard(apiBase, testimonial, branding?.show_platform_labels !== false));
   }
 }
 
 /** Ровно то, что выдаёт наш сервер: /api/photo/<projectId>/<uuid>.<ext>. */
 const PHOTO_PATH = /^\/api\/photo\/[a-z0-9-]+\/[a-z0-9-]+\.(jpg|png|webp)$/i;
 
-function renderCard(apiBase: string, testimonial: WidgetTestimonial): HTMLElement {
+function renderCard(apiBase: string, testimonial: WidgetTestimonial, showLabels: boolean): HTMLElement {
   const card = document.createElement('article');
   card.className = CARD_CLASS;
 
@@ -82,6 +83,7 @@ function renderCard(apiBase: string, testimonial: WidgetTestimonial): HTMLElemen
     const origin = document.createElement('p');
     origin.className = 'pw-origin';
     const url = testimonial.source_url;
+    if (!showLabels) origin.appendChild(document.createTextNode('Перенесённый отзыв · '));
     if (typeof url === 'string' && /^https:\/\//i.test(url)) {
       const link = document.createElement('a');
       link.href = url;
@@ -89,10 +91,10 @@ function renderCard(apiBase: string, testimonial: WidgetTestimonial): HTMLElemen
       // noopener обязателен: без него чужая площадка получает доступ к window.opener
       // страницы ХОЗЯИНА, на которой стоит наш виджет.
       link.rel = 'nofollow noopener noreferrer';
-      link.textContent = `Отзыв с ${testimonial.source_label} \u2192`;
+      link.textContent = showLabels ? `Отзыв с ${testimonial.source_label} \u2192` : 'Первоисточник →';
       origin.appendChild(link);
     } else {
-      origin.textContent = `Отзыв с ${testimonial.source_label}`;
+      origin.textContent = showLabels ? `Отзыв с ${testimonial.source_label}` : 'Перенесённый отзыв';
     }
     card.appendChild(origin);
   }
@@ -143,6 +145,34 @@ function renderCard(apiBase: string, testimonial: WidgetTestimonial): HTMLElemen
   }
 
   return card;
+}
+
+function luminosity(hex: string): number {
+  const c = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16) / 255)
+    .map(v => v <= .04045 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4);
+  return c[0]! * .2126 + c[1]! * .7152 + c[2]! * .0722;
+}
+
+export function applyWidgetBranding(root: ShadowRoot, raw: unknown): WidgetBranding {
+  const value = raw && typeof raw === 'object' && !Array.isArray(raw) ? raw as Record<string, unknown> : {};
+  const branding: WidgetBranding = {
+    theme: value.theme === 'dark' ? 'dark' : 'light',
+    accent_color: typeof value.accent_color === 'string' && /^#[0-9a-f]{6}$/i.test(value.accent_color) ? value.accent_color : '#6701ef',
+    show_platform_labels: typeof value.show_platform_labels === 'boolean' ? value.show_platform_labels : true,
+  };
+  const widget = root.querySelector<HTMLElement>('.pw-widget');
+  if (widget) {
+    const surface = branding.theme === 'dark' ? '#181818' : '#ffffff';
+    const bg = luminosity(surface), fill = luminosity(branding.accent_color);
+    const ink = bg > .179 ? '#000000' : '#ffffff';
+    const onAccent = (fill + .05) / .05 >= 1.05 / (fill + .05) ? '#000000' : '#ffffff';
+    const text = (Math.max(bg, fill) + .05) / (Math.min(bg, fill) + .05) >= 4.5 ? branding.accent_color : ink;
+    for (const [key, value] of Object.entries({ '--pw-surface': surface, '--pw-ink': ink,
+      '--pw-accent': branding.accent_color, '--pw-on-accent': onAccent, '--pw-accent-text': text,
+      '--pw-edge': branding.theme === 'dark' ? '#aaaaaa' : '#767676' })) widget.style.setProperty(key, value);
+    widget.dataset.theme = branding.theme;
+  }
+  return branding;
 }
 
 /** Pseudocode.md §3: проект не найден/деактивирован — тихий no-op, без видимого содержимого. */

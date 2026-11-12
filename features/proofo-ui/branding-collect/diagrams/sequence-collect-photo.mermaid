@@ -1,0 +1,38 @@
+sequenceDiagram
+    actor Visitor as Посетитель
+    participant UI as Collect / SubmitForm
+    participant API as Existing testimonials API
+    participant DB as PostgreSQL app_service
+    participant S3 as Synthetic local S3 при QA
+    participant Photo as Existing photo GET
+    actor Owner as Владелец
+    participant Moderate as Existing owner moderation API
+    participant Publish as Wall / external Widget
+    Visitor->>UI: Имя, роль, текст, photo
+    UI-->>Visitor: Blob preview; прежний URL освобождён
+    Visitor->>UI: Submit
+    UI->>API: Async multipart; sending блокирует повторный click
+    API->>DB: Resolve active slug; check rate limit
+    Note over API: Text/role/name + MIME/signature/5 MiB validation
+    API->>DB: Record quota
+    API->>S3: Настоящий product SDK PUT unchanged bytes
+    alt Storage failure
+        S3-->>API: Failure
+        API->>DB: Revoke quota
+        API-->>UI: 503
+        UI-->>Visitor: Ввод/файл сохранён; retry доступен
+    else Upload success
+        S3-->>API: Object key
+        API->>DB: Pending testimonial + testimonial_created; COMMIT
+        API-->>UI: 201 public_id
+        UI-->>Visitor: Thanks; после проверки владельцем
+        Owner->>Moderate: Approve
+        Moderate->>DB: withAccount; status transition и COMMIT
+        Publish->>DB: Active project и approved/project filter
+        DB-->>Publish: Отзыв с photo route URL
+        Publish->>Photo: GET opaque key
+        Photo->>S3: Настоящий SDK GET
+        S3-->>Photo: Bytes
+        Photo-->>Publish: Sniffed raster + nosniff/CSP/immutable
+    end
+    Note over DB,Photo: Listing approval и key-based media access — отдельные контракты

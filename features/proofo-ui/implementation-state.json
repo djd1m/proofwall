@@ -16,72 +16,72 @@
     "independent-review"
   ],
   "receipt": {
-    "issuedAt": "2026-11-11T21:07:31.718Z",
-    "inputDigest": "8aa0227740e34f2896b0e369dbe96acfb6078b03c340342c620163ddf46ce3e4",
+    "issuedAt": "2026-11-12T11:21:21.928Z",
+    "inputDigest": "5478607311e79dee18852aa362538dd9fc1637125f53c8fb5d93934448f253e0",
     "checks": {
       "unit": {
         "status": "passed",
-        "evidence": "features/proofo-ui/evidence/dashboard-final/check-unit.json",
-        "evidenceSha256": "17bc3131131d898568cb50dc0624d5ecfecd5046c9c5706b668d78f48624b4f3"
+        "evidence": "features/proofo-ui/branding-collect/evidence/checks/unit.json",
+        "evidenceSha256": "ca000fd4109b2c5aeed96c8c7e0ca989d206b689715187a6896265da9fa8767a"
       },
       "integration": {
         "status": "passed",
-        "evidence": "features/proofo-ui/evidence/dashboard-final/check-integration.json",
-        "evidenceSha256": "b6b5ae87aa7b4d5333506d9612666c083fdb93745112b0d091ca3606def409e3"
+        "evidence": "features/proofo-ui/branding-collect/evidence/checks/integration.json",
+        "evidenceSha256": "f913479a8a94385fc11d5c2c3fca920251c3788546f79a86a46dcd64c9f4bb9c"
       },
       "e2e": {
         "status": "passed",
-        "evidence": "features/proofo-ui/evidence/dashboard-final/check-e2e.json",
-        "evidenceSha256": "2f648c9ce69ae78aa784a07787aab67af6bdf9ef17e8af91a7d929abaa7a5c65"
+        "evidence": "features/proofo-ui/branding-collect/evidence/checks/e2e.json",
+        "evidenceSha256": "21b39dc28576fc8ddc2c0dcfa30d2df2ccd4ba49b33ae6c9b172fdb8fdb254aa"
       },
       "visual": {
         "status": "passed",
-        "evidence": "features/proofo-ui/evidence/dashboard-final/check-visual.json",
-        "evidenceSha256": "8825b2ff5df81086740d217c2808e1113582dc2311c585324758613fe14e1afc"
+        "evidence": "features/proofo-ui/branding-collect/evidence/checks/visual.json",
+        "evidenceSha256": "220a663e4fd570ba81117633bfd28f7b6648442fa11c8aefcebc532562631e36"
       },
       "accessibility": {
         "status": "passed",
-        "evidence": "features/proofo-ui/evidence/dashboard-final/check-accessibility.json",
-        "evidenceSha256": "4681aada2b65eb8cb9fc0ff23a14f5003011bfc0185dd258452c77065b8facc4"
+        "evidence": "features/proofo-ui/branding-collect/evidence/checks/accessibility.json",
+        "evidenceSha256": "8928f4afec897c965e78eea700327c9823847f094a992747e7acc7a4f63a4d45"
       },
       "typecheck": {
         "status": "passed",
-        "evidence": "features/proofo-ui/evidence/dashboard-final/check-typecheck.json",
-        "evidenceSha256": "96373f4e95d53dfba8ad3feb329915db6fecf7771eb883e55ced2059382505ff"
+        "evidence": "features/proofo-ui/branding-collect/evidence/checks/typecheck.json",
+        "evidenceSha256": "101c08d16c9fe3b0d71153ab5246331bee73ec5b33805deaf31203c9177c59e6"
       },
       "build": {
         "status": "passed",
-        "evidence": "features/proofo-ui/evidence/dashboard-final/check-build.json",
-        "evidenceSha256": "04dd4b616c04791c7b511cc6f2fcc8ce499ea8b5962f92fa5caefe1efa73ed7a"
+        "evidence": "features/proofo-ui/branding-collect/evidence/checks/build.json",
+        "evidenceSha256": "c30cd95f239df8e1d2a6c9e3080a936730653c7848973c3db2fe50795dfa0cd1"
       },
       "independent-review": {
         "status": "passed",
-        "evidence": "features/proofo-ui/evidence/dashboard-final/check-independent-review.json",
-        "evidenceSha256": "da901726209be669e2f6f941671a1c90efc3e3eea695b8c00d8df45a1dca0dd3"
+        "evidence": "features/proofo-ui/branding-collect/evidence/checks/independent-review.json",
+        "evidenceSha256": "55d6cb20d2869012697079bbb81fd0a3321c12a46f0583d976f9542396165454"
       }
     }
   },
   "implementationAdmission": {
     "plan": {
-      "path": "features/proofo-ui/06_implementation_plan.md",
-      "sha256": "69cfe784dd155731a035767d89a641435e6ebb80634bebc84044555d4f63bee3"
+      "path": "features/proofo-ui/branding-collect/06_implementation_plan.md",
+      "sha256": "9375188bbaf43d77c39edd6d4ba0b0c8a1f9d564df359678cfcf695ed84e188c"
     },
     "specifications": [
       {
-        "path": "openspec/changes/proofo-dashboard/specs/dashboard-overview/spec.md",
-        "sha256": "57e33113157e014fd741f04be2e8d0594d3d64fcf010d5915e51b8c07484c7ce"
+        "path": "openspec/changes/proofo-branding-collect/specs/branding-collect/spec.md",
+        "sha256": "2e9966d6e9eb55e24b992ede14761eb086ce64ecf181ca208bf5d969c359cc75"
       }
     ],
     "checkpoints": {
       "K1": {
         "status": "passed",
-        "evidence": "features/proofo-ui/evidence/admission/K1.json",
-        "evidenceSha256": "dc75cb863390fdeac2e08275a72034027785a91f29c096e5eb65e6efa9739f7b"
+        "evidence": "features/proofo-ui/branding-collect/evidence/admission/K1-final.json",
+        "evidenceSha256": "1d48ae3d7af661e09ce0064003bf40cf50cb669db632e8eff4ff58ab0723fc19"
       },
       "K2": {
         "status": "passed",
-        "evidence": "features/proofo-ui/evidence/admission/K2.json",
-        "evidenceSha256": "05611e88f1c7ddf67a1830ddaf8f5ad8f83638c1b8ab2f76c83255f195be974d"
+        "evidence": "features/proofo-ui/branding-collect/evidence/admission/K2-final.json",
+        "evidenceSha256": "6c3427cc818caa5574b26b84724e1ed2acf5ac336fb9778f2c11e8532a44c318"
       }
     }
   }

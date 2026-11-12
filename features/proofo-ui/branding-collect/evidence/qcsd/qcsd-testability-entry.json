@@ -1,0 +1,40 @@
+{
+  "reviewer": "qcsd-testability",
+  "family": "codex",
+  "independent": true,
+  "verdict": "clean",
+  "conditions": [
+    {
+      "id": "TESTABILITY-01",
+      "owner": "qcsd-testability",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "Согласовать FR-205 UI и HTTP для длины имени: сохранять исходное имя, считать границы по trim как в действующем серверном контракте; устранить противоречие с raw maxlength и уточнить 1/81 как длины после trim. Спланировать проверку обычной формы и прямого HTTP для имени с допустимыми 80 символами после trim и окружающими пробелами, а также для имени с 81 символом после trim, с проверкой исходного сохранённого значения и отсутствия записи при отказе.",
+      "scope": [
+        "features/proofo-ui/branding-collect/01_requirements.md",
+        "features/proofo-ui/branding-collect/00_complexity_assessment.md"
+      ],
+      "evidence": "OpenSpec FR-205 требует совпадения UI/server и говорит о name 1/81 без уточнения trim. apps/web/src/lib/testimonial.ts validateTextSubmission проверяет input.name.trim().length, сохраняя исходное имя; apps/web/src/app/f/[slug]/submit-form.tsx использует maxLength=80 для исходной строки. Пример: пробел + 80 букв + пробел имеет длину 82, после trim 80; сервер его принимает, текущий maxlength не допускает обычный ввод. 01_requirements.md указывает reuse name 2–80, а A7 в 00_complexity_assessment.md повторяет неуточнённый name 1/81. Проверка выполнена статически, тест не запускался."
+    }
+  ],
+  "verifications": [
+    {
+      "id": "TESTABILITY-01",
+      "revision": "7530e37d99132e7af128a3ac107971d97c63fbcaef35ef4f5c2c6ad9cf923374",
+      "classification": "structural",
+      "evidence": "STATIC: активный FR-205, 01_requirements.md, A7, ADR-003, 05_architecture.md и TASK-6/AM-7 сохраняют одинаковую формулу UTF-16 name.trim() 2–80, raw сохранение, обычный browser и direct HTTP для raw82/trim80, trim1/81 и отсутствие записи/upload/квоты при отказе, а также различающий raw maxlength mutant. Проверка относится к design, продуктовые тесты не запускались.",
+      "implementationVerified": true
+    }
+  ],
+  "newRisks": {
+    "assessment": "В узкой owner-approved дельте новых самостоятельных условий testability не выявлено. Решение чужого ACCESSIBILITY-01 остаётся за его origin reviewer; это не заявка на общее закрытие или product/AT pass.",
+    "evidence": "STATIC: owner-decision, FR-208/NFR-201, ADR-003, архитектура и план разделяют original offline palette и approved live palette с отдельным browser oracle/mutation; совпадение frozen кадров не выдаётся за доказательство live contrast. FR-205/AM-7 сохранились. Реализация и исполнение проверок отсутствуют в этой оценке.",
+    "conditions": []
+  },
+  "authorAssessmentChecked": true,
+  "deltaVerification": {
+    "classification": "structural",
+    "evidence": "STATIC focused review: owner-decision фиксирует выбор «выбери контрастнее» и #8e806b. 00/01/ADR-003/05, активный FR-208/NFR-201 и TASK-7/8/AM-13 согласуют generic palette props одних production views, original #ddd3c2 только offline, запрет fixture/route/auth overrides, отдельный live computed border/fill/card oracle и отказную мутацию к старому цвету; обычная форма и прямой HTTP для TESTABILITY-01 сохранены. Проверены SHA всех девяти путей manifest, OpenSpec SHA и SHA pinned definition; это верификация дизайна, не тест продукта и не closure чужого условия.",
+    "implementationVerified": true
+  }
+}

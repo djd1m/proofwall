@@ -4,6 +4,9 @@
 import { afterAll, describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
+import React from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+import { randomUUID } from 'node:crypto';
 import type { PoolClient } from 'pg';
 import type { WallItem } from '../src/lib/wall';
 
@@ -20,6 +23,65 @@ const { applyTransition } = await import('../src/lib/moderation');
 // Импорт ДИНАМИЧЕСКИЙ: статический был бы поднят выше присвоения DATABASE_URL,
 // и пул в @proofwall/db создался бы без строки подключения (поймано этим же тестом).
 const { getApprovedTestimonials, buildReviewJsonLd, safeJsonLd } = await import('../src/lib/wall');
+
+it('platform labels hide names but preserve provenance', async () => {
+  const { pool } = await import('@proofwall/db');
+  const accountId = randomUUID(), projectId = randomUUID(), slug = 'wall-' + randomUUID().slice(0, 8);
+  await pool.query('INSERT INTO accounts(id,email,password_hash) VALUES($1,$2,$3)', [accountId, accountId + '@example.test', 'synthetic']);
+  try {
+    await pool.query('INSERT INTO projects(id,account_id,slug,branding) VALUES($1,$2,$3,$4)', [projectId, accountId, slug, { show_platform_labels: false, theme: 'dark' }]);
+    await pool.query(`INSERT INTO testimonials(project_id,author_name,text,status,source,source_platform,source_url,screenshot_object_key)
+      VALUES($1,'Автор','<img src=x onerror=alert(1)>','approved','platform','yandex_maps','https://source.example/review','project-id/shot-id.png')`, [projectId]);
+    (globalThis as { React?: typeof React }).React = React;
+    const { default: WallPage } = await import('../src/app/w/[slug]/page.tsx' as string);
+    const html = renderToStaticMarkup(await WallPage({ params: Promise.resolve({ slug }) }));
+    expect(html).toContain('Перенесённый отзыв'); expect(html).toContain('Первоисточник');
+    expect(html).not.toContain('Отзыв с Яндекс.Карты');
+    expect(html).toContain('https://source.example/review'); expect(html).toContain('/api/photo/project-id/shot-id.png');
+    expect(html).toContain('&lt;img src=x onerror=alert(1)&gt;'); expect(html).toContain('data-theme="dark"');
+    expect(html).toContain('Proofwall');
+  } finally { await pool.query('DELETE FROM accounts WHERE id=$1', [accountId]); }
+});
+
+it('wall sorts all approved rows with a stable time and id tie break', async () => {
+  const { pool } = await import('@proofwall/db');
+  const accountId = randomUUID(), projectId = randomUUID(), slug = 'sort-' + randomUUID().slice(0, 8);
+  await pool.query('INSERT INTO accounts(id,email,password_hash) VALUES($1,$2,$3)', [accountId, accountId + '@example.test', 'synthetic']);
+  try {
+    await pool.query('INSERT INTO projects(id,account_id,slug) VALUES($1,$2,$3)', [projectId, accountId, slug]);
+    for (let i = 0; i < 53; i++) await pool.query("INSERT INTO testimonials(project_id,author_name,text,status,created_at) VALUES($1,'Author',$2,'approved','2026-01-01')", [projectId, 'row-' + i]);
+    const expected = (await pool.query('SELECT id FROM testimonials WHERE project_id=$1 ORDER BY created_at,id', [projectId])).rows.map(r => r.id);
+    expect((await getApprovedTestimonials(projectId, 'oldest')).map(r => r.id)).toEqual(expected);
+    expect((await getApprovedTestimonials(projectId)).map(r => r.id)).toEqual([...expected].reverse());
+  } finally { await pool.query('DELETE FROM accounts WHERE id=$1', [accountId]); }
+});
+
+it('wall renders empty demo video and author proof states without changing metadata meaning', async () => {
+  const { pool } = await import('@proofwall/db');
+  const accountId = randomUUID(), projectId = randomUUID(), slug = 'states-' + randomUUID().slice(0, 8);
+  await pool.query('INSERT INTO accounts(id,email,password_hash) VALUES($1,$2,$3)', [accountId, accountId + '@example.test', 'synthetic']);
+  (globalThis as { React?: typeof React }).React = React;
+  const { default: WallPage, generateMetadata } = await import('../src/app/w/[slug]/page.tsx' as string);
+  const params = { params: Promise.resolve({ slug }) };
+  try {
+    await pool.query('INSERT INTO projects(id,account_id,slug,branding) VALUES($1,$2,$3,$4)', [projectId, accountId, slug, { logo_url: 'https://logo.example/logo.png' }]);
+    expect(renderToStaticMarkup(await WallPage(params))).toContain('Пока ни одного одобренного отзыва');
+    expect((await generateMetadata(params)).robots).toMatchObject({ index: false });
+    await pool.query(`INSERT INTO testimonials(project_id,author_name,author_role,text,status,source,source_platform,screenshot_object_key,photo_url,video_object_key,transcript)
+      VALUES($1,'Автор','Роль','Точный текст','approved','platform','yandex_maps','project-id/screenshot.png','/api/photo/project-id/photo.png','synthetic-video','Точная расшифровка')`, [projectId]);
+    await pool.query("INSERT INTO testimonials(project_id,author_name,text,status,source,video_object_key) VALUES($1,'','','approved','demo','synthetic-video')", [projectId]);
+    const html = renderToStaticMarkup(await WallPage(params));
+    expect(html).toContain('не принадлежат реальным людям'); expect(html).toContain('Машинная расшифровка видео');
+    expect(html).toContain('видео-отзыв'); expect(html).toContain('Роль'); expect(html).toContain('/api/photo/project-id/photo.png');
+    expect(html).toContain('Отзыв с Яндекс.Карты'); expect(html).toContain('2 отзыва');
+    await pool.query('UPDATE projects SET noindex=false,branding=branding||$2::jsonb WHERE id=$1', [projectId, JSON.stringify({ show_platform_labels: false, theme: 'dark' })]);
+    const hidden = renderToStaticMarkup(await WallPage(params)); expect(hidden).toContain('Перенесённый отзыв'); expect(hidden).not.toContain('Отзыв с Яндекс.Карты');
+    expect((await generateMetadata(params)).robots).toBeUndefined();
+    const missing = { params: Promise.resolve({ slug: slug + '-missing' }) };
+    await expect(WallPage(missing)).rejects.toThrow('NEXT_HTTP_ERROR_FALLBACK;404');
+    expect((await generateMetadata(missing)).robots).toMatchObject({ index: false });
+  } finally { await pool.query('DELETE FROM accounts WHERE id=$1', [accountId]); }
+});
 
 const item = (over: Partial<WallItem> = {}): WallItem => ({
   id: 'id-1',

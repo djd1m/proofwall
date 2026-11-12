@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "exitCode": 0,
+  "command": "node .agents/skills/feature-adr/scripts/check-plan-completeness.mjs features/proofo-ui/branding-collect --tier=L --require-requirements --acid=A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17",
+  "designDigest": "acb9c6fda7d36818fadf5dce0ef1625061915f6307f2913dc9fec16403ef68b8",
+  "capturedAt": "2026-11-12T08:36:27.960622+00:00",
+  "stdout": "NOTE  C9: twin scan over 30 target(s), 15 on disk, 0 unlisted twins (byte-identical only; drifted copies need identity tests)\nNOTE  C8: all 13 requirement ids referenced\nK2 plan-completeness: PASS (0 failure(s), 0 warning(s), 0 skip(s)) over 4 ADRs, tier L, in /tmp/proofwall-branding-collect/features/proofo-ui/branding-collect\n",
+  "stderr": ""
+}

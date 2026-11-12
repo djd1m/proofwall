@@ -1,0 +1,29 @@
+sequenceDiagram
+    actor Owner as Владелец / запрос
+    participant UI as Branding editor
+    participant API as PATCH branding
+    participant DB as PostgreSQL
+    Owner->>UI: Save draft
+    Note over UI: Client validation; capture draft; lock settings + Save
+    UI->>API: PATCH
+    alt Нет действующей session
+        API-->>UI: 401 до body read
+    else Origin / type / body / fields invalid
+        API-->>UI: 403 / 415 / 413 / 400 без write transaction
+    else Request valid
+        API->>DB: withAccount; locked owned active lookup
+        alt Foreign / missing / inactive
+            DB-->>API: Нет видимой строки
+            API-->>UI: 404 без branding
+        else Stored JSON не объект
+            DB-->>API: Non-object value
+            API-->>UI: 409; без normalization write
+        else UPDATE permission revoked / DB fault
+            API->>DB: UPDATE validated patch
+            DB-->>API: Permission/error
+            API->>DB: ROLLBACK
+            API-->>UI: 503; no success payload
+        end
+    end
+    UI-->>Owner: Unlock прежний draft; focus error summary; linked field errors
+    Note over UI,API: Network ambiguity не обещает exactly-once

@@ -1,8 +1,8 @@
 // src/styles.ts
 //
 // Источник истины: docs/ADR.md ADR-001 (Shadow DOM), docs/Architecture.md §4.1,
-// .claude/rules/coding-style.md §3 ("все стили инжектятся внутрь shadow-root через <style>,
-// не использовать глобальные CSS-классы для виджета").
+// .claude/rules/embeddable-widget.md: стили изолированы в ShadowRoot; современная
+// ветка использует constructed stylesheet без inline <style> для restrictive CSP.
 //
 // `:host { all: initial }` — сброс наследуемых от хоста CSS-свойств, которые Shadow DOM
 // пропускает по спецификации (font-family, color и т.п. наследуются даже через границу shadow-
@@ -21,10 +21,13 @@ const CSS = `
   box-sizing: inherit;
 }
 .pw-widget {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  background: var(--pw-surface, #ffffff);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
-  color: #1a1a1a;
+  color: var(--pw-ink, #000000);
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -35,10 +38,11 @@ const CSS = `
   gap: 12px;
 }
 .pw-card {
-  border: 1px solid #e2e2e2;
+  min-width: 0;
+  border: 1px solid var(--pw-edge, #767676);
   border-radius: 8px;
   padding: 16px;
-  background: #ffffff;
+  background: var(--pw-surface, #ffffff);
 }
 .pw-text {
   margin: 0 0 8px;
@@ -48,27 +52,30 @@ const CSS = `
   word-break: break-word;
 }
 .pw-author {
+  min-width: 0;
+  flex-wrap: wrap;
   display: flex;
   align-items: baseline;
   gap: 6px;
   font-size: 13px;
   font-weight: 600;
-  color: #444;
+  color: var(--pw-ink, #000000);
 }
 .pw-author-role {
   font-weight: 400;
-  color: #888;
+  color: var(--pw-ink, #000000);
 }
 .pw-transcript-label {
   margin: 8px 0 0;
   font-size: 12px;
   font-style: italic;
-  color: #777;
+  color: var(--pw-ink, #000000);
 }
 .pw-shot { display:block; width:100%; height:auto; max-height:320px; object-fit:contain;
   margin:10px 0; border-radius:8px; border:1px solid #e4e6ee; background:#fff; }
-.pw-origin { margin:6px 0 0; font-size:12px; color:#736a87; }
-.pw-origin a { color:#6701ef; text-decoration:none; }
+.pw-origin { margin:6px 0 0; font-size:12px; color:var(--pw-ink, #000000); }
+.pw-origin a { color:var(--pw-accent-text, #6701ef); text-decoration:underline; }
+.pw-widget a:focus-visible { outline:2px solid var(--pw-ink, #000000); outline-offset:3px; box-shadow:0 0 0 2px var(--pw-surface, #fff); }
 .pw-origin a:hover { text-decoration:underline; }
 .pw-photo {
   width: 32px;
@@ -87,19 +94,30 @@ const CSS = `
   align-items: center;
   gap: 4px;
   font-size: 12px;
-  color: #666;
+  color: var(--pw-ink, #000000);
   text-decoration: none;
   padding: 4px 0;
 }
 .pw-badge:hover {
-  color: #222;
+  color: var(--pw-ink, #000000);
   text-decoration: underline;
 }
 `;
 
 /** Pseudocode.md §3 `injectScopedStyles(host)` — вызывается сразу после attachShadow. */
 export function injectScopedStyles(root: ShadowRoot): void {
-  const style = document.createElement('style');
+  // Adoption разрешён только для stylesheet из того же Document, включая iframe.
+  const Sheet = root.ownerDocument.defaultView?.CSSStyleSheet;
+  if (Sheet && typeof Sheet.prototype.replaceSync === 'function' && 'adoptedStyleSheets' in root) {
+    const sheet = new Sheet();
+    sheet.replaceSync(CSS);
+    root.adoptedStyleSheets = [...root.adoptedStyleSheets, sheet];
+    return;
+  }
+  // Legacy capability fallback. Без этих API strict CSP не поддерживается;
+  // docs/embed-contract.md явно ограничивает контракт современными браузерами.
+  // Ошибку поддерживаемой adoption не скрываем переходом к inline стилям.
+  const style = root.ownerDocument.createElement('style');
   style.textContent = CSS;
   root.appendChild(style);
 }

@@ -1,0 +1,90 @@
+{
+  "schema": "proofwall-runtime-handoff-1",
+  "capturedAt": "2026-11-11 21:43:32 UTC",
+  "root": "/tmp/proofwall-branding-collect",
+  "featureDir": "features/proofo-ui/branding-collect",
+  "auditStatus": "complete",
+  "scope": "Только ранний аудит runtime; код не реализовывался.",
+  "threadId": "01a1cc8d-9a7a-79a0-98ae-8bf830ab3d6f",
+  "role": "runtime-auditor; будущий автор после допуска",
+  "model": {
+    "id": "gpt-6.1-sol",
+    "reasoning": "high",
+    "source": "Параметры текущего live Codex process; не аттестация провайдера."
+  },
+  "nativeContext": {
+    "cwd": "/tmp/proofwall-branding-collect",
+    "hookDefinitionsMatch": true,
+    "activation": "Текущий CLI передал локальные hooks и MCP через per-invocation overrides; глобальный trust аудитом не менялся.",
+    "sessionStartObservedAt": "2026-11-11T21:39:57.447Z",
+    "preToolUseObservedAt": "2026-11-11T21:41:52.594Z",
+    "currentTurnStop": "Ещё не наблюдался; вручную не имитировался.",
+    "configCheck": {
+      "command": "node_modules/node/bin/node scripts/process-guard.mjs check-config",
+      "exitCode": 0,
+      "result": "Process configuration and vendor hashes valid"
+    },
+    "node": "22.23.4"
+  },
+  "aqe": {
+    "version": "3.15.19",
+    "entrypoint": "/tmp/proofwall-branding-collect/node_modules/agentic-qe/dist/mcp/bundle.js",
+    "projectRoot": "/tmp/proofwall-branding-collect",
+    "memoryPath": "/tmp/proofwall-branding-collect/.agentic-qe/memory.db",
+    "toolOrder": [
+      "fleet_init",
+      "memory_query",
+      "aqe_health",
+      "fleet_status"
+    ],
+    "fleetInit": {
+      "success": true,
+      "requestedMaxAgents": 1,
+      "reportedMaxAgents": 15
+    },
+    "query": {
+      "pattern": "patterns/feature-adr/*",
+      "namespace": "learning",
+      "semantic": false,
+      "success": true,
+      "entries": 0,
+      "hasMore": false
+    },
+    "retrieves": 0,
+    "retrieveReason": "Найденных ключей нет; уроки AQE не применялись.",
+    "health": "healthy",
+    "memoryConnected": true,
+    "hnswEnabled": false,
+    "vectorCount": 0,
+    "semanticSearch": "Не подтверждён как рабочий; индекс выключен.",
+    "ghostPatternsWithoutEmbeddings": 6,
+    "agents": 0,
+    "runningTasks": 0,
+    "lifecycle": "SessionStart сообщил reported-complete; это не QE gate."
+  },
+  "dzRecall": {
+    "command": "npm run dz -- recall \"actual statement role GUC PATCH branding collect\" --project /home/proofwall --limit 3",
+    "exitCode": 0,
+    "search": "SQLite FTS5 lexical",
+    "hits": 1,
+    "lesson": "RLS-тест проверяет роль и tenant GUC фактического SQL statement на том же client/transaction; отдельный helper-тест недостаточен.",
+    "application": "Прочитан для будущего контекста; продуктовый код и тесты здесь не проверялись."
+  },
+  "admission": {
+    "stage": "planned",
+    "implementationAdmissionPresent": false,
+    "receiptPresent": false,
+    "codingNow": false,
+    "futureCoding": "Готов продолжить в этом thread после actual admission, настоящих prerequisites/checkpoints и полного буквального coder context от root. Старый dashboard complete не переносится."
+  },
+  "failuresAndLimitations": [
+    "Вызванные AQE MCP tools и check-config успешны; это не продуктовые gates.",
+    "fleet_init вернул maxAgents=15 при запросе 1; ограничение fleet не подтверждено. Агентов/задач нет.",
+    "Статический .codex/config.toml указывает /home/proofwall; фактический CLI override и MCP process используют текущий worktree.",
+    "Native log не содержит session ID и имеет дубли; свежие события и live process не являются криптографической аттестацией.",
+    "Shell-запись этого handoff отклонена native PreToolUse: слово deploy в описании ограничений распознано как поставка при stage=planned. Команда не исполнилась; выбран файловый patch с явным назначением, hooks/state не менялись.",
+    "Документы изменяются архитектором; после фиксации перечитать актуальные требования/ADR/план.",
+    "K1/K2, QCSD, target admission, coder-context helper, unit/integration/E2E/visual/accessibility, независимое ревью и delivery этим аудитом не выполнялись."
+  ],
+  "boundaries": "Явно записывается только этот JSON вне репозитория. Авторских правок репозитория, commits/push, продуктовых HTTP-операций, почты, production/DNS/deploy нет. Native hooks и авторизованный AQE runtime ведут свои локальные служебные данные."
+}

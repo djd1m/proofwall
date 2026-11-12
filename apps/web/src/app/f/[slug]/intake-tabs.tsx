@@ -16,6 +16,8 @@ export function IntakeTabs(
   // Показанная и неработающая кнопка это обещание, которое продукт не выполнит.
   const tabs = videoEnabled ? (['text', 'video'] as const) : (['text'] as const);
 
+  if (!videoEnabled) return <SubmitForm slug={slug} branding={branding} />;
+
   return (
     <div>
       <div role="tablist" className="tabs">

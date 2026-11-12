@@ -12,6 +12,7 @@ import { buildBadgeUrl } from './badge';
 import { baseUrl } from './urls';
 
 import { platformFrom } from './platform-proof';
+import { readBranding, type ResolvedBranding } from './branding';
 
 export const TESTIMONIAL_LIMIT = 50; // Pseudocode §5.1
 
@@ -32,6 +33,7 @@ export interface WidgetTestimonial {
 }
 
 export interface WidgetConfigResponse {
+  branding?: Pick<ResolvedBranding, 'theme' | 'accent_color' | 'show_platform_labels'>;
   testimonials: WidgetTestimonial[];
   badge_required: boolean;
   project_slug: string;
@@ -66,8 +68,8 @@ export async function buildWidgetConfig(
   // paid_until запрашивается ВМЕСТЕ с tier: правило про badge теперь смотрит на оба, и
   // запрос без срока молча вернул бы undefined — то есть «срока нет» — и badge остался бы
   // включённым у оплатившего. Тот же класс, что «модерация не выбрала поля снимка».
-  const projectRes = await client.query<{ id: string; slug: string; tier: string; paid_until: Date | null }>(
-    'select id, slug, tier, paid_until from projects where slug = $1 and deactivated = false',
+  const projectRes = await client.query<{ id: string; slug: string; tier: string; paid_until: Date | null; branding: unknown }>(
+    'select id, slug, tier, paid_until, branding from projects where slug = $1 and deactivated = false',
     [slug],
   );
   const project = projectRes.rows[0];
@@ -76,18 +78,21 @@ export async function buildWidgetConfig(
   // Тариф читается ИЗ БД и нигде больше. Ни query, ни заголовки, ни тело не участвуют.
   // Само правило — в lib/tariff.ts: один источник на всё приложение (FR-007).
   const badgeRequired = badgeRequiredFor(project.tier, project.paid_until);
+  const branding = readBranding(project.branding);
 
   const items = await client.query<WidgetTestimonial & {
     source: string; source_platform: string | null; screenshot_object_key: string | null;
   }>(
     // Анонимный путь под app_service (BYPASSRLS): фильтр по project_id обязателен в коде.
-    `select id, author_name, author_role, text, transcript, photo_url,
+    `WITH latest AS (select id, author_name, author_role, text, transcript, photo_url,
             source, source_platform, source_url, screenshot_object_key,
+            created_at,
             case when transcript is not null then transcript_source else null end as transcript_source
        from testimonials
       where project_id = $1 and status = 'approved'
-      order by created_at desc
-      limit ${TESTIMONIAL_LIMIT}`,
+      order by created_at desc, id desc
+      limit ${TESTIMONIAL_LIMIT})
+      SELECT * FROM latest ORDER BY created_at ${branding.review_order === 'oldest' ? 'asc' : 'desc'}, id ${branding.review_order === 'oldest' ? 'asc' : 'desc'}`,
     [project.id],
   );
 
@@ -110,6 +115,7 @@ export async function buildWidgetConfig(
 
   return {
     testimonials,
+    branding: { theme: branding.theme, accent_color: branding.accent_color, show_platform_labels: branding.show_platform_labels },
     badge_required: badgeRequired,
     project_slug: project.slug,
     // Только при badge_required: на paid ссылка не нужна и не должна утекать в ответ.

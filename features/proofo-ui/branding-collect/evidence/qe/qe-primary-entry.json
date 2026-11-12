@@ -1,0 +1,96 @@
+{
+  "reviewer": "qe-primary",
+  "family": "codex",
+  "independent": true,
+  "verdict": "clean",
+  "conditions": [
+    {
+      "id": "PRIMARY-01",
+      "owner": "qe-primary",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "FR-202: новый logo URL должен быть absolute HTTPS без credentials. Общий validator обязан отвергать непустые URL username/password; browser dirty-patch и HTTP bypass не должны сохранять такой URL, включая mixed patch. Добавить именованный отрицательный тест и доказать отсутствие записи.",
+      "scope": [
+        "apps/web/src/lib/branding.ts",
+        "apps/web/tests/branding.test.ts",
+        "apps/web/tests/project-branding.test.ts"
+      ],
+      "evidence": "spec.md:43 требует HTTPS без credentials. apps/web/src/lib/branding.ts:86-93 проверяет только длину и protocol; username/password не проверяются. Независимый no-network probe .secrets/bc-qe-primary-logo-probe.mjs импортировал transpiled фактический source SHA256 20f5080ca2f8b5ebe6936323ab28a486fcdc2693b22b3163ff68c1d96ca19432: оба synthetic HTTPS cases (user+password и user-only) получили actualAccept=true, readerRetainsCredentials=true при expectedAccept=false; credential-free control прошёл; exit1, raw .secrets/bc-qe-primary-logo-probe.log. Corpus branding.test.ts:40-56 таких случаев не содержит."
+    },
+    {
+      "id": "PRIMARY-02",
+      "owner": "qe-primary",
+      "severity": "WARNING",
+      "classification": "structural",
+      "requirement": "FR-206, сценарий «Публикация после модерации»: доказать text/photo pending → owner approval через обычный moderation API с действующей owner session → публикацию только соответствующего проекта в wall/widget. Прямой SQL UPDATE status не заменяет этот HTTP сценарий.",
+      "scope": [
+        "tools/visual/branding-collect.e2e.test.mjs"
+      ],
+      "evidence": "spec.md:127-130 явно называет ordinary moderation API. E2E «branding collect real flows» строка157 и «collect uploads and reads local photo» строка253 делают pool.query UPDATE testimonials SET status=approved. Свой E2E exit0, 13/13 (.secrets/bc-qe-primary-e2e.log) поэтому подтверждает публичный reader после SQL approval, но не заявленный owner HTTP transition. wall.test.ts вызывает applyTransition напрямую; это полезный нижний слой, не missing HTTP path. Дефект самой moderation реализации этим review не установлен."
+    },
+    {
+      "id": "PRIMARY-03",
+      "owner": "qe-primary",
+      "severity": "WARNING",
+      "classification": "structural",
+      "requirement": "NFR-201 и ADR-003: дополнить живой reflow oracle branding editor при 320/360/390 CSS px и обеих project themes, с heading120/HTTPS logo URL2048/длинной ошибкой; проверить полный URL value и Home/End/selection/internal scroll, доступность focused controls. Это дополнение к уже проверенным collect/wall/widget.",
+      "scope": [
+        "tools/visual/branding-collect.e2e.test.mjs"
+      ],
+      "evidence": "05_architecture.md:162-166 требует live branding/collect/wall/widget, spec.md:228-232 требует URL Home/End/selection. «live forms and widget reflow without truncation», E2E:387-421, открывает collect, wall и widget, но не editor; Home/End/Shift+End проверены только у #cab-name (399-402). Свой passing E2E имеет 6 reflow records для этих поверхностей, а не доказательство пропущенного editor/URL. Это coverage gap, не доказанный визуальный overflow."
+    },
+    {
+      "id": "PRIMARY-04",
+      "owner": "qe-primary",
+      "severity": "WARNING",
+      "classification": "structural",
+      "requirement": "NFR-202, сценарий «Схема и rollback»: проверить реальный новый writer на legacy/unknown-key JSON и чтение обновлённой записи фактическим старым reader из baseline после rollback версии приложения, без data rewrite; сохранить доказательство existing migrations/grants. SQL ROLLBACK фикстуры сам по себе не проверяет совместимость старого reader.",
+      "scope": [
+        "apps/web/tests/branding-collect-schema.test.ts",
+        "apps/web/tests/branding.test.ts"
+      ],
+      "evidence": "spec.md:241-245 требует new writer → old reader. «branding schema supports legacy and rollback», schema.test.ts:78-99, выполняет handwritten JSONB UPDATE, проверяет сырые поля, затем ROLLBACK и отсутствие созданного project; не вызывает новый writer или старый reader. branding.test.ts:34-38 проверяет старый трёхпольный input новым readBranding, то есть обратное направление. Свой 76/76 pass в .secrets/bc-qe-primary-unit.log не покрывает это отсутствующее направление. Несовместимость runtime не доказана; отсутствует обязательный oracle."
+    }
+  ],
+  "verifications": [
+    {
+      "id": "PRIMARY-01",
+      "revision": "5a55e200c7807177bb7d1e8e39b5eb2b7db0d4d68b3d69d07d182b3403122657",
+      "classification": "structural",
+      "evidence": "EXECUTED: apps/web/src/lib/branding.ts:91 теперь требует HTTPS и пустые username/password. Самостоятельно 39/39 web tests, включая branding rejects credential-bearing HTTPS logos without changing draft (branding.test.ts:34), branding controller retains draft through pending failures and retry (:107), credential-bearing logo mixed PATCH is rejected before repository write (project-branding.test.ts:170). Проверены user+password/user-only/password-only/encoded cases, mixed patch 400 и неизменная БД, client no-fetch/error/draft, clean HTTPS через реальный writer. Тот же независимый no-network probe, который первоначально падал, теперь exit0: два credentialed URL reject, clean control accept; actual source SHA d606b700b6f8313a44968b41422741d8b0739dddab37c68e7f5dc54c23eeea03. Raw .secrets/bc-qe-primary-cycle2-unit.log и bc-qe-primary-cycle2-logo-probe.log.",
+      "implementationVerified": true
+    },
+    {
+      "id": "PRIMARY-02",
+      "revision": "5a55e200c7807177bb7d1e8e39b5eb2b7db0d4d68b3d69d07d182b3403122657",
+      "classification": "structural",
+      "evidence": "EXECUTED: самостоятельный E2E 14/14, .secrets/bc-qe-primary-cycle2-e2e.log. В tools/visual/branding-collect.e2e.test.mjs:113 approveThroughOwnerApi вызывается обоими named journeys branding collect real flows и collect uploads and reads local photo. Pending исключён до owner HTTP approval; foreign403, anonymous401 и expired401 не меняют pending; действующая owner session получает200, persisted approved, отзыв доступен собственным wall/widget и отсутствует у foreign project. Approval теперь обычным POST /api/testimonials/:id/moderate для text и local photo. Статически проверено отсутствие SQL approval в этих journeys; copied current measurements содержат две ordinary-owner-moderation записи.",
+      "implementationVerified": true
+    },
+    {
+      "id": "PRIMARY-03",
+      "revision": "5a55e200c7807177bb7d1e8e39b5eb2b7db0d4d68b3d69d07d182b3403122657",
+      "classification": "structural",
+      "evidence": "EXECUTED: собственный E2E live forms and widget reflow without truncation (tools/visual/branding-collect.e2e.test.mjs:469) прошёл для branding editor, collect, wall и widget. В шести 320/360/390×light/dark случаях editor содержит heading120, HTTPS logo2048, error2056; реальные input value, Home/End/Shift+End selection, internal scroll, focus и доступность Save проверены. Widget измеряется отдельно на document/host/ShadowRoot: host client=scroll304/344/374, положительная width и rendered child bounds внутри host. Raw .secrets/bc-qe-primary-cycle2-e2e.log; copied current measurements bc-qe-primary-cycle2-e2e-measurements.json. No-wrap clipping reverse mutation обнаружена.",
+      "implementationVerified": true
+    },
+    {
+      "id": "PRIMARY-04",
+      "revision": "5a55e200c7807177bb7d1e8e39b5eb2b7db0d4d68b3d69d07d182b3403122657",
+      "classification": "structural",
+      "evidence": "EXECUTED: собственный branding schema supports legacy and rollback (apps/web/tests/branding-collect-schema.test.ts:81) прошёл в 39/39 web run. Реальный patchOwnedBranding обновил committed legacy+unknown-key row всеми шестью новыми значениями; независимый DB client подтвердил persisted JSON/name/unknown и200. Выполнен readBranding из git show 4da1c64b6dcc537a412646183344dcb53645ea02:apps/web/src/lib/branding.ts, SHA4447bd65d7be631a9f98701145fad09c946dfc2b3eb93296daf9e878445730d8, независимо сверенный reviewer. Старый reader вернул три старых поля; повторное чтение сохранило новую row без data rewrite. Проверены existing tables и app_authenticated SELECT/UPDATE grants. Raw .secrets/bc-qe-primary-cycle2-unit.log; copied current provenance bc-qe-primary-cycle2-old-reader-provenance.json. Это исполнение настоящего старого reader, не redeploy полного старого app.",
+      "implementationVerified": true
+    }
+  ],
+  "newRisks": {
+    "assessment": "Новых самостоятельных условий в focused structural delta и затронутых зависимостях не выявлено. PRIMARY-01…04 проверены как выполненные на текущей revision; исходные conditions сохранены неизменно. Чужие условия и общий readiness этой ролью не закрываются.",
+    "evidence": "Самостоятельно изучены все 12 measured changed paths и affected dependencies; changedScope автора включает их все, 46/46 manifest SHA совпали до и после. 39 web tests, 14 E2E и actual-validator probe passed. Redacted outcome sink проверен success/reject/permission/COMMIT-failure тестами; constructed stylesheet/host layout проверены реальным strict-CSP Chromium E2E и inline reverse mutation. Widget unit suite, source mutation campaign, новая frozen capture, rebuild/full-suite и manual AT в этом focused проходе отдельно не выполнялись. Legacy stylesheet fallback не получает обещания strict-CSP; browser evidence относится к pinned Chromium. Подробные границы и связь с историческим traceability в qe-primary.md.",
+    "conditions": []
+  },
+  "authorAssessmentChecked": true,
+  "deltaVerification": {
+    "classification": "structural",
+    "evidence": "Прочитаны actual author-repair-delta.json, repair-cycle2 evidence и handoff; сверены заявленные scope/classification с независимым manifest diff:12 changed paths, missingFromAuthorChangedScope=[], остальные34 неизменны. Проверены validator/client/repository, moderation HTTP journey, editor URL navigation, отдельный host reflow и фактический baseline old reader; независимо выполнены39 web/14 E2E/probe. Затронутые redacted logger, constructed CSSStyleSheet ownerDocument realm/fallback, host display sizing, external CSP host assets и runner env isolation прочитаны; logger и CSP/host фактически исполнились в собственных тестах. Actual built widget0837c760 bytes/hash сверены. Revision5a55e200c7807177bb7d1e8e39b5eb2b7db0d4d68b3d69d07d182b3403122657, nonce893f82d3-e2ae-48df-b357-f3031a194fdf, all46SHA unchanged. Авторские full-suite/build/source-mutation grades не присвоены как собственные результаты. True означает проверенную implementation structural delta в указанном scope.",
+    "implementationVerified": true
+  }
+}

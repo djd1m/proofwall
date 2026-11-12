@@ -44,6 +44,12 @@ export interface WidgetTestimonial {
 }
 
 /** Ответ `GET /api/widget/config` (Pseudocode.md §5.1 `apiWidgetConfig`). */
+export interface WidgetBranding {
+  theme: 'light' | 'dark';
+  accent_color: string;
+  show_platform_labels: boolean;
+}
+
 export interface WidgetConfigResponse {
   testimonials: WidgetTestimonial[];
   /**
@@ -60,5 +66,5 @@ export interface WidgetConfigResponse {
    */
   badge_url?: string;
   /** [GAP: форма branding не описана в документах — Architecture §4.2 упоминает поле по имени] */
-  branding?: Record<string, unknown>;
+  branding?: WidgetBranding;
 }

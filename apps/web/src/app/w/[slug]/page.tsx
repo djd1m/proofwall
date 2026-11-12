@@ -8,7 +8,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { findProjectBySlug } from '@/lib/project';
-import { readBranding } from '@/lib/branding';
+import { readBranding, brandingForeground } from '@/lib/branding';
 import { buildReviewJsonLd, getApprovedTestimonials, safeJsonLd } from '@/lib/wall';
 import { baseUrl } from '@/lib/urls';
 import { platformFrom } from '@/lib/platform-proof';
@@ -36,13 +36,34 @@ export default async function WallPage({ params }: Params) {
   // и noindex тоже не значит 404: страница всегда доступна людям по прямой ссылке.
   if (!project) notFound();
 
-  const items = await getApprovedTestimonials(project.id);
   const branding = readBranding(project.branding);
+  const items = await getApprovedTestimonials(project.id, branding.review_order);
   const pageUrl = `${baseUrl()}/w/${project.slug}`;
   const accent = branding.accent_color;
+  const surface = branding.theme === 'dark' ? '#181818' : '#fffdf8';
+  const ink = branding.theme === 'dark' ? '#ffffff' : '#181818';
+  const accentText = brandingForeground(accent, surface);
 
   return (
-    <main className="stage stage--mid">
+    <main className="stage stage--mid wall-page" data-theme={branding.theme} style={{
+      ['--wall-surface' as string]: surface, ['--wall-ink' as string]: ink,
+      ['--wall-accent-text' as string]: accentText, ['--wall-fill' as string]: accent,
+      ['--wall-on-accent' as string]: brandingForeground(accent),
+      ['--wall-edge' as string]: branding.theme === 'dark' ? '#aaaaaa' : '#8e806b',
+    }}>
+      <style>{`
+        .wall-page {background:var(--wall-surface);color:var(--wall-ink);min-width:0;overflow-wrap:anywhere;max-width:760px;width:100%;--text:var(--wall-ink);--ink:var(--wall-ink);--muted:var(--wall-ink);--on-ink:var(--wall-ink);--on-ink-dim:var(--wall-ink)}
+        .wall-page .wall,.wall-page .quote,.wall-page .quote__author>span {min-width:0}
+        .wall-page .quote,.wall-page .card {background:var(--wall-surface);color:var(--wall-ink);border:1px solid var(--wall-edge)}
+        .wall-page .quote__transcript,.wall-page .quote__origin {color:var(--wall-ink)}
+        .wall-page a,.wall-page .wallHead__title {color:var(--wall-accent-text)}
+        .wall-page .quote__origin a {color:var(--wall-accent-text);text-decoration:underline}
+        .wall-page .quote__avatar,.wall-page .chip {background:var(--wall-fill);color:var(--wall-on-accent)}
+        .wall-page a:focus-visible {outline:2px solid var(--wall-ink);outline-offset:3px;box-shadow:0 0 0 2px var(--wall-surface)}
+        .wall-page .wallHead__logo {max-width:100%;height:auto}
+        .wall-page .quote__author {align-items:flex-start}
+        .wall-page .quote__role,.wall-page .quote__body,.wall-page .quote__origin,.wall-page .quote__transcript {overflow-wrap:anywhere;word-break:break-word}
+      `}</style>
       {items.length > 0 && (
         <script
           type="application/ld+json"
@@ -63,7 +84,7 @@ export default async function WallPage({ params }: Params) {
           role="note"
           style={{
             margin: '0 0 16px', padding: '10px 14px', borderRadius: 10,
-            background: 'var(--accent-tint)', color: 'var(--ink)', fontWeight: 600,
+            background: surface, color: ink, fontWeight: 600,
           }}
         >
           Демонстрация. Отзывы ниже сочинены для показа витрины и не принадлежат реальным людям.
@@ -113,7 +134,7 @@ export default async function WallPage({ params }: Params) {
 
               {item.has_video && item.transcript && (
                 <p className="quote__transcript">
-                  <span className="chip chip--accent">🎥 расшифровка</span> {item.transcript}
+                  <span className="chip chip--accent">Машинная расшифровка видео</span> {item.transcript}
                 </p>
               )}
               {item.has_video && !item.transcript && (
@@ -146,12 +167,13 @@ export default async function WallPage({ params }: Params) {
                 // написанное здесь. Ссылка делает пометку проверяемой, её отсутствие не
                 // отменяет обязанности пометить.
                 <p className="quote__origin">
-                  {item.source_url ? (
+                  {!branding.show_platform_labels && <>Перенесённый отзыв{item.source_url && /^https:\/\//i.test(item.source_url) ? ' · ' : ''}</>}
+                  {item.source_url && /^https:\/\//i.test(item.source_url) ? (
                     <a href={item.source_url} target="_blank" rel="nofollow noopener noreferrer">
-                      Отзыв с {platformFrom(item.source_platform) ?? 'внешней площадки'} →
+                      {branding.show_platform_labels ? <>Отзыв с {platformFrom(item.source_platform) ?? 'внешней площадки'} →</> : <>Первоисточник →</>}
                     </a>
                   ) : (
-                    <>Отзыв с {platformFrom(item.source_platform) ?? 'внешней площадки'}</>
+                    branding.show_platform_labels ? <>Отзыв с {platformFrom(item.source_platform) ?? 'внешней площадки'}</> : null
                   )}
                 </p>
               )}

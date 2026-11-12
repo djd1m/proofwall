@@ -1,0 +1,258 @@
+{
+  "exitCode": 1,
+  "command": "node_modules/node/bin/node node_modules/@dzhechkov/harness-cli/dist/bin.js qe-rounds --source native --action evaluate --project /tmp/proofwall-branding-collect --feature-dir /tmp/proofwall-branding-collect/features/proofo-ui/branding-collect --json",
+  "result": {
+    "schema": "fa-review-convergence-1",
+    "phase": "qe",
+    "verdict": "unresolved",
+    "revision": "b3b7f4779c855441ae482ff5f7d813527058aa6bb9e80536eeb2a4cfa20fb71c",
+    "unresolved": [
+      "PRIMARY-01",
+      "PRIMARY-02",
+      "PRIMARY-03",
+      "PRIMARY-04",
+      "RISK-01",
+      "RISK-02",
+      "INTEGRATION-01",
+      "INTEGRATION-02",
+      "INTEGRATION-03"
+    ],
+    "reasons": [
+      "reviewer-no-go:qe-primary",
+      "reviewer-no-go:qe-integration",
+      "unresolved:PRIMARY-01",
+      "unresolved:PRIMARY-02",
+      "unresolved:PRIMARY-03",
+      "unresolved:PRIMARY-04",
+      "unresolved:RISK-01",
+      "unresolved:RISK-02",
+      "unresolved:INTEGRATION-01",
+      "unresolved:INTEGRATION-02",
+      "unresolved:INTEGRATION-03"
+    ],
+    "source": "native",
+    "history": "complete",
+    "status": "under-ceiling",
+    "ceiling": 3,
+    "rounds": 1,
+    "failedAttempts": [],
+    "journalId": "f8733a94-e72d-49b1-bb63-464502c3a7aa",
+    "cycleId": "d7828c5a-ae74-45f0-a951-51c8e7d214c3",
+    "nonce": "bbba4b1f-3593-41a6-a8be-e3c711994fe2",
+    "sequence": 2,
+    "eventDigest": "dcbd4ba136010905af0a34224501a996b910e3a9ebcd07fda8ba92cbf16fb0b2",
+    "snapshot": {
+      "nonce": "bbba4b1f-3593-41a6-a8be-e3c711994fe2",
+      "revision": "b3b7f4779c855441ae482ff5f7d813527058aa6bb9e80536eeb2a4cfa20fb71c",
+      "manifest": [
+        {
+          "path": "apps/web/src/app/api/projects/[slug]/branding/route.ts",
+          "digest": "ef41e3ae3641a199456a9a176d3073bc1b00bc18de92e8c2b291c4622c28eb9f"
+        },
+        {
+          "path": "apps/web/src/app/dashboard/[slug]/branding/branding-editor.tsx",
+          "digest": "eb8016ec477eec0235bc25050ca2db838a00176dec92d86d9e18d74a2f69378a"
+        },
+        {
+          "path": "apps/web/src/app/dashboard/[slug]/branding/branding-view.tsx",
+          "digest": "804c422499a742ff1ae2252f534f947bab87160ade83cf9141a33c09650b3a09"
+        },
+        {
+          "path": "apps/web/src/app/dashboard/[slug]/branding/page.tsx",
+          "digest": "7bc86d8136e421481df39a9129245850ef2c719a013ec2f5268598411131f015"
+        },
+        {
+          "path": "apps/web/src/app/dashboard/[slug]/page.tsx",
+          "digest": "86be10119cd89198d0709fcc90870b1a97a662d0804ef3603e3500841a587ac6"
+        },
+        {
+          "path": "apps/web/src/app/f/[slug]/collect-view.tsx",
+          "digest": "54de88c7bf37d2df5fd08a6fc4e677fe2a415c8f80c5a410e80afee4f81dbd68"
+        },
+        {
+          "path": "apps/web/src/app/f/[slug]/intake-tabs.tsx",
+          "digest": "40adddecacf33cb4ee65093bf266f48427ec2253002c217195ff8fa42d7b77c1"
+        },
+        {
+          "path": "apps/web/src/app/f/[slug]/page.tsx",
+          "digest": "6aabf7ec3baa6c3271b8a673bb90fcbfe9ce6d38e6bbfcda67483fb855722e9b"
+        },
+        {
+          "path": "apps/web/src/app/f/[slug]/submit-form.tsx",
+          "digest": "636c4ea5bc95bc0addd921eece80d139dad78eb9c7c26c5e60507c10b1dbdd75"
+        },
+        {
+          "path": "apps/web/src/app/proofo-forms.css",
+          "digest": "7c9938a03217abb10ca6e6179bebe60e4753de5c93ad501cc3ff43a040cfaffc"
+        },
+        {
+          "path": "apps/web/src/app/w/[slug]/page.tsx",
+          "digest": "0cd8e7b183c0c354e564f387f28ea60c0fac1ae367c1c884c951534d9dc88914"
+        },
+        {
+          "path": "apps/web/src/lib/branding.ts",
+          "digest": "20f5080ca2f8b5ebe6936323ab28a486fcdc2693b22b3163ff68c1d96ca19432"
+        },
+        {
+          "path": "apps/web/src/lib/project-branding.ts",
+          "digest": "79fb1ee859b2403ae79c16b982709b5265b070bed4e4062df47cfd7b8cd5bb3c"
+        },
+        {
+          "path": "apps/web/src/lib/wall.ts",
+          "digest": "7846ccbea03fd14dcddc19950c58c83fec2f85ba84c1c61c65c2270391f0c264"
+        },
+        {
+          "path": "apps/web/src/lib/widget-config.ts",
+          "digest": "3c4d95a743a3d63f334de52f8c7720286495e3b3fc83160df2c01081472c4d9b"
+        },
+        {
+          "path": "apps/web/tests/branding-collect-mutation.mjs",
+          "digest": "cc3803449b83d2b19e9c77d947bcb87b581459a346b9fbe4d5ee5a5cdf4401de"
+        },
+        {
+          "path": "apps/web/tests/branding-collect-schema.test.ts",
+          "digest": "6fbe194e39a59d82040a783f7938002f17637949b5f908a9cacc068c366332c8"
+        },
+        {
+          "path": "apps/web/tests/branding-collect-visual-fixture.test.ts",
+          "digest": "0f2c47a83bccd24dff2adc79dd4cb6db0dffb09c2556c3af8253e52c1913dfa5"
+        },
+        {
+          "path": "apps/web/tests/branding.test.ts",
+          "digest": "2089a4248767b941311eb2d1c58370ce84ad7c5e708602b4d3613c3d49431954"
+        },
+        {
+          "path": "apps/web/tests/project-branding.test.ts",
+          "digest": "4c83013fa5016e79cdb268dabe13f57798eb3299e61c7e623b95e519f1aed9b4"
+        },
+        {
+          "path": "apps/web/tests/wall.test.ts",
+          "digest": "5d024ffebb3cdbde6e82e85d84f661e256f11e4dbe93bb6f71f9e88b1470c104"
+        },
+        {
+          "path": "apps/web/tests/widget-config.test.ts",
+          "digest": "a1fee01dfacd3c3a4dfd128868a048342dd3b090a7da233a0807ddf6e3a0ea81"
+        },
+        {
+          "path": "apps/widget/src/index.ts",
+          "digest": "94a9a28ce0465947e636ec1e5bb1380c34f981354647840caa748df993c35400"
+        },
+        {
+          "path": "apps/widget/src/render.ts",
+          "digest": "71a23babbe22fc1c13a191a8b650bed36cd62f638d4aa9b2b0fb0f722a870884"
+        },
+        {
+          "path": "apps/widget/src/styles.ts",
+          "digest": "fd88474eeba14866eab4e58f1a636121b56f75efa86ad85baa9c959800ea67f8"
+        },
+        {
+          "path": "apps/widget/src/types.ts",
+          "digest": "ff68a2dd40f689f51a3da45ca5942cdeb2da2c38e3ca4e14960d6ab070822ac1"
+        },
+        {
+          "path": "apps/widget/tests/widget-branding.test.ts",
+          "digest": "1d676d4708e45ab4d8810598e5765abc211bccefab70dd601633f87423bc7a79"
+        },
+        {
+          "path": "features/proofo-ui/branding-collect/00_complexity_assessment.md",
+          "digest": "786302083da193c0912c3c90f915b85915ffe9b741975b744eee8b346d2be8de"
+        },
+        {
+          "path": "features/proofo-ui/branding-collect/01_requirements.md",
+          "digest": "3f1ed924758aa3173608a7a8bc95eb3c99323b2ea9e61c52243f94a6ca672e77"
+        },
+        {
+          "path": "features/proofo-ui/branding-collect/02_research.md",
+          "digest": "f3906ec1dc3e46ce6111a332f41d84ac0f3d915b1f7e2a7e2f8eeb24cffa8732"
+        },
+        {
+          "path": "features/proofo-ui/branding-collect/03.5_ideation_report.md",
+          "digest": "4797469d8b30059b4c2c0513e808497c13e26e871978c85f1cacbd0178256ccf"
+        },
+        {
+          "path": "features/proofo-ui/branding-collect/03_adr/001-patch-existing-branding.md",
+          "digest": "60f162e5c3985dffadf224761c1000efc44c050f483da0427c88a6d8d818f076"
+        },
+        {
+          "path": "features/proofo-ui/branding-collect/03_adr/002-preserve-provenance-when-hiding-labels.md",
+          "digest": "fb3c42b2bf74c1edb24271cba453a33b097e49be234e7bf218758bb91ecba5eb"
+        },
+        {
+          "path": "features/proofo-ui/branding-collect/03_adr/003-render-production-views-offline.md",
+          "digest": "afbc61f3da6c0938216d2a0f06e9dc9dd64f6a687718990c4ac2d97193442616"
+        },
+        {
+          "path": "features/proofo-ui/branding-collect/03_adr/004-isolate-photo-qa-runtime.md",
+          "digest": "55c722ac1fe6bffbb021399df4a99fa0ebff1a2bc35f628dd9db01e220d150c9"
+        },
+        {
+          "path": "features/proofo-ui/branding-collect/04_domain_model.md",
+          "digest": "4bb092e88bb0a014182f389d6149e661332f6acd6768268259ff4e0e6313b772"
+        },
+        {
+          "path": "features/proofo-ui/branding-collect/05_architecture.md",
+          "digest": "2b1e38822aa8057848aae42cbc65f44c3fe9d196ebd80a54c310073a68115d28"
+        },
+        {
+          "path": "features/proofo-ui/branding-collect/06_implementation_plan.md",
+          "digest": "9375188bbaf43d77c39edd6d4ba0b0c8a1f9d564df359678cfcf695ed84e188c"
+        },
+        {
+          "path": "openspec/changes/proofo-branding-collect/design.md",
+          "digest": "4b4e18e7162a3121373916a8244fa57e073b2abd132a039f2e89303eae890d95"
+        },
+        {
+          "path": "openspec/changes/proofo-branding-collect/proposal.md",
+          "digest": "13e102c9f12dec25e763af2d736a0fae0c290cac13e36fefdd64b005512ca737"
+        },
+        {
+          "path": "openspec/changes/proofo-branding-collect/specs/branding-collect/spec.md",
+          "digest": "2e9966d6e9eb55e24b992ede14761eb086ce64ecf181ca208bf5d969c359cc75"
+        },
+        {
+          "path": "openspec/changes/proofo-branding-collect/tasks.md",
+          "digest": "1958360381a0975c89ac47b871e8fc79280715f54ccc4ee78ec31741e6823dc3"
+        },
+        {
+          "path": "scripts/render-branding-collect-fixture.mjs",
+          "digest": "577ca959393f8685aa9f8065155c1a36bff9fa78ce521565ffbac43251be74ee"
+        },
+        {
+          "path": "scripts/run-branding-collect-preview.mjs",
+          "digest": "0ab904b64cf298b176fcb94d843b9f8f85e3ce3a0995005a7ec49fa4217ecbf3"
+        },
+        {
+          "path": "tools/visual/branding-collect.e2e.test.mjs",
+          "digest": "ec08bd5399be3e16b1720566f63a4963dd29d5cb8092d82b29d2706faf756e66"
+        }
+      ]
+    },
+    "postCiCorrection": {
+      "capacity": 1,
+      "used": false,
+      "targetRevision": null,
+      "evidence": null,
+      "anchorSequence": null,
+      "anchorEventDigest": null
+    },
+    "finalContinuation": {
+      "capacity": 1,
+      "used": false,
+      "targetRevision": null
+    },
+    "checkpointDigest": null,
+    "continuation": {
+      "capacity": 0,
+      "used": false,
+      "targetRevision": null
+    },
+    "stopReason": null,
+    "locations": {
+      "journal": "/tmp/proofwall-branding-collect/features/proofo-ui/branding-collect/.fa-state/native-qe-history.jsonl",
+      "head": "/tmp/proofwall-branding-collect/features/proofo-ui/branding-collect/.fa-state/native-qe-head.json",
+      "host": "/tmp/proofwall-branding-collect/features/proofo-ui/branding-collect/.fa-state/review-convergence-qe-host.json",
+      "bridge": "/tmp/proofwall-branding-collect/features/proofo-ui/branding-collect/.fa-state/qe-bridge"
+    },
+    "replayed": false
+  }
+}

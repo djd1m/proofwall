@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "uid": 20001,
+  "gid": 988,
+  "effectiveCapabilities": 0,
+  "buildId": "e19RhYitYH_pbxzgNnPaA",
+  "checks": [
+    {
+      "check": "production env unreadable",
+      "expected": false,
+      "observed": false,
+      "exitCode": 1
+    },
+    {
+      "check": "private access unreadable",
+      "expected": false,
+      "observed": false,
+      "exitCode": 1
+    },
+    {
+      "check": "root credentials unreadable",
+      "expected": false,
+      "observed": false,
+      "exitCode": 1
+    },
+    {
+      "check": "own env file unreadable",
+      "expected": false,
+      "observed": false,
+      "exitCode": 1
+    },
+    {
+      "check": "compiled build readable",
+      "expected": true,
+      "observed": true,
+      "exitCode": 0
+    },
+    {
+      "check": "compiled build not writable",
+      "expected": false,
+      "observed": false,
+      "exitCode": 1
+    },
+    {
+      "check": "own cache writable",
+      "expected": true,
+      "observed": true,
+      "exitCode": 0
+    }
+  ],
+  "tracedFileHashesMatched": 812,
+  "symlinksContained": 47,
+  "unitSha256": "cf655fbbbac1dcc586c0501a641134a3c2b6e32a03d0f81a69f7d8c947d103ec",
+  "scope": "Actual service process identity and read/write predicates in service mount namespace; private file contents not read by predicates."
+}

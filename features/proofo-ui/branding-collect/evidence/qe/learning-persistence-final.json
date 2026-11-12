@@ -1,0 +1,59 @@
+{
+  "capturedAt": "2026-11-12T11:06:28.144167+00:00",
+  "records": [
+    {
+      "phase": "qe",
+      "aqeExitCode": 0,
+      "aqeResult": {
+        "success": true,
+        "data": {
+          "stored": true,
+          "key": "patterns/feature-adr/qe/1794481583",
+          "namespace": "learning",
+          "timestamp": "2026-11-12T11:06:25.168Z",
+          "persisted": true,
+          "vectorIndex": {
+            "status": "failed",
+            "error": {
+              "code": "VECTOR_INDEX_UNAVAILABLE",
+              "message": "Semantic vector indexing is unavailable for this entry. Configure AQE_EMBEDDER_ENDPOINT for the recommended remote backend. The compatible local @huggingface/transformers@4.2.0 dependency chain currently has unresolved HIGH advisories GHSA-xcpc-8h2w-3j85 and GHSA-f88m-g3jw-g9cj."
+            }
+          }
+        }
+      },
+      "semanticIndexingClaimed": false,
+      "durable": {
+        "exitCode": 0,
+        "stdout": "Learned: \"Количество зелёных тестов не доказывает пользовательскую цеп...\"\n  Domain: general  Reward: 0.85 (explicit)  Backend: memory (@dzhechkov/memory)\n  Total patterns: 6\n  store (written): /home/proofwall/.dz  [from --project]\n  ID: teach:c915a8cce9462588\n",
+        "stderr": ""
+      }
+    },
+    {
+      "phase": "fleet",
+      "aqeExitCode": 0,
+      "aqeResult": {
+        "success": true,
+        "data": {
+          "stored": true,
+          "key": "patterns/feature-adr/fleet/1794481585",
+          "namespace": "learning",
+          "timestamp": "2026-11-12T11:06:27.450Z",
+          "persisted": true,
+          "vectorIndex": {
+            "status": "failed",
+            "error": {
+              "code": "VECTOR_INDEX_UNAVAILABLE",
+              "message": "Semantic vector indexing is unavailable for this entry. Configure AQE_EMBEDDER_ENDPOINT for the recommended remote backend. The compatible local @huggingface/transformers@4.2.0 dependency chain currently has unresolved HIGH advisories GHSA-xcpc-8h2w-3j85 and GHSA-f88m-g3jw-g9cj."
+            }
+          }
+        }
+      },
+      "semanticIndexingClaimed": false,
+      "durable": {
+        "exitCode": 0,
+        "stdout": "Learned: \"Redaction-тест невакуозен, только когда сначала доказан факт...\"\n  Domain: general  Reward: 0.85 (explicit)  Backend: memory (@dzhechkov/memory)\n  Total patterns: 7\n  store (written): /home/proofwall/.dz  [from --project]\n  ID: teach:1c50ee0f1bd8fe05\n",
+        "stderr": ""
+      }
+    }
+  ]
+}

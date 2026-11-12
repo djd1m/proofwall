@@ -1,0 +1,22 @@
+{
+  "status": "final-source-staged-not-published",
+  "artifact": "/opt/proofwall-ui-preview/artifacts/e19RhYitYH_pbxzgNnPaA",
+  "buildId": "e19RhYitYH_pbxzgNnPaA",
+  "sourceHashesMatched": 30,
+  "symlinksContained": true,
+  "symlinkCount": 47,
+  "nftPathsContainedAndPresent": true,
+  "nftPathCount": 5507,
+  "nftDirectoryAliasReferences": 98,
+  "uniqueTracedFileCount": 812,
+  "tracedFileSetDigest": "3f173ffb497a7bbe7bd76672d32369dc5603bf531f4c49a4d43e2a34dca3d111",
+  "nftFileBytesMatchSource": true,
+  "newAliases": [],
+  "envOrPrivateFilesCopied": false,
+  "runtimeCacheOwner": [
+    20001,
+    988
+  ],
+  "publicServiceUnchanged": true,
+  "independentClosurePending": true
+}

@@ -9,6 +9,7 @@ import { findProjectBySlug } from '@/lib/project';
 import { readBranding } from '@/lib/branding';
 import { IntakeTabs } from './intake-tabs';
 import { videoIntakeEnabled } from '@/lib/video';
+import '../../proofo-forms.css';
 
 export const dynamic = 'force-dynamic';
 
@@ -27,27 +28,5 @@ export default async function FormPage({ params }: Params) {
 
   const branding = readBranding(project.branding);
 
-  return (
-    <main className="stage stage--narrow">
-      <div className="card" style={{ ['--brand' as string]: branding.accent_color }}>
-        {branding.logo_url && (
-          // eslint-disable-next-line @next/next/no-img-element -- логотип владельца с произвольного
-          // домена; next/image потребовал бы заранее объявленного allowlist'а хостов.
-          <img src={branding.logo_url} alt="" className="formHead__logo" />
-        )}
-        {/* heading подставляется через {} — React экранирует его сам, разметка владельца
-            не станет разметкой страницы. */}
-        <h1 style={{ color: 'var(--brand)' }}>{branding.heading}</h1>
-        <p className="lede" style={{ marginTop: 10 }}>
-          Займёт минуту. Регистрироваться не нужно.
-        </p>
-
-        <IntakeTabs slug={project.slug} branding={branding} videoEnabled={videoIntakeEnabled()} />
-      </div>
-
-      <p className="wallFoot">
-        Отзывы собирает <a href="/">Proofwall</a>
-      </p>
-    </main>
-  );
+  return <IntakeTabs slug={project.slug} branding={branding} videoEnabled={videoIntakeEnabled()} />;
 }

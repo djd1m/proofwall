@@ -1,0 +1,19 @@
+{
+  "capturedAt": "2026-11-12T09:18:50.418Z",
+  "scope": "Operational SDK Put/Get/Delete of a newly allocated synthetic object only; not the full UI photo pipeline",
+  "endpoint": "https://s3.cloud.ru",
+  "bucket": "proofwall",
+  "forcePathStyle": true,
+  "objectKeySha256": "ec5a287511986036409ab11765953a0638ef8c7531bde11c59631fae9c5ba08e",
+  "put": true,
+  "getEqual": true,
+  "delete": true,
+  "credentialsPrinted": false,
+  "bytes": 51,
+  "status": "passed",
+  "observedExitCode": 0,
+  "node": "v22.23.4",
+  "sdkVersion": "3.1118.0",
+  "command": "node_modules/node/bin/node --input-type=module (stdin: operational SDK probe reading only configured S3 values from private env)",
+  "oldProviderTests": "Three historical live-provider tests remain skipped in isolated QA; this separate operational roundtrip does not claim those tests executed"
+}

@@ -1,0 +1,150 @@
+{
+  "schema": "fa-review-convergence-1",
+  "phase": "ideation",
+  "verdict": "prepared",
+  "revision": "7530e37d99132e7af128a3ac107971d97c63fbcaef35ef4f5c2c6ad9cf923374",
+  "unresolved": [],
+  "reasons": [],
+  "nonce": "b29efe0f-6017-41c6-a442-464f3ed3263d",
+  "manifest": [
+    {
+      "path": "features/proofo-ui/branding-collect/00_complexity_assessment.md",
+      "digest": "786302083da193c0912c3c90f915b85915ffe9b741975b744eee8b346d2be8de"
+    },
+    {
+      "path": "features/proofo-ui/branding-collect/01_requirements.md",
+      "digest": "3f1ed924758aa3173608a7a8bc95eb3c99323b2ea9e61c52243f94a6ca672e77"
+    },
+    {
+      "path": "features/proofo-ui/branding-collect/02_research.md",
+      "digest": "f3906ec1dc3e46ce6111a332f41d84ac0f3d915b1f7e2a7e2f8eeb24cffa8732"
+    },
+    {
+      "path": "features/proofo-ui/branding-collect/03_adr/001-patch-existing-branding.md",
+      "digest": "60f162e5c3985dffadf224761c1000efc44c050f483da0427c88a6d8d818f076"
+    },
+    {
+      "path": "features/proofo-ui/branding-collect/03_adr/002-preserve-provenance-when-hiding-labels.md",
+      "digest": "fb3c42b2bf74c1edb24271cba453a33b097e49be234e7bf218758bb91ecba5eb"
+    },
+    {
+      "path": "features/proofo-ui/branding-collect/03_adr/003-render-production-views-offline.md",
+      "digest": "afbc61f3da6c0938216d2a0f06e9dc9dd64f6a687718990c4ac2d97193442616"
+    },
+    {
+      "path": "features/proofo-ui/branding-collect/03_adr/004-isolate-photo-qa-runtime.md",
+      "digest": "55c722ac1fe6bffbb021399df4a99fa0ebff1a2bc35f628dd9db01e220d150c9"
+    },
+    {
+      "path": "features/proofo-ui/branding-collect/04_domain_model.md",
+      "digest": "4bb092e88bb0a014182f389d6149e661332f6acd6768268259ff4e0e6313b772"
+    },
+    {
+      "path": "features/proofo-ui/branding-collect/05_architecture.md",
+      "digest": "2b1e38822aa8057848aae42cbc65f44c3fe9d196ebd80a54c310073a68115d28"
+    }
+  ],
+  "conditions": [
+    {
+      "id": "TESTABILITY-01",
+      "owner": "qcsd-testability",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "Согласовать FR-205 UI и HTTP для длины имени: сохранять исходное имя, считать границы по trim как в действующем серверном контракте; устранить противоречие с raw maxlength и уточнить 1/81 как длины после trim. Спланировать проверку обычной формы и прямого HTTP для имени с допустимыми 80 символами после trim и окружающими пробелами, а также для имени с 81 символом после trim, с проверкой исходного сохранённого значения и отсутствия записи при отказе.",
+      "scope": [
+        "features/proofo-ui/branding-collect/01_requirements.md",
+        "features/proofo-ui/branding-collect/00_complexity_assessment.md"
+      ],
+      "evidence": "OpenSpec FR-205 требует совпадения UI/server и говорит о name 1/81 без уточнения trim. apps/web/src/lib/testimonial.ts validateTextSubmission проверяет input.name.trim().length, сохраняя исходное имя; apps/web/src/app/f/[slug]/submit-form.tsx использует maxLength=80 для исходной строки. Пример: пробел + 80 букв + пробел имеет длину 82, после trim 80; сервер его принимает, текущий maxlength не допускает обычный ввод. 01_requirements.md указывает reuse name 2–80, а A7 в 00_complexity_assessment.md повторяет неуточнённый name 1/81. Проверка выполнена статически, тест не запускался."
+    },
+    {
+      "id": "ACCESSIBILITY-01",
+      "owner": "qcsd-accessibility",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "Уточнить в измеряемой архитектуре и требованиях безопасное применение любого допустимого HEX к каждой фактической паре текста/фона и индикатору контроля/фокуса в form, wall и widget: отдельно текст поверх accent и accent как цвет текста на светлом/тёмном фоне. Спланировать проверку computed colors реального рендера после compositing в обеих темах, включая #FFFFFF, #000000 и промежуточные близкие к фону цвета; обычный текст ≥4.5:1, крупный ≥3:1, необходимые границы и focus различимы ≥3:1 относительно соседнего цвета. Проверка должна обнаруживать невидимый accent h1 и отличаться от одного лишь выбора чёрного/белого текста на accent.",
+      "scope": [
+        "features/proofo-ui/branding-collect/01_requirements.md",
+        "features/proofo-ui/branding-collect/05_architecture.md"
+      ],
+      "evidence": "NFR-201 active OpenSpec требует доступный текст и крайние HEX, но 01_requirements.md:48 и 05_architecture.md:52 определяют только accessible foreground для accent; 05_architecture.md:82–88 перечисляет E2E без contrast oracle. Frozen cabinet.css .cab-collection h1 имеет color:var(--accent) на .cab-paper background:var(--card), и текущий f/[slug]/page.tsx также задаёт h1 цветом accent; выбор foreground на accent не исправляет accent-текст на фоне карточки. Например #FFFFFF на белом фоне имеет 1:1. Это риск будущей реализации, не результат измерения новой CSS."
+    },
+    {
+      "id": "ACCESSIBILITY-02",
+      "owner": "qcsd-accessibility",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "Зафиксировать проверяемую семантику для обоих редакторов в idle/saving/error/success: доступные имена и связи всех полей, включая file и оба color input; объявление актуального pending и результата; при ошибке связь полевого объяснения с полем и управляемый фокус на ошибку/сводку, при успехе фокус на видимый результат и его доступное объявление в соответствии с NFR-201. Указать поведение сохранённого ввода/повтора, отсутствие keyboard trap и проверку Tab/Shift+Tab/Enter/Space на обычных маршрутах, включая неизменённый legacy HTTP logo и ошибку отредактированного HTTP. Запланировать проверку дерева доступности и ручную проверку реальным screen reader; проверить, что устранение сообщения или связи ошибки делает тест отрицательным.",
+      "scope": [
+        "features/proofo-ui/branding-collect/01_requirements.md",
+        "features/proofo-ui/branding-collect/05_architecture.md",
+        "features/proofo-ui/branding-collect/03_adr/001-patch-existing-branding.md"
+      ],
+      "evidence": "NFR-201 active OpenSpec требует label, accessible errors/status и focus при success/error; 05_architecture.md:82–88 перечисляет focus/keyboard без state-by-state oracle, ADR-001 требует noValidate и отдельную dirty validation, но не описывает доступное сообщение или фокус. Текущий submit-form.tsx имеет визуальный span рядом с file input без label, динамический errors ul без явной связи и success-замену формы без управления фокусом/объявления; это статическое наблюдение baseline, не утверждение о будущей реализации. Frozen markup label file содержит, но статичный offline render не проверяет живые переходы."
+    },
+    {
+      "id": "ACCESSIBILITY-03",
+      "owner": "qcsd-accessibility",
+      "severity": "WARNING",
+      "classification": "structural",
+      "requirement": "Уточнить проверяемый предел адаптации и oracle длинных значений для обычных production routes: на мобильных 360/390 CSS px и при reflow до 320 CSS px проверить длинный неразрывный heading до 120, имя/роль и имя выбранного фото, текст ошибки и длинный logo URL; элементы и сообщения полностью доступны и читаемы, основной документ не требует горизонтальной прокрутки, клавиатурный фокус не уходит за видимую область. Для widget отдельно проверить узкий host с длинным отзывом и provenance. Сохранение содержимого проверять без его усечения как способа пройти reflow.",
+      "scope": [
+        "features/proofo-ui/branding-collect/01_requirements.md",
+        "features/proofo-ui/branding-collect/05_architecture.md"
+      ],
+      "evidence": "05_architecture.md:82–88 предусматривает frozen static baseline 360/390 и лишь слова long strings для live E2E; образец не задаёт длинные данные или условие отсутствия обрезки/горизонтального переполнения и не доказывает responsive reflow. FR-202 допускает heading до 120 и URL до 2048, FR-205 сохраняет пользовательский текст; frozen cabinet.css отдельно назначает overflow-wrap заголовкам cabinet title, но не явно collect h1, а placeholder photo filename baseline не доказывает его перенос. Никакого runtime overflow не заявляется."
+    },
+    {
+      "id": "SECURITY-01",
+      "owner": "qcsd-security",
+      "severity": "WARNING",
+      "classification": "wording",
+      "requirement": "Согласовать область NFR-202 для запрета photo key в логах: явно ограничить его новыми PATCH/runner логами, если это намеренная граница, либо расширить план и покрытие существующего photo GET, включая оба error path; синхронизировать нормативную дельту и её SHA mapping.",
+      "scope": [
+        "features/proofo-ui/branding-collect/01_requirements.md",
+        "features/proofo-ui/branding-collect/05_architecture.md"
+      ],
+      "evidence": "STATIC: openspec/changes/proofo-branding-collect/specs/branding-collect/spec.md:183-193 запрещает photo key в логах без ограничения компонента; 05_architecture.md:119-123 описывает только PATCH. apps/web/src/app/api/photo/[...key]/route.ts:32-38,44-50 при StorageError или invalid sniff логирует objectKey; 06_implementation_plan.md не включает этот route в targets. Это несогласованность границы требований и плана, не утверждение новой уязвимости key-based photo contract."
+    },
+    {
+      "id": "UX-01",
+      "owner": "qcsd-ux",
+      "severity": "HIGH",
+      "classification": "structural",
+      "requirement": "Определить поведение branding editor при изменении формы во время незавершённого Save: либо блокировать редактирование до ответа, либо сохранять последующие изменения как несохранённый dirty draft; ответ для прежнего PATCH не должен стирать или объявлять сохранёнными более поздние изменения. Запланировать browser-проверку с задержанным ответом. Отдельно проверить две вкладки: разные dirty keys сохраняются, при одном key последнее зафиксированное изменение побеждает; после reload показано актуальное значение. Версионирование и optimistic locking не требуются.",
+      "scope": [
+        "features/proofo-ui/branding-collect/01_requirements.md",
+        "features/proofo-ui/branding-collect/04_domain_model.md",
+        "features/proofo-ui/branding-collect/03_adr/001-patch-existing-branding.md"
+      ],
+      "evidence": "04_domain_model.md задаёт editable draft → PATCH → canonical response → saved и сохранение draft при ошибке, но не описывает изменения после отправки и до успешного ответа; 01_requirements.md требует dirty keys и честный Save; ADR-001 задаёт last committed write wins для одинаковых ключей и сохранение независимых ключей. Без правила для in-flight состояния допустим дизайн, в котором более поздний ввод затирается canonical response или ошибочно получает статус saved. Это пробел спецификации, не утверждение о найденном дефекте реализованного editor; browser проверка ещё не выполнялась."
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "qcsd-quality",
+      "family": "codex"
+    },
+    {
+      "id": "qcsd-risk",
+      "family": "codex"
+    },
+    {
+      "id": "qcsd-testability",
+      "family": "codex"
+    },
+    {
+      "id": "qcsd-accessibility",
+      "family": "codex"
+    },
+    {
+      "id": "qcsd-security",
+      "family": "codex"
+    },
+    {
+      "id": "qcsd-ux",
+      "family": "codex"
+    }
+  ],
+  "checkpointDigest": null
+}

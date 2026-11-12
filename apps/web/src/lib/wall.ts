@@ -28,7 +28,7 @@ export interface WallItem {
  * (предупреждение packages/db/src/tenant.ts). project_id берётся резолвом слага в этом
  * же запросе и никогда не принимается снаружи.
  */
-export async function getApprovedTestimonials(projectId: string): Promise<WallItem[]> {
+export async function getApprovedTestimonials(projectId: string, order: 'newest' | 'oldest' = 'newest'): Promise<WallItem[]> {
   return withService(async (client) => {
     const { rows } = await client.query<WallItem>(
       // source едет в выдачу, чтобы страница могла ПОМЕТИТЬ демонстрационные отзывы,
@@ -39,7 +39,7 @@ export async function getApprovedTestimonials(projectId: string): Promise<WallIt
               (video_object_key is not null) as has_video, created_at
          from testimonials
         where project_id = $1 and status = 'approved'
-        order by created_at desc`,
+        order by created_at ${order === 'oldest' ? 'asc' : 'desc'}, id ${order === 'oldest' ? 'asc' : 'desc'}`,
       [projectId],
     );
     return rows;

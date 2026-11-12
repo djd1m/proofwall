@@ -26,6 +26,11 @@ Frozen branding checkbox checked: «Показывать метки площад
 использует наличие исходного source_label для определения provenance и флаг для caption.
 Никакого переименования реальной площадки. Proofwall badge/server tariff,
 demo disclaimer и machine-transcript labels независимы от настройки.
+Текст/выдержка отзыва неизменны; screenshot не исчезает при наличии source URL.
+Widget DTO получает optional typed WidgetBranding (theme/accent_color/show_platform_labels),
+без tariff/owner fields. Старый ответ без поля и malformed network value нормализуются
+к light/default accent/labels-on. Серверные и widget типы проверяются contract tests;
+новый shared workspace ради трёх полей не создаётся.
 Новый OpenSpec requirement явно уточняет presentation исторического FR-PROOF-001.
 
 ## Rationale
@@ -42,7 +47,7 @@ owner — владелец продукта/архитектор.
 - Method: wall render + real widget tests на отдельном origin.
 - Load-bearing property: false меняет caption, но не proof/source/badge.
 - Required automated check: `platform labels hide names but preserve provenance` в
-  `apps/web/tests/wall.test.ts` и `apps/widget/tests/branding.test.ts`.
+  `apps/web/tests/wall.test.ts` и `apps/widget/tests/widget-branding.test.ts`.
 - Monitoring: schema DTO contract/regression, без логирования пользовательского source URL.
 - Success metric: одинаковая семантика обеих поверхностей; 0 потерянных metadata.
 - Owner: автор и независимый QE, не текущий planning agent.

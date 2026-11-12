@@ -1,0 +1,14 @@
+flowchart LR
+    Account[Account / session owner] -->|владеет| Project[Project aggregate]
+    Project --> Branding[Branding base: heading / accent / logo]
+    Branding --> Resolved[ResolvedBranding: theme / order / labels defaults]
+    Project --> Testimonial[Testimonial: pending / approved / hidden / rejected]
+    Testimonial --> Content[Неизменный text и photo]
+    Testimonial --> Provenance[Source / platform / URL / screenshot]
+    Resolved -->|presentation supplier| Form[Collect]
+    Resolved -->|presentation supplier| Wall[Wall approved listing]
+    Resolved -->|typed optional DTO| Widget[Widget latest50 listing]
+    Provenance -->|label on или neutral marker| Wall
+    Provenance -->|label on или neutral marker| Widget
+    Project --> Tariff[Existing server tariff]
+    Tariff -->|независимый badge_required| Widget

@@ -1,0 +1,19 @@
+{
+  "reviewer": "qcsd-risk",
+  "family": "codex",
+  "independent": true,
+  "verdict": "clean",
+  "conditions": [],
+  "verifications": [],
+  "newRisks": {
+    "assessment": "Владелец выбрал более контрастную границу; различие live/offline palette создаёт риск ложной визуальной уверенности, который явно покрыт в дизайне отдельным live computed oracle и отрицательной мутацией. Новых самостоятельных серьёзных рисков, требующих собственного condition, не выявлено. Ранее выявленная унаследованная неограниченность raw name и её граница scope остаются описаны в отчёте. ACCESSIBILITY-01 принадлежит другому reviewer и этой ролью не закрывается.",
+    "evidence": "STATIC: owner-decision.json фиксирует literal owner choice; FR-208/NFR-201, ADR-003, требования, архитектура и TASK-7/8 задают тот же production component с generic palette props, literal original только offline и approved border #8e806b на обычных routes; computed border/fill/card oracle с возвратом #ddd3c2 как отрицательной мутацией отделён от frozen screenshots. Ранее прочитанный testimonial.ts сохраняет raw name при trimmed validation; прямой HTTP путь предшествует текущей UI дельте. Ни runtime test, ни эксплуатация не утверждаются.",
+    "conditions": []
+  },
+  "authorAssessmentChecked": true,
+  "deltaVerification": {
+    "classification": "structural",
+    "evidence": "STATIC: самостоятельно сопоставлены author-delta, owner-decision.json, 00/01, ADR-003, архитектура, связанный план, OpenSpec FR-208/NFR-201 и SHA mapping; live/offline palette, их граница доказательств и запланированный computed/negative-mutation oracle согласованы. SHA девяти host manifest файлов совпали; SHA OpenSpec 2e9966d6e9eb55e24b992ede14761eb086ce64ecf181ca208bf5d969c359cc75 совпал с mapping. Role definition из pinned git commit прочитано полностью, SHA 2209955b10105256a2ea4d6fd4cd8a4a57712ce2d79b7243b9f5424cd33db2d3 совпал. Дизайн проверен на revision 7530e37d99132e7af128a3ac107971d97c63fbcaef35ef4f5c2c6ad9cf923374, nonce b29efe0f-6017-41c6-a442-464f3ed3263d. Чужие conditions эта роль не закрывает; код, тесты и гейты не исполнялись.",
+    "implementationVerified": true
+  }
+}

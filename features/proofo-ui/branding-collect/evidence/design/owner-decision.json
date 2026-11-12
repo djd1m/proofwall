@@ -1,0 +1,21 @@
+{
+  "status": "owner-approved-design",
+  "date": "2026-11-12",
+  "quote": "выбери контрастнее",
+  "source": "Явный ответ владельца в текущем диалоге; передан координатором автору архитектуры.",
+  "condition": "ACCESSIBILITY-01",
+  "chosenBorder": "#8e806b",
+  "originalBorder": "#ddd3c2",
+  "inputBackground": "#f7f4eb",
+  "cardBackground": "#fffdf8",
+  "contrastAgainstInput": 3.5035,
+  "contrastAgainstCard": 3.7903,
+  "contrastEvidence": "Предыдущий contrast-proposal.json и comparison-check.json; приведённые ratios — расчёт цветов, не новый product browser test.",
+  "comparisonUrl": "https://proofwall.78.17.53.233.sslip.io/__design/proofo/contrast-fields.html",
+  "referenceUnchanged": true,
+  "decision": "Обычные branding/collect forms всегда используют field border #8e806b при прежней геометрии/fill. Offline literal model сохраняет original palette через generic explicit palette props того же production component. Frozen zero diff доказывает component/layout с reference data; живой runtime имеет одобренное отличие рамок и требует отдельного computed contrast oracle.",
+  "historicalPendingArtifact": "features/proofo-ui/branding-collect/evidence/design/owner-decision-pending.json",
+  "implementationAdmission": false,
+  "conditionClosure": false,
+  "nextStep": "Синхронизировать normative spec/SHA/ADR/plan, actual strict OpenSpec и K2; затем новый host prepare и независимые focused origin reviews. Решение владельца не является gate или product acceptance."
+}

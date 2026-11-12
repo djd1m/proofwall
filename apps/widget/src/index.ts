@@ -7,7 +7,7 @@
 // Встраивание (см. README.md):
 //   <script src="https://.../widget.js" data-slug="acme" async></script>
 
-import { buildSkeleton, renderEmptyPlaceholder, renderTestimonials } from './render';
+import { applyWidgetBranding, buildSkeleton, renderEmptyPlaceholder, renderTestimonials } from './render';
 import { renderBadge, startBadgeIntegrityWatch } from './badge';
 import { fetchWidgetConfig, resolveApiBase, sendBadgeClick } from './api';
 import { injectScopedStyles } from './styles';
@@ -36,6 +36,10 @@ function createMountElement(scriptEl: HTMLScriptElement): HTMLElement {
   // Лёгкая защита самого узла-обёртки от наследуемых свойств хоста ДО attachShadow — Shadow DOM
   // изолирует содержимое, но не сам узел, на который он навешен (ADR-001 "Последствия").
   mount.style.all = 'initial';
+  // Host должен иметь собственную ограниченную ширину, а не inline box с clientWidth=0.
+  mount.style.display = 'block';
+  mount.style.minWidth = '0';
+  mount.style.maxWidth = '100%';
   scriptEl.insertAdjacentElement('afterend', mount);
   return mount;
 }
@@ -73,7 +77,8 @@ export async function widgetBootstrap(): Promise<void> {
     return;
   }
 
-  renderTestimonials(root, config.testimonials, apiBase);
+  const branding = applyWidgetBranding(root, config.branding);
+  renderTestimonials(root, config.testimonials, apiBase, branding);
   renderBadge(root, config.badge_required, onBadgeClick, config.badge_url); // FR-GROWTH-003 — решение сервера
 
   // ПРИМЕЧАНИЕ ПО РАСХОЖДЕНИЮ Pseudocode.md ↔ Architecture.md (см. .claude/rules/

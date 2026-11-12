@@ -1,0 +1,286 @@
+{
+  "schema": "fa-review-convergence-1",
+  "phase": "ideation",
+  "nonce": "b29efe0f-6017-41c6-a442-464f3ed3263d",
+  "revision": "7530e37d99132e7af128a3ac107971d97c63fbcaef35ef4f5c2c6ad9cf923374",
+  "author": {
+    "addressed": [
+      "TESTABILITY-01",
+      "ACCESSIBILITY-01",
+      "ACCESSIBILITY-02",
+      "ACCESSIBILITY-03",
+      "UX-01",
+      "SECURITY-01"
+    ],
+    "changedScope": [
+      "features/proofo-ui/branding-collect/00_complexity_assessment.md",
+      "features/proofo-ui/branding-collect/01_requirements.md",
+      "features/proofo-ui/branding-collect/02_research.md",
+      "features/proofo-ui/branding-collect/03.5_ideation_report.md",
+      "features/proofo-ui/branding-collect/03_adr/001-patch-existing-branding.md",
+      "features/proofo-ui/branding-collect/03_adr/002-preserve-provenance-when-hiding-labels.md",
+      "features/proofo-ui/branding-collect/03_adr/003-render-production-views-offline.md",
+      "features/proofo-ui/branding-collect/03_adr/004-isolate-photo-qa-runtime.md",
+      "features/proofo-ui/branding-collect/04_domain_model.md",
+      "features/proofo-ui/branding-collect/05_architecture.md",
+      "features/proofo-ui/branding-collect/06_implementation_plan.md",
+      "features/proofo-ui/branding-collect/README.md",
+      "features/proofo-ui/branding-collect/evidence/design/comparison-check.json",
+      "features/proofo-ui/branding-collect/evidence/design/contrast-proposal.json",
+      "features/proofo-ui/branding-collect/evidence/design/owner-decision-pending.json",
+      "features/proofo-ui/branding-collect/evidence/design/owner-decision.json",
+      "features/proofo-ui/branding-collect/evidence/qcsd/author-delta.json",
+      "openspec/changes/proofo-branding-collect/design.md",
+      "openspec/changes/proofo-branding-collect/specs/branding-collect/spec.md",
+      "openspec/changes/proofo-branding-collect/tasks.md"
+    ],
+    "classification": "structural",
+    "delta": "2026-11-12 владелец явно ответил «выбери контрастнее». Новый evidence/design/owner-decision.json фиксирует chosenBorder #8e806b, originalBorder #ddd3c2 и referenceUnchanged=true; исторический pending artifact сохранён с исходным статусом в history и resolution link. Live branding/collect containers всегда передают approved fieldBorder #8e806b, fieldFill #f7f4eb/cardSurface #fffdf8 через generic explicit palette props существующих view-model. Offline literal model передаёт original palette тем же production components без isFixture/Next fixture/seed/auth override. Шесть zero-diff кадров доказывают component/layout на reference data; live runtime имеет одобренное отличие рамок. Все необходимые live boundaries/focus >=3 к фактическому соседнему фону, text>=4.5/large>=3, wall/widget обе темы. Отдельный computed border/fill/card oracle и mutation возврата runtime border к #ddd3c2 обязаны обнаружить отказ. Нормативная дельта, SHA mapping, ADR-003, architecture, plan, complexity scope и narrative синхронизированы. A17/AM-13 используют существующие30 targets, новые app files/exports не создавались. Все шесть исходных IDs сохранены; предыдущие решения trim/raw, state/focus/reflow, Save lock/two tabs и logging scope не отменены. changedScope включает четыре фактических host changes, все измеренные author changes и явно указанные dependencies.",
+    "evidence": "Actual commands: npm run openspec -- validate proofo-branding-collect --type change --strict --no-interactive -> exit0, valid; node .agents/skills/feature-adr/scripts/check-plan-completeness.mjs features/proofo-ui/branding-collect --tier=L --require-requirements -> exit0 PASS, 30 targets/13 IDs/4 ADR, 0 failures/warnings/skips; git diff --check -> exit0. Spec SHA-256 2e9966d6e9eb55e24b992ede14761eb086ce64ecf181ca208bf5d969c359cc75; plan SHA-256 9375188bbaf43d77c39edd6d4ba0b0c8a1f9d564df359678cfcf695ed84e188c. SHA mapping и ровно30 уникальных terminal literal targets проверены. Pre-edit digest comparison: 355 protected files unchanged, включая app/packages/scripts, frozen reference, host/reviews/admission evidence и implementation-state; новых app/code files не создано. Recall выполнен: no matching patterns, память не выдана за применённое знание. Ratios3.5035 к #f7f4eb и3.7903 к #fffdf8 — существующий расчёт выбранного цвета, comparison-check.json — прежняя проверка макета, не новый product browser test. Никаких product/AT/E2E tests этим автором не запускалось. По текущему сообщению координатора QA PG33186 доступен, порты33187/33188/33189 свободны; это resource availability, не product evidence.",
+    "newRisks": {
+      "assessment": "Новых самостоятельных conditions автор не вводит. Owner-approved live palette устраняет ранее предложенное исключение neutral border из >=3 contract на уровне дизайна, но ACCESSIBILITY-01 остаётся открытым в неизменённом host до нового focused origin verification/evaluate. Прежние пять проверок относятся к предыдущему snapshot; текущая delta не устанавливает admission, product pass, AT pass либо production acceptance. Главный риск двух palette inputs — перепутать offline layout proof с live runtime evidence; это явно запрещено и покрыто отдельным live oracle/negative mutation.",
+      "evidence": "FR-208/NFR-201, ADR-003, architecture и TASK-7/8/A17/AM-13 требуют один production component, generic explicit props, original palette только offline, approved palette всегда на обычных branding/collect routes. Runtime mutation -> #ddd3c2 обязана провалить live computed boundary oracle даже при passing frozen screenshots. Требования сохраняют computed compositing actual adjacent colors, обе темы wall/widget, text/focus and manual screen-reader acceptance. Owner approval сохранён отдельно от gate authority; независимые entries/condition history/.fa-state не изменены.",
+      "conditions": []
+    }
+  },
+  "reviews": [
+    {
+      "reviewer": "qcsd-quality",
+      "family": "codex",
+      "independent": true,
+      "verdict": "clean",
+      "conditions": [],
+      "verifications": [],
+      "newRisks": {
+        "assessment": "В рассмотренной owner-approved структурной дельте новых условий qcsd-quality не выявлено. ACCESSIBILITY-01 принадлежит qcsd-accessibility и эта роль его не закрывает.",
+        "evidence": "STATIC: owner-decision.json фиксирует выбор #8e806b; 01_requirements.md:60-62,92-94,125-129, ADR-003:24-54, 05_architecture.md:94-102,148-155, FR-208/NFR-201 и TASK-7/8/AM-13 сохраняют same-component frozen original palette и независимый live computed oracle с old-border mutation. EXECUTED: 9/9 SHA-256 manifest совпали; active OpenSpec SHA совпал с mapping. Ни runtime UI, ни visual/AT tests не выполнялись.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": true,
+      "deltaVerification": {
+        "classification": "structural",
+        "implementationVerified": true,
+        "evidence": "STATIC: independently compared author-delta.json and owner-decision.json with 00/01, ADR-003, architecture, active FR-208/NFR-201, plan TASK-7/8 and AM-13. Generic palette props apply approved #8e806b in ordinary live views and original #ddd3c2 only to offline literal model; frozen zero-diff is limited to reference-data component/layout and separate live computed border oracle rejects mutation back to original. EXECUTED: all nine owner-approved-prepared manifest hashes match; active OpenSpec 2e9966d6e9eb55e24b992ede14761eb086ce64ecf181ca208bf5d969c359cc75 matches requirements; pinned role git-show SHA 3e9934cf951a268d56a04459fdcf92ecd91467f3d020e8877694e00cc8bd0407 matches role-references. Ideation design verification only at revision 7530e37d99132e7af128a3ac107971d97c63fbcaef35ef4f5c2c6ad9cf923374 nonce b29efe0f-6017-41c6-a442-464f3ed3263d; no product/browser/AT execution or closure of another role condition."
+      }
+    },
+    {
+      "reviewer": "qcsd-risk",
+      "family": "codex",
+      "independent": true,
+      "verdict": "clean",
+      "conditions": [],
+      "verifications": [],
+      "newRisks": {
+        "assessment": "Владелец выбрал более контрастную границу; различие live/offline palette создаёт риск ложной визуальной уверенности, который явно покрыт в дизайне отдельным live computed oracle и отрицательной мутацией. Новых самостоятельных серьёзных рисков, требующих собственного condition, не выявлено. Ранее выявленная унаследованная неограниченность raw name и её граница scope остаются описаны в отчёте. ACCESSIBILITY-01 принадлежит другому reviewer и этой ролью не закрывается.",
+        "evidence": "STATIC: owner-decision.json фиксирует literal owner choice; FR-208/NFR-201, ADR-003, требования, архитектура и TASK-7/8 задают тот же production component с generic palette props, literal original только offline и approved border #8e806b на обычных routes; computed border/fill/card oracle с возвратом #ddd3c2 как отрицательной мутацией отделён от frozen screenshots. Ранее прочитанный testimonial.ts сохраняет raw name при trimmed validation; прямой HTTP путь предшествует текущей UI дельте. Ни runtime test, ни эксплуатация не утверждаются.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": true,
+      "deltaVerification": {
+        "classification": "structural",
+        "evidence": "STATIC: самостоятельно сопоставлены author-delta, owner-decision.json, 00/01, ADR-003, архитектура, связанный план, OpenSpec FR-208/NFR-201 и SHA mapping; live/offline palette, их граница доказательств и запланированный computed/negative-mutation oracle согласованы. SHA девяти host manifest файлов совпали; SHA OpenSpec 2e9966d6e9eb55e24b992ede14761eb086ce64ecf181ca208bf5d969c359cc75 совпал с mapping. Role definition из pinned git commit прочитано полностью, SHA 2209955b10105256a2ea4d6fd4cd8a4a57712ce2d79b7243b9f5424cd33db2d3 совпал. Дизайн проверен на revision 7530e37d99132e7af128a3ac107971d97c63fbcaef35ef4f5c2c6ad9cf923374, nonce b29efe0f-6017-41c6-a442-464f3ed3263d. Чужие conditions эта роль не закрывает; код, тесты и гейты не исполнялись.",
+        "implementationVerified": true
+      }
+    },
+    {
+      "reviewer": "qcsd-testability",
+      "family": "codex",
+      "independent": true,
+      "verdict": "clean",
+      "conditions": [
+        {
+          "id": "TESTABILITY-01",
+          "owner": "qcsd-testability",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Согласовать FR-205 UI и HTTP для длины имени: сохранять исходное имя, считать границы по trim как в действующем серверном контракте; устранить противоречие с raw maxlength и уточнить 1/81 как длины после trim. Спланировать проверку обычной формы и прямого HTTP для имени с допустимыми 80 символами после trim и окружающими пробелами, а также для имени с 81 символом после trim, с проверкой исходного сохранённого значения и отсутствия записи при отказе.",
+          "scope": [
+            "features/proofo-ui/branding-collect/01_requirements.md",
+            "features/proofo-ui/branding-collect/00_complexity_assessment.md"
+          ],
+          "evidence": "OpenSpec FR-205 требует совпадения UI/server и говорит о name 1/81 без уточнения trim. apps/web/src/lib/testimonial.ts validateTextSubmission проверяет input.name.trim().length, сохраняя исходное имя; apps/web/src/app/f/[slug]/submit-form.tsx использует maxLength=80 для исходной строки. Пример: пробел + 80 букв + пробел имеет длину 82, после trim 80; сервер его принимает, текущий maxlength не допускает обычный ввод. 01_requirements.md указывает reuse name 2–80, а A7 в 00_complexity_assessment.md повторяет неуточнённый name 1/81. Проверка выполнена статически, тест не запускался."
+        }
+      ],
+      "verifications": [
+        {
+          "id": "TESTABILITY-01",
+          "revision": "7530e37d99132e7af128a3ac107971d97c63fbcaef35ef4f5c2c6ad9cf923374",
+          "classification": "structural",
+          "evidence": "STATIC: активный FR-205, 01_requirements.md, A7, ADR-003, 05_architecture.md и TASK-6/AM-7 сохраняют одинаковую формулу UTF-16 name.trim() 2–80, raw сохранение, обычный browser и direct HTTP для raw82/trim80, trim1/81 и отсутствие записи/upload/квоты при отказе, а также различающий raw maxlength mutant. Проверка относится к design, продуктовые тесты не запускались.",
+          "implementationVerified": true
+        }
+      ],
+      "newRisks": {
+        "assessment": "В узкой owner-approved дельте новых самостоятельных условий testability не выявлено. Решение чужого ACCESSIBILITY-01 остаётся за его origin reviewer; это не заявка на общее закрытие или product/AT pass.",
+        "evidence": "STATIC: owner-decision, FR-208/NFR-201, ADR-003, архитектура и план разделяют original offline palette и approved live palette с отдельным browser oracle/mutation; совпадение frozen кадров не выдаётся за доказательство live contrast. FR-205/AM-7 сохранились. Реализация и исполнение проверок отсутствуют в этой оценке.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": true,
+      "deltaVerification": {
+        "classification": "structural",
+        "evidence": "STATIC focused review: owner-decision фиксирует выбор «выбери контрастнее» и #8e806b. 00/01/ADR-003/05, активный FR-208/NFR-201 и TASK-7/8/AM-13 согласуют generic palette props одних production views, original #ddd3c2 только offline, запрет fixture/route/auth overrides, отдельный live computed border/fill/card oracle и отказную мутацию к старому цвету; обычная форма и прямой HTTP для TESTABILITY-01 сохранены. Проверены SHA всех девяти путей manifest, OpenSpec SHA и SHA pinned definition; это верификация дизайна, не тест продукта и не closure чужого условия.",
+        "implementationVerified": true
+      }
+    },
+    {
+      "reviewer": "qcsd-accessibility",
+      "family": "codex",
+      "independent": true,
+      "verdict": "clean",
+      "conditions": [
+        {
+          "id": "ACCESSIBILITY-01",
+          "owner": "qcsd-accessibility",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Уточнить в измеряемой архитектуре и требованиях безопасное применение любого допустимого HEX к каждой фактической паре текста/фона и индикатору контроля/фокуса в form, wall и widget: отдельно текст поверх accent и accent как цвет текста на светлом/тёмном фоне. Спланировать проверку computed colors реального рендера после compositing в обеих темах, включая #FFFFFF, #000000 и промежуточные близкие к фону цвета; обычный текст ≥4.5:1, крупный ≥3:1, необходимые границы и focus различимы ≥3:1 относительно соседнего цвета. Проверка должна обнаруживать невидимый accent h1 и отличаться от одного лишь выбора чёрного/белого текста на accent.",
+          "scope": [
+            "features/proofo-ui/branding-collect/01_requirements.md",
+            "features/proofo-ui/branding-collect/05_architecture.md"
+          ],
+          "evidence": "NFR-201 active OpenSpec требует доступный текст и крайние HEX, но 01_requirements.md:48 и 05_architecture.md:52 определяют только accessible foreground для accent; 05_architecture.md:82–88 перечисляет E2E без contrast oracle. Frozen cabinet.css .cab-collection h1 имеет color:var(--accent) на .cab-paper background:var(--card), и текущий f/[slug]/page.tsx также задаёт h1 цветом accent; выбор foreground на accent не исправляет accent-текст на фоне карточки. Например #FFFFFF на белом фоне имеет 1:1. Это риск будущей реализации, не результат измерения новой CSS."
+        },
+        {
+          "id": "ACCESSIBILITY-02",
+          "owner": "qcsd-accessibility",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Зафиксировать проверяемую семантику для обоих редакторов в idle/saving/error/success: доступные имена и связи всех полей, включая file и оба color input; объявление актуального pending и результата; при ошибке связь полевого объяснения с полем и управляемый фокус на ошибку/сводку, при успехе фокус на видимый результат и его доступное объявление в соответствии с NFR-201. Указать поведение сохранённого ввода/повтора, отсутствие keyboard trap и проверку Tab/Shift+Tab/Enter/Space на обычных маршрутах, включая неизменённый legacy HTTP logo и ошибку отредактированного HTTP. Запланировать проверку дерева доступности и ручную проверку реальным screen reader; проверить, что устранение сообщения или связи ошибки делает тест отрицательным.",
+          "scope": [
+            "features/proofo-ui/branding-collect/01_requirements.md",
+            "features/proofo-ui/branding-collect/05_architecture.md",
+            "features/proofo-ui/branding-collect/03_adr/001-patch-existing-branding.md"
+          ],
+          "evidence": "NFR-201 active OpenSpec требует label, accessible errors/status и focus при success/error; 05_architecture.md:82–88 перечисляет focus/keyboard без state-by-state oracle, ADR-001 требует noValidate и отдельную dirty validation, но не описывает доступное сообщение или фокус. Текущий submit-form.tsx имеет визуальный span рядом с file input без label, динамический errors ul без явной связи и success-замену формы без управления фокусом/объявления; это статическое наблюдение baseline, не утверждение о будущей реализации. Frozen markup label file содержит, но статичный offline render не проверяет живые переходы."
+        },
+        {
+          "id": "ACCESSIBILITY-03",
+          "owner": "qcsd-accessibility",
+          "severity": "WARNING",
+          "classification": "structural",
+          "requirement": "Уточнить проверяемый предел адаптации и oracle длинных значений для обычных production routes: на мобильных 360/390 CSS px и при reflow до 320 CSS px проверить длинный неразрывный heading до 120, имя/роль и имя выбранного фото, текст ошибки и длинный logo URL; элементы и сообщения полностью доступны и читаемы, основной документ не требует горизонтальной прокрутки, клавиатурный фокус не уходит за видимую область. Для widget отдельно проверить узкий host с длинным отзывом и provenance. Сохранение содержимого проверять без его усечения как способа пройти reflow.",
+          "scope": [
+            "features/proofo-ui/branding-collect/01_requirements.md",
+            "features/proofo-ui/branding-collect/05_architecture.md"
+          ],
+          "evidence": "05_architecture.md:82–88 предусматривает frozen static baseline 360/390 и лишь слова long strings для live E2E; образец не задаёт длинные данные или условие отсутствия обрезки/горизонтального переполнения и не доказывает responsive reflow. FR-202 допускает heading до 120 и URL до 2048, FR-205 сохраняет пользовательский текст; frozen cabinet.css отдельно назначает overflow-wrap заголовкам cabinet title, но не явно collect h1, а placeholder photo filename baseline не доказывает его перенос. Никакого runtime overflow не заявляется."
+        }
+      ],
+      "verifications": [
+        {
+          "id": "ACCESSIBILITY-01",
+          "revision": "7530e37d99132e7af128a3ac107971d97c63fbcaef35ef4f5c2c6ad9cf923374",
+          "classification": "structural",
+          "evidence": "STATIC: owner-decision.json фиксирует выбор владельца 2026-11-12 «выбери контрастнее». 01_requirements.md:58–62,117–130, ADR-003:27–55, 05_architecture.md и NFR-201 задают live #8e806b, отдельные onAccent/accentText, все необходимые control/focus границы ≥3:1 к фактическим соседним поверхностям и вычисленный browser oracle после compositing для пяти HEX и обеих тем; old-border и white-heading mutants должны падать. Frozen literal palette неизменна в том же компоненте, не доказывает pixel identity live. EXECUTED ранее: расчёт #8e806b даёт 3.5035 к #f7f4eb и 3.7903 к #fffdf8; это не browser test. Проверено исправление текущих design artifacts, не реализация.",
+          "implementationVerified": true
+        },
+        {
+          "id": "ACCESSIBILITY-02",
+          "revision": "7530e37d99132e7af128a3ac107971d97c63fbcaef35ef4f5c2c6ad9cf923374",
+          "classification": "structural",
+          "evidence": "STATIC: 01_requirements.md:132–141, 05_architecture.md, ADR-001 и NFR-201 сохраняют labels/id и отдельные имена color inputs, pending status и focus вне disabled fieldset, error summary/success focus, field error relations, сохранение draft, keyboard и оба legacy HTTP случая; AX/keyboard oracle, mutation и manual real screen-reader evidence на owner acceptance test copy остаются запланированы. Это проверка design artifacts текущей ревизии, не browser/AT pass.",
+          "implementationVerified": true
+        },
+        {
+          "id": "ACCESSIBILITY-03",
+          "revision": "7530e37d99132e7af128a3ac107971d97c63fbcaef35ef4f5c2c6ad9cf923374",
+          "classification": "structural",
+          "evidence": "STATIC: 01_requirements.md:143–148, 05_architecture.md, ADR-003 и NFR-201 сохраняют production reflow при 320/360/390 с длинными heading/name/role/text/filename/error/URL, видимый focus, отсутствие обрезки, полный input value, отдельный widget host/root и отрицательную clipping mutation. Это проверка design artifacts текущей ревизии, не browser test.",
+          "implementationVerified": true
+        }
+      ],
+      "newRisks": {
+        "assessment": "После focused проверки изменённых design inputs и затронутых зависимостей новых собственных серьёзных условий не выявлено. Риск смешения frozen layout proof и live palette явно оговорён и покрыт отдельным запланированным runtime oracle.",
+        "evidence": "STATIC: ADR-003, 01_requirements.md и NFR-201 различают original offline palette и owner-approved live palette; old-border mutation должна провалить computed live boundary oracle даже при passing frozen proof. Реальная отрисовка, browser/AT tests и полный WCAG audit не выполнялись.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": true,
+      "deltaVerification": {
+        "classification": "structural",
+        "evidence": "STATIC: рассмотрены author-delta.json, owner-decision.json и изменённые требования, архитектура, ADR-003, OpenSpec и зависимый план. Все 9 manifest SHA совпадают, spec SHA-256 2e9966d6e9eb55e24b992ede14761eb086ce64ecf181ca208bf5d969c359cc75 соответствует mapping; сохранение условий ACCESSIBILITY-02/03 перепроверено. Согласованное различие offline/runtime и независимый live oracle указаны явно. Проверено исправление design artifacts на текущем snapshot; продуктовую реализацию и тесты не проверял.",
+        "implementationVerified": true
+      }
+    },
+    {
+      "reviewer": "qcsd-security",
+      "family": "codex",
+      "independent": true,
+      "verdict": "clean",
+      "conditions": [
+        {
+          "id": "SECURITY-01",
+          "owner": "qcsd-security",
+          "severity": "WARNING",
+          "classification": "wording",
+          "requirement": "Согласовать область NFR-202 для запрета photo key в логах: явно ограничить его новыми PATCH/runner логами, если это намеренная граница, либо расширить план и покрытие существующего photo GET, включая оба error path; синхронизировать нормативную дельту и её SHA mapping.",
+          "scope": [
+            "features/proofo-ui/branding-collect/01_requirements.md",
+            "features/proofo-ui/branding-collect/05_architecture.md"
+          ],
+          "evidence": "STATIC: openspec/changes/proofo-branding-collect/specs/branding-collect/spec.md:183-193 запрещает photo key в логах без ограничения компонента; 05_architecture.md:119-123 описывает только PATCH. apps/web/src/app/api/photo/[...key]/route.ts:32-38,44-50 при StorageError или invalid sniff логирует objectKey; 06_implementation_plan.md не включает этот route в targets. Это несогласованность границы требований и плана, не утверждение новой уязвимости key-based photo contract."
+        }
+      ],
+      "verifications": [
+        {
+          "id": "SECURITY-01",
+          "revision": "7530e37d99132e7af128a3ac107971d97c63fbcaef35ef4f5c2c6ad9cf923374",
+          "classification": "structural",
+          "evidence": "STATIC: NFR-202 spec.md:235-250, 01_requirements.md:150-157, 05_architecture.md:198-213 и ADR-004:64-67 сохраняют ограничение новых PATCH/UI и собственных QA logs и явно исключают существующие photo GET error logs/inherited synthetic child output; 06_implementation_plan.md:20,104-106,121 сохраняет planned sentinel logger oracle. SHA-256 spec 2e9966d6e9eb55e24b992ede14761eb086ce64ecf181ca208bf5d969c359cc75 совпадает с 01_requirements.md:17. Nonce b29efe0f-6017-41c6-a442-464f3ed3263d. Подтверждён дизайн; реализация и tests не проверялись.",
+          "implementationVerified": true
+        }
+      ],
+      "newRisks": {
+        "assessment": "SECURITY-01 по текущему snapshot подтверждено на стадии design; собственных новых security conditions в узкой owner-approved дельте не выявлено. Чужие условия этой ролью не проверяются и не закрываются.",
+        "evidence": "Сопоставлены author-delta, owner-decision, затронутые документы, logging contract и SHA mapping; измерены 9 manifest hashes и закреплённое определение роли. Runtime/product проверки не выполнялись.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": true,
+      "deltaVerification": {
+        "classification": "structural",
+        "evidence": "На ревизии 7530e37d99132e7af128a3ac107971d97c63fbcaef35ef4f5c2c6ad9cf923374, nonce b29efe0f-6017-41c6-a442-464f3ed3263d, сопоставлены author-delta и owner decision с FR-208, ADR-003 и архитектурой: approved live palette и original offline palette — внутренние presentation props без fixture/auth/seed override, доказательства разделены; SECURITY-01 и spec SHA mapping сохранены. Это узкая проверка design, а не реализации, продуктовых тестов либо закрытие чужих условий.",
+        "implementationVerified": true
+      }
+    },
+    {
+      "reviewer": "qcsd-ux",
+      "family": "codex",
+      "independent": true,
+      "verdict": "clean",
+      "conditions": [
+        {
+          "id": "UX-01",
+          "owner": "qcsd-ux",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Определить поведение branding editor при изменении формы во время незавершённого Save: либо блокировать редактирование до ответа, либо сохранять последующие изменения как несохранённый dirty draft; ответ для прежнего PATCH не должен стирать или объявлять сохранёнными более поздние изменения. Запланировать browser-проверку с задержанным ответом. Отдельно проверить две вкладки: разные dirty keys сохраняются, при одном key последнее зафиксированное изменение побеждает; после reload показано актуальное значение. Версионирование и optimistic locking не требуются.",
+          "scope": [
+            "features/proofo-ui/branding-collect/01_requirements.md",
+            "features/proofo-ui/branding-collect/04_domain_model.md",
+            "features/proofo-ui/branding-collect/03_adr/001-patch-existing-branding.md"
+          ],
+          "evidence": "04_domain_model.md задаёт editable draft → PATCH → canonical response → saved и сохранение draft при ошибке, но не описывает изменения после отправки и до успешного ответа; 01_requirements.md требует dirty keys и честный Save; ADR-001 задаёт last committed write wins для одинаковых ключей и сохранение независимых ключей. Без правила для in-flight состояния допустим дизайн, в котором более поздний ввод затирается canonical response или ошибочно получает статус saved. Это пробел спецификации, не утверждение о найденном дефекте реализованного editor; browser проверка ещё не выполнялась."
+        }
+      ],
+      "verifications": [
+        {
+          "id": "UX-01",
+          "revision": "7530e37d99132e7af128a3ac107971d97c63fbcaef35ef4f5c2c6ad9cf923374",
+          "classification": "structural",
+          "evidence": "STATIC: на текущей revision FR-201 OpenSpec, 04_domain_model.md, ADR-001 и 05_architecture.md сохраняют captured draft/payload и disabled все шесть settings, оба color controls и Save до ответа, один PATCH, success только для снимка и draft/unlock при ошибке. TASK-5 и ADR-001 сохраняют delayed-response test, разные dirty keys обеих вкладок, last-committed для одного key и reload обеих. Проверен дизайн ideation; product/browser tests не выполнялись.",
+          "implementationVerified": true
+        }
+      ],
+      "newRisks": {
+        "assessment": "Новых самостоятельных UX conditions в этой узкой delta не выявлено. UX-01 подтверждён для текущего ideation snapshot; решение ACCESSIBILITY-01 принадлежит origin accessibility reviewer.",
+        "evidence": "STATIC: сохранённость Save lock/two-tabs и owner-approved palette split сверены с OpenSpec, ADR и планом. Ratio в owner evidence — расчёт, не результат браузера; product/visual/AT тесты не выполнялись.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": true,
+      "deltaVerification": {
+        "classification": "structural",
+        "evidence": "STATIC: прочитаны author-delta.json, owner-decision.json и затронутые requirements, ADR-003, architecture, plan и OpenSpec. Owner-approved live #8e806b задаётся generic palette props, offline reference сохраняет оригинальную палитру; запланированы отдельный live computed border oracle и negative mutation #ddd3c2, без выдачи offline zero-diff за pixel identity live UI. Все девять host SHA совпадают, spec 2e9966d6e9eb55e24b992ede14761eb086ce64ecf181ca208bf5d969c359cc75 и plan 9375188bbaf43d77c39edd6d4ba0b0c8a1f9d564df359678cfcf695ed84e188c совпадают с author delta. True означает структурную проверку design delta ideation, не реализацию или product pass.",
+        "implementationVerified": true
+      }
+    }
+  ]
+}

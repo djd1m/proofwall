@@ -1,0 +1,41 @@
+{
+  "source": "Pinned upstream agent definitions outside selected skill directory; available locally. Read at final focused review; Claude-only tools remain adapted to actual collaboration tools.",
+  "files": {
+    "quality": {
+      "repo": "/tmp/proofwall-agentic-qe-upstream",
+      "path": ".claude/agents/v3/qe-quality-criteria-recommender.md",
+      "commit": "98f241fc8b9d48d017cbdb63ab890104e30397d0",
+      "sha256": "3e9934cf951a268d56a04459fdcf92ecd91467f3d020e8877694e00cc8bd0407"
+    },
+    "risk": {
+      "repo": "/tmp/proofwall-agentic-qe-upstream",
+      "path": ".claude/agents/v3/qe-risk-assessor.md",
+      "commit": "98f241fc8b9d48d017cbdb63ab890104e30397d0",
+      "sha256": "2209955b10105256a2ea4d6fd4cd8a4a57712ce2d79b7243b9f5424cd33db2d3"
+    },
+    "testability": {
+      "repo": "/tmp/proofwall-agentic-qe-upstream",
+      "path": ".claude/agents/v3/qe-requirements-validator.md",
+      "commit": "98f241fc8b9d48d017cbdb63ab890104e30397d0",
+      "sha256": "a200582b09f8b95d9671089f439135e2de39bf37b1b0da2dc6a89ac6449dc7e6"
+    },
+    "accessibility": {
+      "repo": "/tmp/proofwall-agentic-qe-upstream",
+      "path": ".claude/agents/v3/qe-accessibility-auditor.md",
+      "commit": "98f241fc8b9d48d017cbdb63ab890104e30397d0",
+      "sha256": "0f936da5dc5d5f1be2fdef4dda8b362cb3430d4cf7a5a473403107273893f089"
+    },
+    "security": {
+      "repo": "/tmp/proofwall-agentic-qe-upstream",
+      "path": ".claude/agents/v3/qe-security-auditor.md",
+      "commit": "98f241fc8b9d48d017cbdb63ab890104e30397d0",
+      "sha256": "de180aaf62fbf987461aec87c5eb9cf702867c9306fa344da7790e4fcfe457d5"
+    },
+    "ux": {
+      "repo": "/tmp/proofwall-agentic-qe-upstream",
+      "path": ".claude/agents/v3/qe-qx-partner.md",
+      "commit": "98f241fc8b9d48d017cbdb63ab890104e30397d0",
+      "sha256": "e0bc536f296843843ae0a5cbe5e4d6fc1f8e3c0e3443068d22567585fc2f9144"
+    }
+  }
+}
