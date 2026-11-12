@@ -1,0 +1,56 @@
+{
+  "status": "batch1-reports-received",
+  "at": "2026-11-12T19:11:33.498902+00:00",
+  "roles": [
+    {
+      "role": "qcsd-quality",
+      "verdict": "conditional",
+      "conditions": [
+        "QCSQ-01"
+      ],
+      "report": "qcsd-quality.md"
+    },
+    {
+      "role": "qcsd-risk",
+      "verdict": "conditional",
+      "conditions": [
+        "QCRISK-01-egress-boundary",
+        "QCRISK-02-project-runner"
+      ],
+      "report": "qcsd-risk.md"
+    },
+    {
+      "role": "qcsd-testability",
+      "verdict": "conditional",
+      "conditions": [
+        "TST-01",
+        "TST-02",
+        "TST-03"
+      ],
+      "report": "qcsd-testability.md"
+    }
+  ],
+  "qualityCriteria": {
+    "HTSMCategories": 10,
+    "criteria": 12,
+    "P0": 3,
+    "P1": 6,
+    "P2": 3
+  },
+  "risk": {
+    "count": 9,
+    "critical": 0,
+    "high": 8,
+    "medium": 1,
+    "maximumExpertScore": "16/25"
+  },
+  "testability": {
+    "score": 85,
+    "numerator": 34,
+    "denominator": 40,
+    "acceptanceScenariosPresent": "20/20",
+    "requirementsCompleteUnderReviewerRubric": "5/10"
+  },
+  "productionVerification": false,
+  "next": "Conditional wave with3 flagged roles; no synthesis before all6 complete"
+}

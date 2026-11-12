@@ -1,0 +1,37 @@
+{
+  "addressed": [
+    "QCSQ-01",
+    "QCRISK-01-egress-boundary",
+    "QCRISK-02-project-runner",
+    "TST-01",
+    "TST-02",
+    "TST-03",
+    "A11Y-01",
+    "A11Y-02",
+    "UX-01",
+    "UX-02",
+    "UX-03",
+    "QCSEC-01-http-denial",
+    "QCSEC-02-password-cancel-inflight"
+  ],
+  "changedScope": [
+    "features/proofo-ui/project-cabinet/00_complexity_assessment.md",
+    "features/proofo-ui/project-cabinet/01_requirements.md",
+    "features/proofo-ui/project-cabinet/02_research.md",
+    "features/proofo-ui/project-cabinet/03_adr/001-reuse-owned-project-capabilities.md",
+    "features/proofo-ui/project-cabinet/03_adr/002-scope-cabinet-palette-and-interaction.md",
+    "features/proofo-ui/project-cabinet/03_adr/003-separate-original-reference-from-live-adaptation.md",
+    "features/proofo-ui/project-cabinet/04_domain_model.md",
+    "features/proofo-ui/project-cabinet/05_architecture.md",
+    "features/proofo-ui/project-cabinet/06_implementation_plan.md",
+    "openspec/changes/proofo-project-cabinet/specs/project-cabinet/spec.md"
+  ],
+  "classification": "structural",
+  "delta": "Bounded design-only rework: explicit full-reload synchronization and snapshot props; distinct SQL-failure error boundary/HTTP denial; mounted paste/File/raw draft retention; exact CSV preview binding/invalidation; tabs/errors/busy/focus and in-flight password cancel semantics; dedicated24target project runner with exact ports/suite identity/single flock; observed scoped Node/browser deny probes; exact pending proposal manifest and named O0–O2/A0–A7 comparison contract.13 AM rows map actual retained origins to named future tests. Addressed means author-proposed design correction, not independent verification or closure.",
+  "evidence": "Current bytes: 00 complexity/A13,01 FR+new spec SHA,02 corrected runner inventory,03 ADR001/002/003,04 domain lifecycle,05 concrete contracts,06 TASK-QA/AM1–13/24targets and normative spec. Exact old/new SHA in .secrets/project-cabinet-plan-rework-handoff.json. Actual13 IDs read from retained host; role entries, flags, metrics and original reports untouched.",
+  "newRisks": {
+    "assessment": "Авторская оценка design corrections: state/HTTP/CSV/focus/password and scoped QA transport contracts made explicit without new backend APIs or domains. Four test/tool targets increase inventory20→24 within L. Expected risks: client state reconciliation may regress; guard coverage is limited to controlled Node/browser application transports and cannot prove native/OS-wide isolation; exact proposal owner decision remains pending. All planned tests, guard probes and independent origin verification remain unexecuted by this author. No closure or code admission asserted.",
+    "evidence": "05_architecture.md explicitly limits Node/browser guarantee, forbids double flock, specifies refusal probes; ADR003 keeps owner decision pending;06 tasks/tests are planned. Documentation hash consistency only was checked.",
+    "conditions": []
+  }
+}

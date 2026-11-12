@@ -1,0 +1,106 @@
+{
+  "schema": "fa-review-convergence-1",
+  "phase": "ideation",
+  "nonce": "733ac1ec-9eb4-45bb-bbbc-e8391ed7f4ca",
+  "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+  "author": {
+    "addressed": [
+      "QCSQ-01",
+      "QCRISK-01-egress-boundary",
+      "QCRISK-02-project-runner",
+      "TST-01",
+      "TST-02",
+      "TST-03",
+      "A11Y-01",
+      "A11Y-02",
+      "UX-01",
+      "UX-02",
+      "UX-03",
+      "QCSEC-01-http-denial",
+      "QCSEC-02-password-cancel-inflight"
+    ],
+    "changedScope": [
+      "features/proofo-ui/project-cabinet/00_complexity_assessment.md",
+      "features/proofo-ui/project-cabinet/01_requirements.md",
+      "features/proofo-ui/project-cabinet/02_research.md",
+      "features/proofo-ui/project-cabinet/03_adr/001-reuse-owned-project-capabilities.md",
+      "features/proofo-ui/project-cabinet/03_adr/002-scope-cabinet-palette-and-interaction.md",
+      "features/proofo-ui/project-cabinet/03_adr/003-separate-original-reference-from-live-adaptation.md",
+      "features/proofo-ui/project-cabinet/04_domain_model.md",
+      "features/proofo-ui/project-cabinet/05_architecture.md",
+      "features/proofo-ui/project-cabinet/06_implementation_plan.md",
+      "openspec/changes/proofo-project-cabinet/specs/project-cabinet/spec.md"
+    ],
+    "classification": "structural",
+    "delta": "Bounded design-only rework: explicit full-reload synchronization and snapshot props; distinct SQL-failure error boundary/HTTP denial; mounted paste/File/raw draft retention; exact CSV preview binding/invalidation; tabs/errors/busy/focus and in-flight password cancel semantics; dedicated24target project runner with exact ports/suite identity/single flock; observed scoped Node/browser deny probes; exact pending proposal manifest and named O0–O2/A0–A7 comparison contract.13 AM rows map actual retained origins to named future tests. Addressed means author-proposed design correction, not independent verification or closure.",
+    "evidence": "Current bytes: 00 complexity/A13,01 FR+new spec SHA,02 corrected runner inventory,03 ADR001/002/003,04 domain lifecycle,05 concrete contracts,06 TASK-QA/AM1–13/24targets and normative spec. Exact old/new SHA in .secrets/project-cabinet-plan-rework-handoff.json. Actual13 IDs read from retained host; role entries, flags, metrics and original reports untouched.",
+    "newRisks": {
+      "assessment": "Авторская оценка design corrections: state/HTTP/CSV/focus/password and scoped QA transport contracts made explicit without new backend APIs or domains. Four test/tool targets increase inventory20→24 within L. Expected risks: client state reconciliation may regress; guard coverage is limited to controlled Node/browser application transports and cannot prove native/OS-wide isolation; exact proposal owner decision remains pending. All planned tests, guard probes and independent origin verification remain unexecuted by this author. No closure or code admission asserted.",
+      "evidence": "05_architecture.md explicitly limits Node/browser guarantee, forbids double flock, specifies refusal probes; ADR003 keeps owner decision pending;06 tasks/tests are planned. Documentation hash consistency only was checked.",
+      "conditions": []
+    }
+  },
+  "reviews": [
+    {
+      "reviewer": "qcsd-accessibility",
+      "family": "codex",
+      "independent": true,
+      "verdict": "clean",
+      "conditions": [
+        {
+          "id": "A11Y-01",
+          "owner": "qcsd-accessibility",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Привязать к FR-303/304 и NFR-301 конкретный keyboard/focus oracle в именованных live tests tools/visual/project-cabinet.e2e.test.mjs: для выбранных tabs — Tab в выбранную вкладку, Left/Right с wrap, Home/End, aria-selected/tabindex и aria-controls/aria-labelledby согласованы, только активная панель доступна, черновики обоих методов сохраняются; если выбраны disclosures, проверить их фактическую button/expanded/controls-семантику без ложных tab roles. Для успешной и неуспешной модерации существующего item, а также cancel смены пароля определить и проверить видимое разумное место фокуса после исчезновения/перерисовки элемента, доступность дальнейших действий и отсутствие сброса фокуса на body; проверить с клавиатуры без programmatic focus как замены навигации.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/01_requirements.md",
+            "features/proofo-ui/project-cabinet/03_adr/002-scope-cabinet-palette-and-interaction.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: 05_architecture.md:14–16 обещает roving/tab semantics и reuse компонентов; 01_requirements.md:11–12,18 требует keyboard/focus. В дополнительном, не измеренном prepare 06_implementation_plan.md:13,17 названы tab/focus, но нет точной последовательности и oracle после исчезновения action. Existing moderation-list.tsx:32–36,67–68,145–155 меняет набор кнопок после успешного действия; статический preview proposal.js:23 восстанавливает focus на replacement, что само по себе не доказывает будущий production. Пределы и хеши — qcsd-accessibility.md."
+        },
+        {
+          "id": "A11Y-02",
+          "owner": "qcsd-accessibility",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Привязать к FR-303/304/307 и NFR-301 наблюдаемый oracle для полей и асинхронных состояний в tools/visual/project-cabinet.e2e.test.mjs: у screenshot/URL/text, CSV и password есть доступные имена и условия обязательности; проверяемая field-specific ошибка связана с соответствующим полем и объявляется без потери исправляемого ввода, общая сетевая/409 — доступный явный статус без ложного успеха; при pending, ответе успех/ошибка и retry статус/занятость доступны без опоры только на цвет и не требуют просмотра экрана. Определить способ проверки accessibility tree/DOM-связей и отдельный ручной keyboard + реальный screen reader сценарий для доступного будущего test-copy; отсутствие AT отметить как непроверенное, не pass. Проверить на manual, CSV preview/commit, moderation и password mismatch; не требовать вставки настоящих секретов.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/01_requirements.md",
+            "features/proofo-ui/project-cabinet/03_adr/002-scope-cabinet-palette-and-interaction.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: 01_requirements.md:18, 05_architecture.md:25–26 и ADR-002:15 задают общие labels/status/error/focus; дополнительный 06_implementation_plan.md:13,17 перечисляет их без конкретной связки поле → ошибка, busy → результат и оркестрации AT. Existing platform-form.tsx:176–180 выводит error/done без role/live, moderation-list.tsx:55–76,90 выводит error обычным p; import-form.tsx:70,91–94 и change-password.tsx:99–109 имеют alert/status — reuse даёт неодинаковые исходные гарантии. Это наблюдение исходного кода, не установленная runtime-ошибка будущего продукта."
+        }
+      ],
+      "verifications": [
+        {
+          "id": "A11Y-01",
+          "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+          "classification": "structural",
+          "evidence": "STATIC: 01_requirements.md FR-303/304/NFR-301 и spec.md PC-08 scenario связывают требование с 05_architecture.md:14,42–47; selected tab/roving Left/Right wrap/Home/End, linked ARIA, hidden/inert, сохранение mounted drafts и последовательный Tab заданы. Реальные keyboard events, фокус на action той же карточки после success, исходной action после failure/409 и возврат к opener после cancel, activeElement не body, названы как planned tests в 06_implementation_plan.md AM-7 и строка 71. Product тесты не выполнялись.",
+          "implementationVerified": true
+        },
+        {
+          "id": "A11Y-02",
+          "revision": "963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009",
+          "classification": "structural",
+          "evidence": "STATIC: 05_architecture.md:44–47 перечисляет имена и условия обязательности manual/CSV/password, invalid/describedby к видимой ошибке и focused alert summary, сохранение ввода, общий alert для network/409, aria-busy/disabled и живой status, реальный keyboard плюс screen reader с версией и unverified при отсутствии; 01_requirements.md NFR-301, PC-08 и 06_implementation_plan.md AM-8 связывают это с named DOM/ARIA-tree oracle manual/CSV/moderation/password. Это design, не исполнение тестов/AT.",
+          "implementationVerified": true
+        }
+      ],
+      "newRisks": {
+        "assessment": "В пределах focused accessibility review новых материальных условий не выявлено. Контракты busy/focus и AT требуют реализации и фактических испытаний; решение владельца по точному proposal и filled/control states остаётся pending, отдельный precode gate. Другие originating conditions не оценивались на закрытие.",
+        "evidence": "STATIC: author-rework-delta.json newRisks; 05_architecture.md:42–47; ADR-002:25; ADR-003 owner approval pending; 06_implementation_plan.md AM-7/8 и 71.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": true,
+      "deltaVerification": {
+        "classification": "structural",
+        "evidence": "STATIC: прочитан author-rework-delta.json, полный изменённый design scope и отдельные plan/spec; проверены только исправления A11Y-01/02 в ревизии 963294a11da2550521f81059a16fa1fc76420c06623aab200d5f916a6c80c009. Восемь host SHA совпали; spec SHA совпал с FR binding; 24 уникальных targets. Остальные origin conditions принадлежат другим reviewer. Дизайн/план, без исполнения product или AT.",
+        "implementationVerified": true
+      }
+    }
+  ]
+}

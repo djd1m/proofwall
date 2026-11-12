@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "feature": "proofo-ui",
   "fullQe": true,
-  "complexityTier": "S",
-  "stage": "ready",
-  "activeProductChange": true,
+  "complexityTier": "L",
+  "stage": "planned",
+  "activeProductChange": false,
   "requiredChecks": [
     "unit",
     "integration",
@@ -15,74 +15,6 @@
     "build",
     "independent-review"
   ],
-  "receipt": {
-    "issuedAt": "2026-11-12T18:49:13.121Z",
-    "inputDigest": "5612ee66ebf7ecba8b919395cb38274faa5fe290bbc7f098c8182178fc62a78e",
-    "checks": {
-      "unit": {
-        "status": "passed",
-        "evidence": "features/proofo-ui/palette-default-fix/evidence/checks/unit.json",
-        "evidenceSha256": "19d89bb8aad5a41c69be7a86a68430dcd4c12fb44d56314cbb1ba0ae16d21ba7"
-      },
-      "integration": {
-        "status": "passed",
-        "evidence": "features/proofo-ui/palette-default-fix/evidence/checks/integration.json",
-        "evidenceSha256": "e950c6daa815e27345057178168a4d181559e6b80d9c0bd2c29efb758ddbee38"
-      },
-      "e2e": {
-        "status": "passed",
-        "evidence": "features/proofo-ui/palette-default-fix/evidence/checks/e2e.json",
-        "evidenceSha256": "7f4317948c05a459fdc785b23bb5c900cfee301c87812be611c00b50fcbc0315"
-      },
-      "visual": {
-        "status": "passed",
-        "evidence": "features/proofo-ui/palette-default-fix/evidence/checks/visual.json",
-        "evidenceSha256": "4b99eab82e3a6ac7f3ddf48b275f28d1900ad4892ecefc61e0dd0a2361c2aa93"
-      },
-      "accessibility": {
-        "status": "passed",
-        "evidence": "features/proofo-ui/palette-default-fix/evidence/checks/accessibility.json",
-        "evidenceSha256": "57d201b3c21d7c20094cac461acab7514c419045a866084ddce7c75eb70919da"
-      },
-      "typecheck": {
-        "status": "passed",
-        "evidence": "features/proofo-ui/palette-default-fix/evidence/checks/typecheck.json",
-        "evidenceSha256": "3f31355f731b367678335be0a00a23ecdd1fcaeb0091043cba19108012292571"
-      },
-      "build": {
-        "status": "passed",
-        "evidence": "features/proofo-ui/palette-default-fix/evidence/checks/build.json",
-        "evidenceSha256": "2c1fe0400a173632265760bd98f58817c5eace04c16517059c741ddf28096bb7"
-      },
-      "independent-review": {
-        "status": "passed",
-        "evidence": "features/proofo-ui/palette-default-fix/evidence/checks/independent-review.json",
-        "evidenceSha256": "fcecdde7b1e601122695584c1464db97efb01469575133904bd9ce7ecf761e91"
-      }
-    }
-  },
-  "implementationAdmission": {
-    "plan": {
-      "path": "features/proofo-ui/palette-default-fix/06_implementation_plan.md",
-      "sha256": "21a0dd99fe7d222ff141727ee2e5b3ebeb695f15b1d9163a39a86a1dae2023b9"
-    },
-    "specifications": [
-      {
-        "path": "openspec/changes/proofo-palette-default-fix/specs/palette-default/spec.md",
-        "sha256": "5b5df5dbb74be895e39119f7dfc76ff28a0dd6b10857bea2d03771d1f84f6ac7"
-      }
-    ],
-    "checkpoints": {
-      "K1": {
-        "status": "passed",
-        "evidence": "features/proofo-ui/palette-default-fix/evidence/admission/K1.json",
-        "evidenceSha256": "25e415e0916a0283ae5f8ffe97bc36d019932236f099abdfc9f5ae110ddd3fd3"
-      },
-      "K2": {
-        "status": "passed",
-        "evidence": "features/proofo-ui/palette-default-fix/evidence/admission/K2.json",
-        "evidenceSha256": "3c46b7a9398ae56697e5fe13915d4a9d5e0e9d4880943d89f96c9fde91458b3d"
-      }
-    }
-  }
+  "receipt": null,
+  "implementationAdmission": null
 }

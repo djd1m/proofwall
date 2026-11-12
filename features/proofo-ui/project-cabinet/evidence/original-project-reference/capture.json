@@ -1,0 +1,58 @@
+{
+  "kind": "candidate-original-project-observation",
+  "capturedAt": "2026-11-12T18:57:50.227Z",
+  "source": {
+    "originalFrozenManifestSha": "e7999b11e9fb68cf57f64323c624df5d70693d366d1d69be01a1d7e9e3101684",
+    "sourceCommit": "e2e2f963b1a0199d597396cfba1aef369b7e969d",
+    "resourcesUnchanged": true
+  },
+  "environment": {
+    "node": "v22.23.4",
+    "platform": "linux",
+    "arch": "x64",
+    "kernel": "6.8.0-138-generic",
+    "osRelease": "PRETTY_NAME=\"Ubuntu 24.04 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+    "chromiumExecutable": "/root/.cache/puppeteer/chrome/linux-148.0.7778.97/chrome-linux64/chrome",
+    "chromiumSha256": "7f5c687c69c06c2b49f80755087b0575fa67633f359b0cdbe2ee40c33235fc98",
+    "tooling": {
+      "playwright": "1.65.0",
+      "pixelmatch": "8.0.0",
+      "pngjs": "7.0.0"
+    },
+    "browserVersion": "148.0.7778.97"
+  },
+  "cases": [
+    {
+      "id": "project-1440x900",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "image": "project-1440x900.png",
+      "measurements": "project-1440x900.json",
+      "imageSha256": "4f064ae17fe147c7ea53ceb719c9819aea365f71878daa8eb9476b8b57a04b8b"
+    },
+    {
+      "id": "project-390x844",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "image": "project-390x844.png",
+      "measurements": "project-390x844.json",
+      "imageSha256": "935a253c433a34361955000ab153e0131ce2fc40676fb6d224d18fb325684c51"
+    },
+    {
+      "id": "project-360x800",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "image": "project-360x800.png",
+      "measurements": "project-360x800.json",
+      "imageSha256": "8042307b8472396eb544b614913bb970c4f51e89afb30d20d0d89cee3f17b4b1"
+    }
+  ],
+  "scope": "Original empty project macro, not live adaptation; no update to original9cases or owner acceptance of new filled/control states",
+  "approval": "Pending explicit approval of proposed adaptation; general continuation is not fabricated acceptance"
+}
