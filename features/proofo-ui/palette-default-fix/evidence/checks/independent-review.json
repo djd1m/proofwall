@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "exitCode": 0,
+  "command": "node_modules/node/bin/node node_modules/@dzhechkov/harness-cli/dist/bin.js qe-rounds --source native --action evaluate --project /tmp/proofwall-branding-collect --feature-dir /tmp/proofwall-branding-collect/features/proofo-ui/palette-default-fix --json",
+  "sourceHashes": {
+    "apps/web/src/lib/branding.ts": "a511ed93097f653b3fb0b040038a0d9f54413684ed898e435a72acf6cbefce6c",
+    "apps/web/tests/branding.test.ts": "515d67e04bd7788f24490846f5b6b9bbf106df2af9a24483af8d66cbff94cb66",
+    "apps/widget/src/render.ts": "9988c5a94d4de6d21fd9b4de7e6aeb64081c68552c181de6b0660cf57544433a",
+    "apps/widget/src/styles.ts": "2fb32090853851370fe88435d6c0e2235071a5aa01219fa06b82fa105835325e",
+    "apps/widget/tests/widget-branding.test.ts": "ffec65fa7112314cd1bdc6e1dee37cf8bcdd12e63b28cb7b6e7fe56e67b7853c",
+    "tools/visual/branding-collect.e2e.test.mjs": "9f7e799f89a5b339b12c30c964e66d5ae37d3b50c44b08e522262139be0f0fc8"
+  },
+  "scope": "Actual independent Astra/xhigh initial scoped S-tier review and native convergence: web52/widget8/E2E16, snapshot10 matched",
+  "artifacts": [
+    "features/proofo-ui/palette-default-fix/evidence/independent-review.md",
+    "features/proofo-ui/palette-default-fix/evidence/independent-review.json",
+    "features/proofo-ui/palette-default-fix/evidence/independent-review-entry.json",
+    "features/proofo-ui/palette-default-fix/evidence/native-qe-evaluated.json"
+  ]
+}

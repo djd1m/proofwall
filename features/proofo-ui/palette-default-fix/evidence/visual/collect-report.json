@@ -1,0 +1,586 @@
+{
+  "kind": "application-visual-comparison",
+  "baseline": "/tmp/proofwall-branding-collect/features/proofo-ui/reference/dashboard-v3",
+  "environment": {
+    "node": "v22.23.4",
+    "platform": "linux",
+    "arch": "x64",
+    "kernel": "6.8.0-138-generic",
+    "osRelease": "PRETTY_NAME=\"Ubuntu 24.04 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+    "chromiumExecutable": "/root/.cache/puppeteer/chrome/linux-148.0.7778.97/chrome-linux64/chrome",
+    "chromiumSha256": "7f5c687c69c06c2b49f80755087b0575fa67633f359b0cdbe2ee40c33235fc98",
+    "tooling": {
+      "playwright": "1.65.0",
+      "pixelmatch": "8.0.0",
+      "pngjs": "7.0.0"
+    }
+  },
+  "url": "http://127.0.0.1:33189/collect.html",
+  "cases": [
+    {
+      "id": "collect/1440x900",
+      "mutation": "none",
+      "expected": "identical",
+      "passed": true,
+      "checks": {
+        "raster": true,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": true,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 440,
+          "y": 48,
+          "width": 560,
+          "height": 1117.625
+        },
+        "actual": {
+          "x": 440,
+          "y": 48,
+          "width": 560,
+          "height": 1117.625
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 560,
+          "height": 1118
+        },
+        "actual": {
+          "width": 560,
+          "height": 1118
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 0,
+        "pixelmatchPixels": 0,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "collect-1440x900-none"
+    },
+    {
+      "id": "collect/1440x900",
+      "mutation": "font",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 440,
+          "y": 48,
+          "width": 560,
+          "height": 1117.625
+        },
+        "actual": {
+          "x": 440,
+          "y": 48,
+          "width": 560,
+          "height": 1117.625
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 560,
+          "height": 1118
+        },
+        "actual": {
+          "width": 560,
+          "height": 1118
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 8200,
+        "pixelmatchPixels": 8200,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "collect-1440x900-font"
+    },
+    {
+      "id": "collect/1440x900",
+      "mutation": "margin",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 440,
+          "y": 48,
+          "width": 560,
+          "height": 1117.625
+        },
+        "actual": {
+          "x": 440,
+          "y": 48,
+          "width": 560,
+          "height": 1117.625
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 560,
+          "height": 1118
+        },
+        "actual": {
+          "width": 560,
+          "height": 1118
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 4785,
+        "pixelmatchPixels": 4785,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "collect-1440x900-margin"
+    },
+    {
+      "id": "collect/1440x900",
+      "mutation": "color",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 440,
+          "y": 48,
+          "width": 560,
+          "height": 1117.625
+        },
+        "actual": {
+          "x": 440,
+          "y": 48,
+          "width": 560,
+          "height": 1117.625
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 560,
+          "height": 1118
+        },
+        "actual": {
+          "width": 560,
+          "height": 1118
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 8745,
+        "pixelmatchPixels": 8745,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "collect-1440x900-color"
+    },
+    {
+      "id": "collect/390x844",
+      "mutation": "none",
+      "expected": "identical",
+      "passed": true,
+      "checks": {
+        "raster": true,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": true,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1100.015625
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1100.015625
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 390,
+          "height": 1101
+        },
+        "actual": {
+          "width": 390,
+          "height": 1101
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 0,
+        "pixelmatchPixels": 0,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "collect-390x844-none"
+    },
+    {
+      "id": "collect/390x844",
+      "mutation": "font",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1100.015625
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1100.015625
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 390,
+          "height": 1101
+        },
+        "actual": {
+          "width": 390,
+          "height": 1101
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 6578,
+        "pixelmatchPixels": 6578,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "collect-390x844-font"
+    },
+    {
+      "id": "collect/390x844",
+      "mutation": "margin",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1100.015625
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1100.015625
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 390,
+          "height": 1101
+        },
+        "actual": {
+          "width": 390,
+          "height": 1101
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 4109,
+        "pixelmatchPixels": 4109,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "collect-390x844-margin"
+    },
+    {
+      "id": "collect/390x844",
+      "mutation": "color",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1100.015625
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 1100.015625
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 390,
+          "height": 1101
+        },
+        "actual": {
+          "width": 390,
+          "height": 1101
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 6773,
+        "pixelmatchPixels": 6773,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "collect-390x844-color"
+    },
+    {
+      "id": "collect/360x800",
+      "mutation": "none",
+      "expected": "identical",
+      "passed": true,
+      "checks": {
+        "raster": true,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": true,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1121.703125
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1121.703125
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 360,
+          "height": 1122
+        },
+        "actual": {
+          "width": 360,
+          "height": 1122
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 0,
+        "pixelmatchPixels": 0,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "collect-360x800-none"
+    },
+    {
+      "id": "collect/360x800",
+      "mutation": "font",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1121.703125
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1121.703125
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 360,
+          "height": 1122
+        },
+        "actual": {
+          "width": 360,
+          "height": 1122
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 6578,
+        "pixelmatchPixels": 6578,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "collect-360x800-font"
+    },
+    {
+      "id": "collect/360x800",
+      "mutation": "margin",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1121.703125
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1121.703125
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 360,
+          "height": 1122
+        },
+        "actual": {
+          "width": 360,
+          "height": 1122
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 4109,
+        "pixelmatchPixels": 4109,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "collect-360x800-margin"
+    },
+    {
+      "id": "collect/360x800",
+      "mutation": "color",
+      "expected": "raster mismatch",
+      "passed": true,
+      "checks": {
+        "raster": false,
+        "absoluteShellClip": true,
+        "absoluteRasterClip": true,
+        "boxesAndStyles": false,
+        "fixtureText": true,
+        "fixtureValues": true,
+        "body": true
+      },
+      "geometry": {
+        "expected": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1121.703125
+        },
+        "actual": {
+          "x": 0,
+          "y": 28,
+          "width": 360,
+          "height": 1121.703125
+        },
+        "DPR": 1,
+        "tolerance": 0
+      },
+      "raster": {
+        "expected": {
+          "width": 360,
+          "height": 1122
+        },
+        "actual": {
+          "width": 360,
+          "height": 1122
+        },
+        "dimensionsMatch": true,
+        "rawDiffPixels": 6773,
+        "pixelmatchPixels": 6773,
+        "threshold": 0,
+        "maxDiffPixels": 0
+      },
+      "prefix": "collect-360x800-color"
+    }
+  ],
+  "passed": true
+}

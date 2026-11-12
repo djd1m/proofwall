@@ -1,0 +1,12 @@
+{
+  "status": "expected-failure-before-fix",
+  "exitCode": 1,
+  "capturedAt": "2026-11-12T18:35:45.039054+00:00",
+  "command": "flock .secrets/branding-qe-runtime.lock node_modules/node/bin/node .secrets/palette-fix-published-probe.mjs",
+  "url": "https://ui-proofwall.78.17.53.233.sslip.io/dashboard/projects-aicoding-space/branding",
+  "expectedAccent": "#c8492f",
+  "observedAccent": "#6701ef",
+  "assertion": "actual live primary button computed background mismatches agreed reference",
+  "privateLogSha256": "9b2057a56699fa835eedafc48e0c287a42191260219bd7666999640214a28130",
+  "providerOrDatabaseWrites": false
+}

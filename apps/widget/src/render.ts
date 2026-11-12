@@ -157,7 +157,7 @@ export function applyWidgetBranding(root: ShadowRoot, raw: unknown): WidgetBrand
   const value = raw && typeof raw === 'object' && !Array.isArray(raw) ? raw as Record<string, unknown> : {};
   const branding: WidgetBranding = {
     theme: value.theme === 'dark' ? 'dark' : 'light',
-    accent_color: typeof value.accent_color === 'string' && /^#[0-9a-f]{6}$/i.test(value.accent_color) ? value.accent_color : '#6701ef',
+    accent_color: typeof value.accent_color === 'string' && /^#[0-9a-f]{6}$/i.test(value.accent_color) ? value.accent_color : '#c8492f',
     show_platform_labels: typeof value.show_platform_labels === 'boolean' ? value.show_platform_labels : true,
   };
   const widget = root.querySelector<HTMLElement>('.pw-widget');

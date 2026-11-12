@@ -74,7 +74,7 @@ const CSS = `
 .pw-shot { display:block; width:100%; height:auto; max-height:320px; object-fit:contain;
   margin:10px 0; border-radius:8px; border:1px solid #e4e6ee; background:#fff; }
 .pw-origin { margin:6px 0 0; font-size:12px; color:var(--pw-ink, #000000); }
-.pw-origin a { color:var(--pw-accent-text, #6701ef); text-decoration:underline; }
+.pw-origin a { color:var(--pw-accent-text, #c8492f); text-decoration:underline; }
 .pw-widget a:focus-visible { outline:2px solid var(--pw-ink, #000000); outline-offset:3px; box-shadow:0 0 0 2px var(--pw-surface, #fff); }
 .pw-origin a:hover { text-decoration:underline; }
 .pw-photo {

@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "uid": 20001,
+  "gid": 988,
+  "effectiveCapabilities": 0,
+  "buildId": "xl_3mKgt4IwcnieD7U4fy",
+  "checks": [
+    {
+      "case": "main env unreadable",
+      "expected": false,
+      "exitCode": 1,
+      "passed": true
+    },
+    {
+      "case": "private access unreadable",
+      "expected": false,
+      "exitCode": 1,
+      "passed": true
+    },
+    {
+      "case": "root auth unreadable",
+      "expected": false,
+      "exitCode": 1,
+      "passed": true
+    },
+    {
+      "case": "own env file unreadable",
+      "expected": false,
+      "exitCode": 1,
+      "passed": true
+    },
+    {
+      "case": "compiled build readable",
+      "expected": true,
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "case": "compiled build not writable",
+      "expected": false,
+      "exitCode": 1,
+      "passed": true
+    },
+    {
+      "case": "cache writable",
+      "expected": true,
+      "exitCode": 0,
+      "passed": true
+    }
+  ],
+  "tracedFileHashesMatched": 812,
+  "symlinksContained": 47,
+  "scope": "Actual service mount namespace access predicates; no private file contents read by checks",
+  "environmentChanged": false,
+  "productionChanged": false
+}

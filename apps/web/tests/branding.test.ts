@@ -9,7 +9,7 @@ describe('readBranding — дефолты', () => {
     for (const input of [{}, null, undefined, 'строка', 42]) {
       const b = readBranding(input);
       expect(b.heading).toBe('Оставьте отзыв');
-      expect(b.accent_color).toBe('#6701ef');
+      expect(b.accent_color).toBe('#c8492f');
       expect(b.logo_url).toBeNull();
     }
   });
@@ -73,7 +73,7 @@ describe('canonical owner settings', () => {
     };
     const ratio = (a: string, b: string) => (Math.max(lum(a), lum(b)) + .05) / (Math.min(lum(a), lum(b)) + .05);
     for (const fill of ['#FFFFFF', '#000000', '#F8F8F8', '#181818', '#777777', 'invalid']) {
-      const resolved = fill === 'invalid' ? '#6701ef' : fill;
+      const resolved = fill === 'invalid' ? '#c8492f' : fill;
       expect(ratio(brandingForeground(fill), resolved)).toBeGreaterThanOrEqual(4.5);
       for (const surface of ['#fffdf8', '#181818']) {
         expect(ratio(brandingForeground(fill, surface), surface)).toBeGreaterThanOrEqual(4.5);
@@ -289,11 +289,12 @@ describe('accent_color — попадает в атрибут style, поэто�
     '',
     '#gggggg',
   ])('отклоняет %j и падает на дефолт', (value) => {
-    expect(readBranding({ accent_color: value }).accent_color).toBe('#6701ef');
+    expect(readBranding({ accent_color: value }).accent_color).toBe('#c8492f');
   });
 
   it('принимает корректный hex в обоих регистрах', () => {
     expect(readBranding({ accent_color: '#AbCdEf' }).accent_color).toBe('#AbCdEf');
+    expect(readBranding({ accent_color: '#6701ef' }).accent_color).toBe('#6701ef');
   });
 });
 

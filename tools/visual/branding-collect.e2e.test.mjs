@@ -168,7 +168,7 @@ before(async () => {
       res.writeHead(200, { 'content-type': 'text/html', 'content-security-policy': `default-src 'none'; script-src 'self' ${base}; connect-src ${base}; img-src ${base} data:; style-src 'self'; base-uri 'none'; object-src 'none'` });
       res.end(`<!doctype html><html><head><link rel="icon" href="data:,"><link rel="stylesheet" href="/host.css"></head><body><p class="host-marker">Внешний хост</p><script src="/host.js"></script><script src="${base}/${manifest.file}" data-slug="${slug}" async></script></body></html>`);
     }), 33189);
-    appLog = createWriteStream(resolve(root, '.secrets/branding-repair-e2e-next.log'));
+    appLog = createWriteStream(resolve(root, '.secrets/palette-fix-e2e-next.log'));
     app = spawn(process.execPath, [resolve(root, 'node_modules/next/dist/bin/next'), 'start', '-H', '127.0.0.1', '-p', '33187'], { cwd: resolve(root, 'apps/web'), env: childEnv, stdio: ['ignore', 'pipe', 'pipe'] });
     app.once('error', () => { appFailure = true; });
     app.stdout.pipe(appLog); app.stderr.pipe(appLog);
@@ -193,8 +193,57 @@ after(async () => {
   await pool.end();
   const manifest = JSON.parse(await readFile(resolve(root, 'apps/web/public/widget-manifest.json'), 'utf8'));
   const bundleSha256 = createHash('sha256').update(await readFile(resolve(root, 'apps/web/public', manifest.file))).digest('hex');
-  await writeFile(resolve(root, '.secrets/branding-repair-e2e-measurements.json'), JSON.stringify({ counts, records,
+  await writeFile(resolve(root, '.secrets/palette-fix-e2e-measurements.json'), JSON.stringify({ counts, records,
     widgetContract: { policy: actualWidgetCsp, bundleFile: manifest.file, bundleSha256, browser: 'Chromium 148.0.7778.97', hostOrigin: 'http://widget.synthetic.test:33189', widgetOrigin: base, credentials: 'omit', cors: '*' } }, null, 2));
+});
+
+test('new project uses agreed default palette before customization', async () => {
+  const stored = (await pool.query('SELECT branding FROM projects WHERE id=$1', [projectId])).rows[0].branding;
+  assert.equal(stored?.accent_color ?? null, null, 'ordinary registration has no saved accent');
+  await editor();
+  await expect(page.locator('#cab-color')).toHaveValue('#c8492f');
+  await expect(page.locator('#cab-color-text')).toHaveValue('#c8492f');
+  await expect(page.locator('.cab-primary')).toHaveCSS('background-color', 'rgb(200, 73, 47)');
+  await expect(page.locator('.mark')).toHaveCSS('background-color', 'rgb(200, 73, 47)');
+  await expect(page.locator('.cab-eyebrow')).toHaveCSS('color', 'rgb(200, 73, 47)');
+  await expect(page.locator('h1')).toHaveCSS('color', 'rgb(23, 20, 15)');
+  await expect(page.locator('body')).toHaveCSS('background-color', 'rgb(242, 237, 227)');
+  await expect(page.locator('.cab-paper')).toHaveCSS('background-color', 'rgb(255, 253, 248)');
+  await expect(page.locator('#cab-color-text')).toHaveCSS('border-top-color', 'rgb(142, 128, 107)');
+  assertColors(await colors(page));
+  await collect();
+  await expect(page.locator('h1')).toHaveCSS('color', 'rgb(200, 73, 47)');
+  await expect(page.locator('.cab-primary')).toHaveCSS('background-color', 'rgb(200, 73, 47)');
+  assertColors(await colors(page));
+  await page.goto(`${base}/w/${slug}`);
+  await expect(page.locator('.wallHead__title')).toHaveCSS('color', 'rgb(200, 73, 47)');
+  assert.equal(await page.locator('main').evaluate(el => getComputedStyle(el).getPropertyValue('--wall-fill').trim()), '#c8492f');
+  const config = await context.request.get(`${base}/api/widget/config?slug=${slug}`);
+  assert.equal(config.status(), 200); assert.equal((await config.json()).branding.accent_color, '#c8492f');
+  assert.deepEqual((await pool.query('SELECT branding FROM projects WHERE id=$1', [projectId])).rows[0].branding, stored, 'reads do not persist defaults');
+  records.push({ check: 'new-project-runtime-default', accent: '#c8492f', routes: ['branding', 'collect', 'wall', 'widget/config'], storedAccent: null, fixturePaletteInjection: false });
+});
+
+test('saved custom accents including purple survive reload', async () => {
+  const stored = (await pool.query('SELECT branding FROM projects WHERE id=$1', [projectId])).rows[0].branding;
+  try {
+    for (const [accent, rgb] of [['#123456', 'rgb(18, 52, 86)'], ['#6701ef', 'rgb(103, 1, 239)']]) {
+      await editor(); await page.locator('#cab-color-text').fill(accent); await save(); await page.reload();
+      await expect(page.locator('#cab-color')).toHaveValue(accent);
+      await expect(page.locator('#cab-color-text')).toHaveValue(accent);
+      await expect(page.locator('.cab-primary')).toHaveCSS('background-color', rgb);
+      await expect(page.locator('.mark')).toHaveCSS('background-color', rgb);
+      await collect(); await expect(page.locator('h1')).toHaveCSS('color', rgb);
+      await expect(page.locator('.cab-primary')).toHaveCSS('background-color', rgb);
+      await page.goto(`${base}/w/${slug}`); await expect(page.locator('.wallHead__title')).toHaveCSS('color', rgb);
+      const config = await context.request.get(`${base}/api/widget/config?slug=${slug}`);
+      assert.equal(config.status(), 200); assert.equal((await config.json()).branding.accent_color, accent);
+      assert.equal((await pool.query('SELECT branding FROM projects WHERE id=$1', [projectId])).rows[0].branding.accent_color, accent);
+      records.push({ check: 'saved-custom-accent-preserved', accent, routes: ['branding', 'collect', 'wall', 'widget/config'] });
+    }
+  } finally {
+    await pool.query('UPDATE projects SET branding=$2 WHERE id=$1', [projectId, stored]);
+  }
 });
 
 test('owner navigates from project to branding and back', async () => {

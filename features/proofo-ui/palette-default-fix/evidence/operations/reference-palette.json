@@ -1,0 +1,102 @@
+{
+  "capturedAt": "2026-11-12T18:36:42.884Z",
+  "status": "observed",
+  "cases": [
+    {
+      "screen": "dashboard",
+      "url": "https://proofwall.78.17.53.233.sslip.io/__design/proofo/?screen=dashboard&clean=1",
+      "tokens": {
+        "body": {
+          "background": "rgb(242, 237, 227)",
+          "color": "rgb(23, 20, 15)",
+          "border": "rgb(23, 20, 15)"
+        },
+        "card": {
+          "background": "rgb(255, 253, 248)",
+          "color": "rgb(23, 20, 15)",
+          "border": "rgb(23, 20, 15)"
+        },
+        "primary": null,
+        "heading": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 20, 15)",
+          "border": "rgb(23, 20, 15)"
+        },
+        "field": null,
+        "mark": {
+          "background": "rgb(200, 73, 47)",
+          "color": "rgb(255, 255, 255)",
+          "border": "rgb(255, 255, 255)"
+        }
+      }
+    },
+    {
+      "screen": "branding",
+      "url": "https://proofwall.78.17.53.233.sslip.io/__design/proofo/?screen=branding&clean=1",
+      "tokens": {
+        "body": {
+          "background": "rgb(242, 237, 227)",
+          "color": "rgb(23, 20, 15)",
+          "border": "rgb(23, 20, 15)"
+        },
+        "card": {
+          "background": "rgb(255, 253, 248)",
+          "color": "rgb(23, 20, 15)",
+          "border": "rgb(23, 20, 15)"
+        },
+        "primary": {
+          "background": "rgb(200, 73, 47)",
+          "color": "rgb(255, 255, 255)",
+          "border": "rgb(200, 73, 47)"
+        },
+        "heading": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 20, 15)",
+          "border": "rgb(23, 20, 15)"
+        },
+        "field": {
+          "background": "rgb(247, 244, 235)",
+          "color": "rgb(23, 20, 15)",
+          "border": "rgb(221, 211, 194)"
+        },
+        "mark": {
+          "background": "rgb(200, 73, 47)",
+          "color": "rgb(255, 255, 255)",
+          "border": "rgb(255, 255, 255)"
+        }
+      }
+    },
+    {
+      "screen": "collect",
+      "url": "https://proofwall.78.17.53.233.sslip.io/__design/proofo/?screen=collect&clean=1",
+      "tokens": {
+        "body": {
+          "background": "rgb(242, 237, 227)",
+          "color": "rgb(23, 20, 15)",
+          "border": "rgb(23, 20, 15)"
+        },
+        "card": {
+          "background": "rgb(255, 253, 248)",
+          "color": "rgb(23, 20, 15)",
+          "border": "rgb(23, 20, 15)"
+        },
+        "primary": {
+          "background": "rgb(200, 73, 47)",
+          "color": "rgb(255, 255, 255)",
+          "border": "rgb(200, 73, 47)"
+        },
+        "heading": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(200, 73, 47)",
+          "border": "rgb(200, 73, 47)"
+        },
+        "field": {
+          "background": "rgb(247, 244, 235)",
+          "color": "rgb(23, 20, 15)",
+          "border": "rgb(221, 211, 194)"
+        },
+        "mark": null
+      }
+    }
+  ]
+}

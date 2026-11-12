@@ -114,8 +114,9 @@ describe('widget branding', () => {
   it('normalizes absent and malformed network branding without CSS injection', () => {
     const root = mount();
     for (const raw of [undefined, null, [], 'bad', { theme: 'system', accent_color: 'red;display:none', show_platform_labels: 0 }]) {
-      expect(applyWidgetBranding(root, raw)).toEqual({ theme: 'light', accent_color: '#6701ef', show_platform_labels: true });
+      expect(applyWidgetBranding(root, raw)).toEqual({ theme: 'light', accent_color: '#c8492f', show_platform_labels: true });
     }
+    expect(applyWidgetBranding(root, { accent_color: '#6701ef' }).accent_color).toBe('#6701ef');
     expect(applyWidgetBranding(root, { theme: 'dark', accent_color: '#ABCDEF', show_platform_labels: false })).toEqual({ theme: 'dark', accent_color: '#ABCDEF', show_platform_labels: false });
     expect(root.querySelector<HTMLElement>('.pw-widget')?.style.getPropertyValue('--pw-surface')).toBe('#181818');
     expect(applyWidgetBranding(document.createElement('div').attachShadow({ mode: 'open' }), {}).theme).toBe('light');

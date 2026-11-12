@@ -16,11 +16,10 @@ export interface ResolvedBranding extends Branding {
 
 export type BrandingPatch = Partial<ResolvedBranding>;
 
-// Фирменный акцент Proofwall. Проект без собственного оформления должен выглядеть
-// как часть продукта, а не как чёрно-белая заглушка. Значение продублировано в
-// globals.css как --accent; здесь оно нужно потому, что уходит в inline-стиль
-// (виджет и SSR не видят CSS-переменные страницы владельца).
-const DEFAULT_ACCENT = '#6701ef';
+// Согласованный акцент Proofo для отсутствующего/невалидного оформления.
+// Явно сохранённый hex сохраняется, включая прежний фирменный purple.
+// Значение передаётся в SSR и widget config, независимо от CSS страницы.
+const DEFAULT_ACCENT = '#c8492f';
 // Только hex: любое иное значение уехало бы в атрибут style. Проверка — не косметика,
 // а граница: строка вроде "red;background:url(javascript:…)" не должна попасть в разметку.
 const HEX = /^#[0-9a-fA-F]{6}$/;
