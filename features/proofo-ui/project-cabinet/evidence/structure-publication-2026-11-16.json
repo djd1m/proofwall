@@ -1,0 +1,25 @@
+{
+  "at": "2026-11-16T14:37:02.586307+00:00",
+  "scope": "Static proposal only; no application/production/DNS changes",
+  "url": "https://proofwall.78.17.53.233.sslip.io/__design/proofo/project-next/",
+  "files": {
+    "index.html": "eb79e2717b901d53804269cf4b8f011086316be635c40850207c718cac6dda8f",
+    "proposal.js": "d2618a3520b30af98ede272d472a3c482e8a4c95049152e1fd997eaf82d58b33",
+    "proposal.css": "4a95270df8145b93748c0c28835dab4121bfb9c6d02b9295a2b97c0753594d86",
+    "README.md": "a3222f565302eb5474ec9bc9499541e07cbb1a7df04bfcd5c638abd8afb3f90c"
+  },
+  "parentStaticFilesUnchanged": {
+    "cabinet.css": "e85f2e80675067996755250b7637c184b8424ffff1356cee87905839c59e1740",
+    "contrast-fields.html": "2bbc9215692a474f17d35b0dcb60055abda19d840d42e4fc9d14782499fb030b",
+    "preview.js": "3c50db8608144769b27df4567a3d5bc6e46a5d583dd9ff16917e72223d9152c8",
+    "email-onboarding.html": "173aed813253d3c4bbe454b47c84ae53ef289abdf5a37fe470781ab89384107c",
+    "favicon.svg": "79af9ab65c653e6497c3bbdfa618b7ba7d8e80f3270b21e9155f724a9ad4a4ff",
+    "cabinet.js": "278850cf4c47543b50b103e5163b77296f7488453307eeb5720bc8c2a0b24082",
+    "contrast-fields.override.css": "81c11f55c7ed729b5da02b8945bbfe4f8248f37a2d494fe8c284ae3a819139e5",
+    "index.html": "72e77e620fecd019bbc09389a8129ae006012574a2450b85c6e080c94eab5e90",
+    "README.md": "23a8717f9da203bc41adfc9e06a94fe317fbafe46a70239533987e62d5aefc82",
+    "style.css": "0017593280638dac50b3c4c769bc46e99b364baf9f1e0c19c4ea277a619eb7b9",
+    "cabinet-README.md": "386b5180e3a7640f27fe0740d76123720531c85306cf9d68d9c69a0d871c3099"
+  },
+  "ownerInstruction": "Вернуть структуру и три способа переноса Proofo; CSV и технические настройки скрыть."
+}

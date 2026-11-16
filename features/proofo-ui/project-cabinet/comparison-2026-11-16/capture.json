@@ -1,0 +1,71 @@
+{
+  "at": "2026-11-16T14:12:03.703Z",
+  "kind": "Live UI comparison, read-only content audit",
+  "frames": [
+    {
+      "name": "proofo-overview",
+      "url": "https://proofo.ru/dashboard",
+      "file": "proofo-overview.png",
+      "sha256": "2994e75c50c614982042922eb6ddcebbab7e0e0d39e2e356340c065c365656e0",
+      "scope": "Actual main region, no footer/profile/storage copied; credential/email text redacted in local DOM only, password/email controls masked. Different account data, no pixel identity claim."
+    },
+    {
+      "name": "proofo-project",
+      "url": "https://proofo.ru/dashboard/projects-aicoding-space",
+      "file": "proofo-project.png",
+      "sha256": "24a0d578b1087fe5735706db09dd7d8d4c124081374e51b0c59bd660bedfa040",
+      "scope": "Actual main region, no footer/profile/storage copied; credential/email text redacted in local DOM only, password/email controls masked. Different account data, no pixel identity claim."
+    },
+    {
+      "name": "proofo-branding",
+      "url": "https://proofo.ru/dashboard/projects-aicoding-space/branding",
+      "file": "proofo-branding.png",
+      "sha256": "efc2c5b1de6bcf5a9662562e4a8ec4403e9a2d15d854cf0cb3697146f4864075",
+      "scope": "Actual main region, no footer/profile/storage copied; credential/email text redacted in local DOM only, password/email controls masked. Different account data, no pixel identity claim."
+    },
+    {
+      "name": "proofo-collect",
+      "url": "https://proofo.ru/f/projects-aicoding-space",
+      "file": "proofo-collect.png",
+      "sha256": "a93096053518a4c6b1f5e9e7fce64efb868fca07a4530f5dce8a04db4d825508",
+      "scope": "Actual main region, no footer/profile/storage copied; credential/email text redacted in local DOM only, password/email controls masked. Different account data, no pixel identity claim."
+    },
+    {
+      "name": "proofwall-overview",
+      "url": "https://ui-proofwall.78.17.53.233.sslip.io/dashboard",
+      "file": "proofwall-overview.png",
+      "sha256": "9d8a45521af0735c15646d0b3fb2c2abe025aab9c83817b1a5ed92e10ed629f5",
+      "scope": "Actual main region, no footer/profile/storage copied; credential/email text redacted in local DOM only, password/email controls masked. Different account data, no pixel identity claim."
+    },
+    {
+      "name": "proofwall-project",
+      "url": "https://ui-proofwall.78.17.53.233.sslip.io/dashboard/projects-aicoding-space",
+      "file": "proofwall-project.png",
+      "sha256": "765c40b09ce1793794985dd665fd505dcb8601be22ca7145b7275441bdeee378",
+      "scope": "Actual main region, no footer/profile/storage copied; credential/email text redacted in local DOM only, password/email controls masked. Different account data, no pixel identity claim."
+    },
+    {
+      "name": "proofwall-branding",
+      "url": "https://ui-proofwall.78.17.53.233.sslip.io/dashboard/projects-aicoding-space/branding",
+      "file": "proofwall-branding.png",
+      "sha256": "ff7be07423b6117e128ce184b891b9a2c9a2c36ce404d13d65bb4a77b058063e",
+      "scope": "Actual main region, no footer/profile/storage copied; credential/email text redacted in local DOM only, password/email controls masked. Different account data, no pixel identity claim."
+    },
+    {
+      "name": "proofwall-collect",
+      "url": "https://ui-proofwall.78.17.53.233.sslip.io/f/projects-aicoding-space",
+      "file": "proofwall-collect.png",
+      "sha256": "ded4fe990601c7a2b35f8d77350301bd492a2f3adca24eb6b895b3c9c195d378",
+      "scope": "Actual main region, no footer/profile/storage copied; credential/email text redacted in local DOM only, password/email controls masked. Different account data, no pixel identity claim."
+    },
+    {
+      "name": "proofwall-proposal",
+      "url": "https://proofwall.78.17.53.233.sslip.io/__design/proofo/project-next/",
+      "file": "proofwall-proposal.png",
+      "sha256": "6611431321a16643d507b70b9aba600e1b39caae0dd22412554d84d5e83b366f",
+      "scope": "Actual main region, no footer/profile/storage copied; credential/email text redacted in local DOM only, password/email controls masked. Different account data, no pixel identity claim."
+    }
+  ],
+  "publicCredentialsIncluded": false,
+  "normalization": "Text secrets/emails scrubbed only in local screenshot DOM. No account data or design source saved on remote services."
+}

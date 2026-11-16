@@ -1,0 +1,63 @@
+{
+  "capturedAt": "2026-11-16T14:15:35.960167+00:00",
+  "sourceStates": [
+    "proofo-overview",
+    "proofo-project-shots",
+    "proofo-project-text",
+    "proofo-text-preview",
+    "proofo-project-link",
+    "proofo-password-expanded",
+    "proofo-password-cancelled",
+    "proofo-project-mobile",
+    "proofo-branding",
+    "proofo-collect-text",
+    "proofo-public-empty",
+    "proofo-video-choice",
+    "proofo-video-file"
+  ],
+  "ownStates": [
+    "live-overview",
+    "live-project",
+    "live-branding",
+    "live-collect",
+    "proposal-empty",
+    "proposal-filled",
+    "proposal-mobile"
+  ],
+  "sourceOperations": [
+    {
+      "method": "POST",
+      "path": "/api/import",
+      "mode": "preview"
+    },
+    {
+      "path": "/api/import",
+      "mode": "preview",
+      "status": 200
+    }
+  ],
+  "mutatingSourceOperationsBlocked": [],
+  "sourceReviewCommit": false,
+  "sourcePasswordOrBrandingSave": false,
+  "sourceCheckout": false,
+  "sourceMediaUploadOrOCR": false,
+  "sourceTextPreviewOnlyHTTP": 200,
+  "videoUIObserved": true,
+  "videoFileSelected": false,
+  "cameraMethodSelected": false,
+  "proofwallVideoEnvFlagConfigured": false,
+  "proofwallVideoFlagEnabled": false,
+  "oldOverviewEvidence": {
+    "mtime": "2026-11-11T17:51:46.742000+00:00",
+    "headingAlreadyWallCounter": true,
+    "sourcePreserved": "Private11November audit; full raw data not published"
+  },
+  "privacy": "Only redacted main screenshot regions published, no profile/cookie/env/request bodies; input URL values removed locally where needed",
+  "limitations": [
+    "Free source account with empty wall; populated moderation/paid/OCR results not observed",
+    "Different source/own account data and no pixel-parity result",
+    "Service GET/login events and view counters may change normally",
+    "Read-only comparison task; product code/config not changed"
+  ],
+  "publication": "https://proofwall.78.17.53.233.sslip.io/__design/proofo/comparison-2026-11-16/"
+}

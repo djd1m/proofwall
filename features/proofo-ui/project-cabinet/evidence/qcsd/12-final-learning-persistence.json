@@ -1,0 +1,65 @@
+{
+  "at": "2026-11-12T19:42:40.252Z",
+  "aqeExitCode": 0,
+  "aqeResult": {
+    "success": true,
+    "data": {
+      "stored": true,
+      "key": "qcsd-ideation-project-cabinet-20261112-final",
+      "namespace": "qcsd-ideation",
+      "timestamp": "2026-11-12T19:42:38.809Z",
+      "persisted": true,
+      "vectorIndex": {
+        "status": "failed",
+        "error": {
+          "code": "VECTOR_INDEX_UNAVAILABLE",
+          "message": "Semantic vector indexing is unavailable for this entry. Configure AQE_EMBEDDER_ENDPOINT for the recommended remote backend. The compatible local @huggingface/transformers@4.2.0 dependency chain currently has unresolved HIGH advisories GHSA-xcpc-8h2w-3j85 and GHSA-f88m-g3jw-g9cj."
+        }
+      }
+    }
+  },
+  "teachExitCode": 0,
+  "teachOutput": "Learned: \"Proofwall QCSD: evaluate может сохранить валидные origins да...\"\n  Domain: general  Reward: 0.8 (default)  Backend: memory (@dzhechkov/memory)\n  Total patterns: 12\n  store (written): /home/proofwall/.dz  [from --project]\n  ID: teach:cb96be0b31369749\n",
+  "recallExitCode": 0,
+  "recalled": [
+    {
+      "pattern": "Proofwall QCSD: evaluate может сохранить валидные origins даже при not-established из-за другой записи. После исправления формата нужно читать фактический persisted host, сохранять условия, делать реальный author delta и независимую origin verification; нельзя восстанавливать пустую историю по одному ответу CLI. В project-cabinet 13 design conditions закрыты, но owner UI approval и source admission остаются отдельными предкодовыи условиями.",
+      "type": "lesson-learned",
+      "reward": 0.8,
+      "rewardSource": "default",
+      "domain": "general",
+      "ts": "2026-11-12T19:42:39.474Z",
+      "source": "dz-teach",
+      "dzId": "teach:cb96be0b31369749",
+      "relevance": 0.01639344262295082,
+      "similarity": null
+    },
+    {
+      "pattern": "Количество зелёных тестов не доказывает пользовательскую цепочку: SQL approval и unsafe-inline в host CSP скрывают integration gaps. Нужны ordinary owner moderation HTTP, реальный strict-CSP bundle на другом hostname и отрицательные controls.",
+      "type": "lesson-learned",
+      "reward": 0.85,
+      "rewardSource": "explicit",
+      "domain": "general",
+      "ts": "2026-11-12T11:06:25.878Z",
+      "source": "dz-teach",
+      "dzId": "teach:c915a8cce9462588",
+      "relevance": 0.016129032258064516,
+      "similarity": null
+    }
+  ],
+  "semanticAvailabilityClaimed": false,
+  "scope": {
+    "phase": "project-cabinet ideation final",
+    "recommendation": "GO for planning only",
+    "nativeVerdict": "closed",
+    "verifiedDesignConditions": 13,
+    "reviewers": 6,
+    "sourceAdmission": false,
+    "ownerDesignApproval": "pending",
+    "productVerified": false,
+    "observation": "Native evaluator may persist valid originating conditions even when returning not-established; after correction read actual host lineage, preserve origin objects and require author rework + owning independent verification. Contract formatting correction does not erase origins."
+  },
+  "returnedValuesRead": 3,
+  "unrelatedCrossProjectValuesOmitted": 1,
+  "unrelatedLessonsApplied": false
+}

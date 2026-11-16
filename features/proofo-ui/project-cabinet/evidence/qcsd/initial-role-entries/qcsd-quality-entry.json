@@ -1,0 +1,37 @@
+{
+  "schema": "fa-review-convergence-1",
+  "phase": "ideation",
+  "nonce": "0fef60e0-1ec5-4cd4-b693-c9991c49a4cc",
+  "revision": "a02e007567b6e585aee8f6a15b2d563d21c6bd0e54207cd6ebfb1e43ee0cfa62",
+  "author": null,
+  "reviews": [
+    {
+      "reviewer": "qcsd-quality",
+      "family": "codex",
+      "independent": true,
+      "verdict": "conditional",
+      "conditions": [
+        {
+          "id": "QCSQ-01",
+          "owner": "qcsd-quality",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Привязать к FR-303 сохранение существующего screenshot paste и задать в плане отдельный ordinary UI oracle: synthetic clipboard image -> видимое вложение -> переключение intake с сохранением файла -> существующий endpoint -> pending с provenance после reload; screenshot-only без обязательных имени/текста; при 503 до записи нет insert; при сетевой ошибке нет ложного success, исход может быть неизвестен, снимок доступен для retry. Сохранить отдельные сценарии выбора файла и URL+text.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/01_requirements.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: apps/web/src/app/dashboard/[slug]/platform-form.tsx:64-75,77-96,108-119,133-136 реализует paste изображения и screenshot-only, а 05_architecture.md:14,16 обещает reuse и state machine при новом переключателе. Независимая плановая зависимость 06_implementation_plan.md:13,29-33 проверяет screenshot-only и ошибки, но не задаёт clipboard paste или его сохранность при switching. File selection отдельно не проверяет paste. Отчёт evidence/qcsd/qcsd-quality.md содержит hashes и границы проверки."
+        }
+      ],
+      "verifications": [],
+      "newRisks": {
+        "assessment": "Кроме QCSQ-01 новых отдельных блокирующих рисков в рассмотренной области не выявлено. Pending owner approval и закрепление областей визуального сравнения уже явно предусмотрены как precode gates и не являются утверждением о дефекте продукта.",
+        "evidence": "01_requirements.md:24; 03_adr/003-separate-original-reference-from-live-adaptation.md:15-18; 05_architecture.md:21-26; отчёт qcsd-quality.md.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": false,
+      "deltaVerification": null
+    }
+  ]
+}

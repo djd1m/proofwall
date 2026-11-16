@@ -1,0 +1,49 @@
+{
+  "schema": "fa-review-convergence-1",
+  "phase": "ideation",
+  "nonce": "0fef60e0-1ec5-4cd4-b693-c9991c49a4cc",
+  "revision": "a02e007567b6e585aee8f6a15b2d563d21c6bd0e54207cd6ebfb1e43ee0cfa62",
+  "author": null,
+  "reviews": [
+    {
+      "reviewer": "qcsd-security",
+      "family": "codex",
+      "independent": true,
+      "verdict": "conditional",
+      "conditions": [
+        {
+          "id": "QCSEC-01-http-denial",
+          "owner": "qcsd-security",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "До допуска исходного кода связать FR-301/PC-01 с именованной ordinary HTTP проверкой: анонимный запрос получает login redirect с encoded next; owner A к foreign, отсутствующему и собственному deactivated проекту получает 404 без project name, отзывов, ссылок и сниппета; active owner получает только свои данные. Указать persisted синтетические accounts, маршрут, assertions и файл в плане; сохранить отдельный SQL current_user/GUC oracle и mutation проверки. Не подменять проверку ответа страницы одним unit-тестом loader.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/01_requirements.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: 01_requirements.md:11 и 05_architecture.md:6–7 задают отказы; 05:26 требует SQL role/GUC, но не называет HTTP denial oracle. Вне host manifest 06_implementation_plan.md:11 проверяет owner/foreign/missing/inactive на loader, а :12 называет ordinary persisted owner journey и links без конкретной проверки denied HTTP body/status. spec PC-01:11–15 требует redirect/404 без контента. Нет исполнения HTTP."
+        },
+        {
+          "id": "QCSEC-02-password-cancel-inflight",
+          "owner": "qcsd-security",
+          "severity": "MEDIUM",
+          "classification": "structural",
+          "requirement": "До source admission определить наблюдаемый lifecycle нового cancel на PC-07: до отправки очистить значения и ошибки без POST; после начала отправки не обещать отмену серверной операции (например, блокировать cancel до разрешения запроса и сообщать busy), отобразить фактические success/error и не терять reissued session. Связать с именованной synthetic UI проверкой: cancel до submit, задержанный POST при попытке cancel, success/error и старые/новая session; фактический rollback при abort не предполагать.",
+          "scope": [
+            "features/proofo-ui/project-cabinet/01_requirements.md",
+            "features/proofo-ui/project-cabinet/05_architecture.md"
+          ],
+          "evidence": "STATIC: 05_architecture.md:15 вводит show/cancel с очисткой и без API при cancel, но не описывает взаимодействие с уже отправленным POST; 01_requirements.md:16 требует mismatch/error/cancel и revoke/reissue. Текущий ChangePassword по :17–55 асинхронно отправляет запрос и блокирует только submit (:112), cancel в нём пока отсутствует; план 06:14 требует cancel no side effect без in-flight oracle. Это пробел будущего UI-контракта, а не доказанная текущая уязвимость."
+        }
+      ],
+      "verifications": [],
+      "newRisks": {
+        "assessment": "Два новых структурных условия: HIGH 1, MEDIUM 1; подтверждённых эксплойтов и выполненных продуктовых security-тестов 0. Внешний egress и project runner остаются открыты у qcsd-risk и TST-03, здесь не закрываются и не дублируются.",
+        "evidence": "Независимый static review восьми совпавших host hashes, нормативной spec, плана и указанных current UI/API sources; конкретные зависимости, hashes и ограничения в qcsd-security.md.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": false,
+      "deltaVerification": null
+    }
+  ]
+}

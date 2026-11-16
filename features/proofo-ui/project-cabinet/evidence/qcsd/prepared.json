@@ -1,0 +1,71 @@
+{
+  "schema": "fa-review-convergence-1",
+  "phase": "ideation",
+  "verdict": "prepared",
+  "revision": "a02e007567b6e585aee8f6a15b2d563d21c6bd0e54207cd6ebfb1e43ee0cfa62",
+  "unresolved": [],
+  "reasons": [],
+  "nonce": "0fef60e0-1ec5-4cd4-b693-c9991c49a4cc",
+  "manifest": [
+    {
+      "path": "features/proofo-ui/project-cabinet/00_complexity_assessment.md",
+      "digest": "86e6ca35254d7fe7defc12d068e597b84d3f2b60a21c41d6259582b00bc1007d"
+    },
+    {
+      "path": "features/proofo-ui/project-cabinet/01_requirements.md",
+      "digest": "572d68fb62307f755824d09d1e55cbfe3c2df9389c10de6b165ec2366b660a53"
+    },
+    {
+      "path": "features/proofo-ui/project-cabinet/02_research.md",
+      "digest": "d15adf498857d82350df96822626444e896f8451c85c114f3554b64f2d5a6ba0"
+    },
+    {
+      "path": "features/proofo-ui/project-cabinet/03_adr/001-reuse-owned-project-capabilities.md",
+      "digest": "fb4ef2e82a09d3449203691f629b191dd3ad46b155ab6bb234f3296e09f69375"
+    },
+    {
+      "path": "features/proofo-ui/project-cabinet/03_adr/002-scope-cabinet-palette-and-interaction.md",
+      "digest": "68287d023834f6194860bfa3f220cf1a1ef61ff69b805de3918427ccd8c53556"
+    },
+    {
+      "path": "features/proofo-ui/project-cabinet/03_adr/003-separate-original-reference-from-live-adaptation.md",
+      "digest": "1028ab4bfd082c82bc742eb909a368fb0a7739cc5a7bb1167308747c25e97c29"
+    },
+    {
+      "path": "features/proofo-ui/project-cabinet/04_domain_model.md",
+      "digest": "c2c6b701b5161b34d910ba002ed4397a3e0bbe9a13db2427c9ef50f4c3546742"
+    },
+    {
+      "path": "features/proofo-ui/project-cabinet/05_architecture.md",
+      "digest": "6e6453b2325ad89f0326cebfda40072470cecf2c65f165d4f9d7987702452a62"
+    }
+  ],
+  "conditions": [],
+  "reviewers": [
+    {
+      "id": "qcsd-quality",
+      "family": "codex"
+    },
+    {
+      "id": "qcsd-risk",
+      "family": "codex"
+    },
+    {
+      "id": "qcsd-testability",
+      "family": "codex"
+    },
+    {
+      "id": "qcsd-accessibility",
+      "family": "codex"
+    },
+    {
+      "id": "qcsd-security",
+      "family": "codex"
+    },
+    {
+      "id": "qcsd-ux",
+      "family": "codex"
+    }
+  ],
+  "checkpointDigest": null
+}

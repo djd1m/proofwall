@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-16T14:13:48.000Z",
+  "status": "passed",
+  "exitCode": 0,
+  "command": "node_modules/node/bin/node .secrets/proofo-recompare-20261116/check-public.mjs",
+  "url": "https://proofwall.78.17.53.233.sslip.io/__design/proofo/comparison-2026-11-16/",
+  "publicFilesShaMatched": 12,
+  "checks": [
+    {
+      "width": 1440,
+      "status": 200,
+      "horizontalOverflow": false,
+      "imageElements": 9,
+      "anchorNavigation": true
+    },
+    {
+      "width": 390,
+      "status": 200,
+      "horizontalOverflow": false,
+      "imageElements": 9,
+      "anchorNavigation": true
+    },
+    {
+      "width": 360,
+      "status": 200,
+      "horizontalOverflow": false,
+      "imageElements": 9,
+      "anchorNavigation": true
+    }
+  ],
+  "scope": "Only published read-only comparison viewer; no product parity or functional-test claim"
+}

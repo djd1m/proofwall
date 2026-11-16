@@ -1,0 +1,14 @@
+{
+  "status": "static-proposal-published",
+  "at": "2026-11-12T19:02:41.363719+00:00",
+  "url": "https://proofwall.78.17.53.233.sslip.io/__design/proofo/project-next/",
+  "productImplementation": false,
+  "ownerDesignApproval": "pending",
+  "originalStaticFilesUnchanged": 13,
+  "files": {
+    "proposal.css": "fe959c30e5faa362adc28ec7be5212dfaae3b989785592fe941e040ed2e96a42",
+    "proposal.js": "b2252e7ce7342c4b54ed632234ce515ef43a9f7077204a88d9fcbee0a10be119",
+    "index.html": "ab7bab18e7c6543fca03eb79bb35869d465597a9648acf3edb369b1de1f41c9c",
+    "README.md": "963274ca9b665236f5addbcc8c3942f67472a414a2bfe531605492b170bb1d4c"
+  }
+}

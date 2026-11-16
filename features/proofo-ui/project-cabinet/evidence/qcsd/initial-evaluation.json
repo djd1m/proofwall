@@ -1,0 +1,26 @@
+{
+  "exitCode": 3,
+  "command": "node_modules/node/bin/node .agents/skills/feature-adr/scripts/check-review-convergence.mjs evaluate --repo /tmp/proofwall-branding-collect --feature features/proofo-ui/project-cabinet --phase ideation",
+  "result": {
+    "schema": "fa-review-convergence-1",
+    "phase": "ideation",
+    "verdict": "not-established",
+    "revision": "a02e007567b6e585aee8f6a15b2d563d21c6bd0e54207cd6ebfb1e43ee0cfa62",
+    "unresolved": [
+      "QCSQ-01",
+      "QCRISK-01-egress-boundary",
+      "QCRISK-02-project-runner",
+      "TST-01",
+      "TST-02",
+      "TST-03",
+      "A11Y-01",
+      "A11Y-02",
+      "UX-01",
+      "UX-02",
+      "UX-03"
+    ],
+    "reasons": [
+      "author-delta-missing"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "fa-review-convergence-1",
+  "phase": "ideation",
+  "nonce": "0fef60e0-1ec5-4cd4-b693-c9991c49a4cc",
+  "revision": "a02e007567b6e585aee8f6a15b2d563d21c6bd0e54207cd6ebfb1e43ee0cfa62",
+  "author": null,
+  "reviews": [
+    {
+      "reviewer": "qcsd-testability",
+      "family": "codex",
+      "independent": true,
+      "verdict": "conditional",
+      "conditions": [
+        {
+          "id": "TST-01",
+          "owner": "qcsd-testability",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Определить наблюдаемую границу синхронизации persisted testimonial/install данных, локального initial/items, badge и onboarding после успешных intake/moderation/install и изменения props; определить сохранение drafts, реакцию на failed/conflicting mutations и named live oracle для проверки до и после выбранной границы. Допустим честно описанный ручной reload, если он выбран.",
+          "scope": ["features/proofo-ui/project-cabinet/04_domain_model.md", "features/proofo-ui/project-cabinet/05_architecture.md"],
+          "evidence": "STATIC: 04_domain_model.md и 05_architecture.md:7-16 описывают persisted projection и сохранение client state без границы синхронизации; existing moderation-list.tsx:53-69 инициализирует items из initial один раз; platform-form.tsx:91-100 и import-form.tsx:26-35 после успеха меняют только собственный state. 06_implementation_plan.md:13 проверяет reload, не уточняя изменившиеся props и draft reconciliation. См. qcsd-testability.md TST-01."
+        },
+        {
+          "id": "TST-02",
+          "owner": "qcsd-testability",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Для каждого сбоя чтения project/testimonials/widget_installs определить тестируемый SSR error outcome и named loader/ordinary HTTP oracle: ошибка не превращается в 404, пустой или частично успешный кабинет; настоящий пустой проект успешно отображается. Указать повторный запрос и отрицательную мутацию catch-to-null/empty без раскрытия секретов.",
+          "scope": ["features/proofo-ui/project-cabinet/04_domain_model.md", "features/proofo-ui/project-cabinet/05_architecture.md"],
+          "evidence": "STATIC: 05_architecture.md:6-9 различает null для absent/foreign/inactive и ошибки, 04_domain_model.md различает empty и query failure. План 06:11 называет loader test для role/GUC и доступа, но не задаёт инъекции ошибок запросов и различимый HTTP error outcome. См. qcsd-testability.md TST-02."
+        },
+        {
+          "id": "TST-03",
+          "owner": "qcsd-testability",
+          "severity": "HIGH",
+          "classification": "structural",
+          "requirement": "Привязать A13 к именованному oracle с явным охватом изоляции browser/server процессов для email/payment/STT/storage и synthetic отрицательной проверкой обнаружения запрещённого исходящего вызова без обращения к реальному провайдеру; ненаблюдаемые области явно ограничить или обеспечить другую проверяемую гарантию. Сохранить отдельный config guard.",
+          "scope": ["features/proofo-ui/project-cabinet/00_complexity_assessment.md", "features/proofo-ui/project-cabinet/05_architecture.md"],
+          "evidence": "STATIC: A13 в 00_complexity_assessment.md обещает обнаружение outbound escape, 05_architecture.md:28 требует synthetic-only; 06_implementation_plan.md:10,17 ссылается на branding QA runner refuses unsafe configuration. Содержимое apps/web/tests/branding-collect-schema.test.ts проверяет allowlist, env/file и отказ до spawn, но не наблюдение фактического provider outbound. См. qcsd-testability.md TST-03."
+        }
+      ],
+      "verifications": [],
+      "newRisks": {
+        "assessment": "Обнаружены три структурные неопределённости; они полностью представлены в условиях TST-01–TST-03 и не дублируются в этом массиве.",
+        "evidence": "Независимое статическое сопоставление 8 measured design paths, normative PC-01–PC-10, plan 06 и существующих компонентов/guard; продукт и тесты не запускались.",
+        "conditions": []
+      },
+      "authorAssessmentChecked": false,
+      "deltaVerification": null
+    }
+  ]
+}

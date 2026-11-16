@@ -1,0 +1,7 @@
+{
+  "exitCode": 0,
+  "command": "node_modules/node/bin/node node_modules/.bin/openspec validate proofo-project-cabinet --type change --strict --no-interactive",
+  "stdout": "Change 'proofo-project-cabinet' is valid\n",
+  "stderr": "",
+  "scope": "Only normative delta validation; no K1/K2/owner approval/source admission or product test"
+}

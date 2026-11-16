@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "exitCode": 0,
+  "command": "node_modules/node/bin/node .secrets/project-proposal-public-probe.mjs",
+  "at": "2026-11-12T19:03:40.830Z",
+  "url": "https://proofwall.78.17.53.233.sslip.io/__design/proofo/project-next/",
+  "checks": [
+    {
+      "width": 1440,
+      "emptyAndFilledOverflow": false,
+      "proposedCards": 2
+    },
+    {
+      "width": 390,
+      "emptyAndFilledOverflow": false,
+      "proposedCards": 2
+    },
+    {
+      "width": 360,
+      "emptyAndFilledOverflow": false,
+      "proposedCards": 2
+    }
+  ],
+  "publicBytesMatch": 4,
+  "requests": [
+    "/__design/proofo/project-next/",
+    "/__design/proofo/style.css",
+    "/__design/proofo/cabinet.css",
+    "/__design/proofo/project-next/proposal.css",
+    "/__design/proofo/project-next/proposal.js",
+    "/__design/proofo/assets/body.woff2",
+    "/__design/proofo/assets/display.woff2",
+    "/__design/proofo/favicon.svg"
+  ],
+  "pageErrors": 0,
+  "scope": "Read-only static proposal publication, not product implementation or owner approval"
+}
