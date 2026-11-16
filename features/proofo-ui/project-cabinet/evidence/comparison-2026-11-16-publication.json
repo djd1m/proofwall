@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-16T14:12:46.011843+00:00",
+  "url": "https://proofwall.78.17.53.233.sslip.io/__design/proofo/comparison-2026-11-16/",
+  "artifact": "Read-only comparison report and anonymized main screenshots; not app implementation",
+  "files": {
+    "proofo-project.png": "24a0d578b1087fe5735706db09dd7d8d4c124081374e51b0c59bd660bedfa040",
+    "capture.json": "49ed6f4636aa9832b0ad8c3036a449fcd58702262d0865ffafe9a86cba82ffa1",
+    "proofo-branding.png": "efc2c5b1de6bcf5a9662562e4a8ec4403e9a2d15d854cf0cb3697146f4864075",
+    "proofwall-overview.png": "9d8a45521af0735c15646d0b3fb2c2abe025aab9c83817b1a5ed92e10ed629f5",
+    "proofwall-proposal.png": "6611431321a16643d507b70b9aba600e1b39caae0dd22412554d84d5e83b366f",
+    "proofwall-project.png": "765c40b09ce1793794985dd665fd505dcb8601be22ca7145b7275441bdeee378",
+    "comparison.css": "e8493815d21ac68a19a9cb8e56de024d863e3af0c05ed65595cef4fc2eb2f8e3",
+    "proofo-collect.png": "a93096053518a4c6b1f5e9e7fce64efb868fca07a4530f5dce8a04db4d825508",
+    "proofo-overview.png": "2994e75c50c614982042922eb6ddcebbab7e0e0d39e2e356340c065c365656e0",
+    "proofwall-branding.png": "ff7be07423b6117e128ce184b891b9a2c9a2c36ce404d13d65bb4a77b058063e",
+    "index.html": "04ac12fd7d9a58ed0c9d791c6c323c8d8ae994386e5f36b66a21b9cd020cf480",
+    "proofwall-collect.png": "ded4fe990601c7a2b35f8d77350301bd492a2f3adca24eb6b895b3c9c195d378"
+  },
+  "rawProfilesOrCredentialsCopied": false,
+  "productCodeChanged": false,
+  "priorDesignChanged": false
+}
