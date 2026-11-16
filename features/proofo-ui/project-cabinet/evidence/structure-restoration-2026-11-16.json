@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "at": "2026-11-16T14:38:00.470Z",
+  "phase": "public",
+  "url": "https://proofwall.78.17.53.233.sslip.io/__design/proofo/project-next/",
+  "widths": [
+    {
+      "width": 1440,
+      "mainTabs": 3,
+      "advancedClosedInitially": true,
+      "noOverflowEmptyTextFilled": true
+    },
+    {
+      "width": 390,
+      "mainTabs": 3,
+      "advancedClosedInitially": true,
+      "noOverflowEmptyTextFilled": true
+    },
+    {
+      "width": 360,
+      "mainTabs": 3,
+      "advancedClosedInitially": true,
+      "noOverflowEmptyTextFilled": true
+    }
+  ],
+  "checks": [
+    "Три ширины: вкладки, порядок секций, скрытые дополнительные инструменты, терракотовая палитра, уникальные ID, отсутствие переполнения в пустом/текстовом/заполненном состоянии",
+    "Клавиатура: ArrowRight/ArrowLeft/Home/End/Enter/Space и фокус вкладок",
+    "Скриншоты: выбор/перенос, пусто/PNG/JPEG/21/SVG, сохранение выбора при смене вкладки, честное сообщение вместо OCR-результата",
+    "Текст/ссылка: формат, несколько строк, сохранение точки с запятой и черновика, безопасный literal HTML, invalidation предпросмотра, запрет не-HTTP URL, отсутствие добавления/извлечения",
+    "Дополнительно: CSV preview/commit и invalidation mapping, N3/share/платёжная совместимость, модерация демо и возврат к пустому состоянию, повторное скрытие",
+    "Форма пароля открывается/закрывается, ввод отключён; Start/Pro и форма сбора не выполняют внешних действий",
+    "Перезагрузка сбрасывает состояние, нет cookies/storage, API/внешних запросов, ошибок JS/console; проверены опубликованные байты (4 файла)"
+  ],
+  "files": {
+    "index.html": "eb79e2717b901d53804269cf4b8f011086316be635c40850207c718cac6dda8f",
+    "proposal.js": "d2618a3520b30af98ede272d472a3c482e8a4c95049152e1fd997eaf82d58b33",
+    "proposal.css": "4a95270df8145b93748c0c28835dab4121bfb9c6d02b9295a2b97c0753594d86",
+    "README.md": "a3222f565302eb5474ec9bc9499541e07cbb1a7df04bfcd5c638abd8afb3f90c"
+  },
+  "pageErrors": [],
+  "requests": [
+    "/__design/proofo/project-next/",
+    "/__design/proofo/style.css",
+    "/__design/proofo/cabinet.css",
+    "/__design/proofo/project-next/proposal.css",
+    "/__design/proofo/project-next/proposal.js",
+    "/__design/proofo/assets/body.woff2",
+    "/__design/proofo/assets/display.woff2",
+    "/__design/proofo/favicon.svg"
+  ],
+  "scope": "Авторская проверка статического макета. Не product delivery, independent QE или owner acceptance.",
+  "localChecks": {
+    "nodeSyntax": "passed",
+    "processCheck": "passed",
+    "processTest": {
+      "passed": 63,
+      "failed": 0,
+      "skipped": 0
+    },
+    "gitDiffCheck": "passed",
+    "scopeAndSecretScan": "passed"
+  }
+}
